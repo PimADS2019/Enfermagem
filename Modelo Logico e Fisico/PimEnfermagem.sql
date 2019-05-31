@@ -93,7 +93,7 @@ create table Coordenadores
 (
 	IdCoordenador int identity (1,1),
 	NumeroUnipCood varchar (9) not null,
-	Periodo varchar (9),
+	PeriodoCood varchar (9),
 	Fk_Pessoas_IdPessoa int,
 
 	constraint Pk_Coordenadores primary key (IdCoordenador)
@@ -188,13 +188,13 @@ go
 
 create table Estoques
 (
-	IdEstoque int identity (1,1),
+	IdProduto int identity (1,1),
 	NomeProduto varchar (50) not null,
 	QuantidadeProduto smallint,
 	DescricaoProduto varchar (300),
 	DataHrCadastroProduto Datetime not null
 
-	constraint Pk_Estoques primary key (IdEstoque)
+	constraint Pk_Estoques primary key (IdProduto)
 );
 go
 
@@ -204,7 +204,7 @@ create table LogEstoques
 	QuantidadeUtilizada smallint,
 	DataUtilizado Datetime,
 	Fk_Consultas_IdConsulta int,
-	Fk_Estoques_IdEstoque int
+	Fk_Estoques_IdProduto int
 
 	constraint Pk_LogEstoques primary key (IdLogestoque)
 );
@@ -296,8 +296,8 @@ alter table LogEstoques
 go
 
 alter table LogEstoques
-	add constraint Fk_LogEstoques_Estoques foreign key (Fk_Estoques_IdEstoque)
-	references Estoques(IdEstoque);
+	add constraint Fk_LogEstoques_Estoques foreign key (Fk_Estoques_IdProduto)
+	references Estoques(IdProduto);
 go
 
 alter table LogConsultas
