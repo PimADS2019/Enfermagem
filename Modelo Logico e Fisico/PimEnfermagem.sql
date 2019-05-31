@@ -7,9 +7,14 @@ use PimEnfermagem2019
 go
 
 -- Criando Tabelas 
+
 create table Pessoas
 (
 	IdPessoa int identity (1,1),
+	TipoUsuario varchar (12),
+	Usuario varchar (20),
+	Senha Varchar(12),
+	ConfSenha Varchar (12),
 	Nome varchar(50) not null,
 	DataNascimento datetime not null,
 	Cpf varchar(15) not null,
@@ -160,7 +165,7 @@ go
 create table Atendimentos
 (
 	IdAtendimento int identity (1,1),
-	DescricaoAtendimento varchar (max),
+	DescricaoAtendimento varchar (300),
 	Fk_Pacientes_IdPaciente int,
 	Fk_Alunos_IdAluno int,
 	Fk_Professores_IdProfessor int,
@@ -174,8 +179,8 @@ go
 create table Consultas
 (
 	IdConsulta int identity (1,1),
-	ReceitaMedica varchar (max),
-	DescricaoConsulta varchar (max),
+	ReceitaMedica varchar (300),
+	DescricaoConsulta varchar (300),
 
 	constraint Pk_Cosnultas primary key (IdConsulta)
 );
@@ -186,7 +191,7 @@ create table Estoques
 	IdEstoque int identity (1,1),
 	NomeProduto varchar (50) not null,
 	QuantidadeProduto smallint,
-	DescricaoProduto varchar (max),
+	DescricaoProduto varchar (300),
 	DataHrCadastroProduto Datetime not null
 
 	constraint Pk_Estoques primary key (IdEstoque)
