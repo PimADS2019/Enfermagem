@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B90C57C0-654E-4F10-AA8B-A856180D6506}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>enfunip</RootNamespace>
+    <AssemblyName>enfunip</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.LiveShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.LiveShare.1.0.6\lib\net461\Microsoft.VisualStudio.LiveShare.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="apresentacao\frmAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmAgendamento.Designer.cs">
+      <DependentUpon>frmAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmCadastrarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmCadastrarFuncionario.Designer.cs">
+      <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmCadastrarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmCadastrarProduto.Designer.cs">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmCadastrarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmCadastrarPaciente.Designer.cs">
+      <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmConsultarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmConsultarFuncionario.Designer.cs">
+      <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmConsultarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmConsultarPaciente.Designer.cs">
+      <DependentUpon>frmConsultarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmListarEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmListarEstoque.Designer.cs">
+      <DependentUpon>frmListarEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmMainmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmMainmenu.Designer.cs">
+      <DependentUpon>frmMainmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmNovoAtendimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmNovoAtendimento.Designer.cs">
+      <DependentUpon>frmNovoAtendimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apresentacao\frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dao\agendadao.cs" />
+    <Compile Include="dao\conexao.cs" />
+    <Compile Include="dao\Estoquedao.cs" />
+    <Compile Include="dao\Funcionariodao.cs" />
+    <Compile Include="dao\intAgendadao.cs" />
+    <Compile Include="dao\intEstoquedao.cs" />
+    <Compile Include="dao\intFucionariodao.cs" />
+    <Compile Include="dao\intPessoadao.cs" />
+    <Compile Include="dao\pacientedao.cs" />
+    <Compile Include="modelo\Agenda.cs" />
+    <Compile Include="modelo\controle\controleAgenda.cs" />
+    <Compile Include="modelo\controle\controleEstoque.cs" />
+    <Compile Include="modelo\controle\controleFuncionario.cs" />
+    <Compile Include="modelo\controle\controleLogin.cs" />
+    <Compile Include="modelo\controle\controlePaciente.cs" />
+    <Compile Include="modelo\controle\controleRelatorio.cs" />
+    <Compile Include="modelo\Estaticos.cs" />
+    <Compile Include="modelo\Estoque.cs" />
+    <Compile Include="modelo\Funcionario.cs" />
+    <Compile Include="modelo\Paciente.cs" />
+    <Compile Include="modelo\validacoes\Validacao.cs" />
+    <Compile Include="modelo\validacoes\validarAgenda.cs" />
+    <Compile Include="modelo\validacoes\validarEstoque.cs" />
+    <Compile Include="modelo\validacoes\validarFuncionario.cs" />
+    <Compile Include="modelo\validacoes\validarPaciente.cs" />
+    <Compile Include="modelo\validacoes\validarRelatorio.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="apresentacao\frmAgendamento.resx">
+      <DependentUpon>frmAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmCadastrarFuncionario.resx">
+      <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmCadastrarProduto.resx">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmCadastrarPaciente.resx">
+      <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmCadastrarPaciente.zu-ZA.resx">
+      <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmConsultarFuncionario.resx">
+      <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmConsultarPaciente.resx">
+      <DependentUpon>frmConsultarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmListarEstoque.resx">
+      <DependentUpon>frmListarEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmMainmenu.resx">
+      <DependentUpon>frmMainmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmNovoAtendimento.resx">
+      <DependentUpon>frmNovoAtendimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apresentacao\frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logounip.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logounip2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logounip3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_37110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconeusuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azul-degrade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconecadeado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconeSenha2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconeUsuario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pesquisar-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trocarusuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoajuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoagenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reply-all-button_icon-icons.com_72603.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_78935.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savedisk_floppydisk_guardar_1543.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_disk_22124.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfechar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

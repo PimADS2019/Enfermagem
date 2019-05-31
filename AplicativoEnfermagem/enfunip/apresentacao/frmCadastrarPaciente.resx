@@ -1,0 +1,3204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblNumFilhos.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblNumFilhos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblNumFilhos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 220</value>
+  </data>
+  <data name="lblNumFilhos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 16</value>
+  </data>
+  <data name="lblNumFilhos.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="lblNumFilhos.Text" xml:space="preserve">
+    <value>Número de filhos</value>
+  </data>
+  <data name="&gt;&gt;lblNumFilhos.Name" xml:space="preserve">
+    <value>lblNumFilhos</value>
+  </data>
+  <data name="&gt;&gt;lblNumFilhos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNumFilhos.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lblNumFilhos.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txbReligiao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 237</value>
+  </data>
+  <data name="txbReligiao.MaxLength" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="txbReligiao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 22</value>
+  </data>
+  <data name="txbReligiao.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txbReligiao.Name" xml:space="preserve">
+    <value>txbReligiao</value>
+  </data>
+  <data name="&gt;&gt;txbReligiao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbReligiao.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbReligiao.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblReligiao.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblReligiao.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblReligiao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 218</value>
+  </data>
+  <data name="lblReligiao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 16</value>
+  </data>
+  <data name="lblReligiao.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="lblReligiao.Text" xml:space="preserve">
+    <value>Religião</value>
+  </data>
+  <data name="&gt;&gt;lblReligiao.Name" xml:space="preserve">
+    <value>lblReligiao</value>
+  </data>
+  <data name="&gt;&gt;lblReligiao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblReligiao.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lblReligiao.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="txbNumeroEndereco.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 129</value>
+  </data>
+  <data name="txbNumeroEndereco.MaxLength" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="txbNumeroEndereco.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 22</value>
+  </data>
+  <data name="txbNumeroEndereco.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txbNumeroEndereco.Name" xml:space="preserve">
+    <value>txbNumeroEndereco</value>
+  </data>
+  <data name="&gt;&gt;txbNumeroEndereco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbNumeroEndereco.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbNumeroEndereco.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="lblSexo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSexo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSexo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 218</value>
+  </data>
+  <data name="lblSexo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 16</value>
+  </data>
+  <data name="lblSexo.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="lblSexo.Text" xml:space="preserve">
+    <value>Sexo</value>
+  </data>
+  <data name="&gt;&gt;lblSexo.Name" xml:space="preserve">
+    <value>lblSexo</value>
+  </data>
+  <data name="&gt;&gt;lblSexo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSexo.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lblSexo.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="lbl_Email.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Email.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 276</value>
+  </data>
+  <data name="lbl_Email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 16</value>
+  </data>
+  <data name="lbl_Email.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lbl_Email.Text" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="&gt;&gt;lbl_Email.Name" xml:space="preserve">
+    <value>lbl_Email</value>
+  </data>
+  <data name="&gt;&gt;lbl_Email.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Email.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Email.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="cboSexo.Items" xml:space="preserve">
+    <value>Masculino</value>
+  </data>
+  <data name="cboSexo.Items1" xml:space="preserve">
+    <value>Feminino</value>
+  </data>
+  <data name="cboSexo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 237</value>
+  </data>
+  <data name="cboSexo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="cboSexo.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cboSexo.Name" xml:space="preserve">
+    <value>cboSexo</value>
+  </data>
+  <data name="&gt;&gt;cboSexo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboSexo.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;cboSexo.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="txbNome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 72</value>
+  </data>
+  <data name="txbNome.MaxLength" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="txbNome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 22</value>
+  </data>
+  <data name="txbNome.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txbNome.Name" xml:space="preserve">
+    <value>txbNome</value>
+  </data>
+  <data name="&gt;&gt;txbNome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbNome.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbNome.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txbEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 295</value>
+  </data>
+  <data name="txbEmail.MaxLength" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="txbEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 22</value>
+  </data>
+  <data name="txbEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;txbEmail.Name" xml:space="preserve">
+    <value>txbEmail</value>
+  </data>
+  <data name="&gt;&gt;txbEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbEmail.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbEmail.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="lbl_Nome.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Nome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Nome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 53</value>
+  </data>
+  <data name="lbl_Nome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 16</value>
+  </data>
+  <data name="lbl_Nome.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbl_Nome.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="&gt;&gt;lbl_Nome.Name" xml:space="preserve">
+    <value>lbl_Nome</value>
+  </data>
+  <data name="&gt;&gt;lbl_Nome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Nome.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Nome.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="cboEstadoCivil.Items" xml:space="preserve">
+    <value>Solteiro</value>
+  </data>
+  <data name="cboEstadoCivil.Items1" xml:space="preserve">
+    <value>Amasiado</value>
+  </data>
+  <data name="cboEstadoCivil.Items2" xml:space="preserve">
+    <value>Casado</value>
+  </data>
+  <data name="cboEstadoCivil.Items3" xml:space="preserve">
+    <value>Divorciado</value>
+  </data>
+  <data name="cboEstadoCivil.Items4" xml:space="preserve">
+    <value>Viuvo</value>
+  </data>
+  <data name="cboEstadoCivil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 237</value>
+  </data>
+  <data name="cboEstadoCivil.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 24</value>
+  </data>
+  <data name="cboEstadoCivil.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;cboEstadoCivil.Name" xml:space="preserve">
+    <value>cboEstadoCivil</value>
+  </data>
+  <data name="&gt;&gt;cboEstadoCivil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboEstadoCivil.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;cboEstadoCivil.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="lbl_Cpf.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Cpf.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Cpf.Location" type="System.Drawing.Point, System.Drawing">
+    <value>537, 51</value>
+  </data>
+  <data name="lbl_Cpf.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 16</value>
+  </data>
+  <data name="lbl_Cpf.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lbl_Cpf.Text" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cpf.Name" xml:space="preserve">
+    <value>lbl_Cpf</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cpf.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cpf.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cpf.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="lbl_EstadoCivil.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_EstadoCivil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_EstadoCivil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 217</value>
+  </data>
+  <data name="lbl_EstadoCivil.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 16</value>
+  </data>
+  <data name="lbl_EstadoCivil.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="lbl_EstadoCivil.Text" xml:space="preserve">
+    <value>Estado Civil</value>
+  </data>
+  <data name="&gt;&gt;lbl_EstadoCivil.Name" xml:space="preserve">
+    <value>lbl_EstadoCivil</value>
+  </data>
+  <data name="&gt;&gt;lbl_EstadoCivil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_EstadoCivil.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_EstadoCivil.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="lbl_DataNascimento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_DataNascimento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_DataNascimento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 51</value>
+  </data>
+  <data name="lbl_DataNascimento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 16</value>
+  </data>
+  <data name="lbl_DataNascimento.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbl_DataNascimento.Text" xml:space="preserve">
+    <value>Data de Nascimento</value>
+  </data>
+  <data name="&gt;&gt;lbl_DataNascimento.Name" xml:space="preserve">
+    <value>lbl_DataNascimento</value>
+  </data>
+  <data name="&gt;&gt;lbl_DataNascimento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_DataNascimento.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_DataNascimento.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lbl_Endereco.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Endereco.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Endereco.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 110</value>
+  </data>
+  <data name="lbl_Endereco.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 16</value>
+  </data>
+  <data name="lbl_Endereco.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lbl_Endereco.Text" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="&gt;&gt;lbl_Endereco.Name" xml:space="preserve">
+    <value>lbl_Endereco</value>
+  </data>
+  <data name="&gt;&gt;lbl_Endereco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Endereco.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Endereco.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lbl_Numero.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Numero.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Numero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>393, 110</value>
+  </data>
+  <data name="lbl_Numero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 16</value>
+  </data>
+  <data name="lbl_Numero.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lbl_Numero.Text" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="&gt;&gt;lbl_Numero.Name" xml:space="preserve">
+    <value>lbl_Numero</value>
+  </data>
+  <data name="&gt;&gt;lbl_Numero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Numero.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Numero.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lbl_Cidade.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Cidade.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Cidade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 166</value>
+  </data>
+  <data name="lbl_Cidade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="lbl_Cidade.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lbl_Cidade.Text" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cidade.Name" xml:space="preserve">
+    <value>lbl_Cidade</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cidade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cidade.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cidade.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txbCep.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 182</value>
+  </data>
+  <data name="txbCep.Mask" xml:space="preserve">
+    <value>00000-000</value>
+  </data>
+  <data name="txbCep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 22</value>
+  </data>
+  <data name="txbCep.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;txbCep.Name" xml:space="preserve">
+    <value>txbCep</value>
+  </data>
+  <data name="&gt;&gt;txbCep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbCep.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbCep.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txbEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>470, 182</value>
+  </data>
+  <data name="txbEstado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 24</value>
+  </data>
+  <data name="txbEstado.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txbEstado.Name" xml:space="preserve">
+    <value>txbEstado</value>
+  </data>
+  <data name="&gt;&gt;txbEstado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbEstado.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbEstado.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txbTelefone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>544, 295</value>
+  </data>
+  <data name="txbTelefone.Mask" xml:space="preserve">
+    <value>(99) 0000-0000</value>
+  </data>
+  <data name="txbTelefone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 22</value>
+  </data>
+  <data name="txbTelefone.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;txbTelefone.Name" xml:space="preserve">
+    <value>txbTelefone</value>
+  </data>
+  <data name="&gt;&gt;txbTelefone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbTelefone.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbTelefone.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txbBairro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 184</value>
+  </data>
+  <data name="txbBairro.MaxLength" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="txbBairro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="txbBairro.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;txbBairro.Name" xml:space="preserve">
+    <value>txbBairro</value>
+  </data>
+  <data name="&gt;&gt;txbBairro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbBairro.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbBairro.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="lbl_Celular.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Celular.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Celular.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 276</value>
+  </data>
+  <data name="lbl_Celular.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="lbl_Celular.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lbl_Celular.Text" xml:space="preserve">
+    <value>Celular</value>
+  </data>
+  <data name="&gt;&gt;lbl_Celular.Name" xml:space="preserve">
+    <value>lbl_Celular</value>
+  </data>
+  <data name="&gt;&gt;lbl_Celular.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Celular.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Celular.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="txbComplemento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>496, 129</value>
+  </data>
+  <data name="txbComplemento.MaxLength" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="txbComplemento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
+  </data>
+  <data name="txbComplemento.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txbComplemento.Name" xml:space="preserve">
+    <value>txbComplemento</value>
+  </data>
+  <data name="&gt;&gt;txbComplemento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbComplemento.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbComplemento.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="txbCelular.Location" type="System.Drawing.Point, System.Drawing">
+    <value>392, 295</value>
+  </data>
+  <data name="txbCelular.Mask" xml:space="preserve">
+    <value>(99) 00000-0000</value>
+  </data>
+  <data name="txbCelular.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 22</value>
+  </data>
+  <data name="txbCelular.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;txbCelular.Name" xml:space="preserve">
+    <value>txbCelular</value>
+  </data>
+  <data name="&gt;&gt;txbCelular.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbCelular.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbCelular.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="lbl_Telefone.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Telefone.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Telefone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>541, 276</value>
+  </data>
+  <data name="lbl_Telefone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 16</value>
+  </data>
+  <data name="lbl_Telefone.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lbl_Telefone.Text" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="&gt;&gt;lbl_Telefone.Name" xml:space="preserve">
+    <value>lbl_Telefone</value>
+  </data>
+  <data name="&gt;&gt;lbl_Telefone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Telefone.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Telefone.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="lbl_Cep.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Cep.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Cep.Location" type="System.Drawing.Point, System.Drawing">
+    <value>565, 165</value>
+  </data>
+  <data name="lbl_Cep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 16</value>
+  </data>
+  <data name="lbl_Cep.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lbl_Cep.Text" xml:space="preserve">
+    <value>CEP</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cep.Name" xml:space="preserve">
+    <value>lbl_Cep</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cep.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cep.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="txbCpf.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 70</value>
+  </data>
+  <data name="txbCpf.Mask" xml:space="preserve">
+    <value>000.000.000-00</value>
+  </data>
+  <data name="txbCpf.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 22</value>
+  </data>
+  <data name="txbCpf.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txbCpf.Name" xml:space="preserve">
+    <value>txbCpf</value>
+  </data>
+  <data name="&gt;&gt;txbCpf.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbCpf.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbCpf.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="lbl_estado.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_estado.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_estado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>467, 163</value>
+  </data>
+  <data name="lbl_estado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 16</value>
+  </data>
+  <data name="lbl_estado.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lbl_estado.Text" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="&gt;&gt;lbl_estado.Name" xml:space="preserve">
+    <value>lbl_estado</value>
+  </data>
+  <data name="&gt;&gt;lbl_estado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_estado.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_estado.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="dtpNascimento.CustomFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpNascimento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>392, 70</value>
+  </data>
+  <data name="dtpNascimento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 22</value>
+  </data>
+  <data name="dtpNascimento.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dtpNascimento.Name" xml:space="preserve">
+    <value>dtpNascimento</value>
+  </data>
+  <data name="&gt;&gt;dtpNascimento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpNascimento.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;dtpNascimento.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="lbl_Bairro.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Bairro.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Bairro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 165</value>
+  </data>
+  <data name="lbl_Bairro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 16</value>
+  </data>
+  <data name="lbl_Bairro.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lbl_Bairro.Text" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="&gt;&gt;lbl_Bairro.Name" xml:space="preserve">
+    <value>lbl_Bairro</value>
+  </data>
+  <data name="&gt;&gt;lbl_Bairro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Bairro.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Bairro.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="txbEndereco.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 129</value>
+  </data>
+  <data name="txbEndereco.MaxLength" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="txbEndereco.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 22</value>
+  </data>
+  <data name="txbEndereco.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txbEndereco.Name" xml:space="preserve">
+    <value>txbEndereco</value>
+  </data>
+  <data name="&gt;&gt;txbEndereco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbEndereco.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbEndereco.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lbl_Complemento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Complemento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Complemento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>493, 110</value>
+  </data>
+  <data name="lbl_Complemento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 16</value>
+  </data>
+  <data name="lbl_Complemento.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbl_Complemento.Text" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="&gt;&gt;lbl_Complemento.Name" xml:space="preserve">
+    <value>lbl_Complemento</value>
+  </data>
+  <data name="&gt;&gt;lbl_Complemento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Complemento.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Complemento.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txbCidade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 185</value>
+  </data>
+  <data name="txbCidade.MaxLength" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="txbCidade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 22</value>
+  </data>
+  <data name="txbCidade.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txbCidade.Name" xml:space="preserve">
+    <value>txbCidade</value>
+  </data>
+  <data name="&gt;&gt;txbCidade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbCidade.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;txbCidade.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="idPaciente_BD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
+  <data name="idPaciente_BD.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="idPaciente_BD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 14</value>
+  </data>
+  <data name="idPaciente_BD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 18</value>
+  </data>
+  <data name="idPaciente_BD.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;idPaciente_BD.Name" xml:space="preserve">
+    <value>idPaciente_BD</value>
+  </data>
+  <data name="&gt;&gt;idPaciente_BD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;idPaciente_BD.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;idPaciente_BD.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbl_Id.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Id.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Black, 12pt, style=Bold</value>
+  </data>
+  <data name="lbl_Id.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Id.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 11</value>
+  </data>
+  <data name="lbl_Id.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 23</value>
+  </data>
+  <data name="lbl_Id.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbl_Id.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;lbl_Id.Name" xml:space="preserve">
+    <value>lbl_Id</value>
+  </data>
+  <data name="&gt;&gt;lbl_Id.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Id.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;lbl_Id.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="nudFilhos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 239</value>
+  </data>
+  <data name="nudFilhos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 22</value>
+  </data>
+  <data name="nudFilhos.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;nudFilhos.Name" xml:space="preserve">
+    <value>nudFilhos</value>
+  </data>
+  <data name="&gt;&gt;nudFilhos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudFilhos.Parent" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;nudFilhos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grpDadosPaciente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="grpDadosPaciente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="grpDadosPaciente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>664, 334</value>
+  </data>
+  <data name="grpDadosPaciente.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;grpDadosPaciente.Name" xml:space="preserve">
+    <value>grpDadosPaciente</value>
+  </data>
+  <data name="&gt;&gt;grpDadosPaciente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpDadosPaciente.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;grpDadosPaciente.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 350</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Dados do paciente</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tbcCadastroPaciente</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkRenalFamiliar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkRenalFamiliar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkRenalFamiliar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 27</value>
+  </data>
+  <data name="chkRenalFamiliar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 20</value>
+  </data>
+  <data name="chkRenalFamiliar.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="chkRenalFamiliar.Text" xml:space="preserve">
+    <value>Doença Renal</value>
+  </data>
+  <data name="&gt;&gt;chkRenalFamiliar.Name" xml:space="preserve">
+    <value>chkRenalFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkRenalFamiliar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkRenalFamiliar.Parent" xml:space="preserve">
+    <value>grpFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkRenalFamiliar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txbOutrosFamiliar.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txbOutrosFamiliar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 129</value>
+  </data>
+  <data name="txbOutrosFamiliar.MaxLength" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="txbOutrosFamiliar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 22</value>
+  </data>
+  <data name="txbOutrosFamiliar.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;txbOutrosFamiliar.Name" xml:space="preserve">
+    <value>txbOutrosFamiliar</value>
+  </data>
+  <data name="&gt;&gt;txbOutrosFamiliar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbOutrosFamiliar.Parent" xml:space="preserve">
+    <value>grpFamiliar</value>
+  </data>
+  <data name="&gt;&gt;txbOutrosFamiliar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkOutrosFamiliar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkOutrosFamiliar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkOutrosFamiliar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 131</value>
+  </data>
+  <data name="chkOutrosFamiliar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="chkOutrosFamiliar.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="chkOutrosFamiliar.Text" xml:space="preserve">
+    <value>Outros</value>
+  </data>
+  <data name="&gt;&gt;chkOutrosFamiliar.Name" xml:space="preserve">
+    <value>chkOutrosFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkOutrosFamiliar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkOutrosFamiliar.Parent" xml:space="preserve">
+    <value>grpFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkOutrosFamiliar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkCardiovascularFamiliar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkCardiovascularFamiliar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkCardiovascularFamiliar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 105</value>
+  </data>
+  <data name="chkCardiovascularFamiliar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 20</value>
+  </data>
+  <data name="chkCardiovascularFamiliar.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="chkCardiovascularFamiliar.Text" xml:space="preserve">
+    <value>Doença Cardiovascular</value>
+  </data>
+  <data name="&gt;&gt;chkCardiovascularFamiliar.Name" xml:space="preserve">
+    <value>chkCardiovascularFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkCardiovascularFamiliar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkCardiovascularFamiliar.Parent" xml:space="preserve">
+    <value>grpFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkCardiovascularFamiliar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkDiabetesFamiliar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkDiabetesFamiliar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkDiabetesFamiliar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 27</value>
+  </data>
+  <data name="chkDiabetesFamiliar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="chkDiabetesFamiliar.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="chkDiabetesFamiliar.Text" xml:space="preserve">
+    <value>Diabetes Mellitus</value>
+  </data>
+  <data name="&gt;&gt;chkDiabetesFamiliar.Name" xml:space="preserve">
+    <value>chkDiabetesFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkDiabetesFamiliar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDiabetesFamiliar.Parent" xml:space="preserve">
+    <value>grpFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkDiabetesFamiliar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="chkDislipidemiasFamiliar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkDislipidemiasFamiliar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkDislipidemiasFamiliar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 54</value>
+  </data>
+  <data name="chkDislipidemiasFamiliar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 20</value>
+  </data>
+  <data name="chkDislipidemiasFamiliar.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="chkDislipidemiasFamiliar.Text" xml:space="preserve">
+    <value>Dislipidemias</value>
+  </data>
+  <data name="&gt;&gt;chkDislipidemiasFamiliar.Name" xml:space="preserve">
+    <value>chkDislipidemiasFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkDislipidemiasFamiliar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDislipidemiasFamiliar.Parent" xml:space="preserve">
+    <value>grpFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkDislipidemiasFamiliar.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="chkNeurologicaFamiliar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkNeurologicaFamiliar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkNeurologicaFamiliar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 80</value>
+  </data>
+  <data name="chkNeurologicaFamiliar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 20</value>
+  </data>
+  <data name="chkNeurologicaFamiliar.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="chkNeurologicaFamiliar.Text" xml:space="preserve">
+    <value>Doença Neurológica</value>
+  </data>
+  <data name="&gt;&gt;chkNeurologicaFamiliar.Name" xml:space="preserve">
+    <value>chkNeurologicaFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkNeurologicaFamiliar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkNeurologicaFamiliar.Parent" xml:space="preserve">
+    <value>grpFamiliar</value>
+  </data>
+  <data name="&gt;&gt;chkNeurologicaFamiliar.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="grpFamiliar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="grpFamiliar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 180</value>
+  </data>
+  <data name="grpFamiliar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>323, 160</value>
+  </data>
+  <data name="grpFamiliar.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="grpFamiliar.Text" xml:space="preserve">
+    <value>Familiar</value>
+  </data>
+  <data name="&gt;&gt;grpFamiliar.Name" xml:space="preserve">
+    <value>grpFamiliar</value>
+  </data>
+  <data name="&gt;&gt;grpFamiliar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpFamiliar.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;grpFamiliar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaUrinaria.Name" xml:space="preserve">
+    <value>chkIncontinenciaUrinaria</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaUrinaria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaUrinaria.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaUrinaria.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaFecal.Name" xml:space="preserve">
+    <value>chkIncontinenciaFecal</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaFecal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaFecal.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaFecal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkDemencia.Name" xml:space="preserve">
+    <value>chkDemencia</value>
+  </data>
+  <data name="&gt;&gt;chkDemencia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDemencia.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkDemencia.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chkQueda.Name" xml:space="preserve">
+    <value>chkQueda</value>
+  </data>
+  <data name="&gt;&gt;chkQueda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkQueda.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkQueda.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkHospitalizacao.Name" xml:space="preserve">
+    <value>chkHospitalizacao</value>
+  </data>
+  <data name="&gt;&gt;chkHospitalizacao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkHospitalizacao.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkHospitalizacao.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="grpCondFrequentes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="grpCondFrequentes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 6</value>
+  </data>
+  <data name="grpCondFrequentes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 168</value>
+  </data>
+  <data name="grpCondFrequentes.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="grpCondFrequentes.Text" xml:space="preserve">
+    <value>Condições Frequentes</value>
+  </data>
+  <data name="&gt;&gt;grpCondFrequentes.Name" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;grpCondFrequentes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpCondFrequentes.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;grpCondFrequentes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkRenal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkRenal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkRenal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 244</value>
+  </data>
+  <data name="chkRenal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 20</value>
+  </data>
+  <data name="chkRenal.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="chkRenal.Text" xml:space="preserve">
+    <value>Doença Renal</value>
+  </data>
+  <data name="&gt;&gt;chkRenal.Name" xml:space="preserve">
+    <value>chkRenal</value>
+  </data>
+  <data name="&gt;&gt;chkRenal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkRenal.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkRenal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txbOutros.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txbOutros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 294</value>
+  </data>
+  <data name="txbOutros.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="txbOutros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 22</value>
+  </data>
+  <data name="txbOutros.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;txbOutros.Name" xml:space="preserve">
+    <value>txbOutros</value>
+  </data>
+  <data name="&gt;&gt;txbOutros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbOutros.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;txbOutros.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkMusculoEsqueletica.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkMusculoEsqueletica.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkMusculoEsqueletica.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 166</value>
+  </data>
+  <data name="chkMusculoEsqueletica.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 20</value>
+  </data>
+  <data name="chkMusculoEsqueletica.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="chkMusculoEsqueletica.Text" xml:space="preserve">
+    <value>Doença Musculoesquelética</value>
+  </data>
+  <data name="&gt;&gt;chkMusculoEsqueletica.Name" xml:space="preserve">
+    <value>chkMusculoEsqueletica</value>
+  </data>
+  <data name="&gt;&gt;chkMusculoEsqueletica.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkMusculoEsqueletica.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkMusculoEsqueletica.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkOutros.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkOutros.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkOutros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 296</value>
+  </data>
+  <data name="chkOutros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="chkOutros.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="chkOutros.Text" xml:space="preserve">
+    <value>Outros</value>
+  </data>
+  <data name="&gt;&gt;chkOutros.Name" xml:space="preserve">
+    <value>chkOutros</value>
+  </data>
+  <data name="&gt;&gt;chkOutros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkOutros.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkOutros.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkTabagismo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkTabagismo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkTabagismo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 33</value>
+  </data>
+  <data name="chkTabagismo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="chkTabagismo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkTabagismo.Text" xml:space="preserve">
+    <value>Tabagismo</value>
+  </data>
+  <data name="&gt;&gt;chkTabagismo.Name" xml:space="preserve">
+    <value>chkTabagismo</value>
+  </data>
+  <data name="&gt;&gt;chkTabagismo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkTabagismo.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkTabagismo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="chkSexual.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkSexual.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkSexual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 270</value>
+  </data>
+  <data name="chkSexual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 20</value>
+  </data>
+  <data name="chkSexual.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="chkSexual.Text" xml:space="preserve">
+    <value>Disfunção Sexual</value>
+  </data>
+  <data name="&gt;&gt;chkSexual.Name" xml:space="preserve">
+    <value>chkSexual</value>
+  </data>
+  <data name="&gt;&gt;chkSexual.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSexual.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkSexual.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="chkEtilismo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkEtilismo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkEtilismo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 62</value>
+  </data>
+  <data name="chkEtilismo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <data name="chkEtilismo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chkEtilismo.Text" xml:space="preserve">
+    <value>Etilismo</value>
+  </data>
+  <data name="&gt;&gt;chkEtilismo.Name" xml:space="preserve">
+    <value>chkEtilismo</value>
+  </data>
+  <data name="&gt;&gt;chkEtilismo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkEtilismo.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkEtilismo.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="chkRespiratoria.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkRespiratoria.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkRespiratoria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 218</value>
+  </data>
+  <data name="chkRespiratoria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 20</value>
+  </data>
+  <data name="chkRespiratoria.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="chkRespiratoria.Text" xml:space="preserve">
+    <value>Doença Respiratória</value>
+  </data>
+  <data name="&gt;&gt;chkRespiratoria.Name" xml:space="preserve">
+    <value>chkRespiratoria</value>
+  </data>
+  <data name="&gt;&gt;chkRespiratoria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkRespiratoria.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkRespiratoria.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="chkDiabetes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkDiabetes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkDiabetes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 88</value>
+  </data>
+  <data name="chkDiabetes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="chkDiabetes.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chkDiabetes.Text" xml:space="preserve">
+    <value>Diabetes Mellitus</value>
+  </data>
+  <data name="&gt;&gt;chkDiabetes.Name" xml:space="preserve">
+    <value>chkDiabetes</value>
+  </data>
+  <data name="&gt;&gt;chkDiabetes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDiabetes.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkDiabetes.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="chkDislipidemias.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkDislipidemias.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkDislipidemias.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 114</value>
+  </data>
+  <data name="chkDislipidemias.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 20</value>
+  </data>
+  <data name="chkDislipidemias.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="chkDislipidemias.Text" xml:space="preserve">
+    <value>Dislipidemias</value>
+  </data>
+  <data name="&gt;&gt;chkDislipidemias.Name" xml:space="preserve">
+    <value>chkDislipidemias</value>
+  </data>
+  <data name="&gt;&gt;chkDislipidemias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDislipidemias.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkDislipidemias.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="chkNeurologica.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkNeurologica.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkNeurologica.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 192</value>
+  </data>
+  <data name="chkNeurologica.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 20</value>
+  </data>
+  <data name="chkNeurologica.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="chkNeurologica.Text" xml:space="preserve">
+    <value>Doença Neurológica</value>
+  </data>
+  <data name="&gt;&gt;chkNeurologica.Name" xml:space="preserve">
+    <value>chkNeurologica</value>
+  </data>
+  <data name="&gt;&gt;chkNeurologica.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkNeurologica.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkNeurologica.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="chkCardiovascular.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkCardiovascular.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkCardiovascular.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 140</value>
+  </data>
+  <data name="chkCardiovascular.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 20</value>
+  </data>
+  <data name="chkCardiovascular.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="chkCardiovascular.Text" xml:space="preserve">
+    <value>Doença Cardiovascular</value>
+  </data>
+  <data name="&gt;&gt;chkCardiovascular.Name" xml:space="preserve">
+    <value>chkCardiovascular</value>
+  </data>
+  <data name="&gt;&gt;chkCardiovascular.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkCardiovascular.Parent" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;chkCardiovascular.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="grpComorbidades.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="grpComorbidades.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 6</value>
+  </data>
+  <data name="grpComorbidades.Size" type="System.Drawing.Size, System.Drawing">
+    <value>332, 334</value>
+  </data>
+  <data name="grpComorbidades.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="grpComorbidades.Text" xml:space="preserve">
+    <value>Comorbidades</value>
+  </data>
+  <data name="&gt;&gt;grpComorbidades.Name" xml:space="preserve">
+    <value>grpComorbidades</value>
+  </data>
+  <data name="&gt;&gt;grpComorbidades.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpComorbidades.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;grpComorbidades.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 350</value>
+  </data>
+  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>Histórico</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
+    <value>tbcCadastroPaciente</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;grpSonoRepouso.Name" xml:space="preserve">
+    <value>grpSonoRepouso</value>
+  </data>
+  <data name="&gt;&gt;grpSonoRepouso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpSonoRepouso.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;grpSonoRepouso.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;grpVidaSexual.Name" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;grpVidaSexual.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpVidaSexual.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;grpVidaSexual.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;grpAtivFisc.Name" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;grpAtivFisc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpAtivFisc.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;grpAtivFisc.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;grpAlimentação.Name" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;grpAlimentação.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpAlimentação.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;grpAlimentação.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabPage5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 350</value>
+  </data>
+  <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>Hábitos</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Name" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Parent" xml:space="preserve">
+    <value>tbcCadastroPaciente</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tbcCadastroPaciente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="tbcCadastroPaciente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="tbcCadastroPaciente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>690, 379</value>
+  </data>
+  <data name="tbcCadastroPaciente.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;tbcCadastroPaciente.Name" xml:space="preserve">
+    <value>tbcCadastroPaciente</value>
+  </data>
+  <data name="&gt;&gt;tbcCadastroPaciente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbcCadastroPaciente.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbcCadastroPaciente.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkIncontinenciaUrinaria.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkIncontinenciaUrinaria.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkIncontinenciaUrinaria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 27</value>
+  </data>
+  <data name="chkIncontinenciaUrinaria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 20</value>
+  </data>
+  <data name="chkIncontinenciaUrinaria.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkIncontinenciaUrinaria.Text" xml:space="preserve">
+    <value>Incontinência Urinária</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaUrinaria.Name" xml:space="preserve">
+    <value>chkIncontinenciaUrinaria</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaUrinaria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaUrinaria.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaUrinaria.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkIncontinenciaFecal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkIncontinenciaFecal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkIncontinenciaFecal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 56</value>
+  </data>
+  <data name="chkIncontinenciaFecal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="chkIncontinenciaFecal.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chkIncontinenciaFecal.Text" xml:space="preserve">
+    <value>Incontinência Fecal</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaFecal.Name" xml:space="preserve">
+    <value>chkIncontinenciaFecal</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaFecal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaFecal.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkIncontinenciaFecal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkDemencia.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkDemencia.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkDemencia.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 82</value>
+  </data>
+  <data name="chkDemencia.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 20</value>
+  </data>
+  <data name="chkDemencia.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chkDemencia.Text" xml:space="preserve">
+    <value>Declínio Cognitivo (Demência)</value>
+  </data>
+  <data name="&gt;&gt;chkDemencia.Name" xml:space="preserve">
+    <value>chkDemencia</value>
+  </data>
+  <data name="&gt;&gt;chkDemencia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDemencia.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkDemencia.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkQueda.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkQueda.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkQueda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 108</value>
+  </data>
+  <data name="chkQueda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="chkQueda.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="chkQueda.Text" xml:space="preserve">
+    <value>Queda</value>
+  </data>
+  <data name="&gt;&gt;chkQueda.Name" xml:space="preserve">
+    <value>chkQueda</value>
+  </data>
+  <data name="&gt;&gt;chkQueda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkQueda.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkQueda.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkHospitalizacao.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkHospitalizacao.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkHospitalizacao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 134</value>
+  </data>
+  <data name="chkHospitalizacao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="chkHospitalizacao.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="chkHospitalizacao.Text" xml:space="preserve">
+    <value>Hospitalização</value>
+  </data>
+  <data name="&gt;&gt;chkHospitalizacao.Name" xml:space="preserve">
+    <value>chkHospitalizacao</value>
+  </data>
+  <data name="&gt;&gt;chkHospitalizacao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkHospitalizacao.Parent" xml:space="preserve">
+    <value>grpCondFrequentes</value>
+  </data>
+  <data name="&gt;&gt;chkHospitalizacao.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;radDormePouco.Name" xml:space="preserve">
+    <value>radDormePouco</value>
+  </data>
+  <data name="&gt;&gt;radDormePouco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radDormePouco.Parent" xml:space="preserve">
+    <value>grpSonoRepouso</value>
+  </data>
+  <data name="&gt;&gt;radDormePouco.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radDormeBem.Name" xml:space="preserve">
+    <value>radDormeBem</value>
+  </data>
+  <data name="&gt;&gt;radDormeBem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radDormeBem.Parent" xml:space="preserve">
+    <value>grpSonoRepouso</value>
+  </data>
+  <data name="&gt;&gt;radDormeBem.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkDormeMedicação.Name" xml:space="preserve">
+    <value>chkDormeMedicação</value>
+  </data>
+  <data name="&gt;&gt;chkDormeMedicação.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDormeMedicação.Parent" xml:space="preserve">
+    <value>grpSonoRepouso</value>
+  </data>
+  <data name="&gt;&gt;chkDormeMedicação.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="grpSonoRepouso.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="grpSonoRepouso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 209</value>
+  </data>
+  <data name="grpSonoRepouso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 131</value>
+  </data>
+  <data name="grpSonoRepouso.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="grpSonoRepouso.Text" xml:space="preserve">
+    <value>Sono e Repouso</value>
+  </data>
+  <data name="&gt;&gt;grpSonoRepouso.Name" xml:space="preserve">
+    <value>grpSonoRepouso</value>
+  </data>
+  <data name="&gt;&gt;grpSonoRepouso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpSonoRepouso.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;grpSonoRepouso.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radDormePouco.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radDormePouco.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radDormePouco.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 64</value>
+  </data>
+  <data name="radDormePouco.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 20</value>
+  </data>
+  <data name="radDormePouco.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="radDormePouco.Text" xml:space="preserve">
+    <value>Dorme pouco</value>
+  </data>
+  <data name="&gt;&gt;radDormePouco.Name" xml:space="preserve">
+    <value>radDormePouco</value>
+  </data>
+  <data name="&gt;&gt;radDormePouco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radDormePouco.Parent" xml:space="preserve">
+    <value>grpSonoRepouso</value>
+  </data>
+  <data name="&gt;&gt;radDormePouco.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radDormeBem.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radDormeBem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radDormeBem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 40</value>
+  </data>
+  <data name="radDormeBem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 20</value>
+  </data>
+  <data name="radDormeBem.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="radDormeBem.Text" xml:space="preserve">
+    <value>Dorme bem</value>
+  </data>
+  <data name="&gt;&gt;radDormeBem.Name" xml:space="preserve">
+    <value>radDormeBem</value>
+  </data>
+  <data name="&gt;&gt;radDormeBem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radDormeBem.Parent" xml:space="preserve">
+    <value>grpSonoRepouso</value>
+  </data>
+  <data name="&gt;&gt;radDormeBem.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkDormeMedicação.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkDormeMedicação.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkDormeMedicação.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 90</value>
+  </data>
+  <data name="chkDormeMedicação.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 20</value>
+  </data>
+  <data name="chkDormeMedicação.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chkDormeMedicação.Text" xml:space="preserve">
+    <value>Dorme somente com medicação</value>
+  </data>
+  <data name="&gt;&gt;chkDormeMedicação.Name" xml:space="preserve">
+    <value>chkDormeMedicação</value>
+  </data>
+  <data name="&gt;&gt;chkDormeMedicação.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDormeMedicação.Parent" xml:space="preserve">
+    <value>grpSonoRepouso</value>
+  </data>
+  <data name="&gt;&gt;chkDormeMedicação.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnlMultParceiros.Name" xml:space="preserve">
+    <value>pnlMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;pnlMultParceiros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMultParceiros.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;pnlMultParceiros.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblMultParceiros.Name" xml:space="preserve">
+    <value>lblMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;lblMultParceiros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMultParceiros.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;lblMultParceiros.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;radNaoSexualAtivo.Name" xml:space="preserve">
+    <value>radNaoSexualAtivo</value>
+  </data>
+  <data name="&gt;&gt;radNaoSexualAtivo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radNaoSexualAtivo.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;radNaoSexualAtivo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblSexualAtivo.Name" xml:space="preserve">
+    <value>lblSexualAtivo</value>
+  </data>
+  <data name="&gt;&gt;lblSexualAtivo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSexualAtivo.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;lblSexualAtivo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;radSimSexualAtivo.Name" xml:space="preserve">
+    <value>radSimSexualAtivo</value>
+  </data>
+  <data name="&gt;&gt;radSimSexualAtivo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radSimSexualAtivo.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;radSimSexualAtivo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="grpVidaSexual.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="grpVidaSexual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 188</value>
+  </data>
+  <data name="grpVidaSexual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 152</value>
+  </data>
+  <data name="grpVidaSexual.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="grpVidaSexual.Text" xml:space="preserve">
+    <value>Vida Sexual</value>
+  </data>
+  <data name="&gt;&gt;grpVidaSexual.Name" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;grpVidaSexual.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpVidaSexual.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;grpVidaSexual.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;radSimMultParceiros.Name" xml:space="preserve">
+    <value>radSimMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;radSimMultParceiros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radSimMultParceiros.Parent" xml:space="preserve">
+    <value>pnlMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;radSimMultParceiros.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radNaoMultParceiros.Name" xml:space="preserve">
+    <value>radNaoMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;radNaoMultParceiros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radNaoMultParceiros.Parent" xml:space="preserve">
+    <value>pnlMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;radNaoMultParceiros.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlMultParceiros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 90</value>
+  </data>
+  <data name="pnlMultParceiros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 28</value>
+  </data>
+  <data name="pnlMultParceiros.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;pnlMultParceiros.Name" xml:space="preserve">
+    <value>pnlMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;pnlMultParceiros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMultParceiros.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;pnlMultParceiros.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radSimMultParceiros.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radSimMultParceiros.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radSimMultParceiros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 6</value>
+  </data>
+  <data name="radSimMultParceiros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="radSimMultParceiros.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="radSimMultParceiros.Text" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="&gt;&gt;radSimMultParceiros.Name" xml:space="preserve">
+    <value>radSimMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;radSimMultParceiros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radSimMultParceiros.Parent" xml:space="preserve">
+    <value>pnlMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;radSimMultParceiros.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radNaoMultParceiros.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radNaoMultParceiros.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radNaoMultParceiros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 6</value>
+  </data>
+  <data name="radNaoMultParceiros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="radNaoMultParceiros.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="radNaoMultParceiros.Text" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="&gt;&gt;radNaoMultParceiros.Name" xml:space="preserve">
+    <value>radNaoMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;radNaoMultParceiros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radNaoMultParceiros.Parent" xml:space="preserve">
+    <value>pnlMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;radNaoMultParceiros.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblMultParceiros.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMultParceiros.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMultParceiros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 98</value>
+  </data>
+  <data name="lblMultParceiros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 16</value>
+  </data>
+  <data name="lblMultParceiros.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="lblMultParceiros.Text" xml:space="preserve">
+    <value>Múltiplos parceiros?</value>
+  </data>
+  <data name="&gt;&gt;lblMultParceiros.Name" xml:space="preserve">
+    <value>lblMultParceiros</value>
+  </data>
+  <data name="&gt;&gt;lblMultParceiros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMultParceiros.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;lblMultParceiros.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radNaoSexualAtivo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radNaoSexualAtivo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radNaoSexualAtivo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 47</value>
+  </data>
+  <data name="radNaoSexualAtivo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="radNaoSexualAtivo.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="radNaoSexualAtivo.Text" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="&gt;&gt;radNaoSexualAtivo.Name" xml:space="preserve">
+    <value>radNaoSexualAtivo</value>
+  </data>
+  <data name="&gt;&gt;radNaoSexualAtivo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radNaoSexualAtivo.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;radNaoSexualAtivo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblSexualAtivo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSexualAtivo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSexualAtivo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 49</value>
+  </data>
+  <data name="lblSexualAtivo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="lblSexualAtivo.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lblSexualAtivo.Text" xml:space="preserve">
+    <value>Vida Sexual Ativa?</value>
+  </data>
+  <data name="&gt;&gt;lblSexualAtivo.Name" xml:space="preserve">
+    <value>lblSexualAtivo</value>
+  </data>
+  <data name="&gt;&gt;lblSexualAtivo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSexualAtivo.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;lblSexualAtivo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radSimSexualAtivo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radSimSexualAtivo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radSimSexualAtivo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 47</value>
+  </data>
+  <data name="radSimSexualAtivo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="radSimSexualAtivo.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="radSimSexualAtivo.Text" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="&gt;&gt;radSimSexualAtivo.Name" xml:space="preserve">
+    <value>radSimSexualAtivo</value>
+  </data>
+  <data name="&gt;&gt;radSimSexualAtivo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radSimSexualAtivo.Parent" xml:space="preserve">
+    <value>grpVidaSexual</value>
+  </data>
+  <data name="&gt;&gt;radSimSexualAtivo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblNumAtivFisic.Name" xml:space="preserve">
+    <value>lblNumAtivFisic</value>
+  </data>
+  <data name="&gt;&gt;lblNumAtivFisic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNumAtivFisic.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;lblNumAtivFisic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;nudAtivFis.Name" xml:space="preserve">
+    <value>nudAtivFis</value>
+  </data>
+  <data name="&gt;&gt;nudAtivFis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudAtivFis.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;nudAtivFis.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;radNãoAtivFis.Name" xml:space="preserve">
+    <value>radNãoAtivFis</value>
+  </data>
+  <data name="&gt;&gt;radNãoAtivFis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radNãoAtivFis.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;radNãoAtivFis.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblAtividadeFisica.Name" xml:space="preserve">
+    <value>lblAtividadeFisica</value>
+  </data>
+  <data name="&gt;&gt;lblAtividadeFisica.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAtividadeFisica.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;lblAtividadeFisica.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;radSimAtivFis.Name" xml:space="preserve">
+    <value>radSimAtivFis</value>
+  </data>
+  <data name="&gt;&gt;radSimAtivFis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radSimAtivFis.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;radSimAtivFis.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="grpAtivFisc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="grpAtivFisc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 9</value>
+  </data>
+  <data name="grpAtivFisc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 173</value>
+  </data>
+  <data name="grpAtivFisc.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="grpAtivFisc.Text" xml:space="preserve">
+    <value>Atividade Física</value>
+  </data>
+  <data name="&gt;&gt;grpAtivFisc.Name" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;grpAtivFisc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpAtivFisc.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;grpAtivFisc.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblNumAtivFisic.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNumAtivFisic.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNumAtivFisic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 108</value>
+  </data>
+  <data name="lblNumAtivFisic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 16</value>
+  </data>
+  <data name="lblNumAtivFisic.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblNumAtivFisic.Text" xml:space="preserve">
+    <value>Nº vezes na semana</value>
+  </data>
+  <data name="&gt;&gt;lblNumAtivFisic.Name" xml:space="preserve">
+    <value>lblNumAtivFisic</value>
+  </data>
+  <data name="&gt;&gt;lblNumAtivFisic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNumAtivFisic.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;lblNumAtivFisic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="nudAtivFis.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="nudAtivFis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 106</value>
+  </data>
+  <data name="nudAtivFis.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 22</value>
+  </data>
+  <data name="nudAtivFis.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;nudAtivFis.Name" xml:space="preserve">
+    <value>nudAtivFis</value>
+  </data>
+  <data name="&gt;&gt;nudAtivFis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudAtivFis.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;nudAtivFis.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radNãoAtivFis.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radNãoAtivFis.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radNãoAtivFis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 50</value>
+  </data>
+  <data name="radNãoAtivFis.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="radNãoAtivFis.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="radNãoAtivFis.Text" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="&gt;&gt;radNãoAtivFis.Name" xml:space="preserve">
+    <value>radNãoAtivFis</value>
+  </data>
+  <data name="&gt;&gt;radNãoAtivFis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radNãoAtivFis.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;radNãoAtivFis.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblAtividadeFisica.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblAtividadeFisica.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAtividadeFisica.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 52</value>
+  </data>
+  <data name="lblAtividadeFisica.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 16</value>
+  </data>
+  <data name="lblAtividadeFisica.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblAtividadeFisica.Text" xml:space="preserve">
+    <value>Realiza Atividades Físicas?</value>
+  </data>
+  <data name="&gt;&gt;lblAtividadeFisica.Name" xml:space="preserve">
+    <value>lblAtividadeFisica</value>
+  </data>
+  <data name="&gt;&gt;lblAtividadeFisica.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAtividadeFisica.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;lblAtividadeFisica.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radSimAtivFis.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radSimAtivFis.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radSimAtivFis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 50</value>
+  </data>
+  <data name="radSimAtivFis.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="radSimAtivFis.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="radSimAtivFis.Text" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="&gt;&gt;radSimAtivFis.Name" xml:space="preserve">
+    <value>radSimAtivFis</value>
+  </data>
+  <data name="&gt;&gt;radSimAtivFis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radSimAtivFis.Parent" xml:space="preserve">
+    <value>grpAtivFisc</value>
+  </data>
+  <data name="&gt;&gt;radSimAtivFis.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chkLiquidos.Name" xml:space="preserve">
+    <value>chkLiquidos</value>
+  </data>
+  <data name="&gt;&gt;chkLiquidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkLiquidos.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkLiquidos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkMassas.Name" xml:space="preserve">
+    <value>chkMassas</value>
+  </data>
+  <data name="&gt;&gt;chkMassas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkMassas.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkMassas.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkLeguminosasVerduras.Name" xml:space="preserve">
+    <value>chkLeguminosasVerduras</value>
+  </data>
+  <data name="&gt;&gt;chkLeguminosasVerduras.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkLeguminosasVerduras.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkLeguminosasVerduras.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chkProteinas.Name" xml:space="preserve">
+    <value>chkProteinas</value>
+  </data>
+  <data name="&gt;&gt;chkProteinas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkProteinas.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkProteinas.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkLeiteDerivados.Name" xml:space="preserve">
+    <value>chkLeiteDerivados</value>
+  </data>
+  <data name="&gt;&gt;chkLeiteDerivados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkLeiteDerivados.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkLeiteDerivados.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chkFrutas.Name" xml:space="preserve">
+    <value>chkFrutas</value>
+  </data>
+  <data name="&gt;&gt;chkFrutas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkFrutas.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkFrutas.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="grpAlimentação.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="grpAlimentação.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 9</value>
+  </data>
+  <data name="grpAlimentação.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 193</value>
+  </data>
+  <data name="grpAlimentação.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="grpAlimentação.Text" xml:space="preserve">
+    <value>Alimentação</value>
+  </data>
+  <data name="&gt;&gt;grpAlimentação.Name" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;grpAlimentação.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpAlimentação.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;grpAlimentação.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkLiquidos.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkLiquidos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkLiquidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 158</value>
+  </data>
+  <data name="chkLiquidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="chkLiquidos.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="chkLiquidos.Text" xml:space="preserve">
+    <value>Líquidos</value>
+  </data>
+  <data name="&gt;&gt;chkLiquidos.Name" xml:space="preserve">
+    <value>chkLiquidos</value>
+  </data>
+  <data name="&gt;&gt;chkLiquidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkLiquidos.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkLiquidos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkMassas.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkMassas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkMassas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 134</value>
+  </data>
+  <data name="chkMassas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 20</value>
+  </data>
+  <data name="chkMassas.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="chkMassas.Text" xml:space="preserve">
+    <value>Pães, massas, batatas</value>
+  </data>
+  <data name="&gt;&gt;chkMassas.Name" xml:space="preserve">
+    <value>chkMassas</value>
+  </data>
+  <data name="&gt;&gt;chkMassas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkMassas.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkMassas.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkLeguminosasVerduras.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkLeguminosasVerduras.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkLeguminosasVerduras.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 82</value>
+  </data>
+  <data name="chkLeguminosasVerduras.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 20</value>
+  </data>
+  <data name="chkLeguminosasVerduras.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="chkLeguminosasVerduras.Text" xml:space="preserve">
+    <value>Leguminosas/Verduras</value>
+  </data>
+  <data name="&gt;&gt;chkLeguminosasVerduras.Name" xml:space="preserve">
+    <value>chkLeguminosasVerduras</value>
+  </data>
+  <data name="&gt;&gt;chkLeguminosasVerduras.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkLeguminosasVerduras.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkLeguminosasVerduras.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkProteinas.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkProteinas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkProteinas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 108</value>
+  </data>
+  <data name="chkProteinas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="chkProteinas.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chkProteinas.Text" xml:space="preserve">
+    <value>Proteínas</value>
+  </data>
+  <data name="&gt;&gt;chkProteinas.Name" xml:space="preserve">
+    <value>chkProteinas</value>
+  </data>
+  <data name="&gt;&gt;chkProteinas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkProteinas.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkProteinas.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkLeiteDerivados.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkLeiteDerivados.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkLeiteDerivados.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 56</value>
+  </data>
+  <data name="chkLeiteDerivados.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 20</value>
+  </data>
+  <data name="chkLeiteDerivados.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chkLeiteDerivados.Text" xml:space="preserve">
+    <value>Leites/Derivados</value>
+  </data>
+  <data name="&gt;&gt;chkLeiteDerivados.Name" xml:space="preserve">
+    <value>chkLeiteDerivados</value>
+  </data>
+  <data name="&gt;&gt;chkLeiteDerivados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkLeiteDerivados.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkLeiteDerivados.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="chkFrutas.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkFrutas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkFrutas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 31</value>
+  </data>
+  <data name="chkFrutas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="chkFrutas.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkFrutas.Text" xml:space="preserve">
+    <value>Frutas</value>
+  </data>
+  <data name="&gt;&gt;chkFrutas.Name" xml:space="preserve">
+    <value>chkFrutas</value>
+  </data>
+  <data name="&gt;&gt;chkFrutas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkFrutas.Parent" xml:space="preserve">
+    <value>grpAlimentação</value>
+  </data>
+  <data name="&gt;&gt;chkFrutas.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="mnsFunçõesCadastroPac.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="mnsFunçõesCadastroPac.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="mnsFunçõesCadastroPac.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mnsFunçõesCadastroPac.Size" type="System.Drawing.Size, System.Drawing">
+    <value>690, 24</value>
+  </data>
+  <data name="mnsFunçõesCadastroPac.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;mnsFunçõesCadastroPac.Name" xml:space="preserve">
+    <value>mnsFunçõesCadastroPac</value>
+  </data>
+  <data name="&gt;&gt;mnsFunçõesCadastroPac.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnsFunçõesCadastroPac.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mnsFunçõesCadastroPac.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tsmiSalvar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 20</value>
+  </data>
+  <data name="tsmiSalvar.Text" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="tsmiLimpar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <data name="tsmiLimpar.Text" xml:space="preserve">
+    <value>Limpar</value>
+  </data>
+  <data name="tsmiCancelar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 20</value>
+  </data>
+  <data name="tsmiCancelar.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>690, 407</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Cadastro Paciente</value>
+  </data>
+  <data name="&gt;&gt;tsmiSalvar.Name" xml:space="preserve">
+    <value>tsmiSalvar</value>
+  </data>
+  <data name="&gt;&gt;tsmiSalvar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiLimpar.Name" xml:space="preserve">
+    <value>tsmiLimpar</value>
+  </data>
+  <data name="&gt;&gt;tsmiLimpar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiCancelar.Name" xml:space="preserve">
+    <value>tsmiCancelar</value>
+  </data>
+  <data name="&gt;&gt;tsmiCancelar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmCadastrarPaciente</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

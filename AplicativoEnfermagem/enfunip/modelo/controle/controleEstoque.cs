@@ -1,0 +1,129 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using enfunip.modelo.validacoes;
+using enfunip.dao;
+
+
+namespace enfunip.modelo.controle
+{
+    public class controleEstoque
+    {
+        public String mensagem;
+        public void CadastrarItem(List<String> dadosItem)
+        {
+            this.mensagem = "";
+            validarEstoque validarestoque = new validarEstoque();
+            validarestoque.ValidarDados(dadosItem);
+            if (validarestoque.mensagem.Equals(""))
+            {
+                Estoque estoque = new Estoque();
+                estoque.dataentrada = Convert.ToDateTime(dadosItem[2]);
+                estoque.produto = dadosItem[1];
+                estoque.quantidade = (Convert.ToInt32(dadosItem[5]));
+                estoque.fabricante = dadosItem[3];
+                estoque.categoria = dadosItem[4];
+                estoque.descricao = dadosItem[6];
+                Estoquedao estoqueDAO = new Estoquedao();
+                estoqueDAO.CadastrarItem(estoque);
+                this.mensagem = estoqueDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validarestoque.mensagem;
+            }
+        }
+
+        public Estoque PesquisarItemPorID(List<String> dadosEstoque)
+        {
+            this.mensagem = "";
+            Estoque estoque = new Estoque();
+            validarEstoque validarestoque = new validarEstoque();
+            validarestoque.ValidarDados(dadosEstoque);
+            if (validarestoque.mensagem.Equals(""))
+            {
+                estoque.id = validarestoque.id;
+                Estoquedao estoqueDAO = new Estoquedao();
+                estoque = estoqueDAO.PesquisarItemPorID(estoque);
+                this.mensagem = estoqueDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validarestoque.mensagem;
+            }
+            return estoque;
+        }
+
+        public void EditarItem(List<String> dadosEstoque)
+        {
+            this.mensagem = "";
+            Estoque estoque = new Estoque();
+            validarEstoque validarestoque = new validarEstoque();
+            if (validarestoque.mensagem.Equals(""))
+            {
+                Estoque estoque1 = new Estoque();
+                estoque1.dataentrada = Convert.ToDateTime(dadosEstoque[2]);
+                estoque1.produto = dadosEstoque[1];
+                estoque1.quantidade = Convert.ToInt32(dadosEstoque[5]);
+                estoque1.fabricante = dadosEstoque[3];
+                estoque1.categoria = dadosEstoque[4];
+                estoque1.descricao = dadosEstoque[6];
+                Estoquedao estoqueDAO = new Estoquedao();
+                estoqueDAO.EditarItem(estoque1);
+                this.mensagem = estoqueDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validarestoque.mensagem;
+            }
+        }
+
+
+        public void ExcluirItem(List<String> dadosEstoque)
+        {
+            this.mensagem = "";
+            validarEstoque validarestoque = new validarEstoque();
+            validarestoque.ValidarDados(dadosEstoque);
+            if (validarestoque.mensagem.Equals(""))
+            {
+                Estoque estoque = new Estoque(); 
+                estoque.id = validarestoque.id;
+                Estoquedao estoqueDAO = new Estoquedao();
+                if (estoqueDAO.PesquisarItemPorID(estoque).produto != null)
+                {
+                    estoqueDAO.ExcluirItem(estoque);
+                    this.mensagem = estoqueDAO.mensagem;
+                }
+                else
+                {
+                    this.mensagem = "Não existe este ID";
+                }
+            }
+            else
+            {
+                this.mensagem = validarestoque.mensagem;
+            }
+        }
+
+        public void PesquisarItemPorNome(List<String> dadosEstoque)
+        {
+            this.mensagem = "";
+            validarEstoque validarestoque = new validarEstoque();
+            validarestoque.ValidarDados(dadosEstoque);
+            if (validarestoque.mensagem.Equals(""))
+            {
+                Estoquedao estoqueDAO = new Estoquedao();
+                Estoque estoque = new Estoque();
+                estoque.produto = dadosEstoque[1];
+                Estaticos.listaEstoqueEstatico =
+                    estoqueDAO.PesquisarItemPorNome(estoque);
+            }
+            else
+            {
+                this.mensagem = validarestoque.mensagem;
+            }
+        }
+    }
+}
