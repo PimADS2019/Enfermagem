@@ -19,12 +19,27 @@ namespace enfunip.apresentacao
 
         private void tsmiCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+             DialogResult confirm = MessageBox.Show("Deseja Fechar o Cadastro de Produtos?", "Fechar Cadastro de Produtos", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+                this.Close();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tsmiLimpar_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Deseja Limpar Todos os Campos?", "Limpar Todos os Campos", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                txbProduto.Clear();
+                nudQtdProduto.ResetText();
+                txbObsProduto.Clear();
+            }
         }
     }
 }

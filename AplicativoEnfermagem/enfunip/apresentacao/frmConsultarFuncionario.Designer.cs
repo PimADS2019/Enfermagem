@@ -33,7 +33,6 @@
             this.btnEditarFuncionario = new System.Windows.Forms.Button();
             this.btnIncuirFuncionario = new System.Windows.Forms.Button();
             this.txbConsultarFuncionario = new System.Windows.Forms.TextBox();
-            this.btnPesqFunc = new System.Windows.Forms.Button();
             this.lstFuncionarios = new System.Windows.Forms.ListBox();
             this.btnFecharPesqFunc = new System.Windows.Forms.Button();
             this.grpConsultaPaciente.SuspendLayout();
@@ -46,7 +45,6 @@
             this.grpConsultaPaciente.Controls.Add(this.btnEditarFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.btnIncuirFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.txbConsultarFuncionario);
-            this.grpConsultaPaciente.Controls.Add(this.btnPesqFunc);
             this.grpConsultaPaciente.Controls.Add(this.lstFuncionarios);
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqFunc);
             this.grpConsultaPaciente.Location = new System.Drawing.Point(4, -3);
@@ -92,23 +90,10 @@
             this.txbConsultarFuncionario.Location = new System.Drawing.Point(6, 39);
             this.txbConsultarFuncionario.MaxLength = 50;
             this.txbConsultarFuncionario.Name = "txbConsultarFuncionario";
-            this.txbConsultarFuncionario.Size = new System.Drawing.Size(516, 22);
+            this.txbConsultarFuncionario.Size = new System.Drawing.Size(534, 22);
             this.txbConsultarFuncionario.TabIndex = 47;
             this.txbConsultarFuncionario.Text = "Insira nome do funcionário";
             this.txbConsultarFuncionario.Click += new System.EventHandler(this.txbConsultarFuncionario_Click);
-            // 
-            // btnPesqFunc
-            // 
-            this.btnPesqFunc.BackgroundImage = global::enfunip.Properties.Resources.icons8_pesquisar_26;
-            this.btnPesqFunc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesqFunc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPesqFunc.Location = new System.Drawing.Point(518, 38);
-            this.btnPesqFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPesqFunc.Name = "btnPesqFunc";
-            this.btnPesqFunc.Size = new System.Drawing.Size(22, 23);
-            this.btnPesqFunc.TabIndex = 46;
-            this.btnPesqFunc.Text = "...";
-            this.btnPesqFunc.UseVisualStyleBackColor = true;
             // 
             // lstFuncionarios
             // 
@@ -160,7 +145,6 @@
         private System.Windows.Forms.GroupBox grpConsultaPaciente;
         private System.Windows.Forms.Button btnFecharPesqFunc;
         private System.Windows.Forms.TextBox txbConsultarFuncionario;
-        private System.Windows.Forms.Button btnPesqFunc;
         private System.Windows.Forms.ListBox lstFuncionarios;
         private System.Windows.Forms.Button btnExcluirFuncionario;
         private System.Windows.Forms.Button btnEditarFuncionario;

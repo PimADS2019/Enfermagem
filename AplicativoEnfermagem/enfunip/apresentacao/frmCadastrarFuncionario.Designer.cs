@@ -45,7 +45,7 @@
             this.txbCep = new System.Windows.Forms.MaskedTextBox();
             this.txbCidade = new System.Windows.Forms.TextBox();
             this.lbl_Numero = new System.Windows.Forms.Label();
-            this.txbEstado = new System.Windows.Forms.ComboBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.lbl_Complemento = new System.Windows.Forms.Label();
             this.lbl_Endereco = new System.Windows.Forms.Label();
             this.lblDataNascimento = new System.Windows.Forms.Label();
@@ -92,7 +92,7 @@
             this.grpDadosPaciente.Controls.Add(this.txbCep);
             this.grpDadosPaciente.Controls.Add(this.txbCidade);
             this.grpDadosPaciente.Controls.Add(this.lbl_Numero);
-            this.grpDadosPaciente.Controls.Add(this.txbEstado);
+            this.grpDadosPaciente.Controls.Add(this.cboEstado);
             this.grpDadosPaciente.Controls.Add(this.lbl_Complemento);
             this.grpDadosPaciente.Controls.Add(this.lbl_Endereco);
             this.grpDadosPaciente.Controls.Add(this.lblDataNascimento);
@@ -135,6 +135,7 @@
             this.txbConfirmaSenha.Name = "txbConfirmaSenha";
             this.txbConfirmaSenha.Size = new System.Drawing.Size(158, 22);
             this.txbConfirmaSenha.TabIndex = 4;
+            this.txbConfirmaSenha.TextChanged += new System.EventHandler(this.txbConfirmaSenha_TextChanged);
             // 
             // lblSenhaCad
             // 
@@ -183,8 +184,8 @@
             // 
             // cboTipoUsuario
             // 
+            this.cboTipoUsuario.BackColor = System.Drawing.Color.White;
             this.cboTipoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoUsuario.FormattingEnabled = true;
             this.cboTipoUsuario.Items.AddRange(new object[] {
             "Coordenador",
@@ -270,14 +271,42 @@
             this.lbl_Numero.TabIndex = 6;
             this.lbl_Numero.Text = "Número";
             // 
-            // txbEstado
+            // cboEstado
             // 
-            this.txbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txbEstado.FormattingEnabled = true;
-            this.txbEstado.Location = new System.Drawing.Point(473, 265);
-            this.txbEstado.Name = "txbEstado";
-            this.txbEstado.Size = new System.Drawing.Size(70, 24);
-            this.txbEstado.TabIndex = 13;
+            this.cboEstado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AM",
+            "AP",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MG",
+            "MS",
+            "MT",
+            "PA",
+            "PB",
+            "PE",
+            "PI",
+            "PR",
+            "RJ",
+            "RN",
+            "RO",
+            "RR",
+            "RS",
+            "SC",
+            "SE",
+            "SP",
+            "TO"});
+            this.cboEstado.Location = new System.Drawing.Point(473, 265);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(70, 24);
+            this.cboEstado.TabIndex = 13;
             // 
             // lbl_Complemento
             // 
@@ -477,6 +506,7 @@
             this.tsmiSalvar.Name = "tsmiSalvar";
             this.tsmiSalvar.Size = new System.Drawing.Size(69, 20);
             this.tsmiSalvar.Text = "Salvar";
+            this.tsmiSalvar.Click += new System.EventHandler(this.tsmiSalvar_Click);
             // 
             // tsmiLimpar
             // 
@@ -484,6 +514,7 @@
             this.tsmiLimpar.Name = "tsmiLimpar";
             this.tsmiLimpar.Size = new System.Drawing.Size(74, 20);
             this.tsmiLimpar.Text = "Limpar";
+            this.tsmiLimpar.Click += new System.EventHandler(this.tsmiLimpar_Click);
             // 
             // tsmiCancelar
             // 
@@ -529,7 +560,7 @@
         private System.Windows.Forms.MaskedTextBox txbCep;
         private System.Windows.Forms.TextBox txbCidade;
         private System.Windows.Forms.Label lbl_Numero;
-        private System.Windows.Forms.ComboBox txbEstado;
+        private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.Label lbl_Complemento;
         private System.Windows.Forms.Label lbl_Endereco;
         private System.Windows.Forms.Label lblDataNascimento;

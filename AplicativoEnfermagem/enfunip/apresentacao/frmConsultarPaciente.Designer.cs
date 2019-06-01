@@ -30,7 +30,6 @@
         {
             this.lstPacientes = new System.Windows.Forms.ListBox();
             this.txbConsultarPaciente = new System.Windows.Forms.TextBox();
-            this.btnPesqPac = new System.Windows.Forms.Button();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
             this.btnExcluirPaciente = new System.Windows.Forms.Button();
             this.btnEditarPaciente = new System.Windows.Forms.Button();
@@ -56,24 +55,11 @@
             this.txbConsultarPaciente.Location = new System.Drawing.Point(6, 39);
             this.txbConsultarPaciente.MaxLength = 50;
             this.txbConsultarPaciente.Name = "txbConsultarPaciente";
-            this.txbConsultarPaciente.Size = new System.Drawing.Size(514, 22);
+            this.txbConsultarPaciente.Size = new System.Drawing.Size(534, 22);
             this.txbConsultarPaciente.TabIndex = 44;
             this.txbConsultarPaciente.Text = "Insira nome do paciente";
             this.txbConsultarPaciente.Click += new System.EventHandler(this.txbConsultarPaciente_Click);
             this.txbConsultarPaciente.TextChanged += new System.EventHandler(this.txbConsultarPaciente_TextChanged);
-            // 
-            // btnPesqPac
-            // 
-            this.btnPesqPac.BackgroundImage = global::enfunip.Properties.Resources.icons8_pesquisar_26;
-            this.btnPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPesqPac.Location = new System.Drawing.Point(519, 39);
-            this.btnPesqPac.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPesqPac.Name = "btnPesqPac";
-            this.btnPesqPac.Size = new System.Drawing.Size(22, 22);
-            this.btnPesqPac.TabIndex = 43;
-            this.btnPesqPac.Text = "...";
-            this.btnPesqPac.UseVisualStyleBackColor = true;
             // 
             // grpConsultaPaciente
             // 
@@ -83,7 +69,6 @@
             this.grpConsultaPaciente.Controls.Add(this.btnIncuirPaciente);
             this.grpConsultaPaciente.Controls.Add(this.txbConsultarPaciente);
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
-            this.grpConsultaPaciente.Controls.Add(this.btnPesqPac);
             this.grpConsultaPaciente.Controls.Add(this.lstPacientes);
             this.grpConsultaPaciente.Location = new System.Drawing.Point(3, -4);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
@@ -160,7 +145,6 @@
 
         #endregion
         private System.Windows.Forms.ListBox lstPacientes;
-        private System.Windows.Forms.Button btnPesqPac;
         private System.Windows.Forms.TextBox txbConsultarPaciente;
         private System.Windows.Forms.GroupBox grpConsultaPaciente;
         private System.Windows.Forms.Button btnFecharPesqPac;

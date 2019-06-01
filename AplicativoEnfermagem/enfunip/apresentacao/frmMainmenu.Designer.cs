@@ -47,7 +47,6 @@
             this.tmiListagemEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiAjuda = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tmiSuporte = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiManual = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiSobre = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -170,7 +169,7 @@
             // tmiAgendar
             // 
             this.tmiAgendar.Name = "tmiAgendar";
-            this.tmiAgendar.Size = new System.Drawing.Size(130, 22);
+            this.tmiAgendar.Size = new System.Drawing.Size(180, 22);
             this.tmiAgendar.Text = "Agendar";
             this.tmiAgendar.Click += new System.EventHandler(this.tmiAgendar_Click);
             // 
@@ -214,7 +213,6 @@
             // tsmiAjuda
             // 
             this.tsmiAjuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmiSuporte,
             this.tmiManual,
             this.tmiSobre});
             this.tsmiAjuda.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,12 +222,6 @@
             this.tsmiAjuda.Name = "tsmiAjuda";
             this.tsmiAjuda.Size = new System.Drawing.Size(137, 36);
             this.tsmiAjuda.Text = "Ajuda";
-            // 
-            // tmiSuporte
-            // 
-            this.tmiSuporte.Name = "tmiSuporte";
-            this.tmiSuporte.Size = new System.Drawing.Size(180, 22);
-            this.tmiSuporte.Text = "Suporte";
             // 
             // tmiManual
             // 
@@ -310,7 +302,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripDropDownButton tsmiAjuda;
-        private System.Windows.Forms.ToolStripMenuItem tmiSuporte;
         private System.Windows.Forms.ToolStripMenuItem tmiManual;
         private System.Windows.Forms.ToolStripMenuItem tmiSobre;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;

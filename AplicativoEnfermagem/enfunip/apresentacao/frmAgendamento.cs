@@ -17,20 +17,7 @@ namespace enfunip.apresentacao
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnPaciente_Click(object sender, EventArgs e)
         {
@@ -45,7 +32,24 @@ namespace enfunip.apresentacao
 
         private void tsmiCancelarAgenda_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult confirm = MessageBox.Show("Deseja Fechar o Agendamento?", "Fechar Agendamento", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+                this.Close();
+        }
+
+        private void tsmiLimparAgenda_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Deseja Limpar Todos os Campos?", "Limpar Todos os Campos", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                txbPacienteAgenda.Clear();
+                dtpAgendamento.ResetText();
+                txbHoraAgenda.Clear();
+                txbLocalAgendamento.Clear();
+                txbObsAgenda.Clear();
+            }
         }
     }
 }

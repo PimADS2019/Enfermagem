@@ -30,7 +30,7 @@ namespace enfunip.modelo
 
         private void Validar()
         {
-            this.mensagem = "senha inválida";
+            this.mensagem = "Usuário e/ou senha inválidos";
             Estaticos.logado = false;
             try
             {
@@ -42,8 +42,8 @@ namespace enfunip.modelo
             }
             catch (Exception)
             {
-                this.mensagem = "senha inválida";
-                
+                this.mensagem = "Usuário e/ou senha inválidos";
+
             }
         }
     }

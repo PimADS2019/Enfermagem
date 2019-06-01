@@ -25,7 +25,7 @@ namespace enfunip.modelo
 
         private void Executar()
         {
-            this.mensagem = "senha inválida";
+            this.mensagem = "Usuário e/ou senha inválidos";
             Validacao validacao = new Validacao(this.usuario, this.senha);
 
             if (validacao.Mensagem.Equals(""))

@@ -156,6 +156,7 @@
             this.tsmiLimpar.Name = "tsmiLimpar";
             this.tsmiLimpar.Size = new System.Drawing.Size(74, 20);
             this.tsmiLimpar.Text = "Limpar";
+            this.tsmiLimpar.Click += new System.EventHandler(this.tsmiLimpar_Click);
             // 
             // tsmiCancelar
             // 

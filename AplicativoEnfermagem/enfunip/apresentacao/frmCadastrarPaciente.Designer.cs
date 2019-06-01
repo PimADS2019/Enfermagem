@@ -47,7 +47,6 @@
             this.lbl_Numero = new System.Windows.Forms.Label();
             this.lbl_Cidade = new System.Windows.Forms.Label();
             this.txbCep = new System.Windows.Forms.MaskedTextBox();
-            this.txbEstado = new System.Windows.Forms.ComboBox();
             this.txbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txbBairro = new System.Windows.Forms.TextBox();
             this.lbl_Celular = new System.Windows.Forms.Label();
@@ -102,19 +101,9 @@
             this.radDormeBem = new System.Windows.Forms.RadioButton();
             this.chkDormeMedicação = new System.Windows.Forms.CheckBox();
             this.grpVidaSexual = new System.Windows.Forms.GroupBox();
-            this.pnlMultParceiros = new System.Windows.Forms.Panel();
-            this.radSimMultParceiros = new System.Windows.Forms.RadioButton();
-            this.radNaoMultParceiros = new System.Windows.Forms.RadioButton();
-            this.lblMultParceiros = new System.Windows.Forms.Label();
-            this.radNaoSexualAtivo = new System.Windows.Forms.RadioButton();
-            this.lblSexualAtivo = new System.Windows.Forms.Label();
-            this.radSimSexualAtivo = new System.Windows.Forms.RadioButton();
             this.grpAtivFisc = new System.Windows.Forms.GroupBox();
             this.lblNumAtivFisic = new System.Windows.Forms.Label();
             this.nudAtivFis = new System.Windows.Forms.NumericUpDown();
-            this.radNãoAtivFis = new System.Windows.Forms.RadioButton();
-            this.lblAtividadeFisica = new System.Windows.Forms.Label();
-            this.radSimAtivFis = new System.Windows.Forms.RadioButton();
             this.grpAlimentação = new System.Windows.Forms.GroupBox();
             this.chkLiquidos = new System.Windows.Forms.CheckBox();
             this.chkMassas = new System.Windows.Forms.CheckBox();
@@ -126,6 +115,10 @@
             this.tsmiSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.chkPraticaAtvFisc = new System.Windows.Forms.CheckBox();
+            this.chkSexualAtivo = new System.Windows.Forms.CheckBox();
+            this.chkMultParceiros = new System.Windows.Forms.CheckBox();
             this.tbcCadastroPaciente.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.grpDadosPaciente.SuspendLayout();
@@ -137,7 +130,6 @@
             this.tabPage5.SuspendLayout();
             this.grpSonoRepouso.SuspendLayout();
             this.grpVidaSexual.SuspendLayout();
-            this.pnlMultParceiros.SuspendLayout();
             this.grpAtivFisc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAtivFis)).BeginInit();
             this.grpAlimentação.SuspendLayout();
@@ -176,7 +168,6 @@
             // 
             // cboSexo
             // 
-            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
             resources.GetString("cboSexo.Items"),
@@ -201,7 +192,6 @@
             // 
             // cboEstadoCivil
             // 
-            this.cboEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstadoCivil.FormattingEnabled = true;
             this.cboEstadoCivil.Items.AddRange(new object[] {
             resources.GetString("cboEstadoCivil.Items"),
@@ -246,13 +236,6 @@
             // 
             resources.ApplyResources(this.txbCep, "txbCep");
             this.txbCep.Name = "txbCep";
-            // 
-            // txbEstado
-            // 
-            this.txbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txbEstado.FormattingEnabled = true;
-            resources.ApplyResources(this.txbEstado, "txbEstado");
-            this.txbEstado.Name = "txbEstado";
             // 
             // txbTelefone
             // 
@@ -358,6 +341,7 @@
             // grpDadosPaciente
             // 
             this.grpDadosPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpDadosPaciente.Controls.Add(this.cboEstado);
             this.grpDadosPaciente.Controls.Add(this.nudFilhos);
             this.grpDadosPaciente.Controls.Add(this.txbTelefone);
             this.grpDadosPaciente.Controls.Add(this.lbl_Id);
@@ -369,7 +353,6 @@
             this.grpDadosPaciente.Controls.Add(this.txbCidade);
             this.grpDadosPaciente.Controls.Add(this.lbl_Numero);
             this.grpDadosPaciente.Controls.Add(this.txbReligiao);
-            this.grpDadosPaciente.Controls.Add(this.txbEstado);
             this.grpDadosPaciente.Controls.Add(this.lbl_Complemento);
             this.grpDadosPaciente.Controls.Add(this.lbl_Endereco);
             this.grpDadosPaciente.Controls.Add(this.lblReligiao);
@@ -540,6 +523,7 @@
             // 
             resources.ApplyResources(this.txbOutros, "txbOutros");
             this.txbOutros.Name = "txbOutros";
+            this.txbOutros.TextChanged += new System.EventHandler(this.txbOutros_TextChanged);
             // 
             // chkMusculoEsqueletica
             // 
@@ -651,67 +635,17 @@
             // 
             // grpVidaSexual
             // 
-            this.grpVidaSexual.Controls.Add(this.pnlMultParceiros);
-            this.grpVidaSexual.Controls.Add(this.lblMultParceiros);
-            this.grpVidaSexual.Controls.Add(this.radNaoSexualAtivo);
-            this.grpVidaSexual.Controls.Add(this.lblSexualAtivo);
-            this.grpVidaSexual.Controls.Add(this.radSimSexualAtivo);
+            this.grpVidaSexual.Controls.Add(this.chkMultParceiros);
+            this.grpVidaSexual.Controls.Add(this.chkSexualAtivo);
             resources.ApplyResources(this.grpVidaSexual, "grpVidaSexual");
             this.grpVidaSexual.Name = "grpVidaSexual";
             this.grpVidaSexual.TabStop = false;
             // 
-            // pnlMultParceiros
-            // 
-            this.pnlMultParceiros.Controls.Add(this.radSimMultParceiros);
-            this.pnlMultParceiros.Controls.Add(this.radNaoMultParceiros);
-            resources.ApplyResources(this.pnlMultParceiros, "pnlMultParceiros");
-            this.pnlMultParceiros.Name = "pnlMultParceiros";
-            // 
-            // radSimMultParceiros
-            // 
-            resources.ApplyResources(this.radSimMultParceiros, "radSimMultParceiros");
-            this.radSimMultParceiros.Name = "radSimMultParceiros";
-            this.radSimMultParceiros.TabStop = true;
-            this.radSimMultParceiros.UseVisualStyleBackColor = true;
-            // 
-            // radNaoMultParceiros
-            // 
-            resources.ApplyResources(this.radNaoMultParceiros, "radNaoMultParceiros");
-            this.radNaoMultParceiros.Name = "radNaoMultParceiros";
-            this.radNaoMultParceiros.TabStop = true;
-            this.radNaoMultParceiros.UseVisualStyleBackColor = true;
-            // 
-            // lblMultParceiros
-            // 
-            resources.ApplyResources(this.lblMultParceiros, "lblMultParceiros");
-            this.lblMultParceiros.Name = "lblMultParceiros";
-            // 
-            // radNaoSexualAtivo
-            // 
-            resources.ApplyResources(this.radNaoSexualAtivo, "radNaoSexualAtivo");
-            this.radNaoSexualAtivo.Name = "radNaoSexualAtivo";
-            this.radNaoSexualAtivo.TabStop = true;
-            this.radNaoSexualAtivo.UseVisualStyleBackColor = true;
-            // 
-            // lblSexualAtivo
-            // 
-            resources.ApplyResources(this.lblSexualAtivo, "lblSexualAtivo");
-            this.lblSexualAtivo.Name = "lblSexualAtivo";
-            // 
-            // radSimSexualAtivo
-            // 
-            resources.ApplyResources(this.radSimSexualAtivo, "radSimSexualAtivo");
-            this.radSimSexualAtivo.Name = "radSimSexualAtivo";
-            this.radSimSexualAtivo.TabStop = true;
-            this.radSimSexualAtivo.UseVisualStyleBackColor = true;
-            // 
             // grpAtivFisc
             // 
+            this.grpAtivFisc.Controls.Add(this.chkPraticaAtvFisc);
             this.grpAtivFisc.Controls.Add(this.lblNumAtivFisic);
             this.grpAtivFisc.Controls.Add(this.nudAtivFis);
-            this.grpAtivFisc.Controls.Add(this.radNãoAtivFis);
-            this.grpAtivFisc.Controls.Add(this.lblAtividadeFisica);
-            this.grpAtivFisc.Controls.Add(this.radSimAtivFis);
             resources.ApplyResources(this.grpAtivFisc, "grpAtivFisc");
             this.grpAtivFisc.Name = "grpAtivFisc";
             this.grpAtivFisc.TabStop = false;
@@ -725,26 +659,6 @@
             // 
             resources.ApplyResources(this.nudAtivFis, "nudAtivFis");
             this.nudAtivFis.Name = "nudAtivFis";
-            // 
-            // radNãoAtivFis
-            // 
-            resources.ApplyResources(this.radNãoAtivFis, "radNãoAtivFis");
-            this.radNãoAtivFis.Name = "radNãoAtivFis";
-            this.radNãoAtivFis.TabStop = true;
-            this.radNãoAtivFis.UseVisualStyleBackColor = true;
-            // 
-            // lblAtividadeFisica
-            // 
-            resources.ApplyResources(this.lblAtividadeFisica, "lblAtividadeFisica");
-            this.lblAtividadeFisica.Name = "lblAtividadeFisica";
-            // 
-            // radSimAtivFis
-            // 
-            resources.ApplyResources(this.radSimAtivFis, "radSimAtivFis");
-            this.radSimAtivFis.Name = "radSimAtivFis";
-            this.radSimAtivFis.TabStop = true;
-            this.radSimAtivFis.UseVisualStyleBackColor = true;
-            this.radSimAtivFis.CheckedChanged += new System.EventHandler(this.radSimAtivFis_CheckedChanged);
             // 
             // grpAlimentação
             // 
@@ -817,6 +731,7 @@
             this.tsmiLimpar.Image = global::enfunip.Properties.Resources.reply_all_button_icon_icons_com_72603;
             this.tsmiLimpar.Name = "tsmiLimpar";
             resources.ApplyResources(this.tsmiLimpar, "tsmiLimpar");
+            this.tsmiLimpar.Click += new System.EventHandler(this.tsmiLimpar_Click);
             // 
             // tsmiCancelar
             // 
@@ -824,6 +739,60 @@
             this.tsmiCancelar.Name = "tsmiCancelar";
             resources.ApplyResources(this.tsmiCancelar, "tsmiCancelar");
             this.tsmiCancelar.Click += new System.EventHandler(this.tsmiCancelar_Click);
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Items.AddRange(new object[] {
+            resources.GetString("cboEstado.Items"),
+            resources.GetString("cboEstado.Items1"),
+            resources.GetString("cboEstado.Items2"),
+            resources.GetString("cboEstado.Items3"),
+            resources.GetString("cboEstado.Items4"),
+            resources.GetString("cboEstado.Items5"),
+            resources.GetString("cboEstado.Items6"),
+            resources.GetString("cboEstado.Items7"),
+            resources.GetString("cboEstado.Items8"),
+            resources.GetString("cboEstado.Items9"),
+            resources.GetString("cboEstado.Items10"),
+            resources.GetString("cboEstado.Items11"),
+            resources.GetString("cboEstado.Items12"),
+            resources.GetString("cboEstado.Items13"),
+            resources.GetString("cboEstado.Items14"),
+            resources.GetString("cboEstado.Items15"),
+            resources.GetString("cboEstado.Items16"),
+            resources.GetString("cboEstado.Items17"),
+            resources.GetString("cboEstado.Items18"),
+            resources.GetString("cboEstado.Items19"),
+            resources.GetString("cboEstado.Items20"),
+            resources.GetString("cboEstado.Items21"),
+            resources.GetString("cboEstado.Items22"),
+            resources.GetString("cboEstado.Items23"),
+            resources.GetString("cboEstado.Items24"),
+            resources.GetString("cboEstado.Items25"),
+            resources.GetString("cboEstado.Items26")});
+            resources.ApplyResources(this.cboEstado, "cboEstado");
+            this.cboEstado.Name = "cboEstado";
+            // 
+            // chkPraticaAtvFisc
+            // 
+            resources.ApplyResources(this.chkPraticaAtvFisc, "chkPraticaAtvFisc");
+            this.chkPraticaAtvFisc.Name = "chkPraticaAtvFisc";
+            this.chkPraticaAtvFisc.UseVisualStyleBackColor = true;
+            this.chkPraticaAtvFisc.CheckedChanged += new System.EventHandler(this.chkPraticaAtvFisc_CheckedChanged);
+            // 
+            // chkSexualAtivo
+            // 
+            resources.ApplyResources(this.chkSexualAtivo, "chkSexualAtivo");
+            this.chkSexualAtivo.Name = "chkSexualAtivo";
+            this.chkSexualAtivo.UseVisualStyleBackColor = true;
+            // 
+            // chkMultParceiros
+            // 
+            resources.ApplyResources(this.chkMultParceiros, "chkMultParceiros");
+            this.chkMultParceiros.Name = "chkMultParceiros";
+            this.chkMultParceiros.UseVisualStyleBackColor = true;
             // 
             // frmCadastrarPaciente
             // 
@@ -854,8 +823,6 @@
             this.grpSonoRepouso.PerformLayout();
             this.grpVidaSexual.ResumeLayout(false);
             this.grpVidaSexual.PerformLayout();
-            this.pnlMultParceiros.ResumeLayout(false);
-            this.pnlMultParceiros.PerformLayout();
             this.grpAtivFisc.ResumeLayout(false);
             this.grpAtivFisc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAtivFis)).EndInit();
@@ -876,7 +843,6 @@
         private System.Windows.Forms.MaskedTextBox txbTelefone;
         private System.Windows.Forms.MaskedTextBox txbCelular;
         private System.Windows.Forms.MaskedTextBox txbCep;
-        private System.Windows.Forms.ComboBox txbEstado;
         private System.Windows.Forms.TextBox txbBairro;
         private System.Windows.Forms.TextBox txbCidade;
         private System.Windows.Forms.TextBox txbComplemento;
@@ -949,13 +915,6 @@
         private System.Windows.Forms.RadioButton radDormeBem;
         private System.Windows.Forms.CheckBox chkDormeMedicação;
         private System.Windows.Forms.GroupBox grpVidaSexual;
-        private System.Windows.Forms.RadioButton radNaoMultParceiros;
-        private System.Windows.Forms.Label lblMultParceiros;
-        private System.Windows.Forms.RadioButton radSimMultParceiros;
-        private System.Windows.Forms.RadioButton radNaoSexualAtivo;
-        private System.Windows.Forms.Label lblSexualAtivo;
-        private System.Windows.Forms.RadioButton radSimSexualAtivo;
-        private System.Windows.Forms.Panel pnlMultParceiros;
         private System.Windows.Forms.MenuStrip mnsFunçõesCadastroPac;
         private System.Windows.Forms.ToolStripMenuItem tsmiSalvar;
         private System.Windows.Forms.ToolStripMenuItem tsmiLimpar;
@@ -963,8 +922,9 @@
         private System.Windows.Forms.GroupBox grpAtivFisc;
         private System.Windows.Forms.Label lblNumAtivFisic;
         private System.Windows.Forms.NumericUpDown nudAtivFis;
-        private System.Windows.Forms.RadioButton radNãoAtivFis;
-        private System.Windows.Forms.Label lblAtividadeFisica;
-        private System.Windows.Forms.RadioButton radSimAtivFis;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.CheckBox chkMultParceiros;
+        private System.Windows.Forms.CheckBox chkSexualAtivo;
+        private System.Windows.Forms.CheckBox chkPraticaAtvFisc;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgendamento));
             this.mclDiasAgendados = new System.Windows.Forms.MonthCalendar();
             this.grpAgendamento = new System.Windows.Forms.GroupBox();
             this.txbLocalAgendamento = new System.Windows.Forms.TextBox();
@@ -38,7 +39,7 @@
             this.lblDataAgenda = new System.Windows.Forms.Label();
             this.lblHoraAgenda = new System.Windows.Forms.Label();
             this.btnPaciente = new System.Windows.Forms.Button();
-            this.txtHoraAgenda = new System.Windows.Forms.MaskedTextBox();
+            this.txbHoraAgenda = new System.Windows.Forms.MaskedTextBox();
             this.dtpAgendamento = new System.Windows.Forms.DateTimePicker();
             this.lblPacienteAgenda = new System.Windows.Forms.Label();
             this.lstAgendamentos = new System.Windows.Forms.ListBox();
@@ -69,7 +70,7 @@
             this.grpAgendamento.Controls.Add(this.lblDataAgenda);
             this.grpAgendamento.Controls.Add(this.lblHoraAgenda);
             this.grpAgendamento.Controls.Add(this.btnPaciente);
-            this.grpAgendamento.Controls.Add(this.txtHoraAgenda);
+            this.grpAgendamento.Controls.Add(this.txbHoraAgenda);
             this.grpAgendamento.Controls.Add(this.dtpAgendamento);
             this.grpAgendamento.Controls.Add(this.lblPacienteAgenda);
             this.grpAgendamento.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,7 +143,7 @@
             // 
             // btnPaciente
             // 
-            this.btnPaciente.BackgroundImage = global::enfunip.Properties.Resources.icons8_pesquisar_26;
+            this.btnPaciente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPaciente.BackgroundImage")));
             this.btnPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPaciente.Location = new System.Drawing.Point(449, 39);
@@ -153,14 +154,14 @@
             this.btnPaciente.UseVisualStyleBackColor = true;
             this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
             // 
-            // txtHoraAgenda
+            // txbHoraAgenda
             // 
-            this.txtHoraAgenda.Location = new System.Drawing.Point(263, 92);
-            this.txtHoraAgenda.Mask = "90:00";
-            this.txtHoraAgenda.Name = "txtHoraAgenda";
-            this.txtHoraAgenda.Size = new System.Drawing.Size(35, 22);
-            this.txtHoraAgenda.TabIndex = 37;
-            this.txtHoraAgenda.ValidatingType = typeof(System.DateTime);
+            this.txbHoraAgenda.Location = new System.Drawing.Point(263, 92);
+            this.txbHoraAgenda.Mask = "90:00";
+            this.txbHoraAgenda.Name = "txbHoraAgenda";
+            this.txbHoraAgenda.Size = new System.Drawing.Size(35, 22);
+            this.txbHoraAgenda.TabIndex = 37;
+            this.txbHoraAgenda.ValidatingType = typeof(System.DateTime);
             // 
             // dtpAgendamento
             // 
@@ -204,21 +205,22 @@
             // 
             // tsmiSalvarAgenda
             // 
-            this.tsmiSalvarAgenda.Image = global::enfunip.Properties.Resources.savedisk_floppydisk_guardar_1543;
+            this.tsmiSalvarAgenda.Image = ((System.Drawing.Image)(resources.GetObject("tsmiSalvarAgenda.Image")));
             this.tsmiSalvarAgenda.Name = "tsmiSalvarAgenda";
             this.tsmiSalvarAgenda.Size = new System.Drawing.Size(69, 20);
             this.tsmiSalvarAgenda.Text = "Salvar";
             // 
             // tsmiLimparAgenda
             // 
-            this.tsmiLimparAgenda.Image = global::enfunip.Properties.Resources.reply_all_button_icon_icons_com_72603;
+            this.tsmiLimparAgenda.Image = ((System.Drawing.Image)(resources.GetObject("tsmiLimparAgenda.Image")));
             this.tsmiLimparAgenda.Name = "tsmiLimparAgenda";
             this.tsmiLimparAgenda.Size = new System.Drawing.Size(74, 20);
             this.tsmiLimparAgenda.Text = "Limpar";
+            this.tsmiLimparAgenda.Click += new System.EventHandler(this.tsmiLimparAgenda_Click);
             // 
             // tsmiCancelarAgenda
             // 
-            this.tsmiCancelarAgenda.Image = global::enfunip.Properties.Resources.excluir;
+            this.tsmiCancelarAgenda.Image = ((System.Drawing.Image)(resources.GetObject("tsmiCancelarAgenda.Image")));
             this.tsmiCancelarAgenda.Name = "tsmiCancelarAgenda";
             this.tsmiCancelarAgenda.Size = new System.Drawing.Size(85, 20);
             this.tsmiCancelarAgenda.Text = "Cancelar";
@@ -267,6 +269,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiLimparAgenda;
         private System.Windows.Forms.ToolStripMenuItem tsmiCancelarAgenda;
         private System.Windows.Forms.TextBox txbLocalAgendamento;
-        private System.Windows.Forms.MaskedTextBox txtHoraAgenda;
+        private System.Windows.Forms.MaskedTextBox txbHoraAgenda;
     }
 }

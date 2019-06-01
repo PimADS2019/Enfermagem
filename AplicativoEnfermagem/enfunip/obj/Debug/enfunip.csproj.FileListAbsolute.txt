@@ -160,3 +160,4 @@ C:\Users\Vinicius\Desktop\Enf\enfunip\obj\Debug\zu-ZA\enfunip.resources.dll
 C:\Users\Vinicius\Desktop\Enf\enfunip\obj\Debug\enfunip.csproj.CopyComplete
 C:\Users\Vinicius\Desktop\Enf\enfunip\obj\Debug\enfunip.exe
 C:\Users\Vinicius\Desktop\Enf\enfunip\obj\Debug\enfunip.pdb
+C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmSobre.resources
