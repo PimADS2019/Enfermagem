@@ -63,7 +63,6 @@ C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\enfunip.exe
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\enfunip.pdb
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.csprojAssemblyReference.cache
-C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.FrmEnfermagem.resources
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.FrmMainmenu.resources
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.Properties.Resources.resources
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.csproj.GenerateResource.cache
@@ -161,3 +160,5 @@ C:\Users\Vinicius\Desktop\Enf\enfunip\obj\Debug\enfunip.csproj.CopyComplete
 C:\Users\Vinicius\Desktop\Enf\enfunip\obj\Debug\enfunip.exe
 C:\Users\Vinicius\Desktop\Enf\enfunip\obj\Debug\enfunip.pdb
 C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmSobre.resources
+C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.frmLogin.resources
+C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmSobre.resources
