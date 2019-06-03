@@ -71,5 +71,26 @@ namespace enfunip.apresentacao
 
                 
         }
+
+        private void txbNumContrato_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboTipoUsuario.Text == "Aluno")
+            {
+                txbRA.Enabled = true;
+                cboPeriodo.Enabled = true;
+                txbNumContrato.Enabled = false;
+            }
+            else
+            {
+                txbRA.Enabled = false;
+                cboPeriodo.Enabled = false;
+                txbNumContrato.Enabled = true;
+            }
+        }
     }
 }
