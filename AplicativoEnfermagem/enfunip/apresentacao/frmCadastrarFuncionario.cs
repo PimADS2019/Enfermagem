@@ -39,6 +39,12 @@ namespace enfunip.apresentacao
                 txbNome.Clear();
                 txbCpf.Clear();
                 dtpNascimento.Text = "";
+                txbNumContrato.Clear();
+                txbNumContrato.Enabled = false;
+                txbRA.Clear();
+                txbRA.Enabled = false;
+                cboPeriodo.Text = "";
+                cboPeriodo.Enabled = false;
                 txbEndereco.Clear();
                 txbNumeroEndereco.Clear();
                 txbComplemento.Clear();
