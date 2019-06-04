@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using enfunip.modelo.controle;
 
 namespace enfunip.apresentacao
 {
@@ -65,17 +66,37 @@ namespace enfunip.apresentacao
 
         private void tsmiSalvar_Click(object sender, EventArgs e)
         {
-            if (txbSenha.Text != txbConfirmaSenha.Text)
-            {
-                MessageBox.Show("Senhas não coincidem. Tente Novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-                txbConfirmaSenha.Focus();
-            }
-            else
-            {
-                MessageBox.Show("Funcionário Cadastrado com Sucesso!");
-           }
+            controleFuncionario controleFuncionario = new controleFuncionario();
 
-                
+            List<String> dadosFuncionario = new List<string>();
+            dadosFuncionario.Add(idFuncionario_BD.Text);
+            dadosFuncionario.Add(cboTipoUsuario.Text);
+            dadosFuncionario.Add(txbUsuario.Text);
+            dadosFuncionario.Add(txbSenha.Text);
+            dadosFuncionario.Add(txbConfirmaSenha.Text);
+            dadosFuncionario.Add(txbNome.Text);
+            dadosFuncionario.Add(dtpNascimento.Text);
+            dadosFuncionario.Add(txbCpf.Text);
+            dadosFuncionario.Add(txbNumContrato.Text);
+            dadosFuncionario.Add(txbRA.Text);
+            dadosFuncionario.Add(cboPeriodo.Text);
+            dadosFuncionario.Add(txbEndereco.Text);
+            dadosFuncionario.Add(txbNumeroEndereco.Text);
+            dadosFuncionario.Add(txbComplemento.Text);
+            dadosFuncionario.Add(txbCidade.Text);
+            dadosFuncionario.Add(txbBairro.Text);
+            dadosFuncionario.Add(cboEstado.Text);
+            dadosFuncionario.Add(txbCep.Text);
+            dadosFuncionario.Add(txbEmail.Text);
+            dadosFuncionario.Add(txbCelular.Text);
+            dadosFuncionario.Add(txbTelefone.Text);
+
+            controleFuncionario.CadastrarFuncionario(dadosFuncionario);
+
+            MessageBox.Show(controleFuncionario.mensagem);
+
+
+
         }
 
         private void txbNumContrato_TextChanged(object sender, EventArgs e)

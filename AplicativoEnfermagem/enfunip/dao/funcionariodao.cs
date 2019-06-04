@@ -18,17 +18,61 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"insert into Enderecos
-                                    values (@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep)
+
+            if (funcionario.tipousuario.Equals("Professor"))
+            {
+                cmd.CommandText = @"insert into Enderecos (Logradouro,Numero,Complemento,Cidade,Bairro,Estado,Cep)
+                                    values (@Logradouro,@Numero,@Complemento,@Cidade,@Bairro,@Estado,@Cep)
                                     declare @id_endereco int=@@identity
-                                insert into Pessoas
-                                    values (@TipoUsuario, Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf, @Sexo, @EstadoCivil, @id_endereco)
-                                    declare @id_pessoa int=@@identity
-                                insert into Alunos
-                                    values (@Ra, @Periodo, @Semestre, @id_pessoa)
-                                    declare @id_aluno int=@@identity
-                                insert into Contatos
-                                    values (@Email, @Celular, @Telefone, @id_aluno))";
+
+                                insert into Pessoas (TipoUsuario,Usuario,Senha,ConfSenha,Nome,DataNascimento,Cpf, Fk_Enderecos_IdEndereco)
+                                Values (@tipousuario,@usuario,@senha,@confsenha,@Nome,@DataNascimento,@Cpf, @id_endereco)
+                                select * from
+                                (
+	                                select TipoUsuario,Usuario,Senha,ConfSenha,Nome,DataNascimento,Cpf,IdEndereco from Enderecos
+	                                inner join Pessoas
+	                                on Pessoas.Fk_Enderecos_IdEndereco = Enderecos.IdEndereco
+                                ) as Endereco_Pessoas;
+                                declare @id_Pessoa int=@@identity
+
+                                insert into Professores (NumeroUnipProf, PeriodoProf, Fk_Pessoas_IdPessoa)
+                                    values (@NumeroContrato, @Periodo, @id_Pessoa)";
+            }
+
+            if (funcionario.tipousuario.Equals("Coordenador"))
+            {
+                cmd.CommandText = @"insert into Coordenadores (NumeroUnipCood, PeriodoCood, Fk_Pessoas_IdPessoa)
+                                    values (@NumeroContrato, @Periodo, @id_Pessoa)";
+            }
+
+            if (funcionario.tipousuario.Equals("Aluno"))
+            {
+                cmd.CommandText = @"insert into Enderecos (Logradouro,Numero,Complemento,Cidade,Bairro,Estado,Cep)
+                                    values (@Logradouro,@Numero,@Complemento,@Cidade,@Bairro,@Estado,@Cep)
+                                    declare @id_endereco int=@@identity
+
+                                insert into Pessoas (TipoUsuario,Usuario,Senha,ConfSenha,Nome,DataNascimento,Cpf, Fk_Enderecos_IdEndereco)
+                                Values (@tipousuario,@usuario,@senha,@confsenha,@Nome,@DataNascimento,@Cpf, @id_endereco)
+                                select * from
+                                (
+	                                select TipoUsuario,Usuario,Senha,ConfSenha,Nome,DataNascimento,Cpf,IdEndereco from Enderecos
+	                                inner join Pessoas
+	                                on Pessoas.Fk_Enderecos_IdEndereco = Enderecos.IdEndereco
+                                ) as Endereco_Pessoas;
+                                declare @id_Pessoa int=@@identity
+
+                                insert into Alunos(Ra, Semestre, Fk_Pessoas_IdPessoa)
+                                values(@Ra, @Periodo, @id_Pessoa)
+                                select Ra,Semestre,Fk_Pessoas_IdPessoa from
+                                (
+	                                select * from Alunos
+	                                inner join Pessoas
+	                                on Alunos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+                                ) as Pessoas_Alunos";
+
+
+            }
+
             cmd.Parameters.AddWithValue("@TipoUsuario", funcionario.tipousuario);
             cmd.Parameters.AddWithValue("@Usuario", funcionario.usuario);
             cmd.Parameters.AddWithValue("@Senha", funcionario.senha);
@@ -36,6 +80,9 @@ namespace enfunip.dao
             cmd.Parameters.AddWithValue("@Nome", funcionario.nome);
             cmd.Parameters.AddWithValue("@DataNascimento", funcionario.datanascimento);
             cmd.Parameters.AddWithValue("@Cpf", funcionario.cpf);
+            cmd.Parameters.AddWithValue("@NumeroContrato", funcionario.numeroContrato);
+            cmd.Parameters.AddWithValue("@Ra", funcionario.ra);
+            cmd.Parameters.AddWithValue("@Periodo", funcionario.periodo);
             cmd.Parameters.AddWithValue("@Logradouro", funcionario.endereco);
             cmd.Parameters.AddWithValue("@Numero", funcionario.numero);
             cmd.Parameters.AddWithValue("@Complemento", funcionario.complemento);

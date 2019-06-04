@@ -15,9 +15,7 @@ namespace enfunip.dao
         public Conexao()
         {
             conexaoBD = new SqlConnection();
-            conexaoBD.ConnectionString = @"Data Source=Localhost;
-                Initial Catalog=CrudCSharpPessoasManha;
-                User ID=sa;Password=rever";
+            conexaoBD.ConnectionString = @"Data Source=DESKTOP-M9DQHH4;Initial Catalog=PimEnfermagem2019;Integrated Security=True";
         }
 
         public SqlConnection Conectar()
