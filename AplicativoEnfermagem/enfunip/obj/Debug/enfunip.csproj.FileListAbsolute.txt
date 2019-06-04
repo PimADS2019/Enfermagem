@@ -52,7 +52,6 @@ C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfuni
 C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\enfunip.exe
 C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\enfunip.pdb
 C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.csprojAssemblyReference.cache
-C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.FrmEnfermagem.resources
 C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.FrmMainmenu.resources
 C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.Properties.Resources.resources
 C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.csproj.GenerateResource.cache
@@ -71,7 +70,6 @@ C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.pdb
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmAgendamento.resources
 C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmAgendamento.resources
-C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmCadastroPaciente.resources
 C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\enfunip.exe.config
 C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\enfunip.exe
 C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\enfunip.pdb
@@ -188,3 +186,18 @@ C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.csproj.CopyComplete
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.exe
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.pdb
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmCadastrarFuncionario.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmCadastrarProduto.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmCadastrarPaciente.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmConsultarFuncionario.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmConsultarPaciente.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmListarEstoque.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.frmLogin.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmNovoAtendimento.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmSobre.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmCadastrarPaciente.zu-ZA.resources
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\zu-ZA\enfunip.resources.dll
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\Microsoft.VisualStudio.LiveShare.dll
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\Microsoft.VisualStudio.LiveShare.xml
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\zu-ZA\enfunip.resources.dll
+C:\Users\welli\OneDrive\Documentos\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.csproj.CopyComplete

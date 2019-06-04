@@ -18,7 +18,7 @@ namespace enfunip.modelo
         public String cpf { get; set; }
         public String numeroContrato { get; set; }
         public String ra { get; set; }
-        public String periodo { get; set; }
+        public String Semestre { get; set; }
         public String endereco { get; set; }
         public String numero { get; set; }
         public String complemento { get; set; }

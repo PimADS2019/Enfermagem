@@ -28,7 +28,7 @@ namespace enfunip.modelo.controle
                 funcionario.cpf = dadosFuncionario[7];
                 funcionario.numeroContrato= dadosFuncionario[8];
                 funcionario.ra = dadosFuncionario[9];
-                funcionario.periodo = dadosFuncionario[10];
+                funcionario.Semestre = dadosFuncionario[10];
                 funcionario.endereco = dadosFuncionario[11];
                 funcionario.numero = dadosFuncionario[12];
                 funcionario.complemento = dadosFuncionario[13];
