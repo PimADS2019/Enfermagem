@@ -246,6 +246,8 @@ namespace enfunip.apresentacao
             {
                 nudAtivFis.Enabled = true;
             }
+            else
+                nudAtivFis.Enabled = false;
         }
     }
 }

@@ -51,7 +51,7 @@
             this.txbUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUsuario.ForeColor = System.Drawing.Color.Black;
             this.txbUsuario.HideSelection = false;
-            this.txbUsuario.Location = new System.Drawing.Point(63, 187);
+            this.txbUsuario.Location = new System.Drawing.Point(56, 187);
             this.txbUsuario.MaxLength = 20;
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(204, 19);
@@ -63,12 +63,12 @@
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEntrar.Location = new System.Drawing.Point(63, 319);
+            this.btnEntrar.Location = new System.Drawing.Point(69, 318);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(179, 37);
+            this.btnEntrar.Size = new System.Drawing.Size(154, 36);
             this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -79,7 +79,7 @@
             // pnlUsuario
             // 
             this.pnlUsuario.BackColor = System.Drawing.Color.Black;
-            this.pnlUsuario.Location = new System.Drawing.Point(57, 209);
+            this.pnlUsuario.Location = new System.Drawing.Point(50, 209);
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(210, 1);
             this.pnlUsuario.TabIndex = 8;
@@ -87,7 +87,7 @@
             // pnlSenha
             // 
             this.pnlSenha.BackColor = System.Drawing.Color.Black;
-            this.pnlSenha.Location = new System.Drawing.Point(57, 262);
+            this.pnlSenha.Location = new System.Drawing.Point(50, 262);
             this.pnlSenha.Name = "pnlSenha";
             this.pnlSenha.Size = new System.Drawing.Size(210, 1);
             this.pnlSenha.TabIndex = 11;
@@ -99,7 +99,7 @@
             this.txbSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbSenha.ForeColor = System.Drawing.Color.Black;
             this.txbSenha.HideSelection = false;
-            this.txbSenha.Location = new System.Drawing.Point(63, 239);
+            this.txbSenha.Location = new System.Drawing.Point(56, 239);
             this.txbSenha.MaxLength = 12;
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.PasswordChar = '•';
@@ -113,7 +113,7 @@
             // 
             this.picSenha.BackColor = System.Drawing.Color.Transparent;
             this.picSenha.Image = global::enfunip.Properties.Resources.iconecadeado;
-            this.picSenha.Location = new System.Drawing.Point(27, 236);
+            this.picSenha.Location = new System.Drawing.Point(20, 236);
             this.picSenha.Name = "picSenha";
             this.picSenha.Size = new System.Drawing.Size(23, 22);
             this.picSenha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,9 +124,9 @@
             // 
             this.imgLogo.BackColor = System.Drawing.Color.Transparent;
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(8, 46);
+            this.imgLogo.Location = new System.Drawing.Point(20, 52);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(277, 90);
+            this.imgLogo.Size = new System.Drawing.Size(240, 90);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
@@ -136,7 +136,7 @@
             // 
             this.picUsuario.BackColor = System.Drawing.Color.Transparent;
             this.picUsuario.Image = ((System.Drawing.Image)(resources.GetObject("picUsuario.Image")));
-            this.picUsuario.Location = new System.Drawing.Point(27, 187);
+            this.picUsuario.Location = new System.Drawing.Point(20, 187);
             this.picUsuario.Name = "picUsuario";
             this.picUsuario.Size = new System.Drawing.Size(23, 22);
             this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,7 +152,7 @@
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFechar.Location = new System.Drawing.Point(271, -1);
+            this.btnFechar.Location = new System.Drawing.Point(257, -1);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(25, 37);
             this.btnFechar.TabIndex = 21;
@@ -169,7 +169,7 @@
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnMinimizar.Location = new System.Drawing.Point(246, -3);
+            this.btnMinimizar.Location = new System.Drawing.Point(230, -2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(25, 39);
             this.btnMinimizar.TabIndex = 22;
@@ -182,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(297, 387);
+            this.ClientSize = new System.Drawing.Size(284, 387);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.pnlSenha);

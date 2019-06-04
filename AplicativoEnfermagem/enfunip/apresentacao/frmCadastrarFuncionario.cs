@@ -42,10 +42,12 @@ namespace enfunip.apresentacao
                 dtpNascimento.Text = "";
                 txbNumContrato.Clear();
                 txbNumContrato.Enabled = false;
-                txbRA.Clear();
-                txbRA.Enabled = false;
                 cboPeriodo.Text = "";
                 cboPeriodo.Enabled = false;
+                txbRA.Clear();
+                txbRA.Enabled = false;
+                cboSemestre.Text = "";
+                cboSemestre.Enabled = false;
                 txbEndereco.Clear();
                 txbNumeroEndereco.Clear();
                 txbComplemento.Clear();
@@ -110,14 +112,21 @@ namespace enfunip.apresentacao
             {
                 txbRA.Enabled = true;
                 cboPeriodo.Enabled = true;
-                txbNumContrato.Enabled = false;
+                cboSemestre.Enabled = true;
+                txbNumContrato.Enabled = false; txbNumContrato.Clear();
             }
             else
             {
-                txbRA.Enabled = false;
-                cboPeriodo.Enabled = false;
+                txbRA.Enabled = false; txbRA.Clear();
+                cboPeriodo.Enabled = true; 
+                cboSemestre.Enabled = false; cboSemestre.Text = "";
                 txbNumContrato.Enabled = true;
             }
+        }
+
+        private void cboPeriodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

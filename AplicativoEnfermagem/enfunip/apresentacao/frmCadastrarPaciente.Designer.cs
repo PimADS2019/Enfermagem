@@ -56,7 +56,6 @@
             this.lbl_Cep = new System.Windows.Forms.Label();
             this.txbCpf = new System.Windows.Forms.MaskedTextBox();
             this.lbl_estado = new System.Windows.Forms.Label();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.lbl_Bairro = new System.Windows.Forms.Label();
             this.txbEndereco = new System.Windows.Forms.TextBox();
             this.lbl_Complemento = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@
             this.tbcCadastroPaciente = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.grpDadosPaciente = new System.Windows.Forms.GroupBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.nudFilhos = new System.Windows.Forms.NumericUpDown();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.grpFamiliar = new System.Windows.Forms.GroupBox();
@@ -101,7 +101,10 @@
             this.radDormeBem = new System.Windows.Forms.RadioButton();
             this.chkDormeMedicação = new System.Windows.Forms.CheckBox();
             this.grpVidaSexual = new System.Windows.Forms.GroupBox();
+            this.chkMultParceiros = new System.Windows.Forms.CheckBox();
+            this.chkSexualAtivo = new System.Windows.Forms.CheckBox();
             this.grpAtivFisc = new System.Windows.Forms.GroupBox();
+            this.chkPraticaAtvFisc = new System.Windows.Forms.CheckBox();
             this.lblNumAtivFisic = new System.Windows.Forms.Label();
             this.nudAtivFis = new System.Windows.Forms.NumericUpDown();
             this.grpAlimentação = new System.Windows.Forms.GroupBox();
@@ -115,10 +118,7 @@
             this.tsmiSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
-            this.cboEstado = new System.Windows.Forms.ComboBox();
-            this.chkPraticaAtvFisc = new System.Windows.Forms.CheckBox();
-            this.chkSexualAtivo = new System.Windows.Forms.CheckBox();
-            this.chkMultParceiros = new System.Windows.Forms.CheckBox();
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.tbcCadastroPaciente.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.grpDadosPaciente.SuspendLayout();
@@ -168,6 +168,9 @@
             // 
             // cboSexo
             // 
+            this.cboSexo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboSexo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboSexo.Cursor = System.Windows.Forms.Cursors.Default;
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
             resources.GetString("cboSexo.Items"),
@@ -192,6 +195,9 @@
             // 
             // cboEstadoCivil
             // 
+            this.cboEstadoCivil.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboEstadoCivil.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboEstadoCivil.Cursor = System.Windows.Forms.Cursors.Default;
             this.cboEstadoCivil.FormattingEnabled = true;
             this.cboEstadoCivil.Items.AddRange(new object[] {
             resources.GetString("cboEstadoCivil.Items"),
@@ -274,6 +280,7 @@
             // 
             // txbCpf
             // 
+            this.txbCpf.Culture = new System.Globalization.CultureInfo("en-001");
             resources.ApplyResources(this.txbCpf, "txbCpf");
             this.txbCpf.Name = "txbCpf";
             // 
@@ -281,14 +288,6 @@
             // 
             resources.ApplyResources(this.lbl_estado, "lbl_estado");
             this.lbl_estado.Name = "lbl_estado";
-            // 
-            // dtpNascimento
-            // 
-            this.dtpNascimento.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.dtpNascimento, "dtpNascimento");
-            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.MinDate = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
-            this.dtpNascimento.Name = "dtpNascimento";
             // 
             // lbl_Bairro
             // 
@@ -341,6 +340,7 @@
             // grpDadosPaciente
             // 
             this.grpDadosPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpDadosPaciente.Controls.Add(this.dtpNascimento);
             this.grpDadosPaciente.Controls.Add(this.cboEstado);
             this.grpDadosPaciente.Controls.Add(this.nudFilhos);
             this.grpDadosPaciente.Controls.Add(this.txbTelefone);
@@ -365,7 +365,6 @@
             this.grpDadosPaciente.Controls.Add(this.lbl_Celular);
             this.grpDadosPaciente.Controls.Add(this.lblSexo);
             this.grpDadosPaciente.Controls.Add(this.lbl_Cpf);
-            this.grpDadosPaciente.Controls.Add(this.dtpNascimento);
             this.grpDadosPaciente.Controls.Add(this.txbComplemento);
             this.grpDadosPaciente.Controls.Add(this.lbl_Email);
             this.grpDadosPaciente.Controls.Add(this.cboEstadoCivil);
@@ -381,6 +380,43 @@
             this.grpDadosPaciente.Name = "grpDadosPaciente";
             this.grpDadosPaciente.TabStop = false;
             this.grpDadosPaciente.Enter += new System.EventHandler(this.grpDadosPaciente_Enter);
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboEstado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboEstado.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Items.AddRange(new object[] {
+            resources.GetString("cboEstado.Items"),
+            resources.GetString("cboEstado.Items1"),
+            resources.GetString("cboEstado.Items2"),
+            resources.GetString("cboEstado.Items3"),
+            resources.GetString("cboEstado.Items4"),
+            resources.GetString("cboEstado.Items5"),
+            resources.GetString("cboEstado.Items6"),
+            resources.GetString("cboEstado.Items7"),
+            resources.GetString("cboEstado.Items8"),
+            resources.GetString("cboEstado.Items9"),
+            resources.GetString("cboEstado.Items10"),
+            resources.GetString("cboEstado.Items11"),
+            resources.GetString("cboEstado.Items12"),
+            resources.GetString("cboEstado.Items13"),
+            resources.GetString("cboEstado.Items14"),
+            resources.GetString("cboEstado.Items15"),
+            resources.GetString("cboEstado.Items16"),
+            resources.GetString("cboEstado.Items17"),
+            resources.GetString("cboEstado.Items18"),
+            resources.GetString("cboEstado.Items19"),
+            resources.GetString("cboEstado.Items20"),
+            resources.GetString("cboEstado.Items21"),
+            resources.GetString("cboEstado.Items22"),
+            resources.GetString("cboEstado.Items23"),
+            resources.GetString("cboEstado.Items24"),
+            resources.GetString("cboEstado.Items25"),
+            resources.GetString("cboEstado.Items26")});
+            resources.ApplyResources(this.cboEstado, "cboEstado");
+            this.cboEstado.Name = "cboEstado";
             // 
             // nudFilhos
             // 
@@ -641,6 +677,18 @@
             this.grpVidaSexual.Name = "grpVidaSexual";
             this.grpVidaSexual.TabStop = false;
             // 
+            // chkMultParceiros
+            // 
+            resources.ApplyResources(this.chkMultParceiros, "chkMultParceiros");
+            this.chkMultParceiros.Name = "chkMultParceiros";
+            this.chkMultParceiros.UseVisualStyleBackColor = true;
+            // 
+            // chkSexualAtivo
+            // 
+            resources.ApplyResources(this.chkSexualAtivo, "chkSexualAtivo");
+            this.chkSexualAtivo.Name = "chkSexualAtivo";
+            this.chkSexualAtivo.UseVisualStyleBackColor = true;
+            // 
             // grpAtivFisc
             // 
             this.grpAtivFisc.Controls.Add(this.chkPraticaAtvFisc);
@@ -649,6 +697,13 @@
             resources.ApplyResources(this.grpAtivFisc, "grpAtivFisc");
             this.grpAtivFisc.Name = "grpAtivFisc";
             this.grpAtivFisc.TabStop = false;
+            // 
+            // chkPraticaAtvFisc
+            // 
+            resources.ApplyResources(this.chkPraticaAtvFisc, "chkPraticaAtvFisc");
+            this.chkPraticaAtvFisc.Name = "chkPraticaAtvFisc";
+            this.chkPraticaAtvFisc.UseVisualStyleBackColor = true;
+            this.chkPraticaAtvFisc.CheckedChanged += new System.EventHandler(this.chkPraticaAtvFisc_CheckedChanged);
             // 
             // lblNumAtivFisic
             // 
@@ -740,59 +795,12 @@
             resources.ApplyResources(this.tsmiCancelar, "tsmiCancelar");
             this.tsmiCancelar.Click += new System.EventHandler(this.tsmiCancelar_Click);
             // 
-            // cboEstado
+            // dtpNascimento
             // 
-            this.cboEstado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Items.AddRange(new object[] {
-            resources.GetString("cboEstado.Items"),
-            resources.GetString("cboEstado.Items1"),
-            resources.GetString("cboEstado.Items2"),
-            resources.GetString("cboEstado.Items3"),
-            resources.GetString("cboEstado.Items4"),
-            resources.GetString("cboEstado.Items5"),
-            resources.GetString("cboEstado.Items6"),
-            resources.GetString("cboEstado.Items7"),
-            resources.GetString("cboEstado.Items8"),
-            resources.GetString("cboEstado.Items9"),
-            resources.GetString("cboEstado.Items10"),
-            resources.GetString("cboEstado.Items11"),
-            resources.GetString("cboEstado.Items12"),
-            resources.GetString("cboEstado.Items13"),
-            resources.GetString("cboEstado.Items14"),
-            resources.GetString("cboEstado.Items15"),
-            resources.GetString("cboEstado.Items16"),
-            resources.GetString("cboEstado.Items17"),
-            resources.GetString("cboEstado.Items18"),
-            resources.GetString("cboEstado.Items19"),
-            resources.GetString("cboEstado.Items20"),
-            resources.GetString("cboEstado.Items21"),
-            resources.GetString("cboEstado.Items22"),
-            resources.GetString("cboEstado.Items23"),
-            resources.GetString("cboEstado.Items24"),
-            resources.GetString("cboEstado.Items25"),
-            resources.GetString("cboEstado.Items26")});
-            resources.ApplyResources(this.cboEstado, "cboEstado");
-            this.cboEstado.Name = "cboEstado";
-            // 
-            // chkPraticaAtvFisc
-            // 
-            resources.ApplyResources(this.chkPraticaAtvFisc, "chkPraticaAtvFisc");
-            this.chkPraticaAtvFisc.Name = "chkPraticaAtvFisc";
-            this.chkPraticaAtvFisc.UseVisualStyleBackColor = true;
-            this.chkPraticaAtvFisc.CheckedChanged += new System.EventHandler(this.chkPraticaAtvFisc_CheckedChanged);
-            // 
-            // chkSexualAtivo
-            // 
-            resources.ApplyResources(this.chkSexualAtivo, "chkSexualAtivo");
-            this.chkSexualAtivo.Name = "chkSexualAtivo";
-            this.chkSexualAtivo.UseVisualStyleBackColor = true;
-            // 
-            // chkMultParceiros
-            // 
-            resources.ApplyResources(this.chkMultParceiros, "chkMultParceiros");
-            this.chkMultParceiros.Name = "chkMultParceiros";
-            this.chkMultParceiros.UseVisualStyleBackColor = true;
+            this.dtpNascimento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            resources.ApplyResources(this.dtpNascimento, "dtpNascimento");
+            this.dtpNascimento.Name = "dtpNascimento";
             // 
             // frmCadastrarPaciente
             // 
@@ -847,7 +855,6 @@
         private System.Windows.Forms.TextBox txbCidade;
         private System.Windows.Forms.TextBox txbComplemento;
         private System.Windows.Forms.TextBox txbEndereco;
-        private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.MaskedTextBox txbCpf;
         private System.Windows.Forms.TextBox txbNome;
         private System.Windows.Forms.Label lbl_Email;
@@ -926,5 +933,6 @@
         private System.Windows.Forms.CheckBox chkMultParceiros;
         private System.Windows.Forms.CheckBox chkSexualAtivo;
         private System.Windows.Forms.CheckBox chkPraticaAtvFisc;
+        private System.Windows.Forms.DateTimePicker dtpNascimento;
     }
 }
