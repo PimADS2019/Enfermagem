@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using enfunip.modelo.controle;
 
 namespace enfunip.apresentacao
 {
@@ -116,7 +117,35 @@ namespace enfunip.apresentacao
 
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Paciente cadastrado com sucesso");
+            controlePaciente controlePaciente = new controlePaciente();
+
+            List<String> dadosPaciente = new List<string>();
+            //Primera tela cliente
+            dadosPaciente.Add(idPaciente_BD.Text);
+            dadosPaciente.Add(txbNome.Text);
+            dadosPaciente.Add(dtpNascimento.Text);
+            dadosPaciente.Add(txbCpf.Text);
+            dadosPaciente.Add(txbEndereco.Text);
+            dadosPaciente.Add(txbNumeroEndereco.Text);
+            dadosPaciente.Add(txbComplemento.Text);
+            dadosPaciente.Add(txbCidade.Text);
+            dadosPaciente.Add(txbBairro.Text);
+            dadosPaciente.Add(cboEstado.Text);
+            dadosPaciente.Add(txbCep.Text);
+            dadosPaciente.Add(cboSexo.Text);
+            dadosPaciente.Add(cboEstadoCivil.Text);
+            dadosPaciente.Add(txbReligiao.Text);
+            dadosPaciente.Add(nudFilhos.Text);
+            dadosPaciente.Add(txbEmail.Text);
+            dadosPaciente.Add(txbCelular.Text);
+            dadosPaciente.Add(txbTelefone.Text);
+
+            //Tela Historico
+
+            controlePaciente.CadastrarPaciente(dadosPaciente);
+
+            MessageBox.Show(controlePaciente.mensagem);
+
         }
 
 

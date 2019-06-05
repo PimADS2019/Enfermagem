@@ -82,6 +82,7 @@ namespace enfunip.apresentacao
             dadosFuncionario.Add(txbNumContrato.Text);
             dadosFuncionario.Add(txbRA.Text);
             dadosFuncionario.Add(cboPeriodo.Text);
+            dadosFuncionario.Add(cboSemestre.Text);
             dadosFuncionario.Add(txbEndereco.Text);
             dadosFuncionario.Add(txbNumeroEndereco.Text);
             dadosFuncionario.Add(txbComplemento.Text);

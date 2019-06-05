@@ -36,23 +36,25 @@ namespace enfunip.modelo.validacoes
                 this.mensagem += "Periodo com mais de 11 caracteres\n";
             if (dadosFuncionario[11].Length > 50)
                 this.mensagem += "endereço com mais de 50 caracteres\n";
-            if (dadosFuncionario[12].Length > 8)
+            if (dadosFuncionario[12].Length > 50)
+                this.mensagem += "endereço com mais de 50 caracteres\n";
+            if (dadosFuncionario[13].Length > 8)
                 this.mensagem += "número com mais de 8 caracteres \n";
-            if (dadosFuncionario[13].Length > 30)
+            if (dadosFuncionario[14].Length > 30)
                 this.mensagem += "Complemento com mais de 30 caracteres \n";
-            if (dadosFuncionario[14].Length > 40)
-                this.mensagem += "Cidade com mais de 40 caracteres\n";
             if (dadosFuncionario[15].Length > 40)
+                this.mensagem += "Cidade com mais de 40 caracteres\n";
+            if (dadosFuncionario[16].Length > 40)
                 this.mensagem += "bairro com mais de 40 de caracteres\n";
-            if (dadosFuncionario[16].Length > 2)
+            if (dadosFuncionario[17].Length > 2)
                 this.mensagem += "Sigla do estado com mais de 2 caracteres\n";
-            if (dadosFuncionario[17].Length > 10)
+            if (dadosFuncionario[18].Length > 10)
                 this.mensagem += "cep com mais de 10 caracteres\n";
-            if (dadosFuncionario[18].Length > 70)
+            if (dadosFuncionario[19].Length > 70)
                 this.mensagem += "email com mais de 70 caracteres\n";
-            if (dadosFuncionario[19].Length > 15)
-                this.mensagem += "Celular com mais de 15 caracteres\n";
             if (dadosFuncionario[20].Length > 15)
+                this.mensagem += "Celular com mais de 15 caracteres\n";
+            if (dadosFuncionario[21].Length > 15)
                 this.mensagem += "telefone com mais de 15 caracteres \n";
            /* try
             {

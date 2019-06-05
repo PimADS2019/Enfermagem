@@ -19,14 +19,33 @@ namespace enfunip.dao
             
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"insert into Paciente
-                (nome, dataNascimento, cpf, endereco, numero, complemento
-                 cidade, bairro, estado, cep, sexo, estadocivil, religiao
-                 filhos, email, celular, telefone)
-                values
-                (@Nome, @DataNascimento, @Cpf, @Logradouro, @Numero, @Complemento,
-                 @Cidade, @Bairro, @Estado, @Cep, @Sexo, @EstadoCivil, @Religiao,
-                 @Filhos, @Email, @Celular, @Telefone)";
+            cmd.CommandText = @"Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep)
+                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep)
+                                    declare @id_endereco int=@@identity
+
+                                    insert into Pessoas(TipoUsuario,Nome, DataNascimento, Cpf,Sexo,EstadoCivil, Fk_Enderecos_IdEndereco)
+                                    Values('Paciente', @Nome, @DataNascimento, @Cpf,@Sexo,@EstadoCivil, @id_endereco)
+                                    select* from
+                                    (
+                                        select Nome, DataNascimento, Cpf, Sexo,EstadoCivil, IdEndereco from Enderecos
+                                        inner join Pessoas
+                                        on Pessoas.Fk_Enderecos_IdEndereco = Enderecos.IdEndereco
+                                    ) as Endereco_Pessoas;
+                                    declare @id_Pessoa int=@@identity
+                                       
+                                    insert into Contatos(Email,Celular,Telefone, Fk_Pessoas_IdPessoa)
+                                    values (@Email,@Celular,@Telefone,@Id_Pessoa)
+                                    select Email,Celular,Telefone,Fk_Pessoas_IdPessoa from Contatos
+                                    inner join Pessoas
+                                    on Pessoas.IdPessoa = Contatos.Fk_Pessoas_IdPessoa
+
+                                    insert into Pacientes(Religiao, NumeroFilhos, Fk_Pessoas_IdPessoa)
+                                    values(@Religiao, @Filhos, @Id_Pessoa)
+                                    select Religiao, NumeroFilhos, Fk_Pessoas_IdPessoa from Pacientes
+                                     inner join Pessoas
+ 
+                                     on Pessoas.IdPessoa = Pacientes.Fk_Pessoas_IdPessoa";
+
             cmd.Parameters.AddWithValue("@Nome", paciente.nome);
             cmd.Parameters.AddWithValue("@DataNascimento", paciente.datanascimento);
             cmd.Parameters.AddWithValue("@Cpf", paciente.cpf);

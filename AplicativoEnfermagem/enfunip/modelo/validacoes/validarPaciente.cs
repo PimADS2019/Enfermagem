@@ -48,14 +48,14 @@ namespace enfunip.modelo.validacoes
                 this.mensagem += "Celular com mais de 15 caracteres\n";
             if (dadosPaciente[17].Length > 15)
                 this.mensagem += "telefone com mais de 15 caracteres \n";
-            try
+            /*try
             {
                 this.id = Convert.ToInt32(dadosPaciente[0]);
             }
             catch (FormatException)
             {
                 this.mensagem += "ID inválido";
-            }
+            }*/
         }
     }
 }
