@@ -198,10 +198,31 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"update funcionario
-                            set Nome = @Nome, @DataNascimento, @Cpf, @Logradouro, @Numero, @Complemento,
-                 @Cidade, @Bairro, @Estado, @Cep, @Sexo, @EstadoCivil, @Religiao,
-                 @Filhos, @Email, @Celular, @Telefone";
+            cmd.CommandText = @"UPDATE Pessoas
+                                SET TipoUsuario = @TipoUsuario
+                                    Usuario = @Usuario
+                                    Senha = @Senha
+                                    ConfSenha = @ConfSenha
+                                    Nome = @Nome,
+                                    DataNascimento = @DataNascimento
+                                    Cpf = @Cpf
+                                WHERE IdPessoa = @id
+
+                                UPDATE Enderecos
+                                SET Logradouro = @Logradouro,
+                                    Numero = @Numero,
+                                    Complemento = @Complemento
+                                    Cidade = @Cidade,
+                                    Bairro = @Bairro,
+                                    Estado = @Estado,
+                                    Cep = @Cep
+                                WHERE Fk_Pessoas_IdPessoa = @id
+
+                                UPDATE Contatos
+                                SET Email = @Email,
+                                    Celular = @Celular,
+                                    Telefone = @Telefone,
+                                WHERE Fk_Pessoas_IdPessoa = @id";
             cmd.Parameters.AddWithValue("@TipoUsuario", funcionario.tipousuario);
             cmd.Parameters.AddWithValue("@Usuario", funcionario.usuario);
             cmd.Parameters.AddWithValue("@Senha", funcionario.senha);
