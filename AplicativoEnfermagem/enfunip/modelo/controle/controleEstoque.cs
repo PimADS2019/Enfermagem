@@ -20,12 +20,12 @@ namespace enfunip.modelo.controle
             if (validarestoque.mensagem.Equals(""))
             {
                 Estoque estoque = new Estoque();
-                estoque.dataentrada = Convert.ToDateTime(dadosItem[2]);
-                estoque.produto = dadosItem[1];
-                estoque.quantidade = (Convert.ToInt32(dadosItem[5]));
-                estoque.fabricante = dadosItem[3];
-                estoque.categoria = dadosItem[4];
-                estoque.descricao = dadosItem[6];
+
+                estoque.dataentrada = Convert.ToDateTime(dadosItem[1]);
+                estoque.produto = dadosItem[2];
+                estoque.quantidade = (Convert.ToInt32(dadosItem[3]));
+                estoque.descricao = dadosItem[4];
+
                 Estoquedao estoqueDAO = new Estoquedao();
                 estoqueDAO.CadastrarItem(estoque);
                 this.mensagem = estoqueDAO.mensagem;

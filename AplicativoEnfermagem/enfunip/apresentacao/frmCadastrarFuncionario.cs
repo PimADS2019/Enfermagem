@@ -71,7 +71,6 @@ namespace enfunip.apresentacao
             controleFuncionario controleFuncionario = new controleFuncionario();
 
             List<String> dadosFuncionario = new List<string>();
-            dadosFuncionario.Add(idFuncionario_BD.Text);
             dadosFuncionario.Add(cboTipoUsuario.Text);
             dadosFuncionario.Add(txbUsuario.Text);
             dadosFuncionario.Add(txbSenha.Text);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using enfunip.modelo.controle;
 
 namespace enfunip.apresentacao
 {
@@ -40,6 +41,21 @@ namespace enfunip.apresentacao
                 nudQtdProduto.ResetText();
                 txbObsProduto.Clear();
             }
+        }
+
+        private void tsmiSalvar_Click(object sender, EventArgs e)
+        {
+            controleEstoque estoque = new controleEstoque();
+
+            List<String> dadosItem= new List<string>();
+            dadosItem.Add(idProduto_BD.Text);
+            dadosItem.Add(dtpEntradaProduto.Text);
+            dadosItem.Add(txbProduto.Text);
+            dadosItem.Add(nudQtdProduto.Text);
+            dadosItem.Add(txbObsProduto.Text);
+
+            estoque.CadastrarItem(dadosItem);
+            MessageBox.Show(estoque.mensagem); ;
         }
     }
 }

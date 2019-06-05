@@ -19,22 +19,12 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"insert into Enderecos
-                                    values ('r. nelson c', '340', 'casa', 'Sorocaba', 'VH', 'SP', '18888888')
-                                    declare @id_endereco int=@@identity
-                                insert into Pessoas
-                                    values ('Isac Chuab', '19940802', '99999999999', 'Masculino', 'Casado', 1)
-                                    declare @id_Pessoa int=@@identity
-                                insert into Alunos
-                                    values ( 'd999999', 'Manhã', '3', 1)
-                                    declare @id_aluno int=@@identity
-                                insert into Contatos
-                                    values ('isac@issoai.com', '99999999999', '9999999999', 1))";
+            cmd.CommandText = @"insert into Estoques (NomeProduto, QuantidadeProduto,DescricaoProduto,DataHrCadastroProduto)
+                                    values (@Produto,@Quantidade,@Descricao,@DataEntrada)";
+     
             cmd.Parameters.AddWithValue("@DataEntrada", estoque.dataentrada);
             cmd.Parameters.AddWithValue("@Produto", estoque.produto);
             cmd.Parameters.AddWithValue("@Quantidade", estoque.quantidade);
-            cmd.Parameters.AddWithValue("@fabricante", estoque.fabricante);
-            cmd.Parameters.AddWithValue("@Categoria", estoque.categoria);
             cmd.Parameters.AddWithValue("@Descricao", estoque.descricao);
             try
             {
