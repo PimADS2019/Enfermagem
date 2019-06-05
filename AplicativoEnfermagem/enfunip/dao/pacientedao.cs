@@ -19,19 +19,13 @@ namespace enfunip.dao
             
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep)
-                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep)
-                                    declare @id_endereco int=@@identity
-
-                                    insert into Pessoas(TipoUsuario,Nome, DataNascimento, Cpf,Sexo,EstadoCivil, Fk_Enderecos_IdEndereco)
-                                    Values('Paciente', @Nome, @DataNascimento, @Cpf,@Sexo,@EstadoCivil, @id_endereco)
-                                    select* from
-                                    (
-                                        select Nome, DataNascimento, Cpf, Sexo,EstadoCivil, IdEndereco from Enderecos
-                                        inner join Pessoas
-                                        on Pessoas.Fk_Enderecos_IdEndereco = Enderecos.IdEndereco
-                                    ) as Endereco_Pessoas;
+            cmd.CommandText = @"insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf)
+                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf)
                                     declare @id_Pessoa int=@@identity
+
+                                    Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Fk_Pessoas_IdPessoa)
+                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep, @id_Pessoa)
+                                    declare @id_endereco int=@@identity
                                        
                                     insert into Contatos(Email,Celular,Telefone, Fk_Pessoas_IdPessoa)
                                     values (@Email,@Celular,@Telefone,@Id_Pessoa)
@@ -126,10 +120,33 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"update pessoas
-                            set nome = @Nome, @DataNascimento, @Cpf, @Logradouro, @Numero, @Complemento,
-                 @Cidade, @Bairro, @Estado, @Cep, @Sexo, @EstadoCivil, @Religiao,
-                 @Filhos, @Email, @Celular, @Telefone";
+            cmd.CommandText = @"UPDATE Pessoas
+                                SET Nome = @Nome,
+                                    DataNascimento = @DataNascimento
+                                    Cpf = @Cpf
+                                WHERE IdPessoa = @id
+
+                                UPDATE Enderecos
+                                SET Logradouro = @Logradouro,
+                                    Numero = @Numero,
+                                    Complemento = @Complemento
+                                    Cidade = @Cidade,
+                                    Bairro = @Bairro,
+                                    Estado = @Estado,
+                                    Cep = @Cep
+                                WHERE Fk_Pessoas_IdPessoa = @id
+
+                                UPDATE Contatos
+                                SET Email = @Email,
+                                    Celular = @Celular,
+                                    Telefone = @Telefone,
+                                WHERE Fk_Pessoas_IdPessoa = @id
+
+                                UPDATE Pacientes
+                                SET Religiao = @Religiao,
+                                    NumeroFilhos = @Filhos,
+                                WHERE Fk_Pessoas_IdPessoa = @id";
+
             cmd.Parameters.AddWithValue("@id", paciente.id);
             cmd.Parameters.AddWithValue("@Nome", paciente.nome);
             cmd.Parameters.AddWithValue("@DataNascimento", paciente.datanascimento);
@@ -165,7 +182,7 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"delete from pessoas where id = @id";
+            cmd.CommandText = @"delete from Pessoas where id = @id";
             cmd.Parameters.AddWithValue("@id", paciente.id);
             try
             {

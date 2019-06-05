@@ -21,20 +21,13 @@ namespace enfunip.dao
 
             if (funcionario.tipousuario.Equals("Professor"))
             {
-                cmd.CommandText = @"Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep)
-                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep)
-                                    declare @id_endereco int=@@identity
-
-                                    insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf, Fk_Enderecos_IdEndereco)
-                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf, @id_endereco)
-                                    select* from
-                                    (
-                                        select TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf, IdEndereco from Enderecos
-                                        inner join Pessoas
-
-                                        on Pessoas.Fk_Enderecos_IdEndereco = Enderecos.IdEndereco
-                                    ) as Endereco_Pessoas;
+                cmd.CommandText = @" insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf)
+                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf)
                                     declare @id_Pessoa int=@@identity
+
+                                    Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Fk_Pessoas_IdPessoa)
+                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep, @id_Pessoa)
+                                    declare @id_endereco int=@@identity
                                        
                                     insert into Contatos(Email,Celular,Telefone, Fk_Pessoas_IdPessoa)
                                     values (@Email,@Celular,@Telefone,@Id_Pessoa)
@@ -51,20 +44,13 @@ namespace enfunip.dao
 
             if (funcionario.tipousuario.Equals("Coordenador"))
             {
-                cmd.CommandText = @"Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep)
-                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep)
-                                    declare @id_endereco int=@@identity
-
-                                    insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf, Fk_Enderecos_IdEndereco)
-                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf, @id_endereco)
-                                    select* from
-                                    (
-                                        select TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf, IdEndereco from Enderecos
-                                        inner join Pessoas
-
-                                        on Pessoas.Fk_Enderecos_IdEndereco = Enderecos.IdEndereco
-                                    ) as Endereco_Pessoas;
+                cmd.CommandText = @"insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf)
+                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf)
                                     declare @id_Pessoa int=@@identity
+
+                                    Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Fk_Pessoas_IdPessoa)
+                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep, @id_Pessoa)
+                                    declare @id_endereco int=@@identity
                                        
                                     insert into Contatos(Email,Celular,Telefone, Fk_Pessoas_IdPessoa)
                                     values (@Email,@Celular,@Telefone,@Id_Pessoa)
@@ -81,20 +67,13 @@ namespace enfunip.dao
 
             if (funcionario.tipousuario.Equals("Aluno"))
             {
-                cmd.CommandText = @"Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep)
-                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep)
-                                    declare @id_endereco int=@@identity
-
-                                    insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf, Fk_Enderecos_IdEndereco)
-                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf, @id_endereco)
-                                    select* from
-                                    (
-                                        select TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf, IdEndereco from Enderecos
-                                        inner join Pessoas
-
-                                        on Pessoas.Fk_Enderecos_IdEndereco = Enderecos.IdEndereco
-                                    ) as Endereco_Pessoas;
+                cmd.CommandText = @"insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf)
+                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf)
                                     declare @id_Pessoa int=@@identity
+
+                                    Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Fk_Pessoas_IdPessoa)
+                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep, @id_Pessoa)
+                                    declare @id_endereco int=@@identity
                                        
                                     insert into Contatos(Email,Celular,Telefone, Fk_Pessoas_IdPessoa)
                                     values (@Email,@Celular,@Telefone,@Id_Pessoa)
@@ -111,20 +90,13 @@ namespace enfunip.dao
 
             if (funcionario.tipousuario.Equals("Enfermeiro"))
             {
-                cmd.CommandText = @"Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep)
-                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep)
-                                    declare @id_endereco int=@@identity
-
-                                    insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf, Fk_Enderecos_IdEndereco)
-                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf, @id_endereco)
-                                    select* from
-                                    (
-                                        select TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf, IdEndereco from Enderecos
-                                        inner join Pessoas
-
-                                        on Pessoas.Fk_Enderecos_IdEndereco = Enderecos.IdEndereco
-                                    ) as Endereco_Pessoas;
+                cmd.CommandText = @"insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf)
+                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf)
                                     declare @id_Pessoa int=@@identity
+
+                                    Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Fk_Pessoas_IdPessoa)
+                                    values(@Logradouro, @Numero, @Complemento, @Cidade, @Bairro, @Estado, @Cep, @id_Pessoa)
+                                    declare @id_endereco int=@@identity
                                        
                                     insert into Contatos(Email,Celular,Telefone, Fk_Pessoas_IdPessoa)
                                     values (@Email,@Celular,@Telefone,@Id_Pessoa)
@@ -264,7 +236,8 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"delete from funcionario where id = @id";
+            cmd.CommandText = @"delete from Pessoas 
+                                where id = @id";
             cmd.Parameters.AddWithValue("@id", funcionario.id);
             try
             {

@@ -1,3 +1,6 @@
+
+drop database IF EXISTS PimEnfermagem2019
+
 --Criando Banco de Dados
 create database PimEnfermagem2019
 go
@@ -19,8 +22,7 @@ create table Pessoas
 	DataNascimento datetime not null,
 	Cpf varchar(15) not null,
 	Sexo Varchar (10),
-	EstadoCivil Varchar(15) not null,
-	Fk_Enderecos_IdEndereco int
+	EstadoCivil Varchar(15) not null
 
 	constraint Pk_Pessoas primary key (IdPessoa)
 );
@@ -35,7 +37,8 @@ Create table Enderecos
 	Cidade varchar (40)not null,
 	Bairro varchar (40)not null,
 	Estado varchar (2) not null,
-	Cep varchar (10) not null
+	Cep varchar (10) not null,
+	Fk_Pessoas_IdPessoa int
 
 	constraint Pk_Enderecos primary key (IdEndereco)
 );
@@ -225,44 +228,61 @@ create table LogConsultas
 go
 -- Adicionando Chave Estrangeira
 
-alter table Pessoas
-	add constraint FK_Pessoas_Enderecos foreign key (Fk_Enderecos_IdEndereco)
-	references Enderecos(IdEndereco);
+alter table Enderecos
+	add constraint FK_Enderecos_Pessoas foreign key (Fk_Pessoas_IdPessoa)
+	references Pessoas(IdPessoa)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table Contatos 
 	add constraint FK_Contatos_Pessoas foreign key (Fk_Pessoas_IdPessoa)
-	references Pessoas(IdPessoa);
+	references Pessoas(IdPessoa)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
+
 go
 
 alter table Pacientes
 	add constraint Fk_Pacientes_Pessoas foreign key (Fk_Pessoas_IdPessoa)
-	references Pessoas(IdPessoa);
+	references Pessoas(IdPessoa)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table Alunos
 	add constraint Fk_Alunos_Pessoas foreign key (Fk_Pessoas_IdPessoa)
-	references Pessoas(IdPessoa);
+	references Pessoas(IdPessoa)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table Professores
 	add constraint Fk_Professores_Pessoas foreign key (Fk_Pessoas_IdPessoa)
-	references Pessoas(IdPessoa);
+	references Pessoas(IdPessoa)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table Coordenadores
 	add constraint Fk_Coordenadores_Pessoas foreign key (Fk_Pessoas_IdPessoa)
-	references Pessoas(IdPessoa);
+	references Pessoas(IdPessoa)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table Enfermeiros
 	add constraint Fk_Enfermeiros_Pessoas foreign key (Fk_Pessoas_IdPessoa)
-	references Pessoas(IdPessoa);
+	references Pessoas(IdPessoa)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table Pacientes
 	add constraint Fk_Pacientes_Amnense foreign key (Fk_Amnense_IdAmnense)
-	references Amnense(IdAmnense);
+	references Amnense(IdAmnense)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table Atendimentos
@@ -278,6 +298,7 @@ go
 alter table Atendimentos
 	add constraint Fk_Atendimentos_Professores foreign key (Fk_Professores_IdProfessor)
 	references Professores(IdProfessor);
+
 go
 
 alter table Atendimentos
@@ -292,26 +313,36 @@ go
 
 alter table LogEstoques
 	add constraint Fk_LogEstoques_Consultas foreign key (Fk_Consultas_IdConsulta)
-	references Consultas(IdConsulta);
+	references Consultas(IdConsulta)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table LogEstoques
 	add constraint Fk_LogEstoques_Estoques foreign key (Fk_Estoques_IdProduto)
-	references Estoques(IdProduto);
+	references Estoques(IdProduto)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table LogConsultas
 	add constraint Fk_LogConsutas_Consultas foreign key (Fk_Consultas_IdConsulta)
-	references Consultas(IdConsulta);
+	references Consultas(IdConsulta)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table logConsultas
 	add constraint Fk_LogConsultas_Atendimentos foreign key (Fk_Atendimentos_IdAtendimento)
-	references Atendimentos(IdAtendimento);
+	references Atendimentos(IdAtendimento)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table Amnense
 	add constraint Fk_Amnense_Habitos foreign key (Fk_Habitos_IdHabito)
-	references Habitos(IdHabito);
+	references Habitos(IdHabito)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 
 	
