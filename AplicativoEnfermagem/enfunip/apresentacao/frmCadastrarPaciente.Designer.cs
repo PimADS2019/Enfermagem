@@ -65,6 +65,7 @@
             this.tbcCadastroPaciente = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.grpDadosPaciente = new System.Windows.Forms.GroupBox();
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.nudFilhos = new System.Windows.Forms.NumericUpDown();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -118,7 +119,6 @@
             this.tsmiSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.tbcCadastroPaciente.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.grpDadosPaciente.SuspendLayout();
@@ -380,6 +380,13 @@
             this.grpDadosPaciente.Name = "grpDadosPaciente";
             this.grpDadosPaciente.TabStop = false;
             this.grpDadosPaciente.Enter += new System.EventHandler(this.grpDadosPaciente_Enter);
+            // 
+            // dtpNascimento
+            // 
+            this.dtpNascimento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            resources.ApplyResources(this.dtpNascimento, "dtpNascimento");
+            this.dtpNascimento.Name = "dtpNascimento";
             // 
             // cboEstado
             // 
@@ -794,13 +801,6 @@
             this.tsmiCancelar.Name = "tsmiCancelar";
             resources.ApplyResources(this.tsmiCancelar, "tsmiCancelar");
             this.tsmiCancelar.Click += new System.EventHandler(this.tsmiCancelar_Click);
-            // 
-            // dtpNascimento
-            // 
-            this.dtpNascimento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            resources.ApplyResources(this.dtpNascimento, "dtpNascimento");
-            this.dtpNascimento.Name = "dtpNascimento";
             // 
             // frmCadastrarPaciente
             // 
