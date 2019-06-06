@@ -8,6 +8,7 @@ namespace enfunip.modelo
 {
     public class Login
     {
+        public String tipousuario;
         public String usuario;
         public String senha;
     }
