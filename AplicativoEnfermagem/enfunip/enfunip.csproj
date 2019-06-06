@@ -123,7 +123,9 @@
     <Compile Include="dao\intAgendadao.cs" />
     <Compile Include="dao\intEstoquedao.cs" />
     <Compile Include="dao\intFucionariodao.cs" />
+    <Compile Include="dao\intLogindao.cs" />
     <Compile Include="dao\intPessoadao.cs" />
+    <Compile Include="dao\Logindao.cs" />
     <Compile Include="dao\pacientedao.cs" />
     <Compile Include="modelo\Agenda.cs" />
     <Compile Include="modelo\controle\controleAgenda.cs" />
@@ -135,6 +137,7 @@
     <Compile Include="modelo\Estaticos.cs" />
     <Compile Include="modelo\Estoque.cs" />
     <Compile Include="modelo\Funcionario.cs" />
+    <Compile Include="modelo\Login.cs" />
     <Compile Include="modelo\Paciente.cs" />
     <Compile Include="modelo\validacoes\Validacao.cs" />
     <Compile Include="modelo\validacoes\validarAgenda.cs" />
