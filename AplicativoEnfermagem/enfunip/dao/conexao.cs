@@ -15,7 +15,7 @@ namespace enfunip.dao
         public Conexao()
         {
             conexaoBD = new SqlConnection();
-            conexaoBD.ConnectionString = @"Data Source=DESKTOP-QV22MKT;Initial Catalog=PimEnfermagem2019;Integrated Security=True";
+            conexaoBD.ConnectionString = @"Data Source=DESKTOP-S0KR4FS;Initial Catalog=PimEnfermagem2019;Integrated Security=True";
         }
 
         public SqlConnection Conectar()

@@ -22,7 +22,7 @@ create table Pessoas
 	DataNascimento datetime not null,
 	Cpf varchar(15) not null,
 	Sexo Varchar (10),
-	EstadoCivil Varchar(15) not null
+	EstadoCivil Varchar(15)
 
 	constraint Pk_Pessoas primary key (IdPessoa)
 );
@@ -72,9 +72,9 @@ go
 create table Alunos
 (
 	IdAluno int identity (1,1),
-	Ra varchar (9) not null,
-	PeriodoAluno varchar (9) not null,
-	Semestre varchar (2),
+	Ra varchar (9),
+	PeriodoAluno varchar (9),
+	Semestre varchar (12),
 	Fk_Pessoas_IdPessoa int,
 
 	constraint Pk_Alunos primary key (IdAluno)
@@ -84,8 +84,8 @@ go
 create table Professores
 (
 	IdProfessor int identity (1,1),
-	NumeroUnipProf varchar (9) not null,
-	PeriodoProf varchar (9) not null,
+	NumeroUnipProf varchar (9),
+	PeriodoProf varchar (9),
 	Fk_Pessoas_IdPessoa int,
 
 	constraint Pk_Professores primary key (IdProfessor)
@@ -95,7 +95,7 @@ go
 create table Coordenadores
 (
 	IdCoordenador int identity (1,1),
-	NumeroUnipCood varchar (9) not null,
+	NumeroUnipCood varchar (9),
 	PeriodoCood varchar (9),
 	Fk_Pessoas_IdPessoa int,
 
@@ -106,7 +106,7 @@ go
 create table Enfermeiros
 (
 	IdEnfermeiro int identity (1,1),
-	NumeroEnfermeiro varchar (9) not null,
+	NumeroEnfermeiro varchar (9),
 	PeriodoEnf varchar (9),
 	Fk_Pessoas_IdPessoa int,
 
@@ -346,3 +346,11 @@ alter table Amnense
 	on UPDATE CASCADE;
 
 	
+	select * from Pessoas
+	select * from Contatos
+	select * from Enderecos
+	select * from Enfermeiros
+	select * from Coordenadores
+	select * from  Professores
+	select * from  Alunos
+	select * from  Pacientes

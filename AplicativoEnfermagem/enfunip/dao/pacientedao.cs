@@ -19,8 +19,8 @@ namespace enfunip.dao
             
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf)
-                                    Values(@TipoUsuario, @Usuario, @Senha, @ConfSenha, @Nome, @DataNascimento, @Cpf)
+            cmd.CommandText = @"insert into Pessoas(Nome, DataNascimento, Cpf, Sexo, EstadoCivil)
+                                    Values(@Nome, @DataNascimento, @Cpf, @Sexo, @EstadoCivil)
                                     declare @id_Pessoa int=@@identity
 
                                     Insert into Enderecos(Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Fk_Pessoas_IdPessoa)

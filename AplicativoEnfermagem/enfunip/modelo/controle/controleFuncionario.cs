@@ -19,27 +19,27 @@ namespace enfunip.modelo.controle
             if (validarfuncionario.mensagem.Equals(""))
             {
                 Funcionario funcionario = new Funcionario();
-                funcionario.tipousuario = dadosFuncionario[1];
-                funcionario.usuario = dadosFuncionario[2];
-                funcionario.senha = dadosFuncionario[3];
-                funcionario.confsenha = dadosFuncionario[4];
-                funcionario.nome = dadosFuncionario[5];
-                funcionario.datanascimento = Convert.ToDateTime(dadosFuncionario[6]);
-                funcionario.cpf = dadosFuncionario[7];
-                funcionario.numeroContrato= dadosFuncionario[8];
-                funcionario.ra = dadosFuncionario[9];
-                funcionario.periodo = dadosFuncionario[10];
-                funcionario.semestre = dadosFuncionario[11];
-                funcionario.endereco = dadosFuncionario[12];
-                funcionario.numero = dadosFuncionario[13];
-                funcionario.complemento = dadosFuncionario[14];
-                funcionario.cidade = dadosFuncionario[15];
-                funcionario.bairro = dadosFuncionario[16];
-                funcionario.estado = dadosFuncionario[17];
-                funcionario.cep = dadosFuncionario[18];
-                funcionario.email = dadosFuncionario[19];
-                funcionario.celular = dadosFuncionario[20];
-                funcionario.telefone = dadosFuncionario[21];
+                funcionario.tipousuario = dadosFuncionario[0];
+                funcionario.usuario = dadosFuncionario[1];
+                funcionario.senha = dadosFuncionario[2];
+                funcionario.confsenha = dadosFuncionario[3];
+                funcionario.nome = dadosFuncionario[4];
+                funcionario.datanascimento = Convert.ToDateTime(dadosFuncionario[5]);
+                funcionario.cpf = dadosFuncionario[6];
+                funcionario.numeroContrato = dadosFuncionario[7];
+                funcionario.ra = dadosFuncionario[8];
+                funcionario.periodo = dadosFuncionario[9];
+                funcionario.semestre = dadosFuncionario[10];
+                funcionario.endereco = dadosFuncionario[11];
+                funcionario.numero = dadosFuncionario[12];
+                funcionario.complemento = dadosFuncionario[13];
+                funcionario.cidade = dadosFuncionario[14];
+                funcionario.bairro = dadosFuncionario[15];
+                funcionario.estado = dadosFuncionario[16];
+                funcionario.cep = dadosFuncionario[17];
+                funcionario.email = dadosFuncionario[18];
+                funcionario.celular = dadosFuncionario[19];
+                funcionario.telefone = dadosFuncionario[20];
 
                 Funcionariodao funcionarioDAO = new Funcionariodao();
                 funcionarioDAO.CadastrarFuncionario(funcionario);

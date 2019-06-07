@@ -132,6 +132,7 @@ namespace enfunip.dao
             cmd.Parameters.AddWithValue("@Email", funcionario.email);
             cmd.Parameters.AddWithValue("@Celular", funcionario.celular);
             cmd.Parameters.AddWithValue("@Telefone", funcionario.telefone);
+
             try
             {
                 cmd.Connection = conexaoBD.Conectar();
