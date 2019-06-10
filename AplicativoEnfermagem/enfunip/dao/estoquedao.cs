@@ -91,8 +91,8 @@ namespace enfunip.dao
             SqlCommand cmd = new SqlCommand();
             List<Estoque> listaEstoque = new List<Estoque>();
 
-            cmd.CommandText = @"select * from pessoas 
-                where nome like @nome";
+            cmd.CommandText = @"select * from Estoques
+                where NomeProduto like @nome";
             cmd.Parameters.AddWithValue("@Nome", estoque.produto + "%");
 
             try
@@ -102,13 +102,13 @@ namespace enfunip.dao
                 while (dataReader.Read())
                 {
                     Estoque estoqueLista = new Estoque();
-                    estoqueLista.id = Convert.ToInt32(dataReader["Id"]);
-                    estoqueLista.dataentrada = Convert.ToDateTime(dataReader["DataEntrada"].ToString());
-                    estoqueLista.produto = dataReader["Produto"].ToString();
-                    estoqueLista.quantidade = Convert.ToInt32(dataReader["Quantidade"]);
-                    estoqueLista.fabricante = dataReader["Fabricante"].ToString();
-                    estoqueLista.categoria = dataReader["Categoria"].ToString();
-                    estoqueLista.descricao = dataReader["Descricao"].ToString();
+                    //estoqueLista.id = Convert.ToInt32(dataReader["Id"]);
+                    //estoqueLista.dataentrada = Convert.ToDateTime(dataReader["DataEntrada"].ToString());
+                    estoqueLista.produto = dataReader["NomeProduto"].ToString();
+                    //estoqueLista.quantidade = Convert.ToInt32(dataReader["Quantidade"]);
+                    //estoqueLista.fabricante = dataReader["Fabricante"].ToString();
+                    //estoqueLista.categoria = dataReader["Categoria"].ToString();
+                    //estoqueLista.descricao = dataReader["Descricao"].ToString();
                     listaEstoque.Add(estoqueLista);
 
                 }

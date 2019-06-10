@@ -111,19 +111,13 @@ namespace enfunip.modelo.controle
         {
             this.mensagem = "";
             validarEstoque validarestoque = new validarEstoque();
-            validarestoque.ValidarDados(dadosEstoque);
-            if (validarestoque.mensagem.Equals(""))
-            {
-                Estoquedao estoqueDAO = new Estoquedao();
-                Estoque estoque = new Estoque();
-                estoque.produto = dadosEstoque[1];
-                Estaticos.listaEstoqueEstatico =
-                    estoqueDAO.PesquisarItemPorNome(estoque);
-            }
-            else
-            {
-                this.mensagem = validarestoque.mensagem;
-            }
+            //validarestoque.ValidarDados(dadosEstoque)
+            Estoquedao estoqueDAO = new Estoquedao();
+            Estoque estoque = new Estoque();
+            estoque.produto = dadosEstoque[0];
+            Estaticos.listaEstoqueEstatico = estoqueDAO.PesquisarItemPorNome(estoque);
+            
+            
         }
     }
 }
