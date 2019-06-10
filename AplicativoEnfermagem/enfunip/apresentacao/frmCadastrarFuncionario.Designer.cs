@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpDadosPaciente = new System.Windows.Forms.GroupBox();
             this.lblSemestre = new System.Windows.Forms.Label();
             this.cboSemestre = new System.Windows.Forms.ComboBox();
@@ -77,8 +78,10 @@
             this.tsmiSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpDadosPaciente.SuspendLayout();
             this.mnsFunçõesCadastroFunc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDadosPaciente
@@ -131,9 +134,10 @@
             this.grpDadosPaciente.Font = new System.Drawing.Font("Arial", 9.75F);
             this.grpDadosPaciente.Location = new System.Drawing.Point(4, 22);
             this.grpDadosPaciente.Name = "grpDadosPaciente";
-            this.grpDadosPaciente.Size = new System.Drawing.Size(616, 418);
+            this.grpDadosPaciente.Size = new System.Drawing.Size(639, 418);
             this.grpDadosPaciente.TabIndex = 47;
             this.grpDadosPaciente.TabStop = false;
+            this.grpDadosPaciente.Enter += new System.EventHandler(this.grpDadosPaciente_Enter);
             // 
             // lblSemestre
             // 
@@ -240,7 +244,7 @@
             // lblConfSenhaCad
             // 
             this.lblConfSenhaCad.AutoSize = true;
-            this.lblConfSenhaCad.Location = new System.Drawing.Point(425, 78);
+            this.lblConfSenhaCad.Location = new System.Drawing.Point(460, 78);
             this.lblConfSenhaCad.Name = "lblConfSenhaCad";
             this.lblConfSenhaCad.Size = new System.Drawing.Size(102, 16);
             this.lblConfSenhaCad.TabIndex = 48;
@@ -248,7 +252,7 @@
             // 
             // txbConfirmaSenha
             // 
-            this.txbConfirmaSenha.Location = new System.Drawing.Point(428, 97);
+            this.txbConfirmaSenha.Location = new System.Drawing.Point(463, 97);
             this.txbConfirmaSenha.MaxLength = 12;
             this.txbConfirmaSenha.Name = "txbConfirmaSenha";
             this.txbConfirmaSenha.Size = new System.Drawing.Size(162, 22);
@@ -258,7 +262,7 @@
             // lblSenhaCad
             // 
             this.lblSenhaCad.AutoSize = true;
-            this.lblSenhaCad.Location = new System.Drawing.Point(250, 78);
+            this.lblSenhaCad.Location = new System.Drawing.Point(269, 78);
             this.lblSenhaCad.Name = "lblSenhaCad";
             this.lblSenhaCad.Size = new System.Drawing.Size(45, 16);
             this.lblSenhaCad.TabIndex = 46;
@@ -275,7 +279,7 @@
             // 
             // txbSenha
             // 
-            this.txbSenha.Location = new System.Drawing.Point(253, 97);
+            this.txbSenha.Location = new System.Drawing.Point(272, 97);
             this.txbSenha.MaxLength = 12;
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.Size = new System.Drawing.Size(169, 22);
@@ -609,7 +613,7 @@
             this.mnsFunçõesCadastroFunc.Location = new System.Drawing.Point(0, 0);
             this.mnsFunçõesCadastroFunc.Name = "mnsFunçõesCadastroFunc";
             this.mnsFunçõesCadastroFunc.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnsFunçõesCadastroFunc.Size = new System.Drawing.Size(624, 24);
+            this.mnsFunçõesCadastroFunc.Size = new System.Drawing.Size(668, 24);
             this.mnsFunçõesCadastroFunc.TabIndex = 51;
             // 
             // tsmiSalvar
@@ -636,12 +640,17 @@
             this.tsmiCancelar.Text = "Cancelar";
             this.tsmiCancelar.Click += new System.EventHandler(this.tsmiCancelar_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmCadastrarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(624, 444);
+            this.ClientSize = new System.Drawing.Size(668, 444);
             this.Controls.Add(this.mnsFunçõesCadastroFunc);
             this.Controls.Add(this.grpDadosPaciente);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -654,6 +663,7 @@
             this.grpDadosPaciente.PerformLayout();
             this.mnsFunçõesCadastroFunc.ResumeLayout(false);
             this.mnsFunçõesCadastroFunc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -710,5 +720,6 @@
         private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.ComboBox cboSemestre;
         private System.Windows.Forms.Label lblSemestre;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
