@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using enfunip.modelo;
 using System.Data.SqlClient;
+using System.Data;
 
 
 namespace enfunip.dao
 {
     class Estoquedao : intEstoquedao
     {
-        Conexao conexaoBD = new Conexao();
-        SqlDataReader dataReader;
+        Conexao conexaoBD = new Conexao(); 
         public String mensagem;
 
         public void CadastrarItem(Estoque estoque)
@@ -84,78 +84,66 @@ namespace enfunip.dao
                 this.mensagem = e.ToString();
             }
         }
-
-        public List<Estoque> PesquisarItemPorNome (Estoque estoque)
+        
+        //Metodo Utilizado para listar os dados estoques
+        public DataTable ListarItemPorNome()
         {
-            this.mensagem = "";
-            SqlCommand cmd = new SqlCommand();
-            List<Estoque> listaEstoque = new List<Estoque>();
-
-            cmd.CommandText = @"select * from Estoques
-                where NomeProduto like @nome";
-            cmd.Parameters.AddWithValue("@Nome", estoque.produto + "%");
 
             try
             {
+                SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexaoBD.Conectar();
-                dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    Estoque estoqueLista = new Estoque();
-                    //estoqueLista.id = Convert.ToInt32(dataReader["Id"]);
-                    //estoqueLista.dataentrada = Convert.ToDateTime(dataReader["DataEntrada"].ToString());
-                    estoqueLista.produto = dataReader["NomeProduto"].ToString();
-                    //estoqueLista.quantidade = Convert.ToInt32(dataReader["Quantidade"]);
-                    //estoqueLista.fabricante = dataReader["Fabricante"].ToString();
-                    //estoqueLista.categoria = dataReader["Categoria"].ToString();
-                    //estoqueLista.descricao = dataReader["Descricao"].ToString();
-                    listaEstoque.Add(estoqueLista);
+                cmd = new SqlCommand("select * from Estoques", cmd.Connection);
 
-                }
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataTable dt = new DataTable();
 
-                dataReader.Close();
-                conexaoBD.Desconectar();
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                return dt;              
             }
             catch (SqlException e)
             {
-                this.mensagem = e.ToString();
+                throw;
             }
-            return listaEstoque;
+            
         }
-        
+
+        //metodo de pesquisa ao digitar
+        public DataTable PesquisarProduto(Estoque estoque)
+        {
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conexaoBD.Conectar();
+
+                cmd = new SqlCommand("SELECT * FROM Estoques WHERE NomeProduto Like @Nome ORDER BY NomeProduto", cmd.Connection);
+                cmd.Parameters.AddWithValue("@Nome", "%"+estoque.produto+"%");
+
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
         public Estoque PesquisarItemPorID(Estoque estoque)
         {
-            this.mensagem = "";
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"select * from Pacientes 
-                where id = @id";
-            cmd.Parameters.AddWithValue("@id", estoque.id);
-            try
-            {
-                cmd.Connection = conexaoBD.Conectar();
-                dataReader = cmd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    cmd.Parameters.AddWithValue("@DataEntrada", estoque.dataentrada);
-                    cmd.Parameters.AddWithValue("@Produto", estoque.produto);
-                    cmd.Parameters.AddWithValue("@Quantidade", estoque.quantidade);
-                    cmd.Parameters.AddWithValue("@fabricante", estoque.fabricante);
-                    cmd.Parameters.AddWithValue("@Categoria", estoque.categoria);
-                    cmd.Parameters.AddWithValue("@Descricao", estoque.descricao);
-                    dataReader.Read();
-                }
-                else
-                {
-                    estoque.id = 0;
-                }
-                dataReader.Close();
-                conexaoBD.Desconectar();
-            }
-            catch (SqlException e)
-            {
-                this.mensagem = e.ToString();
-            }
-            return estoque;
+            throw new NotImplementedException();
+        }
+
+        public List<Estoque> PesquisarItemPorNome(Estoque estoque)
+        {
+            throw new NotImplementedException();
         }
     }
 }

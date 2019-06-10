@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using enfunip.modelo.validacoes;
 using enfunip.dao;
+using System.Data;
 
 
 namespace enfunip.modelo.controle
@@ -88,7 +89,7 @@ namespace enfunip.modelo.controle
             validarestoque.ValidarDados(dadosEstoque);
             if (validarestoque.mensagem.Equals(""))
             {
-                Estoque estoque = new Estoque(); 
+                Estoque estoque = new Estoque();
                 estoque.id = validarestoque.id;
                 Estoquedao estoqueDAO = new Estoquedao();
                 if (estoqueDAO.PesquisarItemPorID(estoque).produto != null)
@@ -107,17 +108,39 @@ namespace enfunip.modelo.controle
             }
         }
 
-        public void PesquisarItemPorNome(List<String> dadosEstoque)
+        public DataTable ListarPorNome()
         {
-            this.mensagem = "";
-            validarEstoque validarestoque = new validarEstoque();
-            //validarestoque.ValidarDados(dadosEstoque)
-            Estoquedao estoqueDAO = new Estoquedao();
-            Estoque estoque = new Estoque();
-            estoque.produto = dadosEstoque[0];
-            Estaticos.listaEstoqueEstatico = estoqueDAO.PesquisarItemPorNome(estoque);
-            
-            
+            try
+         {
+                Estoquedao estoquedao = new Estoquedao();
+                DataTable dt = new DataTable();
+
+                dt = estoquedao.ListarItemPorNome();
+
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public DataTable PesquisarPorNome(Estoque estoque)
+        {
+            try
+            {
+                Estoquedao estoquedao = new Estoquedao();
+                DataTable dt = new DataTable();
+
+                dt = estoquedao.PesquisarProduto(estoque);
+
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

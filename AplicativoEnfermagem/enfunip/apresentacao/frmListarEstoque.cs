@@ -31,33 +31,43 @@ namespace enfunip.apresentacao
 
         private void btnPesqPac_Click(object sender, EventArgs e)
         {
-            List<String> dadosItem = new List<string>();
-
-            dadosItem.Add(txbConsultarProdutos.Text);
-
-            modelo.controle.controleEstoque controleestoque = new modelo.controle.controleEstoque();
-            controleestoque.PesquisarItemPorNome(dadosItem);
-            int cont = 0;
-            Boolean loop = true;
-
-            try
-            {
-                while (loop.Equals(true))
-                {
-                    lstProdutos.Items.Add(Estaticos.listaEstoqueEstatico[cont].produto);
-                    cont++;
-                }
-                
-            }
-            catch (Exception)
-            {
-                cont = 0;
-            }
             
+        }
 
+        private void FrmListarEstoque_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'pimEnfermagem2019DataSet1.Estoques'. Você pode movê-la ou removê-la conforme necessário.
+            this.estoquesTableAdapter.Fill(this.pimEnfermagem2019DataSet1.Estoques);
+           
+       
 
+        }
 
+        private void Pesquisar (Estoque estoque)
+        {
+            estoque.produto = txbConsultarProdutos.Text.Trim();
 
+            modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+            dgv_ListaProdutos.DataSource = controleEstoque.PesquisarPorNome(estoque);
+        }
+        private void GrpConsultaPaciente_Enter(object sender, EventArgs e)
+        {
+            modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+            dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
+        }
+
+        private void TxbConsultarProdutos_TextChanged(object sender, EventArgs e)
+        {
+            if (txbConsultarProdutos.Text.Equals(""))
+            {
+                modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+                dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
+            }
+            else
+            {
+                Estoque estoque = new Estoque();
+                Pesquisar(estoque);
+            }
         }
     }
 }

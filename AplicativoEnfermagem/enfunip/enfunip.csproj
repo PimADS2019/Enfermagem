@@ -145,6 +145,16 @@
     <Compile Include="modelo\validacoes\validarFuncionario.cs" />
     <Compile Include="modelo\validacoes\validarPaciente.cs" />
     <Compile Include="modelo\validacoes\validarRelatorio.cs" />
+    <Compile Include="PimEnfermagem2019DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PimEnfermagem2019DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PimEnfermagem2019DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PimEnfermagem2019DataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="apresentacao\frmAgendamento.resx">
@@ -194,6 +204,28 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="PimEnfermagem2019DataSet.xsc">
+      <DependentUpon>PimEnfermagem2019DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PimEnfermagem2019DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PimEnfermagem2019DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PimEnfermagem2019DataSet.xss">
+      <DependentUpon>PimEnfermagem2019DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PimEnfermagem2019DataSet11.xsc">
+      <DependentUpon>PimEnfermagem2019DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="PimEnfermagem2019DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PimEnfermagem2019DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PimEnfermagem2019DataSet11.xss">
+      <DependentUpon>PimEnfermagem2019DataSet11.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
