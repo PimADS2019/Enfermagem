@@ -22,8 +22,8 @@ namespace enfunip.modelo.controle
             {
                 Estoque estoque = new Estoque();
 
-                estoque.dataentrada = Convert.ToDateTime(dadosItem[1]);
-                estoque.produto = dadosItem[2];
+                estoque.produto = dadosItem[1];
+                estoque.dataentrada = Convert.ToDateTime(dadosItem[2]);
                 estoque.quantidade = (Convert.ToInt32(dadosItem[3]));
                 estoque.descricao = dadosItem[4];
 
@@ -65,12 +65,10 @@ namespace enfunip.modelo.controle
             if (validarestoque.mensagem.Equals(""))
             {
                 Estoque estoque1 = new Estoque();
-                estoque1.dataentrada = Convert.ToDateTime(dadosEstoque[2]);
                 estoque1.produto = dadosEstoque[1];
-                estoque1.quantidade = Convert.ToInt32(dadosEstoque[5]);
-                estoque1.fabricante = dadosEstoque[3];
-                estoque1.categoria = dadosEstoque[4];
-                estoque1.descricao = dadosEstoque[6];
+                estoque1.dataentrada = Convert.ToDateTime(dadosEstoque[2]);
+                estoque1.quantidade = Convert.ToInt32(dadosEstoque[3]);
+                estoque1.descricao = dadosEstoque[4];
                 Estoquedao estoqueDAO = new Estoquedao();
                 estoqueDAO.EditarItem(estoque1);
                 this.mensagem = estoqueDAO.mensagem;

@@ -8,8 +8,9 @@ namespace enfunip.modelo
 {
     public class Agenda
     {
-        public DateTime dataentrada { get; set; }
-        public String local { get; set; }
-        public String  observacao { get; set; }
+        public String nomePaciente { get; set; }
+        public DateTime dataHoraAgendamento { get; set; }
+        public String localAgendamento { get; set; }
+        public String  obsAgendamento { get; set; }
     }
 }

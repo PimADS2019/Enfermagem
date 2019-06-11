@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using enfunip.modelo.validacoes;
 using enfunip.dao;
+using System.Data;
 
 namespace enfunip.modelo.controle
 {
@@ -19,9 +20,10 @@ namespace enfunip.modelo.controle
             if (validaragenda.mensagem.Equals(""))
             {
                 Agenda agenda = new Agenda();
-                agenda.dataentrada = Convert.ToDateTime(dadosAgenda[1]);
-                agenda.local = dadosAgenda[2];
-                agenda.observacao = dadosAgenda[3];
+                agenda.nomePaciente = dadosAgenda[1];
+                agenda.dataHoraAgendamento = Convert.ToDateTime(dadosAgenda[2]);
+                agenda.localAgendamento = dadosAgenda[3];
+                agenda.obsAgendamento = dadosAgenda[4];
                 Agendadao agendaDAO = new Agendadao();
                 agendaDAO.CadastrarAgenda(agenda);
                 this.mensagem = agendaDAO.mensagem;
@@ -29,6 +31,40 @@ namespace enfunip.modelo.controle
             else
             {
                 this.mensagem = validaragenda.mensagem;
+            }
+        }
+        public DataTable ListarPorNome()
+        {
+            try
+            {
+                Agendadao agendadao = new Agendadao();
+                DataTable dt = new DataTable();
+
+                dt = agendadao.ListarItemPorNome();
+
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public DataTable PesquisarPorNome(Agenda agenda)
+        {
+            try
+            {
+                Agendadao agendadao = new Agendadao();
+                DataTable dt = new DataTable();
+
+                dt = agendadao.PesquisarAgenda(agenda);
+
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

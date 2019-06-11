@@ -12,8 +12,6 @@ namespace enfunip.modelo
         public DateTime dataentrada { get; set; }
         public String produto { get; set; }
         public Int32 quantidade { get; set; }
-        public String fabricante { get; set; }
-        public String categoria { get; set; }
         public String descricao { get; set; }
     }
 }

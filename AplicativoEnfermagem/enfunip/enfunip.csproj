@@ -133,7 +133,6 @@
     <Compile Include="modelo\controle\controleFuncionario.cs" />
     <Compile Include="modelo\controle\controleLogin.cs" />
     <Compile Include="modelo\controle\controlePaciente.cs" />
-    <Compile Include="modelo\controle\controleRelatorio.cs" />
     <Compile Include="modelo\Estaticos.cs" />
     <Compile Include="modelo\Estoque.cs" />
     <Compile Include="modelo\Funcionario.cs" />
@@ -144,7 +143,6 @@
     <Compile Include="modelo\validacoes\validarEstoque.cs" />
     <Compile Include="modelo\validacoes\validarFuncionario.cs" />
     <Compile Include="modelo\validacoes\validarPaciente.cs" />
-    <Compile Include="modelo\validacoes\validarRelatorio.cs" />
     <Compile Include="PimEnfermagem2019DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

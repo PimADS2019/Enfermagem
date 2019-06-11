@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using enfunip.modelo.controle;
+using enfunip.modelo;
 
 namespace enfunip.apresentacao
 {
@@ -17,8 +18,19 @@ namespace enfunip.apresentacao
         {
             InitializeComponent();
         }
+        private void Pesquisar(Agenda agenda)
+        {
+            agenda.dataHoraAgendamento = Convert.ToDateTime(txbConsultarAgendamento.Text.Trim());
 
+            controleAgenda controleAgenda = new controleAgenda();
 
+            dgvAgendamentos.DataSource = controleAgenda.PesquisarPorNome(agenda);
+        }
+        private void grpAgendamentos_Enter(object sender, EventArgs e)
+        {
+            controleAgenda controleAgenda = new controleAgenda();
+            dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
+        }
 
         private void btnPaciente_Click(object sender, EventArgs e)
         {
@@ -46,8 +58,7 @@ namespace enfunip.apresentacao
             if (confirm.ToString().ToUpper() == "YES")
             {
                 txbPacienteAgenda.Clear();
-                dtpAgendamento.ResetText();
-                txbHoraAgenda.Clear();
+                mtxDataHoraAgenda.Clear();
                 txbLocalAgendamento.Clear();
                 txbObsAgenda.Clear();
             }
@@ -55,19 +66,74 @@ namespace enfunip.apresentacao
 
         private void tsmiSalvarAgenda_Click(object sender, EventArgs e)
         {
-            controleAgenda controle = new controleAgenda();
+            if (string.IsNullOrEmpty(txbPacienteAgenda.Text) || string.IsNullOrWhiteSpace(mtxDataHoraAgenda.Text)||
+                string.IsNullOrWhiteSpace(txbLocalAgendamento.Text))
+            {
+                lblCampoObrig.Visible = true;
+                VerificarCampos();
+                MessageBox.Show("Campos obrigatórios não preenchidos!");
+            }
+            else
+            {
+                ApagarMsgErro();
+                lblCampoObrig.Visible = false;
+
+                controleAgenda controleAgenda = new controleAgenda();
+
+                List<String> dadosAgenda = new List<string>();
+
+                dadosAgenda.Add(txbPacienteAgenda.Text);
+                dadosAgenda.Add(mtxDataHoraAgenda.Text);
+                dadosAgenda.Add(txbLocalAgendamento.Text);
+                dadosAgenda.Add(txbObsAgenda.Text);
+
+                controleAgenda.CadastrarAgenda(dadosAgenda);
+
+                MessageBox.Show(controleAgenda.mensagem);
+            }
+        }
+        private bool VerificarCampos()
+        {
+            bool ok = true;
+
+            if (txbPacienteAgenda.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbPacienteAgenda, "Insira o paciente");
+            }
+            if (mtxDataHoraAgenda.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbPacienteAgenda, "Insira a data e hora do agendamento");
+            }
+            if (txbLocalAgendamento.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbLocalAgendamento, "Insira o local do agendamento");
+            }
+            return ok;
+        }
+        private void ApagarMsgErro()
+        {
+            errorProvider.SetError(txbPacienteAgenda, "");
+            errorProvider.SetError(txbPacienteAgenda, "");
+            errorProvider.SetError(txbLocalAgendamento, "");
+        }
+
+        private void txbConsultarAgendamento_TextChanged(object sender, EventArgs e)
+        {
+            if(txbConsultarAgendamento.Text.Equals(""))
+            {
+                controleAgenda controleAgenda = new controleAgenda();
+
+                dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
+            }
+            else
+            {
+                Agenda agenda = new Agenda;
+                Pesquisar(agenda);
+            }
             
-            List<String> dadosAgenda = new List<string>();
-
-            dadosAgenda.Add(txbPacienteAgenda.Text);
-            dadosAgenda.Add(dtpAgendamento.Text);
-            dadosAgenda.Add(txbHoraAgenda.Text);
-            dadosAgenda.Add(txbLocalAgendamento.Text);
-            dadosAgenda.Add(txbObsAgenda.Text);
-
-            //controleAgenda.CadastrarAgenda(dadosAgenda); < --ERRO
-
-
         }
     }
 }

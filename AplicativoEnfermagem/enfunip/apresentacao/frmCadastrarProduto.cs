@@ -57,5 +57,10 @@ namespace enfunip.apresentacao
             estoque.CadastrarItem(dadosItem);
             MessageBox.Show(estoque.mensagem); ;
         }
+
+        private void grpCadastrarProduto_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -146,6 +146,7 @@
             this.grpCadastrarProduto.Size = new System.Drawing.Size(669, 338);
             this.grpCadastrarProduto.TabIndex = 52;
             this.grpCadastrarProduto.TabStop = false;
+            this.grpCadastrarProduto.Enter += new System.EventHandler(this.grpCadastrarProduto_Enter);
             // 
             // lbl_idProduto
             // 

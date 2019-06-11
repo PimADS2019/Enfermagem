@@ -70,15 +70,15 @@
             // dgv_Pacientes
             // 
             this.dgv_Pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Pacientes.Location = new System.Drawing.Point(6, 78);
+            this.dgv_Pacientes.Location = new System.Drawing.Point(6, 67);
             this.dgv_Pacientes.Name = "dgv_Pacientes";
-            this.dgv_Pacientes.Size = new System.Drawing.Size(683, 370);
+            this.dgv_Pacientes.Size = new System.Drawing.Size(683, 496);
             this.dgv_Pacientes.TabIndex = 54;
             // 
             // btnExcluirPaciente
             // 
             this.btnExcluirPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirPaciente.Location = new System.Drawing.Point(173, 470);
+            this.btnExcluirPaciente.Location = new System.Drawing.Point(173, 569);
             this.btnExcluirPaciente.Name = "btnExcluirPaciente";
             this.btnExcluirPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirPaciente.TabIndex = 53;
@@ -89,7 +89,7 @@
             // btnEditarPaciente
             // 
             this.btnEditarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarPaciente.Location = new System.Drawing.Point(90, 470);
+            this.btnEditarPaciente.Location = new System.Drawing.Point(90, 569);
             this.btnEditarPaciente.Name = "btnEditarPaciente";
             this.btnEditarPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnEditarPaciente.TabIndex = 52;
@@ -99,7 +99,7 @@
             // btnIncuirPaciente
             // 
             this.btnIncuirPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIncuirPaciente.Location = new System.Drawing.Point(6, 470);
+            this.btnIncuirPaciente.Location = new System.Drawing.Point(6, 569);
             this.btnIncuirPaciente.Name = "btnIncuirPaciente";
             this.btnIncuirPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnIncuirPaciente.TabIndex = 51;

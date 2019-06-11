@@ -83,6 +83,8 @@ namespace enfunip.apresentacao
                 controleEstoque.ExcluirItem(Id_Excluir);
 
                 MessageBox.Show(controleEstoque.mensagem);
+
+                this.estoquesTableAdapter.Fill(this.pimEnfermagem2019DataSet1.Estoques); // < FAZ A ATUALIZAÇÃO DA LISTAGEM DE PRODUTOS APÓS A EXCLUSÃO
             }
         }
 
