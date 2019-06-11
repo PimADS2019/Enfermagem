@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpDadosPaciente = new System.Windows.Forms.GroupBox();
             this.lblSemestre = new System.Windows.Forms.Label();
             this.cboSemestre = new System.Windows.Forms.ComboBox();
@@ -77,13 +78,31 @@
             this.tsmiSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblCampoObrigatorio = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio2 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio3 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio4 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio5 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio8 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio9 = new System.Windows.Forms.Label();
+            this.lblCampoObrig = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpDadosPaciente.SuspendLayout();
             this.mnsFunçõesCadastroFunc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDadosPaciente
             // 
             this.grpDadosPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrig);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio9);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio8);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio5);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio4);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio3);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio2);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio);
             this.grpDadosPaciente.Controls.Add(this.lblSemestre);
             this.grpDadosPaciente.Controls.Add(this.cboSemestre);
             this.grpDadosPaciente.Controls.Add(this.dtpNascimento);
@@ -131,7 +150,7 @@
             this.grpDadosPaciente.Font = new System.Drawing.Font("Arial", 9.75F);
             this.grpDadosPaciente.Location = new System.Drawing.Point(4, 22);
             this.grpDadosPaciente.Name = "grpDadosPaciente";
-            this.grpDadosPaciente.Size = new System.Drawing.Size(616, 418);
+            this.grpDadosPaciente.Size = new System.Drawing.Size(603, 427);
             this.grpDadosPaciente.TabIndex = 47;
             this.grpDadosPaciente.TabStop = false;
             // 
@@ -283,6 +302,7 @@
             // 
             // txbUsuario
             // 
+            this.errorProvider.SetIconPadding(this.txbUsuario, -17);
             this.txbUsuario.Location = new System.Drawing.Point(22, 97);
             this.txbUsuario.MaxLength = 20;
             this.txbUsuario.Name = "txbUsuario";
@@ -294,7 +314,7 @@
             this.lblTipoUsuario.AutoSize = true;
             this.lblTipoUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblTipoUsuario.Location = new System.Drawing.Point(486, 11);
+            this.lblTipoUsuario.Location = new System.Drawing.Point(466, 12);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
             this.lblTipoUsuario.Size = new System.Drawing.Size(108, 16);
             this.lblTipoUsuario.TabIndex = 42;
@@ -312,7 +332,7 @@
             "Professor",
             "Enfermeiro",
             "Aluno"});
-            this.cboTipoUsuario.Location = new System.Drawing.Point(489, 30);
+            this.cboTipoUsuario.Location = new System.Drawing.Point(469, 31);
             this.cboTipoUsuario.Name = "cboTipoUsuario";
             this.cboTipoUsuario.Size = new System.Drawing.Size(121, 24);
             this.cboTipoUsuario.TabIndex = 1;
@@ -331,7 +351,7 @@
             this.lbl_Id.AutoSize = true;
             this.lbl_Id.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_Id.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Id.Location = new System.Drawing.Point(6, 11);
+            this.lbl_Id.Location = new System.Drawing.Point(2, 9);
             this.lbl_Id.Name = "lbl_Id";
             this.lbl_Id.Size = new System.Drawing.Size(28, 23);
             this.lbl_Id.TabIndex = 0;
@@ -351,7 +371,7 @@
             this.idFuncionario_BD.ForeColor = System.Drawing.Color.DarkGray;
             this.idFuncionario_BD.FormattingEnabled = true;
             this.idFuncionario_BD.ItemHeight = 14;
-            this.idFuncionario_BD.Location = new System.Drawing.Point(36, 14);
+            this.idFuncionario_BD.Location = new System.Drawing.Point(32, 12);
             this.idFuncionario_BD.Name = "idFuncionario_BD";
             this.idFuncionario_BD.Size = new System.Drawing.Size(68, 18);
             this.idFuncionario_BD.TabIndex = 35;
@@ -609,7 +629,7 @@
             this.mnsFunçõesCadastroFunc.Location = new System.Drawing.Point(0, 0);
             this.mnsFunçõesCadastroFunc.Name = "mnsFunçõesCadastroFunc";
             this.mnsFunçõesCadastroFunc.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnsFunçõesCadastroFunc.Size = new System.Drawing.Size(624, 24);
+            this.mnsFunçõesCadastroFunc.Size = new System.Drawing.Size(612, 24);
             this.mnsFunçõesCadastroFunc.TabIndex = 51;
             // 
             // tsmiSalvar
@@ -636,12 +656,106 @@
             this.tsmiCancelar.Text = "Cancelar";
             this.tsmiCancelar.Click += new System.EventHandler(this.tsmiCancelar_Click);
             // 
+            // lblCampoObrigatorio
+            // 
+            this.lblCampoObrigatorio.AutoSize = true;
+            this.lblCampoObrigatorio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio.Location = new System.Drawing.Point(68, 78);
+            this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
+            this.lblCampoObrigatorio.Size = new System.Drawing.Size(13, 16);
+            this.lblCampoObrigatorio.TabIndex = 110;
+            this.lblCampoObrigatorio.Text = "*";
+            // 
+            // lblCampoObrigatorio2
+            // 
+            this.lblCampoObrigatorio2.AutoSize = true;
+            this.lblCampoObrigatorio2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrigatorio2.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio2.Location = new System.Drawing.Point(293, 78);
+            this.lblCampoObrigatorio2.Name = "lblCampoObrigatorio2";
+            this.lblCampoObrigatorio2.Size = new System.Drawing.Size(13, 16);
+            this.lblCampoObrigatorio2.TabIndex = 111;
+            this.lblCampoObrigatorio2.Text = "*";
+            // 
+            // lblCampoObrigatorio3
+            // 
+            this.lblCampoObrigatorio3.AutoSize = true;
+            this.lblCampoObrigatorio3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrigatorio3.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio3.Location = new System.Drawing.Point(523, 78);
+            this.lblCampoObrigatorio3.Name = "lblCampoObrigatorio3";
+            this.lblCampoObrigatorio3.Size = new System.Drawing.Size(13, 16);
+            this.lblCampoObrigatorio3.TabIndex = 112;
+            this.lblCampoObrigatorio3.Text = "*";
+            // 
+            // lblCampoObrigatorio4
+            // 
+            this.lblCampoObrigatorio4.AutoSize = true;
+            this.lblCampoObrigatorio4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrigatorio4.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio4.Location = new System.Drawing.Point(59, 132);
+            this.lblCampoObrigatorio4.Name = "lblCampoObrigatorio4";
+            this.lblCampoObrigatorio4.Size = new System.Drawing.Size(13, 16);
+            this.lblCampoObrigatorio4.TabIndex = 113;
+            this.lblCampoObrigatorio4.Text = "*";
+            // 
+            // lblCampoObrigatorio5
+            // 
+            this.lblCampoObrigatorio5.AutoSize = true;
+            this.lblCampoObrigatorio5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrigatorio5.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio5.Location = new System.Drawing.Point(523, 132);
+            this.lblCampoObrigatorio5.Name = "lblCampoObrigatorio5";
+            this.lblCampoObrigatorio5.Size = new System.Drawing.Size(13, 16);
+            this.lblCampoObrigatorio5.TabIndex = 114;
+            this.lblCampoObrigatorio5.Text = "*";
+            // 
+            // lblCampoObrigatorio8
+            // 
+            this.lblCampoObrigatorio8.AutoSize = true;
+            this.lblCampoObrigatorio8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrigatorio8.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio8.Location = new System.Drawing.Point(59, 354);
+            this.lblCampoObrigatorio8.Name = "lblCampoObrigatorio8";
+            this.lblCampoObrigatorio8.Size = new System.Drawing.Size(13, 16);
+            this.lblCampoObrigatorio8.TabIndex = 117;
+            this.lblCampoObrigatorio8.Text = "*";
+            // 
+            // lblCampoObrigatorio9
+            // 
+            this.lblCampoObrigatorio9.AutoSize = true;
+            this.lblCampoObrigatorio9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrigatorio9.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio9.Location = new System.Drawing.Point(442, 355);
+            this.lblCampoObrigatorio9.Name = "lblCampoObrigatorio9";
+            this.lblCampoObrigatorio9.Size = new System.Drawing.Size(13, 16);
+            this.lblCampoObrigatorio9.TabIndex = 118;
+            this.lblCampoObrigatorio9.Text = "*";
+            // 
+            // lblCampoObrig
+            // 
+            this.lblCampoObrig.AutoSize = true;
+            this.lblCampoObrig.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrig.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrig.Location = new System.Drawing.Point(488, 410);
+            this.lblCampoObrig.Name = "lblCampoObrig";
+            this.lblCampoObrig.Size = new System.Drawing.Size(115, 14);
+            this.lblCampoObrig.TabIndex = 119;
+            this.lblCampoObrig.Text = "* Campos Obrigatórios";
+            this.lblCampoObrig.Visible = false;
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmCadastrarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(624, 444);
+            this.ClientSize = new System.Drawing.Size(612, 452);
             this.Controls.Add(this.mnsFunçõesCadastroFunc);
             this.Controls.Add(this.grpDadosPaciente);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -654,6 +768,7 @@
             this.grpDadosPaciente.PerformLayout();
             this.mnsFunçõesCadastroFunc.ResumeLayout(false);
             this.mnsFunçõesCadastroFunc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -710,5 +825,14 @@
         private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.ComboBox cboSemestre;
         private System.Windows.Forms.Label lblSemestre;
+        private System.Windows.Forms.Label lblCampoObrigatorio;
+        private System.Windows.Forms.Label lblCampoObrigatorio9;
+        private System.Windows.Forms.Label lblCampoObrigatorio8;
+        private System.Windows.Forms.Label lblCampoObrigatorio5;
+        private System.Windows.Forms.Label lblCampoObrigatorio4;
+        private System.Windows.Forms.Label lblCampoObrigatorio3;
+        private System.Windows.Forms.Label lblCampoObrigatorio2;
+        private System.Windows.Forms.Label lblCampoObrig;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

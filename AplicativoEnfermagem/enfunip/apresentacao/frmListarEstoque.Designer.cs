@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txbConsultarProdutos = new System.Windows.Forms.TextBox();
-            this.btnPesqPac = new System.Windows.Forms.Button();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
             this.dgv_ListaProdutos = new System.Windows.Forms.DataGridView();
             this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,27 +53,13 @@
             // txbConsultarProdutos
             // 
             this.txbConsultarProdutos.ForeColor = System.Drawing.Color.Silver;
-            this.txbConsultarProdutos.Location = new System.Drawing.Point(6, 39);
+            this.txbConsultarProdutos.Location = new System.Drawing.Point(0, 39);
             this.txbConsultarProdutos.MaxLength = 50;
             this.txbConsultarProdutos.Name = "txbConsultarProdutos";
-            this.txbConsultarProdutos.Size = new System.Drawing.Size(514, 22);
+            this.txbConsultarProdutos.Size = new System.Drawing.Size(550, 22);
             this.txbConsultarProdutos.TabIndex = 44;
             this.txbConsultarProdutos.Text = "Insira nome do produto";
             this.txbConsultarProdutos.TextChanged += new System.EventHandler(this.TxbConsultarProdutos_TextChanged);
-            // 
-            // btnPesqPac
-            // 
-            this.btnPesqPac.BackgroundImage = global::enfunip.Properties.Resources.icons8_pesquisar_26;
-            this.btnPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPesqPac.Location = new System.Drawing.Point(519, 39);
-            this.btnPesqPac.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPesqPac.Name = "btnPesqPac";
-            this.btnPesqPac.Size = new System.Drawing.Size(22, 22);
-            this.btnPesqPac.TabIndex = 43;
-            this.btnPesqPac.Text = "...";
-            this.btnPesqPac.UseVisualStyleBackColor = true;
-            this.btnPesqPac.Click += new System.EventHandler(this.btnPesqPac_Click);
             // 
             // grpConsultaPaciente
             // 
@@ -85,7 +70,6 @@
             this.grpConsultaPaciente.Controls.Add(this.btnIncuirProduto);
             this.grpConsultaPaciente.Controls.Add(this.txbConsultarProdutos);
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
-            this.grpConsultaPaciente.Controls.Add(this.btnPesqPac);
             this.grpConsultaPaciente.Location = new System.Drawing.Point(3, -4);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
             this.grpConsultaPaciente.Size = new System.Drawing.Size(557, 495);
@@ -108,6 +92,7 @@
             this.dgv_ListaProdutos.Name = "dgv_ListaProdutos";
             this.dgv_ListaProdutos.Size = new System.Drawing.Size(550, 376);
             this.dgv_ListaProdutos.TabIndex = 54;
+            this.dgv_ListaProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ListaProdutos_CellContentClick);
             // 
             // idProdutoDataGridViewTextBoxColumn
             // 
@@ -229,7 +214,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txbConsultarProdutos;
-        private System.Windows.Forms.Button btnPesqPac;
         private System.Windows.Forms.GroupBox grpConsultaPaciente;
         private System.Windows.Forms.Button btnExcluirProduto;
         private System.Windows.Forms.Button btnEditarProduto;

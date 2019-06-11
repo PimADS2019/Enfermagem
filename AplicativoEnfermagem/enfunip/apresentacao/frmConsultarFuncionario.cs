@@ -46,7 +46,7 @@ namespace enfunip.apresentacao
 
         private void GrpConsultaPaciente_Enter(object sender, EventArgs e)
         {
-            Estaticos.TipoUsuario = cbx_TipoFuncionario.Text;
+            Estaticos.TipoUsuario = cboTipoFuncionario.Text;
             modelo.controle.controleFuncionario controleFuncionario = new modelo.controle.controleFuncionario();
             dgv_Funcionarios.DataSource = controleFuncionario.ListarFuncionario();
         }
@@ -62,7 +62,7 @@ namespace enfunip.apresentacao
             }
             else
             {
-                Estaticos.TipoUsuario = cbx_TipoFuncionario.SelectedItem.ToString();
+                Estaticos.TipoUsuario = cboTipoFuncionario.SelectedItem.ToString();
 
                 Funcionario funcionario = new Funcionario();
                 Pesquisar(funcionario);

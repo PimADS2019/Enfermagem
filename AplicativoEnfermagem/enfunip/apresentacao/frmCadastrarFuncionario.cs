@@ -68,37 +68,53 @@ namespace enfunip.apresentacao
 
         private void tsmiSalvar_Click(object sender, EventArgs e)
         {
-            controleFuncionario controleFuncionario = new controleFuncionario();
 
-            List<String> dadosFuncionario = new List<string>();
-            dadosFuncionario.Add(cboTipoUsuario.Text);
-            dadosFuncionario.Add(txbUsuario.Text);
-            dadosFuncionario.Add(txbSenha.Text);
-            dadosFuncionario.Add(txbConfirmaSenha.Text);
-            dadosFuncionario.Add(txbNome.Text);
-            dadosFuncionario.Add(dtpNascimento.Text);
-            dadosFuncionario.Add(txbCpf.Text);
-            dadosFuncionario.Add(txbNumContrato.Text);
-            dadosFuncionario.Add(txbRA.Text);
-            dadosFuncionario.Add(cboPeriodo.Text);
-            dadosFuncionario.Add(cboSemestre.Text);
-            dadosFuncionario.Add(txbEndereco.Text);
-            dadosFuncionario.Add(txbNumeroEndereco.Text);
-            dadosFuncionario.Add(txbComplemento.Text);
-            dadosFuncionario.Add(txbCidade.Text);
-            dadosFuncionario.Add(txbBairro.Text);
-            dadosFuncionario.Add(cboEstado.Text);
-            dadosFuncionario.Add(txbCep.Text);
-            dadosFuncionario.Add(txbEmail.Text);
-            dadosFuncionario.Add(txbCelular.Text);
-            dadosFuncionario.Add(txbTelefone.Text);
+            // Verificação de Campos Obrigatórios
+            if (string.IsNullOrWhiteSpace(cboTipoUsuario.Text) || string.IsNullOrWhiteSpace(txbUsuario.Text) || 
+                string.IsNullOrWhiteSpace(txbSenha.Text) ||string.IsNullOrWhiteSpace(txbConfirmaSenha.Text) || 
+                string.IsNullOrWhiteSpace(txbNome.Text) ||string.IsNullOrWhiteSpace(txbCpf.Text) ||
+                string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbCelular.Text))
+            {
+                VerificarCampos();
+                MessageBox.Show("Campos obrigatórios não preenchidos!");
+                lblCampoObrig.Visible = true;
+            }
+            else
+            {
+                ApagarMsgErro();
+                lblCampoObrig.Visible = false;
+                MessageBox.Show("Cadastro com sucesso");
+                /*
+                controleFuncionario controleFuncionario = new controleFuncionario();
 
-            controleFuncionario.CadastrarFuncionario(dadosFuncionario);
+                List<String> dadosFuncionario = new List<string>();
+                dadosFuncionario.Add(cboTipoUsuario.Text);
+                dadosFuncionario.Add(txbUsuario.Text);
+                dadosFuncionario.Add(txbSenha.Text);
+                dadosFuncionario.Add(txbConfirmaSenha.Text);
+                dadosFuncionario.Add(txbNome.Text);
+                dadosFuncionario.Add(dtpNascimento.Text);
+                dadosFuncionario.Add(txbCpf.Text);
+                dadosFuncionario.Add(txbNumContrato.Text);
+                dadosFuncionario.Add(txbRA.Text);
+                dadosFuncionario.Add(cboPeriodo.Text);
+                dadosFuncionario.Add(cboSemestre.Text);
+                dadosFuncionario.Add(txbEndereco.Text);
+                dadosFuncionario.Add(txbNumeroEndereco.Text);
+                dadosFuncionario.Add(txbComplemento.Text);
+                dadosFuncionario.Add(txbCidade.Text);
+                dadosFuncionario.Add(txbBairro.Text);
+                dadosFuncionario.Add(cboEstado.Text);
+                dadosFuncionario.Add(txbCep.Text);
+                dadosFuncionario.Add(txbEmail.Text);
+                dadosFuncionario.Add(txbCelular.Text);
+                dadosFuncionario.Add(txbTelefone.Text);
 
-            MessageBox.Show(controleFuncionario.mensagem);
+                controleFuncionario.CadastrarFuncionario(dadosFuncionario);
 
-
-
+                MessageBox.Show(controleFuncionario.mensagem);
+                */
+            }
         }
 
         private void txbNumContrato_TextChanged(object sender, EventArgs e)
@@ -127,6 +143,65 @@ namespace enfunip.apresentacao
         private void cboPeriodo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        // Verificação CAmpos Obrigatórios com ErrorProvider
+        private bool VerificarCampos()
+        {
+            bool ok = true;
+
+            if (cboTipoUsuario.Text=="")
+            {
+                ok = false;
+                errorProvider.SetError(cboTipoUsuario, "Insira o tipo de usuário");
+            }
+            if (txbUsuario.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbUsuario, "Insira o usuário");
+            }
+            if (txbSenha.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbSenha, "Insira a senha");
+            }
+            if (txbConfirmaSenha.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbConfirmaSenha, "Confirme a senha");
+            }
+            if (txbNome.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbNome, "Insira o nome");
+            }
+            if (txbCpf.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbCpf, "Insira o CPF");
+            }
+            if (txbEmail.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbEmail, "Insira o e-mail");
+            }
+            if (txbCelular.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbCelular, "Insira o celular");
+            }
+            return ok;
+        }
+        // Apagar mensagem de erro no formulário
+        private void ApagarMsgErro()
+        {
+            errorProvider.SetError(cboTipoUsuario, "");
+            errorProvider.SetError(txbUsuario, "");
+            errorProvider.SetError(txbSenha, "");
+            errorProvider.SetError(txbConfirmaSenha, "");
+            errorProvider.SetError(txbNome, "");
+            errorProvider.SetError(txbCpf, "");
+            errorProvider.SetError(txbEmail, "");
+            errorProvider.SetError(txbCelular, "");
         }
     }
 }

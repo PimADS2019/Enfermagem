@@ -30,7 +30,7 @@
         {
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
             this.lbl_TipoFuncionario = new System.Windows.Forms.Label();
-            this.cbx_TipoFuncionario = new System.Windows.Forms.ComboBox();
+            this.cboTipoFuncionario = new System.Windows.Forms.ComboBox();
             this.dgv_Funcionarios = new System.Windows.Forms.DataGridView();
             this.btnExcluirFuncionario = new System.Windows.Forms.Button();
             this.btnEditarFuncionario = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
             this.grpConsultaPaciente.Controls.Add(this.lbl_TipoFuncionario);
-            this.grpConsultaPaciente.Controls.Add(this.cbx_TipoFuncionario);
+            this.grpConsultaPaciente.Controls.Add(this.cboTipoFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.dgv_Funcionarios);
             this.grpConsultaPaciente.Controls.Add(this.btnExcluirFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.btnEditarFuncionario);
@@ -68,19 +68,21 @@
             this.lbl_TipoFuncionario.TabIndex = 53;
             this.lbl_TipoFuncionario.Text = "Tipo Funcionario";
             // 
-            // cbx_TipoFuncionario
+            // cboTipoFuncionario
             // 
-            this.cbx_TipoFuncionario.FormattingEnabled = true;
-            this.cbx_TipoFuncionario.Items.AddRange(new object[] {
+            this.cboTipoFuncionario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboTipoFuncionario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboTipoFuncionario.FormattingEnabled = true;
+            this.cboTipoFuncionario.Items.AddRange(new object[] {
             "Aluno",
             "Coordenador",
             "Professor",
             "Enfermeiro"});
-            this.cbx_TipoFuncionario.Location = new System.Drawing.Point(112, 15);
-            this.cbx_TipoFuncionario.Name = "cbx_TipoFuncionario";
-            this.cbx_TipoFuncionario.Size = new System.Drawing.Size(121, 24);
-            this.cbx_TipoFuncionario.TabIndex = 52;
-            this.cbx_TipoFuncionario.Text = "Aluno";
+            this.cboTipoFuncionario.Location = new System.Drawing.Point(112, 15);
+            this.cboTipoFuncionario.Name = "cboTipoFuncionario";
+            this.cboTipoFuncionario.Size = new System.Drawing.Size(121, 24);
+            this.cboTipoFuncionario.TabIndex = 52;
+            this.cboTipoFuncionario.Text = "Aluno";
             // 
             // dgv_Funcionarios
             // 
@@ -157,6 +159,7 @@
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(553, 493);
             this.Controls.Add(this.grpConsultaPaciente);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -180,6 +183,6 @@
         private System.Windows.Forms.Button btnIncuirFuncionario;
         private System.Windows.Forms.DataGridView dgv_Funcionarios;
         private System.Windows.Forms.Label lbl_TipoFuncionario;
-        private System.Windows.Forms.ComboBox cbx_TipoFuncionario;
+        private System.Windows.Forms.ComboBox cboTipoFuncionario;
     }
 }

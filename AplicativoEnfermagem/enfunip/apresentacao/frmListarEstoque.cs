@@ -85,5 +85,10 @@ namespace enfunip.apresentacao
                 MessageBox.Show(controleEstoque.mensagem);
             }
         }
+
+        private void dgv_ListaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
