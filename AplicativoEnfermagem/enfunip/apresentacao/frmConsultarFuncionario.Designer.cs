@@ -99,6 +99,7 @@
             this.btnExcluirFuncionario.TabIndex = 50;
             this.btnExcluirFuncionario.Text = "Excluir";
             this.btnExcluirFuncionario.UseVisualStyleBackColor = true;
+            this.btnExcluirFuncionario.Click += new System.EventHandler(this.BtnExcluirFuncionario_Click);
             // 
             // btnEditarFuncionario
             // 

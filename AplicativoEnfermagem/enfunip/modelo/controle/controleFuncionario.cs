@@ -88,17 +88,17 @@ namespace enfunip.modelo.controle
         }
         
 
-       public void ExcluirFuncionario(List<String> dadosFuncionario)
+       public void ExcluirFuncionario(String Id_Excluir)
         {
             this.mensagem = "";
             validarFuncionario validarfuncionario = new validarFuncionario();
-            validarfuncionario.ValidarDados(dadosFuncionario);
+            validarfuncionario.ValidarDados(Id_Excluir);
             if (validarfuncionario.mensagem.Equals(""))
             {
                 Funcionario funcionario = new Funcionario();
                 funcionario.id = validarfuncionario.id;
                 Funcionariodao funcionarioDAO = new Funcionariodao();
-                if (funcionarioDAO.PesquisarFuncionarioPorID(funcionario).nome != null)
+                if (funcionarioDAO.ListarFuncionario() != null)
                 {
                     funcionarioDAO.ExcluirFuncionario(funcionario);
                     this.mensagem = funcionarioDAO.mensagem;

@@ -11,12 +11,12 @@ namespace enfunip.modelo.validacoes
         public String mensagem;
         public int id;
 
-        public void ValidarDados(List<String>dadosPaciente)
+        public void ValidarDados(List<String> dadosPaciente)
         {
             this.mensagem = "";
             if (dadosPaciente[1].Length > 50)
                 this.mensagem = "Nome com mais de 50 caracteres \n";
-            if(Convert.ToDateTime(dadosPaciente[2]).Year < 1900)
+            if (Convert.ToDateTime(dadosPaciente[2]).Year < 1900)
                 this.mensagem += "Data de nascimento inválida, paciente com mais de 110 ano\n";
             if (dadosPaciente[3].Length > 15)
                 this.mensagem += "CPF com mais de 15 caracteres \n";
@@ -48,14 +48,20 @@ namespace enfunip.modelo.validacoes
                 this.mensagem += "Celular com mais de 15 caracteres\n";
             if (dadosPaciente[17].Length > 15)
                 this.mensagem += "telefone com mais de 15 caracteres \n";
-            /*try
+        }
+        public void ValidarDados(String Id_Excluir)
+        {
+            this.mensagem = "";
+            try
             {
-                this.id = Convert.ToInt32(dadosPaciente[0]);
+                this.id = Convert.ToInt32(Id_Excluir);
             }
             catch (FormatException)
             {
                 this.mensagem += "ID inválido";
-            }*/
+            }
         }
+
+        
     }
 }

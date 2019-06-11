@@ -13,7 +13,6 @@ namespace enfunip.dao
     public class pacientedao : intPessoadao
     {
         Conexao conexaoBD = new Conexao();
-        SqlDataReader dataReader;
         public String mensagem;
         public void CadastrarPaciente(Paciente paciente)
         {
@@ -137,7 +136,8 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"delete from Pessoas where id = @id";
+            cmd.CommandText = @"delete from Pessoas 
+                                where IdPessoa = @id";
             cmd.Parameters.AddWithValue("@id", paciente.id);
             try
             {
@@ -179,7 +179,7 @@ namespace enfunip.dao
                 da.Fill(dt);
                 return (dt);
             }
-            catch (SqlException e)
+            catch (SqlException )
             {
                 throw;
             }
@@ -218,7 +218,7 @@ namespace enfunip.dao
                 return dt;
                 
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
                 throw;
             }

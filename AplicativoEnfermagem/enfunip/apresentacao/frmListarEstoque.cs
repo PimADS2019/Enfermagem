@@ -72,7 +72,18 @@ namespace enfunip.apresentacao
 
         private void BtnExcluirProduto_Click(object sender, EventArgs e)
         {
-            
+            String Id_Excluir;
+
+            DialogResult confirm = MessageBox.Show("Deseja Realmente Excluir o Produto?", "Fechar Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+
+                Id_Excluir = dgv_ListaProdutos.CurrentRow.Cells[0].Value.ToString();
+                controleEstoque.ExcluirItem(Id_Excluir);
+
+                MessageBox.Show(controleEstoque.mensagem);
+            }
         }
     }
 }

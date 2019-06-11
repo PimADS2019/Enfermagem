@@ -82,17 +82,17 @@ namespace enfunip.modelo.controle
             }
         }
 
-        public void ExcluirPaciente(List<String> dadosPaciente)
+        public void ExcluirPaciente(String Id_Excluir)
         {
             this.mensagem = "";
             validarPaciente validarpaciente = new validarPaciente();
-            validarpaciente.ValidarDados(dadosPaciente);
+            validarpaciente.ValidarDados(Id_Excluir);
             if (validarpaciente.mensagem.Equals(""))
             {
                 Paciente paciente = new Paciente();
                 paciente.id = validarpaciente.id;
                 pacientedao pacienteDAO = new pacientedao();
-                if (pacienteDAO.PesquisarPacientePorID(paciente).nome != null)
+                if (pacienteDAO.ListarPaciente() != null)
                 {
                     pacienteDAO.ExcluirPaciente(paciente);
                     this.mensagem = pacienteDAO.mensagem;

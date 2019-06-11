@@ -12,7 +12,6 @@ namespace enfunip.dao
     public class Funcionariodao : intFuncionariodao
     {
         Conexao conexaoBD = new Conexao();
-        SqlDataReader dataReader;
         public String mensagem;
 
         public void CadastrarFuncionario(Funcionario funcionario)
@@ -211,7 +210,7 @@ namespace enfunip.dao
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"delete from Pessoas 
-                                where id = @id";
+                                where IdPessoa = @id ";
             cmd.Parameters.AddWithValue("@id", funcionario.id);
             try
             {
@@ -308,7 +307,7 @@ namespace enfunip.dao
                 da.Fill(dt);
                 return (dt);
             }
-            catch (SqlException e)
+            catch (SqlException )
             {
                 throw;
             }
@@ -357,7 +356,7 @@ namespace enfunip.dao
                 return dt;
 
             }
-            catch (SqlException e)
+            catch (SqlException )
             {
                 throw;
             }

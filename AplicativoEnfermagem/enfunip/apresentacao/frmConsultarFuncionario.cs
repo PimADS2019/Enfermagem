@@ -68,5 +68,19 @@ namespace enfunip.apresentacao
                 Pesquisar(funcionario);
             }
         }
+
+        private void BtnExcluirFuncionario_Click(object sender, EventArgs e)
+        {
+            String Id_Excluir;
+            DialogResult confirm = MessageBox.Show("Deseja Realmente Excluir o Funcionario?", "Fechar Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                modelo.controle.controleFuncionario controleFuncionario = new modelo.controle.controleFuncionario();
+
+                Id_Excluir = dgv_Funcionarios.CurrentRow.Cells[0].Value.ToString();
+                controleFuncionario.ExcluirFuncionario(Id_Excluir);
+                MessageBox.Show(controleFuncionario.mensagem);
+            }
+        }
     }
 }

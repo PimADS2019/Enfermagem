@@ -14,20 +14,24 @@ namespace enfunip.modelo.validacoes
         public void ValidarDados(List<String> dadosItem)
         {
             this.mensagem = "";
-            
+
             if (dadosItem[1].Length > 50)
                 this.mensagem = "Nome do produto com mais de 50 caracteres \n";
             if (Convert.ToDateTime(dadosItem[1]) < DateTime.Today)
                 this.mensagem += "Data de estrada está no ano errado\n";
-
-           /* try
+        }
+        public void ValidarId(String Id_Excluir)
+        {
+            this.mensagem = "";
+            try
             {
-                this.id = Convert.ToInt32(dadosItem[0]);
+                this.id = Convert.ToInt32(Id_Excluir);
             }
             catch (FormatException)
             {
                 this.mensagem += "ID inválido";
-            }*/
+            }
         }
+        
     }
 }

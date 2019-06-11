@@ -82,14 +82,18 @@ namespace enfunip.modelo.controle
         }
 
 
-        public void ExcluirItem(List<String> dadosEstoque)
+        public void ExcluirItem(String Id_Excluir)
         {
             this.mensagem = "";
-          
+            validarEstoque validarEstoque = new validarEstoque();
+
+            validarEstoque.ValidarId(Id_Excluir);
+            if (validarEstoque.mensagem.Equals(""))
+            {
                 Estoque estoque = new Estoque();
-                
+                estoque.id = validarEstoque.id;
                 Estoquedao estoqueDAO = new Estoquedao();
-                if (estoqueDAO.PesquisarProduto(estoque) != null)
+                if (estoqueDAO.ListarItemPorNome() != null)
                 {
                     estoqueDAO.ExcluirItem(estoque);
                     this.mensagem = estoqueDAO.mensagem;
@@ -98,7 +102,7 @@ namespace enfunip.modelo.controle
                 {
                     this.mensagem = "Não existe este ID";
                 }
-           
+            }
         }
 
         public DataTable ListarPorNome()

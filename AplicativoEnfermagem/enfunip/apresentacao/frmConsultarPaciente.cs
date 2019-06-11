@@ -85,5 +85,22 @@ namespace enfunip.apresentacao
 
             dgv_Pacientes.DataSource = controlePaciente.ListarPaciente();
         }
+
+        private void BtnExcluirPaciente_Click(object sender, EventArgs e)
+        {
+            String Excluir_Id;
+
+            DialogResult confirm = MessageBox.Show("Deseja Realmente Excluir o Paciente?", "Fechar Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                modelo.controle.controlePaciente controlePaciente = new modelo.controle.controlePaciente(); 
+
+                Excluir_Id = dgv_Pacientes.CurrentRow.Cells[0].Value.ToString();
+                controlePaciente.ExcluirPaciente(Excluir_Id);
+
+                MessageBox.Show(controlePaciente.mensagem);
+            }
+            
+        }
     }
 }

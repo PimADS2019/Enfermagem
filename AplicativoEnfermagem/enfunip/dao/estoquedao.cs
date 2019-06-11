@@ -102,7 +102,7 @@ namespace enfunip.dao
                 da.Fill(dt);
                 return dt;              
             }
-            catch (SqlException e)
+            catch (SqlException )
             {
                 throw;
             }

@@ -30,11 +30,11 @@
         {
             this.txbConsultarPaciente = new System.Windows.Forms.TextBox();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
+            this.dgv_Pacientes = new System.Windows.Forms.DataGridView();
             this.btnExcluirPaciente = new System.Windows.Forms.Button();
             this.btnEditarPaciente = new System.Windows.Forms.Button();
             this.btnIncuirPaciente = new System.Windows.Forms.Button();
             this.btnFecharPesqPac = new System.Windows.Forms.Button();
-            this.dgv_Pacientes = new System.Windows.Forms.DataGridView();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Pacientes)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,14 @@
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
             // 
+            // dgv_Pacientes
+            // 
+            this.dgv_Pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Pacientes.Location = new System.Drawing.Point(6, 78);
+            this.dgv_Pacientes.Name = "dgv_Pacientes";
+            this.dgv_Pacientes.Size = new System.Drawing.Size(534, 370);
+            this.dgv_Pacientes.TabIndex = 54;
+            // 
             // btnExcluirPaciente
             // 
             this.btnExcluirPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -76,6 +84,7 @@
             this.btnExcluirPaciente.TabIndex = 53;
             this.btnExcluirPaciente.Text = "Excluir";
             this.btnExcluirPaciente.UseVisualStyleBackColor = true;
+            this.btnExcluirPaciente.Click += new System.EventHandler(this.BtnExcluirPaciente_Click);
             // 
             // btnEditarPaciente
             // 
@@ -114,14 +123,6 @@
             this.btnFecharPesqPac.TabIndex = 21;
             this.btnFecharPesqPac.UseVisualStyleBackColor = false;
             this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
-            // 
-            // dgv_Pacientes
-            // 
-            this.dgv_Pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Pacientes.Location = new System.Drawing.Point(6, 78);
-            this.dgv_Pacientes.Name = "dgv_Pacientes";
-            this.dgv_Pacientes.Size = new System.Drawing.Size(534, 370);
-            this.dgv_Pacientes.TabIndex = 54;
             // 
             // frmConsultarPaciente
             // 
