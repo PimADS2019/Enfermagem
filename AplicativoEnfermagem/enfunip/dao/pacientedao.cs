@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using enfunip.modelo;
+using System.Data;
 
 namespace enfunip.dao
 {
@@ -68,52 +69,6 @@ namespace enfunip.dao
             {
                 this.mensagem = e.ToString();
             }
-        }
-
-        public Paciente PesquisarPacientePorID(Paciente paciente)
-        {
-            this.mensagem = "";
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"select * from Pacientes 
-                where id = @id";
-            cmd.Parameters.AddWithValue("@id", paciente.id);
-            try
-            {
-                cmd.Connection = conexaoBD.Conectar();
-                dataReader = cmd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    cmd.Parameters.AddWithValue("@Nome", paciente.nome);
-                    cmd.Parameters.AddWithValue("@DataNascimento", paciente.datanascimento);
-                    cmd.Parameters.AddWithValue("@Cpf", paciente.cpf);
-                    cmd.Parameters.AddWithValue("@Logradouro", paciente.endereco);
-                    cmd.Parameters.AddWithValue("@Numero", paciente.numero);
-                    cmd.Parameters.AddWithValue("@Complemento", paciente.complemento);
-                    cmd.Parameters.AddWithValue("@Cidade", paciente.cidade);
-                    cmd.Parameters.AddWithValue("@Bairro", paciente.bairro);
-                    cmd.Parameters.AddWithValue("@Estado", paciente.estado);
-                    cmd.Parameters.AddWithValue("@Cep", paciente.cep);
-                    cmd.Parameters.AddWithValue("@Sexo", paciente.sexo);
-                    cmd.Parameters.AddWithValue("@EstadoCivil", paciente.estadocivil);
-                    cmd.Parameters.AddWithValue("@Religiao", paciente.religiao);
-                    cmd.Parameters.AddWithValue("@Filhos", paciente.filhos);
-                    cmd.Parameters.AddWithValue("@Email", paciente.email);
-                    cmd.Parameters.AddWithValue("@Celular", paciente.celular);
-                    cmd.Parameters.AddWithValue("@Telefone", paciente.telefone);
-                    dataReader.Read();
-                }
-                else
-                {
-                    paciente.id = 0;
-                }
-                dataReader.Close();
-                conexaoBD.Desconectar();
-            }
-            catch (SqlException e)
-            {
-                this.mensagem = e.ToString();
-            }
-            return paciente;
         }
 
         public void EditarPaciente(Paciente paciente)
@@ -197,53 +152,87 @@ namespace enfunip.dao
             }
         }
 
-        public List<Paciente> PesquisarPacientePorNome(Paciente paciente)
+        public DataTable ListarPaciente()
         {
-            this.mensagem = "";
-            SqlCommand cmd = new SqlCommand();
-            List<Paciente> listaPaciente = new List<Paciente>();
-
-            cmd.CommandText = @"select * from pessoas 
-                where nome like @nome";
-            cmd.Parameters.AddWithValue("@Nome", paciente.nome + "%");
-
             try
             {
+                SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexaoBD.Conectar();
-                dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    Paciente pacienteLista = new Paciente();
-                    pacienteLista.id = Convert.ToInt32(dataReader["Id"]);
-                    pacienteLista.nome = dataReader["Nome"].ToString();
-                    pacienteLista.datanascimento = Convert.ToDateTime(dataReader["DataNascimento"].ToString());
-                    pacienteLista.cpf = dataReader["Cpf"].ToString();
-                    pacienteLista.endereco = dataReader["Endereco"].ToString();
-                    pacienteLista.numero = dataReader["Numero"].ToString();
-                    pacienteLista.complemento = dataReader["Complemento"].ToString();
-                    pacienteLista.cidade = dataReader["Cidade"].ToString();
-                    pacienteLista.bairro = dataReader["Bairro"].ToString();
-                    pacienteLista.estado = dataReader["Estado"].ToString();
-                    pacienteLista.cep = dataReader["Cep"].ToString();
-                    pacienteLista.sexo = dataReader["Sexo"].ToString();
-                    pacienteLista.estadocivil = dataReader["EstadoCivil"].ToString();
-                    pacienteLista.religiao = dataReader["Religiao"].ToString();
-                    pacienteLista.filhos = dataReader["Filhos"].ToString();
-                    pacienteLista.email = dataReader["Email"].ToString();
-                    pacienteLista.celular = dataReader["Celular"].ToString();
-                    pacienteLista.telefone = dataReader["Telefone"].ToString();
-                    listaPaciente.Add(pacienteLista);
-               
-                }
 
-                dataReader.Close();
-                conexaoBD.Desconectar();
+                cmd.CommandText = @"select IdPessoa, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone from
+	                            (
+		                            select IdPessoa, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep from
+		                            (
+			                            SELECT IdPessoa, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Fk_Pessoas_IdPessoa FROM Pessoas
+			                            inner join Pacientes
+			                            on Pessoas.IdPessoa = Pacientes.Fk_Pessoas_IdPessoa
+		                            ) as Pessoas_pacientes
+		                            inner join Enderecos
+		                            on Enderecos.Fk_Pessoas_IdPessoa = Pessoas_pacientes.IdPessoa
+		                            ) as Pessoas_Pacientes_Endereco
+		                            inner join Contatos
+		                            on Contatos.Fk_Pessoas_IdPessoa = Pessoas_Pacientes_Endereco.IdPessoa";
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                return (dt);
             }
             catch (SqlException e)
             {
-                this.mensagem = e.ToString();
+                throw;
             }
-            return listaPaciente;
+            
+        }
+
+        public DataTable PesquisarPaciente(modelo.Paciente paciente)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conexaoBD.Conectar();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter();
+
+                cmd.CommandText = @"select IdPessoa, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone from
+	                            (
+		                            select IdPessoa, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep from
+		                            (
+			                            SELECT IdPessoa, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Fk_Pessoas_IdPessoa FROM Pessoas
+			                            inner join Pacientes
+			                            on Pessoas.IdPessoa = Pacientes.Fk_Pessoas_IdPessoa
+		                            ) as Pessoas_pacientes
+		                            inner join Enderecos
+		                            on Enderecos.Fk_Pessoas_IdPessoa = Pessoas_pacientes.IdPessoa
+		                            ) as Pessoas_Pacientes_Endereco
+		                            inner join Contatos
+		                            on Contatos.Fk_Pessoas_IdPessoa = Pessoas_Pacientes_Endereco.IdPessoa
+                                    Where Nome like @Nome order by Nome";
+
+                cmd.Parameters.AddWithValue("@nome", "%"+paciente.nome+"%");
+
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+
+                return dt;
+                
+            }
+            catch (SqlException e)
+            {
+                throw;
+            }
+
+        }
+
+        public Paciente PesquisarPacientePorID(Paciente paciente)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Paciente> PesquisarPacientePorNome(Paciente paciente)
+        {
+            throw new NotImplementedException();
         }
     }
 }

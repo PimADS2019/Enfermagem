@@ -28,26 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstPacientes = new System.Windows.Forms.ListBox();
             this.txbConsultarPaciente = new System.Windows.Forms.TextBox();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
             this.btnExcluirPaciente = new System.Windows.Forms.Button();
             this.btnEditarPaciente = new System.Windows.Forms.Button();
             this.btnIncuirPaciente = new System.Windows.Forms.Button();
             this.btnFecharPesqPac = new System.Windows.Forms.Button();
+            this.dgv_Pacientes = new System.Windows.Forms.DataGridView();
             this.grpConsultaPaciente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Pacientes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lstPacientes
-            // 
-            this.lstPacientes.FormattingEnabled = true;
-            this.lstPacientes.ItemHeight = 16;
-            this.lstPacientes.Location = new System.Drawing.Point(6, 74);
-            this.lstPacientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lstPacientes.Name = "lstPacientes";
-            this.lstPacientes.Size = new System.Drawing.Size(534, 388);
-            this.lstPacientes.TabIndex = 1;
-            this.lstPacientes.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // txbConsultarPaciente
             // 
@@ -64,17 +54,18 @@
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.dgv_Pacientes);
             this.grpConsultaPaciente.Controls.Add(this.btnExcluirPaciente);
             this.grpConsultaPaciente.Controls.Add(this.btnEditarPaciente);
             this.grpConsultaPaciente.Controls.Add(this.btnIncuirPaciente);
             this.grpConsultaPaciente.Controls.Add(this.txbConsultarPaciente);
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
-            this.grpConsultaPaciente.Controls.Add(this.lstPacientes);
             this.grpConsultaPaciente.Location = new System.Drawing.Point(3, -4);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
             this.grpConsultaPaciente.Size = new System.Drawing.Size(546, 495);
             this.grpConsultaPaciente.TabIndex = 46;
             this.grpConsultaPaciente.TabStop = false;
+            this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
             // 
             // btnExcluirPaciente
             // 
@@ -124,6 +115,14 @@
             this.btnFecharPesqPac.UseVisualStyleBackColor = false;
             this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
             // 
+            // dgv_Pacientes
+            // 
+            this.dgv_Pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Pacientes.Location = new System.Drawing.Point(6, 78);
+            this.dgv_Pacientes.Name = "dgv_Pacientes";
+            this.dgv_Pacientes.Size = new System.Drawing.Size(534, 370);
+            this.dgv_Pacientes.TabIndex = 54;
+            // 
             // frmConsultarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -139,17 +138,18 @@
             this.Text = "Consultar Paciente";
             this.grpConsultaPaciente.ResumeLayout(false);
             this.grpConsultaPaciente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Pacientes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ListBox lstPacientes;
         private System.Windows.Forms.TextBox txbConsultarPaciente;
         private System.Windows.Forms.GroupBox grpConsultaPaciente;
         private System.Windows.Forms.Button btnFecharPesqPac;
         private System.Windows.Forms.Button btnExcluirPaciente;
         private System.Windows.Forms.Button btnEditarPaciente;
         private System.Windows.Forms.Button btnIncuirPaciente;
+        private System.Windows.Forms.DataGridView dgv_Pacientes;
     }
 }

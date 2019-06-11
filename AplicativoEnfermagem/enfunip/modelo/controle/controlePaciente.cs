@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using enfunip.modelo.validacoes;
 using enfunip.dao;
+using System.Data;
 
 namespace enfunip.modelo.controle
 {
@@ -45,27 +46,6 @@ namespace enfunip.modelo.controle
                 this.mensagem = validarpaciente.mensagem;
             }
         }
-
-        public Paciente PesquisarPacientePorID(List<String> dadosPaciente)
-        {
-            this.mensagem = "";
-            Paciente paciente = new Paciente();
-            validarPaciente validarpaciente = new validarPaciente();
-            validarpaciente.ValidarDados(dadosPaciente);
-            if (validarpaciente.mensagem.Equals(""))
-            {
-                paciente.id = validarpaciente.id;
-                pacientedao pacienteDAO = new pacientedao();
-                paciente = pacienteDAO.PesquisarPacientePorID(paciente);
-                this.mensagem = pacienteDAO.mensagem;
-            }
-            else
-            {
-                this.mensagem = validarpaciente.mensagem;
-            }
-            return paciente;
-        }
-
         public void EditarPaciente(List<String> dadosPaciente)
         {
             this.mensagem = "";
@@ -128,23 +108,41 @@ namespace enfunip.modelo.controle
             }
         }
 
-        public void PesquisarPessoaPorNome(List<String> dadosPaciente)
+        public DataTable ListarPaciente()
         {
-            this.mensagem = "";
-            validarPaciente validarpaciente = new validarPaciente();
-            validarpaciente.ValidarDados(dadosPaciente);
-            if (validarpaciente.mensagem.Equals(""))
+            try
             {
                 pacientedao pacienteDAO = new pacientedao();
-                Paciente paciente = new Paciente();
-                paciente.nome = dadosPaciente[1];
-                Estaticos.listaPacienteEstatico =
-                    pacienteDAO.PesquisarPacientePorNome(paciente);
+
+                DataTable dt = new DataTable();
+
+                dt = pacienteDAO.ListarPaciente();
+
+                return dt;
             }
-            else
+            catch (Exception)
             {
-                this.mensagem = validarpaciente.mensagem;
+
+                throw;
             }
+        }
+        public DataTable PesquisarPaciente(modelo.Paciente paciente)
+        {   
+                try
+                {
+                    pacientedao pacienteDAO = new pacientedao();
+
+                    DataTable dt = new DataTable();
+
+                    dt = pacienteDAO.PesquisarPaciente(paciente);
+
+                    return dt;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
         }
     }
 }

@@ -41,7 +41,17 @@ namespace enfunip.apresentacao
 
         private void txbConsultarPaciente_TextChanged(object sender, EventArgs e)
         {
+            if (txbConsultarPaciente.Text.Equals(""))
+            {
+                modelo.controle.controlePaciente controlePaciente = new modelo.controle.controlePaciente();
 
+                dgv_Pacientes.DataSource = controlePaciente.ListarPaciente();              
+            }
+            else
+            {
+                modelo.Paciente paciente = new modelo.Paciente();
+                Pesquisar(paciente);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,6 +68,22 @@ namespace enfunip.apresentacao
         {
             frmCadastrarPaciente frmCadastrarPaciente = new frmCadastrarPaciente();
             frmCadastrarPaciente.ShowDialog();
+        }
+
+        private void Pesquisar(modelo.Paciente paciente)
+        {
+            paciente.nome = (txbConsultarPaciente.Text.Trim());
+
+            modelo.controle.controlePaciente controlePaciente = new modelo.controle.controlePaciente();
+
+            dgv_Pacientes.DataSource = controlePaciente.PesquisarPaciente(paciente);
+        }
+
+        private void GrpConsultaPaciente_Enter(object sender, EventArgs e)
+        {
+            modelo.controle.controlePaciente controlePaciente = new modelo.controle.controlePaciente();
+
+            dgv_Pacientes.DataSource = controlePaciente.ListarPaciente();
         }
     }
 }
