@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarPaciente));
             this.lblNumFilhos = new System.Windows.Forms.Label();
             this.txbReligiao = new System.Windows.Forms.TextBox();
@@ -119,6 +120,19 @@
             this.tsmiSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblCampoObrig = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblCampoObrigatorio = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio2 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio3 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio4 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio5 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio6 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio7 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio8 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio9 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio10 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio11 = new System.Windows.Forms.Label();
             this.tbcCadastroPaciente.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.grpDadosPaciente.SuspendLayout();
@@ -134,6 +148,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudAtivFis)).BeginInit();
             this.grpAlimentação.SuspendLayout();
             this.mnsFunçõesCadastroPac.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumFilhos
@@ -153,6 +168,7 @@
             // 
             // txbNumeroEndereco
             // 
+            this.errorProvider.SetIconPadding(this.txbNumeroEndereco, ((int)(resources.GetObject("txbNumeroEndereco.IconPadding"))));
             resources.ApplyResources(this.txbNumeroEndereco, "txbNumeroEndereco");
             this.txbNumeroEndereco.Name = "txbNumeroEndereco";
             // 
@@ -172,6 +188,7 @@
             this.cboSexo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboSexo.Cursor = System.Windows.Forms.Cursors.Default;
             this.cboSexo.FormattingEnabled = true;
+            this.errorProvider.SetIconPadding(this.cboSexo, ((int)(resources.GetObject("cboSexo.IconPadding"))));
             this.cboSexo.Items.AddRange(new object[] {
             resources.GetString("cboSexo.Items"),
             resources.GetString("cboSexo.Items1")});
@@ -180,11 +197,13 @@
             // 
             // txbNome
             // 
+            this.errorProvider.SetIconPadding(this.txbNome, ((int)(resources.GetObject("txbNome.IconPadding"))));
             resources.ApplyResources(this.txbNome, "txbNome");
             this.txbNome.Name = "txbNome";
             // 
             // txbEmail
             // 
+            this.errorProvider.SetIconPadding(this.txbEmail, ((int)(resources.GetObject("txbEmail.IconPadding"))));
             resources.ApplyResources(this.txbEmail, "txbEmail");
             this.txbEmail.Name = "txbEmail";
             // 
@@ -199,6 +218,7 @@
             this.cboEstadoCivil.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboEstadoCivil.Cursor = System.Windows.Forms.Cursors.Default;
             this.cboEstadoCivil.FormattingEnabled = true;
+            this.errorProvider.SetIconPadding(this.cboEstadoCivil, ((int)(resources.GetObject("cboEstadoCivil.IconPadding"))));
             this.cboEstadoCivil.Items.AddRange(new object[] {
             resources.GetString("cboEstadoCivil.Items"),
             resources.GetString("cboEstadoCivil.Items1"),
@@ -240,16 +260,20 @@
             // 
             // txbCep
             // 
+            this.errorProvider.SetIconPadding(this.txbCep, ((int)(resources.GetObject("txbCep.IconPadding"))));
             resources.ApplyResources(this.txbCep, "txbCep");
             this.txbCep.Name = "txbCep";
+            this.txbCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txbTelefone
             // 
             resources.ApplyResources(this.txbTelefone, "txbTelefone");
             this.txbTelefone.Name = "txbTelefone";
+            this.txbTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txbBairro
             // 
+            this.errorProvider.SetIconPadding(this.txbBairro, ((int)(resources.GetObject("txbBairro.IconPadding"))));
             resources.ApplyResources(this.txbBairro, "txbBairro");
             this.txbBairro.Name = "txbBairro";
             // 
@@ -265,8 +289,10 @@
             // 
             // txbCelular
             // 
+            this.errorProvider.SetIconPadding(this.txbCelular, ((int)(resources.GetObject("txbCelular.IconPadding"))));
             resources.ApplyResources(this.txbCelular, "txbCelular");
             this.txbCelular.Name = "txbCelular";
+            this.txbCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbl_Telefone
             // 
@@ -281,8 +307,10 @@
             // txbCpf
             // 
             this.txbCpf.Culture = new System.Globalization.CultureInfo("en-001");
+            this.errorProvider.SetIconPadding(this.txbCpf, ((int)(resources.GetObject("txbCpf.IconPadding"))));
             resources.ApplyResources(this.txbCpf, "txbCpf");
             this.txbCpf.Name = "txbCpf";
+            this.txbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbl_estado
             // 
@@ -296,6 +324,7 @@
             // 
             // txbEndereco
             // 
+            this.errorProvider.SetIconPadding(this.txbEndereco, ((int)(resources.GetObject("txbEndereco.IconPadding"))));
             resources.ApplyResources(this.txbEndereco, "txbEndereco");
             this.txbEndereco.Name = "txbEndereco";
             // 
@@ -306,6 +335,7 @@
             // 
             // txbCidade
             // 
+            this.errorProvider.SetIconPadding(this.txbCidade, ((int)(resources.GetObject("txbCidade.IconPadding"))));
             resources.ApplyResources(this.txbCidade, "txbCidade");
             this.txbCidade.Name = "txbCidade";
             // 
@@ -340,6 +370,18 @@
             // grpDadosPaciente
             // 
             this.grpDadosPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio11);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio10);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio9);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio8);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio7);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio6);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio5);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio4);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio3);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio2);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio);
+            this.grpDadosPaciente.Controls.Add(this.lblCampoObrig);
             this.grpDadosPaciente.Controls.Add(this.dtpNascimento);
             this.grpDadosPaciente.Controls.Add(this.cboEstado);
             this.grpDadosPaciente.Controls.Add(this.nudFilhos);
@@ -394,6 +436,7 @@
             this.cboEstado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboEstado.Cursor = System.Windows.Forms.Cursors.Default;
             this.cboEstado.FormattingEnabled = true;
+            this.errorProvider.SetIconPadding(this.cboEstado, ((int)(resources.GetObject("cboEstado.IconPadding"))));
             this.cboEstado.Items.AddRange(new object[] {
             resources.GetString("cboEstado.Items"),
             resources.GetString("cboEstado.Items1"),
@@ -802,6 +845,83 @@
             resources.ApplyResources(this.tsmiCancelar, "tsmiCancelar");
             this.tsmiCancelar.Click += new System.EventHandler(this.tsmiCancelar_Click);
             // 
+            // lblCampoObrig
+            // 
+            resources.ApplyResources(this.lblCampoObrig, "lblCampoObrig");
+            this.lblCampoObrig.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrig.Name = "lblCampoObrig";
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
+            // lblCampoObrigatorio
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio, "lblCampoObrigatorio");
+            this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
+            // 
+            // lblCampoObrigatorio2
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio2, "lblCampoObrigatorio2");
+            this.lblCampoObrigatorio2.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio2.Name = "lblCampoObrigatorio2";
+            // 
+            // lblCampoObrigatorio3
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio3, "lblCampoObrigatorio3");
+            this.lblCampoObrigatorio3.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio3.Name = "lblCampoObrigatorio3";
+            // 
+            // lblCampoObrigatorio4
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio4, "lblCampoObrigatorio4");
+            this.lblCampoObrigatorio4.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio4.Name = "lblCampoObrigatorio4";
+            // 
+            // lblCampoObrigatorio5
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio5, "lblCampoObrigatorio5");
+            this.lblCampoObrigatorio5.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio5.Name = "lblCampoObrigatorio5";
+            // 
+            // lblCampoObrigatorio6
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio6, "lblCampoObrigatorio6");
+            this.lblCampoObrigatorio6.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio6.Name = "lblCampoObrigatorio6";
+            // 
+            // lblCampoObrigatorio7
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio7, "lblCampoObrigatorio7");
+            this.lblCampoObrigatorio7.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio7.Name = "lblCampoObrigatorio7";
+            // 
+            // lblCampoObrigatorio8
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio8, "lblCampoObrigatorio8");
+            this.lblCampoObrigatorio8.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio8.Name = "lblCampoObrigatorio8";
+            // 
+            // lblCampoObrigatorio9
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio9, "lblCampoObrigatorio9");
+            this.lblCampoObrigatorio9.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio9.Name = "lblCampoObrigatorio9";
+            // 
+            // lblCampoObrigatorio10
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio10, "lblCampoObrigatorio10");
+            this.lblCampoObrigatorio10.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio10.Name = "lblCampoObrigatorio10";
+            // 
+            // lblCampoObrigatorio11
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio11, "lblCampoObrigatorio11");
+            this.lblCampoObrigatorio11.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio11.Name = "lblCampoObrigatorio11";
+            // 
             // frmCadastrarPaciente
             // 
             resources.ApplyResources(this, "$this");
@@ -838,6 +958,7 @@
             this.grpAlimentação.PerformLayout();
             this.mnsFunçõesCadastroPac.ResumeLayout(false);
             this.mnsFunçõesCadastroPac.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -934,5 +1055,18 @@
         private System.Windows.Forms.CheckBox chkSexualAtivo;
         private System.Windows.Forms.CheckBox chkPraticaAtvFisc;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
+        private System.Windows.Forms.Label lblCampoObrig;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label lblCampoObrigatorio11;
+        private System.Windows.Forms.Label lblCampoObrigatorio10;
+        private System.Windows.Forms.Label lblCampoObrigatorio9;
+        private System.Windows.Forms.Label lblCampoObrigatorio8;
+        private System.Windows.Forms.Label lblCampoObrigatorio7;
+        private System.Windows.Forms.Label lblCampoObrigatorio6;
+        private System.Windows.Forms.Label lblCampoObrigatorio5;
+        private System.Windows.Forms.Label lblCampoObrigatorio4;
+        private System.Windows.Forms.Label lblCampoObrigatorio3;
+        private System.Windows.Forms.Label lblCampoObrigatorio2;
+        private System.Windows.Forms.Label lblCampoObrigatorio;
     }
 }

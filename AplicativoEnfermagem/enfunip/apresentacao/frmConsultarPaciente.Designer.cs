@@ -45,7 +45,7 @@
             this.txbConsultarPaciente.Location = new System.Drawing.Point(6, 39);
             this.txbConsultarPaciente.MaxLength = 50;
             this.txbConsultarPaciente.Name = "txbConsultarPaciente";
-            this.txbConsultarPaciente.Size = new System.Drawing.Size(534, 22);
+            this.txbConsultarPaciente.Size = new System.Drawing.Size(519, 22);
             this.txbConsultarPaciente.TabIndex = 44;
             this.txbConsultarPaciente.Text = "Insira nome do paciente";
             this.txbConsultarPaciente.Click += new System.EventHandler(this.txbConsultarPaciente_Click);
@@ -62,7 +62,7 @@
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
             this.grpConsultaPaciente.Location = new System.Drawing.Point(3, -4);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
-            this.grpConsultaPaciente.Size = new System.Drawing.Size(546, 495);
+            this.grpConsultaPaciente.Size = new System.Drawing.Size(695, 598);
             this.grpConsultaPaciente.TabIndex = 46;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
@@ -72,7 +72,7 @@
             this.dgv_Pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Pacientes.Location = new System.Drawing.Point(6, 78);
             this.dgv_Pacientes.Name = "dgv_Pacientes";
-            this.dgv_Pacientes.Size = new System.Drawing.Size(534, 370);
+            this.dgv_Pacientes.Size = new System.Drawing.Size(683, 370);
             this.dgv_Pacientes.TabIndex = 54;
             // 
             // btnExcluirPaciente
@@ -117,7 +117,7 @@
             this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
             this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFecharPesqPac.Location = new System.Drawing.Point(524, 5);
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(674, 5);
             this.btnFecharPesqPac.Name = "btnFecharPesqPac";
             this.btnFecharPesqPac.Size = new System.Drawing.Size(22, 23);
             this.btnFecharPesqPac.TabIndex = 21;
@@ -129,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(549, 492);
+            this.ClientSize = new System.Drawing.Size(700, 600);
             this.Controls.Add(this.grpConsultaPaciente);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

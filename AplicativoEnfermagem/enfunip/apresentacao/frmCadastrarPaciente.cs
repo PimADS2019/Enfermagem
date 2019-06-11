@@ -117,35 +117,53 @@ namespace enfunip.apresentacao
 
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            controlePaciente controlePaciente = new controlePaciente();
+            if (string.IsNullOrWhiteSpace(txbNome.Text) || string.IsNullOrWhiteSpace(txbCpf.Text) ||
+                string.IsNullOrWhiteSpace(txbEndereco.Text) || string.IsNullOrWhiteSpace (txbNumeroEndereco.Text) || 
+                string.IsNullOrWhiteSpace(txbCidade.Text) || string.IsNullOrWhiteSpace(txbBairro.Text) ||
+                string.IsNullOrWhiteSpace(cboEstado.Text) || string.IsNullOrWhiteSpace(txbCep.Text) ||
+                string.IsNullOrWhiteSpace(cboSexo.Text) || string.IsNullOrWhiteSpace(txbEmail.Text) ||
+                string.IsNullOrWhiteSpace(txbCelular.Text))
+            {
+                lblCampoObrig.Visible = true;
+                VerificarCampos();
+                MessageBox.Show("Campos obrigatórios não preenchidos!");
+            }
+            else
+            {
+                ApagarMsgErro();
 
-            List<String> dadosPaciente = new List<string>();
-            //Primera tela cliente
-            dadosPaciente.Add(idPaciente_BD.Text);
-            dadosPaciente.Add(txbNome.Text);
-            dadosPaciente.Add(dtpNascimento.Text);
-            dadosPaciente.Add(txbCpf.Text);
-            dadosPaciente.Add(txbEndereco.Text);
-            dadosPaciente.Add(txbNumeroEndereco.Text);
-            dadosPaciente.Add(txbComplemento.Text);
-            dadosPaciente.Add(txbCidade.Text);
-            dadosPaciente.Add(txbBairro.Text);
-            dadosPaciente.Add(cboEstado.Text);
-            dadosPaciente.Add(txbCep.Text);
-            dadosPaciente.Add(cboSexo.Text);
-            dadosPaciente.Add(cboEstadoCivil.Text);
-            dadosPaciente.Add(txbReligiao.Text);
-            dadosPaciente.Add(nudFilhos.Text);
-            dadosPaciente.Add(txbEmail.Text);
-            dadosPaciente.Add(txbCelular.Text);
-            dadosPaciente.Add(txbTelefone.Text);
+                lblCampoObrig.Visible = false;
 
-            //Tela Historico
+                controlePaciente controlePaciente = new controlePaciente();
 
-            controlePaciente.CadastrarPaciente(dadosPaciente);
+                List<String> dadosPaciente = new List<string>();
+                //Primera tela cliente
+                dadosPaciente.Add(idPaciente_BD.Text);
+                dadosPaciente.Add(txbNome.Text);
+                dadosPaciente.Add(dtpNascimento.Text);
+                dadosPaciente.Add(txbCpf.Text);
+                dadosPaciente.Add(txbEndereco.Text);
+                dadosPaciente.Add(txbNumeroEndereco.Text);
+                dadosPaciente.Add(txbComplemento.Text);
+                dadosPaciente.Add(txbCidade.Text);
+                dadosPaciente.Add(txbBairro.Text);
+                dadosPaciente.Add(cboEstado.Text);
+                dadosPaciente.Add(txbCep.Text);
+                dadosPaciente.Add(cboSexo.Text);
+                dadosPaciente.Add(cboEstadoCivil.Text);
+                dadosPaciente.Add(txbReligiao.Text);
+                dadosPaciente.Add(nudFilhos.Text);
+                dadosPaciente.Add(txbEmail.Text);
+                dadosPaciente.Add(txbCelular.Text);
+                dadosPaciente.Add(txbTelefone.Text);
 
-            MessageBox.Show(controlePaciente.mensagem);
+                //Tela Historico
 
+                controlePaciente.CadastrarPaciente(dadosPaciente);
+
+                MessageBox.Show(controlePaciente.mensagem);
+            
+            }
         }
 
 
@@ -190,7 +208,8 @@ namespace enfunip.apresentacao
 
             if (confirm.ToString().ToUpper() == "YES")
             {
-
+                ApagarMsgErro();
+                lblCampoObrig.Visible = false;
 
                 // DADOS DO PACIENTE
 
@@ -277,6 +296,85 @@ namespace enfunip.apresentacao
             }
             else
                 nudAtivFis.Enabled = false;
+        }
+        
+        // Verificação dos Campos Obrigatórios com ErrorProvider
+        private bool VerificarCampos()
+        {
+            bool ok = true;
+
+            if (txbNome.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbNome, "Insira o nome");
+            }
+            if (txbCpf.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbCpf, "Insira o CPF");
+            }
+            if (txbEndereco.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbEndereco, "Insira o endereço");
+            }
+            if (txbNumeroEndereco.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbNumeroEndereco, "Insira o número");
+            }
+            if (txbCidade.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbCidade, "Insira a cidade");
+            }
+            if (txbBairro.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbBairro, "Insira o bairro");
+            }
+            if (cboEstado.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(cboEstado, "Insira o estado");
+            }
+            if (txbCep.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbCep, "Insira o CEP");
+            }
+            if (cboSexo.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(cboSexo, "Insira o sexo");
+            }
+            if (txbEmail.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbEmail, "Insira o e-mail");
+            }
+            if (txbCelular.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txbCelular, "Insira o celular");
+            }
+            return ok;
+        }
+
+        // Apagar mensagem de erro no formulário
+        private void ApagarMsgErro()
+        {
+            errorProvider.SetError(txbNome, "");
+            errorProvider.SetError(txbCpf, "");
+            errorProvider.SetError(txbEndereco, "");
+            errorProvider.SetError(txbNumeroEndereco, "");
+            errorProvider.SetError(txbCidade, "");
+            errorProvider.SetError(txbBairro, "");
+            errorProvider.SetError(cboEstado, "");
+            errorProvider.SetError(txbCep, "");
+            errorProvider.SetError(cboSexo, "");
+            errorProvider.SetError(txbEmail, "");
+            errorProvider.SetError(txbCelular, "");
         }
     }
 }

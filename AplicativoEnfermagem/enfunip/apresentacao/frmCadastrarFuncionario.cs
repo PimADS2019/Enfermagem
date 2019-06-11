@@ -33,6 +33,10 @@ namespace enfunip.apresentacao
 
             if (confirm.ToString().ToUpper() == "YES")
             {
+                ApagarMsgErro();
+                lblCampoObrig.Visible = false;
+
+                ApagarMsgErro();
                 cboTipoUsuario.Text = "";
                 txbUsuario.Clear();
                 txbSenha.Clear();
@@ -61,65 +65,60 @@ namespace enfunip.apresentacao
             }
         }
 
-        private void txbConfirmaSenha_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void tsmiSalvar_Click(object sender, EventArgs e)
         {
-
-            // Verificação de Campos Obrigatórios
-            if (string.IsNullOrWhiteSpace(cboTipoUsuario.Text) || string.IsNullOrWhiteSpace(txbUsuario.Text) || 
-                string.IsNullOrWhiteSpace(txbSenha.Text) ||string.IsNullOrWhiteSpace(txbConfirmaSenha.Text) || 
-                string.IsNullOrWhiteSpace(txbNome.Text) ||string.IsNullOrWhiteSpace(txbCpf.Text) ||
-                string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbCelular.Text))
+            if (txbSenha.Text != txbConfirmaSenha.Text)
             {
-                VerificarCampos();
-                MessageBox.Show("Campos obrigatórios não preenchidos!");
-                lblCampoObrig.Visible = true;
+                MessageBox.Show("Senhas não coincidem");
             }
             else
             {
-                ApagarMsgErro();
-                lblCampoObrig.Visible = false;
-                MessageBox.Show("Cadastro com sucesso");
-                /*
-                controleFuncionario controleFuncionario = new controleFuncionario();
+                if (string.IsNullOrWhiteSpace(cboTipoUsuario.Text) || string.IsNullOrWhiteSpace(txbUsuario.Text) ||
+                    string.IsNullOrWhiteSpace(txbSenha.Text) || string.IsNullOrWhiteSpace(txbConfirmaSenha.Text) ||
+                    string.IsNullOrWhiteSpace(txbNome.Text) || string.IsNullOrWhiteSpace(txbCpf.Text) ||
+                    string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbCelular.Text))
+                {
+                    lblCampoObrig.Visible = true;
+                    VerificarCampos();
+                    MessageBox.Show("Campos obrigatórios não preenchidos!");
+                }
+                else
+                {
+                    ApagarMsgErro();
+                    lblCampoObrig.Visible = false;
 
-                List<String> dadosFuncionario = new List<string>();
-                dadosFuncionario.Add(cboTipoUsuario.Text);
-                dadosFuncionario.Add(txbUsuario.Text);
-                dadosFuncionario.Add(txbSenha.Text);
-                dadosFuncionario.Add(txbConfirmaSenha.Text);
-                dadosFuncionario.Add(txbNome.Text);
-                dadosFuncionario.Add(dtpNascimento.Text);
-                dadosFuncionario.Add(txbCpf.Text);
-                dadosFuncionario.Add(txbNumContrato.Text);
-                dadosFuncionario.Add(txbRA.Text);
-                dadosFuncionario.Add(cboPeriodo.Text);
-                dadosFuncionario.Add(cboSemestre.Text);
-                dadosFuncionario.Add(txbEndereco.Text);
-                dadosFuncionario.Add(txbNumeroEndereco.Text);
-                dadosFuncionario.Add(txbComplemento.Text);
-                dadosFuncionario.Add(txbCidade.Text);
-                dadosFuncionario.Add(txbBairro.Text);
-                dadosFuncionario.Add(cboEstado.Text);
-                dadosFuncionario.Add(txbCep.Text);
-                dadosFuncionario.Add(txbEmail.Text);
-                dadosFuncionario.Add(txbCelular.Text);
-                dadosFuncionario.Add(txbTelefone.Text);
+                    controleFuncionario controleFuncionario = new controleFuncionario();
 
-                controleFuncionario.CadastrarFuncionario(dadosFuncionario);
+                    List<String> dadosFuncionario = new List<string>();
+                    dadosFuncionario.Add(cboTipoUsuario.Text);
+                    dadosFuncionario.Add(txbUsuario.Text);
+                    dadosFuncionario.Add(txbSenha.Text);
+                    dadosFuncionario.Add(txbConfirmaSenha.Text);
+                    dadosFuncionario.Add(txbNome.Text);
+                    dadosFuncionario.Add(dtpNascimento.Text);
+                    dadosFuncionario.Add(txbCpf.Text);
+                    dadosFuncionario.Add(txbNumContrato.Text);
+                    dadosFuncionario.Add(txbRA.Text);
+                    dadosFuncionario.Add(cboPeriodo.Text);
+                    dadosFuncionario.Add(cboSemestre.Text);
+                    dadosFuncionario.Add(txbEndereco.Text);
+                    dadosFuncionario.Add(txbNumeroEndereco.Text);
+                    dadosFuncionario.Add(txbComplemento.Text);
+                    dadosFuncionario.Add(txbCidade.Text);
+                    dadosFuncionario.Add(txbBairro.Text);
+                    dadosFuncionario.Add(cboEstado.Text);
+                    dadosFuncionario.Add(txbCep.Text);
+                    dadosFuncionario.Add(txbEmail.Text);
+                    dadosFuncionario.Add(txbCelular.Text);
+                    dadosFuncionario.Add(txbTelefone.Text);
 
-                MessageBox.Show(controleFuncionario.mensagem);
-                */
+                    controleFuncionario.CadastrarFuncionario(dadosFuncionario);
+
+                    MessageBox.Show(controleFuncionario.mensagem);
+                    
+                }
             }
-        }
-
-        private void txbNumContrato_TextChanged(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void cboTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
@@ -140,11 +139,7 @@ namespace enfunip.apresentacao
             }
         }
 
-        private void cboPeriodo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        // Verificação CAmpos Obrigatórios com ErrorProvider
+        // Verificação dos Campos Obrigatórios com ErrorProvider
         private bool VerificarCampos()
         {
             bool ok = true;
@@ -191,6 +186,7 @@ namespace enfunip.apresentacao
             }
             return ok;
         }
+
         // Apagar mensagem de erro no formulário
         private void ApagarMsgErro()
         {
