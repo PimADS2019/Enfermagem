@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
+            this.lbl_TipoFuncionario = new System.Windows.Forms.Label();
+            this.cbx_TipoFuncionario = new System.Windows.Forms.ComboBox();
+            this.dgv_Funcionarios = new System.Windows.Forms.DataGridView();
             this.btnExcluirFuncionario = new System.Windows.Forms.Button();
             this.btnEditarFuncionario = new System.Windows.Forms.Button();
             this.btnIncuirFuncionario = new System.Windows.Forms.Button();
             this.txbConsultarFuncionario = new System.Windows.Forms.TextBox();
             this.btnFecharPesqFunc = new System.Windows.Forms.Button();
-            this.dgv_Funcionarios = new System.Windows.Forms.DataGridView();
-            this.cbx_TipoFuncionario = new System.Windows.Forms.ComboBox();
-            this.lbl_TipoFuncionario = new System.Windows.Forms.Label();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Funcionarios)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,37 @@
             this.grpConsultaPaciente.TabIndex = 47;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
+            // 
+            // lbl_TipoFuncionario
+            // 
+            this.lbl_TipoFuncionario.AutoSize = true;
+            this.lbl_TipoFuncionario.Location = new System.Drawing.Point(3, 18);
+            this.lbl_TipoFuncionario.Name = "lbl_TipoFuncionario";
+            this.lbl_TipoFuncionario.Size = new System.Drawing.Size(103, 16);
+            this.lbl_TipoFuncionario.TabIndex = 53;
+            this.lbl_TipoFuncionario.Text = "Tipo Funcionario";
+            // 
+            // cbx_TipoFuncionario
+            // 
+            this.cbx_TipoFuncionario.FormattingEnabled = true;
+            this.cbx_TipoFuncionario.Items.AddRange(new object[] {
+            "Aluno",
+            "Coordenador",
+            "Professor",
+            "Enfermeiro"});
+            this.cbx_TipoFuncionario.Location = new System.Drawing.Point(112, 15);
+            this.cbx_TipoFuncionario.Name = "cbx_TipoFuncionario";
+            this.cbx_TipoFuncionario.Size = new System.Drawing.Size(121, 24);
+            this.cbx_TipoFuncionario.TabIndex = 52;
+            this.cbx_TipoFuncionario.Text = "Aluno";
+            // 
+            // dgv_Funcionarios
+            // 
+            this.dgv_Funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Funcionarios.Location = new System.Drawing.Point(9, 96);
+            this.dgv_Funcionarios.Name = "dgv_Funcionarios";
+            this.dgv_Funcionarios.Size = new System.Drawing.Size(528, 368);
+            this.dgv_Funcionarios.TabIndex = 51;
             // 
             // btnExcluirFuncionario
             // 
@@ -117,36 +148,6 @@
             this.btnFecharPesqFunc.TabIndex = 21;
             this.btnFecharPesqFunc.UseVisualStyleBackColor = false;
             this.btnFecharPesqFunc.Click += new System.EventHandler(this.btnFecharPesqFunc_Click);
-            // 
-            // dgv_Funcionarios
-            // 
-            this.dgv_Funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Funcionarios.Location = new System.Drawing.Point(9, 96);
-            this.dgv_Funcionarios.Name = "dgv_Funcionarios";
-            this.dgv_Funcionarios.Size = new System.Drawing.Size(528, 368);
-            this.dgv_Funcionarios.TabIndex = 51;
-            // 
-            // cbx_TipoFuncionario
-            // 
-            this.cbx_TipoFuncionario.FormattingEnabled = true;
-            this.cbx_TipoFuncionario.Items.AddRange(new object[] {
-            "Aluno",
-            "Coordenador",
-            "Professor",
-            "Enfermeiro"});
-            this.cbx_TipoFuncionario.Location = new System.Drawing.Point(112, 15);
-            this.cbx_TipoFuncionario.Name = "cbx_TipoFuncionario";
-            this.cbx_TipoFuncionario.Size = new System.Drawing.Size(121, 24);
-            this.cbx_TipoFuncionario.TabIndex = 52;
-            // 
-            // lbl_TipoFuncionario
-            // 
-            this.lbl_TipoFuncionario.AutoSize = true;
-            this.lbl_TipoFuncionario.Location = new System.Drawing.Point(3, 18);
-            this.lbl_TipoFuncionario.Name = "lbl_TipoFuncionario";
-            this.lbl_TipoFuncionario.Size = new System.Drawing.Size(103, 16);
-            this.lbl_TipoFuncionario.TabIndex = 53;
-            this.lbl_TipoFuncionario.Text = "Tipo Funcionario";
             // 
             // frmConsultarFuncionario
             // 
