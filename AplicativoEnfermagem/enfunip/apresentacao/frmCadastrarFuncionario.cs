@@ -115,7 +115,7 @@ namespace enfunip.apresentacao
                     controleFuncionario.CadastrarFuncionario(dadosFuncionario);
 
                     MessageBox.Show(controleFuncionario.mensagem);
-                    
+
                 }
             }
             

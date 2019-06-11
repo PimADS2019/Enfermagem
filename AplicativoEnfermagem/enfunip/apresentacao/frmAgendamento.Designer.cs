@@ -209,6 +209,7 @@
             this.tsmiSalvarAgenda.Name = "tsmiSalvarAgenda";
             this.tsmiSalvarAgenda.Size = new System.Drawing.Size(69, 20);
             this.tsmiSalvarAgenda.Text = "Salvar";
+            this.tsmiSalvarAgenda.Click += new System.EventHandler(this.tsmiSalvarAgenda_Click);
             // 
             // tsmiLimparAgenda
             // 

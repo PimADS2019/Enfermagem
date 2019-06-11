@@ -53,7 +53,7 @@
             // txbConsultarProdutos
             // 
             this.txbConsultarProdutos.ForeColor = System.Drawing.Color.Silver;
-            this.txbConsultarProdutos.Location = new System.Drawing.Point(9, 39);
+            this.txbConsultarProdutos.Location = new System.Drawing.Point(9, 30);
             this.txbConsultarProdutos.MaxLength = 50;
             this.txbConsultarProdutos.Name = "txbConsultarProdutos";
             this.txbConsultarProdutos.Size = new System.Drawing.Size(550, 22);
@@ -72,7 +72,7 @@
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
             this.grpConsultaPaciente.Location = new System.Drawing.Point(3, -4);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
-            this.grpConsultaPaciente.Size = new System.Drawing.Size(695, 600);
+            this.grpConsultaPaciente.Size = new System.Drawing.Size(567, 516);
             this.grpConsultaPaciente.TabIndex = 47;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
@@ -90,7 +90,7 @@
             this.dgv_ListaProdutos.DataSource = this.estoquesBindingSource;
             this.dgv_ListaProdutos.Location = new System.Drawing.Point(9, 67);
             this.dgv_ListaProdutos.Name = "dgv_ListaProdutos";
-            this.dgv_ListaProdutos.Size = new System.Drawing.Size(680, 496);
+            this.dgv_ListaProdutos.Size = new System.Drawing.Size(550, 392);
             this.dgv_ListaProdutos.TabIndex = 54;
             this.dgv_ListaProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ListaProdutos_CellContentClick);
             // 
@@ -138,7 +138,7 @@
             // btnExcluirProduto
             // 
             this.btnExcluirProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirProduto.Location = new System.Drawing.Point(178, 569);
+            this.btnExcluirProduto.Location = new System.Drawing.Point(178, 484);
             this.btnExcluirProduto.Name = "btnExcluirProduto";
             this.btnExcluirProduto.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirProduto.TabIndex = 53;
@@ -149,7 +149,7 @@
             // btnEditarProduto
             // 
             this.btnEditarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarProduto.Location = new System.Drawing.Point(93, 569);
+            this.btnEditarProduto.Location = new System.Drawing.Point(93, 484);
             this.btnEditarProduto.Name = "btnEditarProduto";
             this.btnEditarProduto.Size = new System.Drawing.Size(75, 23);
             this.btnEditarProduto.TabIndex = 52;
@@ -159,7 +159,7 @@
             // btnIncuirProduto
             // 
             this.btnIncuirProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIncuirProduto.Location = new System.Drawing.Point(9, 569);
+            this.btnIncuirProduto.Location = new System.Drawing.Point(9, 484);
             this.btnIncuirProduto.Name = "btnIncuirProduto";
             this.btnIncuirProduto.Size = new System.Drawing.Size(75, 23);
             this.btnIncuirProduto.TabIndex = 51;
@@ -177,7 +177,7 @@
             this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
             this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFecharPesqPac.Location = new System.Drawing.Point(674, 110);
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(537, -254);
             this.btnFecharPesqPac.Name = "btnFecharPesqPac";
             this.btnFecharPesqPac.Size = new System.Drawing.Size(22, 23);
             this.btnFecharPesqPac.TabIndex = 21;
@@ -193,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(700, 600);
+            this.ClientSize = new System.Drawing.Size(576, 516);
             this.Controls.Add(this.grpConsultaPaciente);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
