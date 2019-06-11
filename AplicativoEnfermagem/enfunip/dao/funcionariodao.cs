@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using enfunip.modelo;
+using System.Data;
 
 namespace enfunip.dao
 {
@@ -144,56 +145,7 @@ namespace enfunip.dao
             {
                 this.mensagem = e.ToString();
             }
-        }
-
-        public Funcionario PesquisarFuncionarioPorID(Funcionario funcionario)
-        {
-            this.mensagem = "";
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText =
-                @"select TipoUsuario, Nome, DataNascimento, Email, Celular, Telefone from Contatos
-                join Pessoas
-                on IdContato = IdPessoa
-                where IdPessoa = @IdPessoa";
-            cmd.Parameters.AddWithValue("@id", funcionario.id);
-            try
-            {
-                cmd.Connection = conexaoBD.Conectar();
-                dataReader = cmd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    cmd.Parameters.AddWithValue("@TipoUsuario", funcionario.tipousuario);
-                    cmd.Parameters.AddWithValue("@Usuario", funcionario.usuario);
-                    cmd.Parameters.AddWithValue("@Senha", funcionario.senha);
-                    cmd.Parameters.AddWithValue("@ConfSenha", funcionario.confsenha);
-                    cmd.Parameters.AddWithValue("@Nome", funcionario.nome);
-                    cmd.Parameters.AddWithValue("@DataNascimento", funcionario.datanascimento);
-                    cmd.Parameters.AddWithValue("@Cpf", funcionario.cpf);
-                    cmd.Parameters.AddWithValue("@Logradouro", funcionario.endereco);
-                    cmd.Parameters.AddWithValue("@Numero", funcionario.numero);
-                    cmd.Parameters.AddWithValue("@Complemento", funcionario.complemento);
-                    cmd.Parameters.AddWithValue("@Cidade", funcionario.cidade);
-                    cmd.Parameters.AddWithValue("@Bairro", funcionario.bairro);
-                    cmd.Parameters.AddWithValue("@Estado", funcionario.estado);
-                    cmd.Parameters.AddWithValue("@Cep", funcionario.cep);
-                    cmd.Parameters.AddWithValue("@Email", funcionario.email);
-                    cmd.Parameters.AddWithValue("@Celular", funcionario.celular);
-                    cmd.Parameters.AddWithValue("@Telefone", funcionario.telefone);
-                    dataReader.Read();
-                }
-                else
-                {
-                    funcionario.id = 0;
-                }
-                dataReader.Close();
-                conexaoBD.Desconectar();
-            }
-            catch (SqlException e)
-            {
-                this.mensagem = e.ToString();
-            }
-            return funcionario;
-        }
+        }       
 
         public void EditarFuncionario(Funcionario funcionario)
         {
@@ -274,52 +226,108 @@ namespace enfunip.dao
             }
         }
 
-        public  List<Funcionario> PesquisarFuncionarioPorNome(Funcionario funcionario)
+        public DataTable ListarFuncionario()
         {
-            this.mensagem = "";
-            SqlCommand cmd = new SqlCommand();
-            List<Funcionario> listaFuncionario = new List<Funcionario>();
-
-            cmd.CommandText = 
-                @"select TipoUsuario, Nome, DataNascimento, Email, Celular, Telefone 
-                from Contatos
-                join Pessoas
-                on IdContato = IdPessoa";
-            cmd.Parameters.AddWithValue("@Nome", funcionario.nome + "%");
-
             try
             {
+                SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexaoBD.Conectar();
-                dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    Funcionario funcionarioLista = new Funcionario();
-                    funcionarioLista.id = Convert.ToInt32(dataReader["Id"]);
-                    funcionarioLista.nome = dataReader["Nome"].ToString();
-                    funcionarioLista.datanascimento = Convert.ToDateTime(dataReader["DataNascimento"].ToString());
-                    funcionarioLista.cpf = dataReader["Cpf"].ToString();
-                    funcionarioLista.endereco = dataReader["Endereco"].ToString();
-                    funcionarioLista.numero = dataReader["Numero"].ToString();
-                    funcionarioLista.complemento = dataReader["Complemento"].ToString();
-                    funcionarioLista.cidade = dataReader["Cidade"].ToString();
-                    funcionarioLista.bairro = dataReader["Bairro"].ToString();
-                    funcionarioLista.estado = dataReader["Estado"].ToString();
-                    funcionarioLista.cep = dataReader["Cep"].ToString();
-                    funcionarioLista.email = dataReader["Email"].ToString();
-                    funcionarioLista.celular = dataReader["Celular"].ToString();
-                    funcionarioLista.telefone = dataReader["Telefone"].ToString();
-                    listaFuncionario.Add(funcionarioLista);
 
-                }
+                cmd.CommandText = @"select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf,Semestre,Ra,NumeroUnipCood,NumeroEnfermeiro,PeriodoAluno,PeriodoEnf,PeriodoCood, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone from
+	                                (
+		                                select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf,NumeroUnipCood, NumeroEnfermeiro, PeriodoEnf,PeriodoCood, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone from 
+		                                (
+			                                select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf, NumeroEnfermeiro, PeriodoEnf, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone  From
+			                                (
+				                                select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf, NumeroEnfermeiro, PeriodoEnf, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep from
+				                                (
+					                                select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf, NumeroEnfermeiro, PeriodoEnf from Pessoas
+					                                inner join Enfermeiros
+					                                on Pessoas.IdPessoa = Enfermeiros.Fk_Pessoas_IdPessoa
+				                                ) as Pessoas_Enfemeiros
+				                                inner join Enderecos
+				                                on Enderecos.Fk_Pessoas_IdPessoa  = Pessoas_Enfemeiros.IdPessoa
+			                                )as Pessoas_Enderecos
+			                                inner join Contatos
+			                                on Contatos.Fk_Pessoas_IdPessoa = Pessoas_Enderecos.IdPessoa
+		                             ) as Pessoas_Contatos
+		                             inner join Coordenadores
+		                             on Coordenadores.Fk_Pessoas_IdPessoa = Pessoas_Contatos.IdPessoa
+	                            ) as Pessoas_Coordenadores
+	                            inner join Alunos
+	                            on Alunos.Fk_Pessoas_IdPessoa = Pessoas_Coordenadores.IdPessoa";
 
-                dataReader.Close();
-                conexaoBD.Desconectar();
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                return (dt);
             }
             catch (SqlException e)
             {
-                this.mensagem = e.ToString();
+                throw;
             }
-            return listaFuncionario;
+        }
+
+        public DataTable PesquisarFuncionario(modelo.Funcionario funcionario)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conexaoBD.Conectar();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter();
+
+                cmd.CommandText = @"select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf,Semestre,Ra,NumeroUnipCood,NumeroEnfermeiro,PeriodoAluno,PeriodoEnf,PeriodoCood, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone from
+	                                (
+		                                select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf,NumeroUnipCood, NumeroEnfermeiro, PeriodoEnf,PeriodoCood, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone from 
+		                                (
+			                                select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf, NumeroEnfermeiro, PeriodoEnf, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone  From
+			                                (
+				                                select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf, NumeroEnfermeiro, PeriodoEnf, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep from
+				                                (
+					                                select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf, NumeroEnfermeiro, PeriodoEnf from Pessoas
+					                                inner join Enfermeiros
+					                                on Pessoas.IdPessoa = Enfermeiros.Fk_Pessoas_IdPessoa
+				                                ) as Pessoas_Enfemeiros
+				                                inner join Enderecos
+				                                on Enderecos.Fk_Pessoas_IdPessoa  = Pessoas_Enfemeiros.IdPessoa
+			                                )as Pessoas_Enderecos
+			                                inner join Contatos
+			                                on Contatos.Fk_Pessoas_IdPessoa = Pessoas_Enderecos.IdPessoa
+		                             ) as Pessoas_Contatos
+		                             inner join Coordenadores
+		                             on Coordenadores.Fk_Pessoas_IdPessoa = Pessoas_Contatos.IdPessoa
+	                            ) as Pessoas_Coordenadores
+	                            inner join Alunos
+	                            on Alunos.Fk_Pessoas_IdPessoa = Pessoas_Coordenadores.IdPessoa
+                                Where Nome like @Nome order by Nome";
+                                
+
+                cmd.Parameters.AddWithValue("@nome", "%" + funcionario.nome + "%");
+
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch (SqlException e)
+            {
+                throw;
+            }
+
+        }
+
+        public Funcionario PesquisarFuncionarioPorID(Funcionario funcionario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Funcionario> PesquisarFuncionarioPorNome(Funcionario funcionario)
+        {
+            throw new NotImplementedException();
         }
     }
 }

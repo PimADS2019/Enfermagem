@@ -69,5 +69,10 @@ namespace enfunip.apresentacao
                 Pesquisar(estoque);
             }
         }
+
+        private void BtnExcluirProduto_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

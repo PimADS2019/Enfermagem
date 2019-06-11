@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using enfunip.modelo.validacoes;
 using enfunip.dao;
+using System.Data;
 
 namespace enfunip.modelo.controle
 {
@@ -51,26 +52,6 @@ namespace enfunip.modelo.controle
             }
         }
 
-        public Funcionario PesquisarFuncionarioPorID(List<String> dadosFuncionario)
-        {
-            this.mensagem = "";
-            Funcionario funcionario = new Funcionario();
-            validarFuncionario validarfuncionario = new validarFuncionario();
-            validarfuncionario.ValidarDados(dadosFuncionario);
-            if (validarfuncionario.mensagem.Equals(""))
-            {
-                funcionario.id = validarfuncionario.id;
-                Funcionariodao funcionarioDAO = new Funcionariodao();
-                funcionario = funcionarioDAO.PesquisarFuncionarioPorID(funcionario);
-                this.mensagem = funcionarioDAO.mensagem;
-            }
-            else
-            {
-                this.mensagem = validarfuncionario.mensagem;
-            }
-            return funcionario;
-        }
-
         public void EditarFuncionario(List<String> dadosFuncionario)
         {
             this.mensagem = "";
@@ -107,7 +88,7 @@ namespace enfunip.modelo.controle
         }
         
 
-        public void ExcluirFuncionario(List<String> dadosFuncionario)
+       public void ExcluirFuncionario(List<String> dadosFuncionario)
         {
             this.mensagem = "";
             validarFuncionario validarfuncionario = new validarFuncionario();
@@ -133,23 +114,41 @@ namespace enfunip.modelo.controle
             }
         }
 
-        public void PesquisarFuncionarioPorNome(List<String> dadosFuncionario)
+        public DataTable ListarFuncionario()
         {
-            this.mensagem = "";
-            validarFuncionario validarfuncionario = new validarFuncionario();
-            validarfuncionario.ValidarDados(dadosFuncionario);
-            if (validarfuncionario.mensagem.Equals(""))
+            try
             {
-                Funcionariodao funcionarioDAO = new Funcionariodao();
-                Funcionario funcionario = new Funcionario();
-                funcionario.nome = dadosFuncionario[1];
-                Estaticos.listaFuncionarioEstatico =
-                    funcionarioDAO.PesquisarFuncionarioPorNome(funcionario);
+                Funcionariodao funcionariodao = new Funcionariodao();
+                DataTable dt = new DataTable();
+
+                dt = funcionariodao.ListarFuncionario();
+
+                return dt;
             }
-            else
+            catch (Exception)
             {
-                this.mensagem = validarfuncionario.mensagem;
+
+                throw;
             }
         }
+
+        public DataTable PesquisarFuncionario(modelo.Funcionario funcionario)
+        {
+            try
+            {
+                Funcionariodao funcionariodao = new Funcionariodao();
+                DataTable dt = new DataTable();
+
+                dt = funcionariodao.PesquisarFuncionario(funcionario);
+
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

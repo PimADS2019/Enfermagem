@@ -32,23 +32,23 @@
             this.txbConsultarProdutos = new System.Windows.Forms.TextBox();
             this.btnPesqPac = new System.Windows.Forms.Button();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
-            this.btnExcluirProduto = new System.Windows.Forms.Button();
-            this.btnEditarProduto = new System.Windows.Forms.Button();
-            this.btnIncuirProduto = new System.Windows.Forms.Button();
-            this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.dgv_ListaProdutos = new System.Windows.Forms.DataGridView();
-            this.pimEnfermagem2019DataSet1 = new enfunip.PimEnfermagem2019DataSet1();
-            this.estoquesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estoquesTableAdapter = new enfunip.PimEnfermagem2019DataSet1TableAdapters.EstoquesTableAdapter();
             this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataHrCadastroProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estoquesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pimEnfermagem2019DataSet1 = new enfunip.PimEnfermagem2019DataSet1();
+            this.btnExcluirProduto = new System.Windows.Forms.Button();
+            this.btnEditarProduto = new System.Windows.Forms.Button();
+            this.btnIncuirProduto = new System.Windows.Forms.Button();
+            this.btnFecharPesqPac = new System.Windows.Forms.Button();
+            this.estoquesTableAdapter = new enfunip.PimEnfermagem2019DataSet1TableAdapters.EstoquesTableAdapter();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pimEnfermagem2019DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoquesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pimEnfermagem2019DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // txbConsultarProdutos
@@ -93,6 +93,63 @@
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
             // 
+            // dgv_ListaProdutos
+            // 
+            this.dgv_ListaProdutos.AutoGenerateColumns = false;
+            this.dgv_ListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ListaProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idProdutoDataGridViewTextBoxColumn,
+            this.nomeProdutoDataGridViewTextBoxColumn,
+            this.quantidadeProdutoDataGridViewTextBoxColumn,
+            this.descricaoProdutoDataGridViewTextBoxColumn,
+            this.dataHrCadastroProdutoDataGridViewTextBoxColumn});
+            this.dgv_ListaProdutos.DataSource = this.estoquesBindingSource;
+            this.dgv_ListaProdutos.Location = new System.Drawing.Point(0, 67);
+            this.dgv_ListaProdutos.Name = "dgv_ListaProdutos";
+            this.dgv_ListaProdutos.Size = new System.Drawing.Size(550, 376);
+            this.dgv_ListaProdutos.TabIndex = 54;
+            // 
+            // idProdutoDataGridViewTextBoxColumn
+            // 
+            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "IdProduto";
+            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "IdProduto";
+            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
+            this.idProdutoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeProdutoDataGridViewTextBoxColumn
+            // 
+            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "NomeProduto";
+            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "NomeProduto";
+            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
+            // 
+            // quantidadeProdutoDataGridViewTextBoxColumn
+            // 
+            this.quantidadeProdutoDataGridViewTextBoxColumn.DataPropertyName = "QuantidadeProduto";
+            this.quantidadeProdutoDataGridViewTextBoxColumn.HeaderText = "QuantidadeProduto";
+            this.quantidadeProdutoDataGridViewTextBoxColumn.Name = "quantidadeProdutoDataGridViewTextBoxColumn";
+            // 
+            // descricaoProdutoDataGridViewTextBoxColumn
+            // 
+            this.descricaoProdutoDataGridViewTextBoxColumn.DataPropertyName = "DescricaoProduto";
+            this.descricaoProdutoDataGridViewTextBoxColumn.HeaderText = "DescricaoProduto";
+            this.descricaoProdutoDataGridViewTextBoxColumn.Name = "descricaoProdutoDataGridViewTextBoxColumn";
+            // 
+            // dataHrCadastroProdutoDataGridViewTextBoxColumn
+            // 
+            this.dataHrCadastroProdutoDataGridViewTextBoxColumn.DataPropertyName = "DataHrCadastroProduto";
+            this.dataHrCadastroProdutoDataGridViewTextBoxColumn.HeaderText = "DataHrCadastroProduto";
+            this.dataHrCadastroProdutoDataGridViewTextBoxColumn.Name = "dataHrCadastroProdutoDataGridViewTextBoxColumn";
+            // 
+            // estoquesBindingSource
+            // 
+            this.estoquesBindingSource.DataMember = "Estoques";
+            this.estoquesBindingSource.DataSource = this.pimEnfermagem2019DataSet1;
+            // 
+            // pimEnfermagem2019DataSet1
+            // 
+            this.pimEnfermagem2019DataSet1.DataSetName = "PimEnfermagem2019DataSet1";
+            this.pimEnfermagem2019DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnExcluirProduto
             // 
             this.btnExcluirProduto.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -102,6 +159,7 @@
             this.btnExcluirProduto.TabIndex = 53;
             this.btnExcluirProduto.Text = "Excluir";
             this.btnExcluirProduto.UseVisualStyleBackColor = true;
+            this.btnExcluirProduto.Click += new System.EventHandler(this.BtnExcluirProduto_Click);
             // 
             // btnEditarProduto
             // 
@@ -141,66 +199,9 @@
             this.btnFecharPesqPac.UseVisualStyleBackColor = false;
             this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
             // 
-            // dgv_ListaProdutos
-            // 
-            this.dgv_ListaProdutos.AutoGenerateColumns = false;
-            this.dgv_ListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ListaProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProdutoDataGridViewTextBoxColumn,
-            this.nomeProdutoDataGridViewTextBoxColumn,
-            this.quantidadeProdutoDataGridViewTextBoxColumn,
-            this.descricaoProdutoDataGridViewTextBoxColumn,
-            this.dataHrCadastroProdutoDataGridViewTextBoxColumn});
-            this.dgv_ListaProdutos.DataSource = this.estoquesBindingSource;
-            this.dgv_ListaProdutos.Location = new System.Drawing.Point(0, 67);
-            this.dgv_ListaProdutos.Name = "dgv_ListaProdutos";
-            this.dgv_ListaProdutos.Size = new System.Drawing.Size(550, 376);
-            this.dgv_ListaProdutos.TabIndex = 54;
-            // 
-            // pimEnfermagem2019DataSet1
-            // 
-            this.pimEnfermagem2019DataSet1.DataSetName = "PimEnfermagem2019DataSet1";
-            this.pimEnfermagem2019DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estoquesBindingSource
-            // 
-            this.estoquesBindingSource.DataMember = "Estoques";
-            this.estoquesBindingSource.DataSource = this.pimEnfermagem2019DataSet1;
-            // 
             // estoquesTableAdapter
             // 
             this.estoquesTableAdapter.ClearBeforeFill = true;
-            // 
-            // idProdutoDataGridViewTextBoxColumn
-            // 
-            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "IdProduto";
-            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "IdProduto";
-            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
-            this.idProdutoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeProdutoDataGridViewTextBoxColumn
-            // 
-            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "NomeProduto";
-            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "NomeProduto";
-            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
-            // 
-            // quantidadeProdutoDataGridViewTextBoxColumn
-            // 
-            this.quantidadeProdutoDataGridViewTextBoxColumn.DataPropertyName = "QuantidadeProduto";
-            this.quantidadeProdutoDataGridViewTextBoxColumn.HeaderText = "QuantidadeProduto";
-            this.quantidadeProdutoDataGridViewTextBoxColumn.Name = "quantidadeProdutoDataGridViewTextBoxColumn";
-            // 
-            // descricaoProdutoDataGridViewTextBoxColumn
-            // 
-            this.descricaoProdutoDataGridViewTextBoxColumn.DataPropertyName = "DescricaoProduto";
-            this.descricaoProdutoDataGridViewTextBoxColumn.HeaderText = "DescricaoProduto";
-            this.descricaoProdutoDataGridViewTextBoxColumn.Name = "descricaoProdutoDataGridViewTextBoxColumn";
-            // 
-            // dataHrCadastroProdutoDataGridViewTextBoxColumn
-            // 
-            this.dataHrCadastroProdutoDataGridViewTextBoxColumn.DataPropertyName = "DataHrCadastroProduto";
-            this.dataHrCadastroProdutoDataGridViewTextBoxColumn.HeaderText = "DataHrCadastroProduto";
-            this.dataHrCadastroProdutoDataGridViewTextBoxColumn.Name = "dataHrCadastroProdutoDataGridViewTextBoxColumn";
             // 
             // frmListarEstoque
             // 
@@ -219,8 +220,8 @@
             this.grpConsultaPaciente.ResumeLayout(false);
             this.grpConsultaPaciente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pimEnfermagem2019DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoquesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pimEnfermagem2019DataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

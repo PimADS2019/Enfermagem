@@ -33,25 +33,31 @@
             this.btnEditarFuncionario = new System.Windows.Forms.Button();
             this.btnIncuirFuncionario = new System.Windows.Forms.Button();
             this.txbConsultarFuncionario = new System.Windows.Forms.TextBox();
-            this.lstFuncionarios = new System.Windows.Forms.ListBox();
             this.btnFecharPesqFunc = new System.Windows.Forms.Button();
+            this.dgv_Funcionarios = new System.Windows.Forms.DataGridView();
+            this.cbx_TipoFuncionario = new System.Windows.Forms.ComboBox();
+            this.lbl_TipoFuncionario = new System.Windows.Forms.Label();
             this.grpConsultaPaciente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Funcionarios)).BeginInit();
             this.SuspendLayout();
             // 
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.lbl_TipoFuncionario);
+            this.grpConsultaPaciente.Controls.Add(this.cbx_TipoFuncionario);
+            this.grpConsultaPaciente.Controls.Add(this.dgv_Funcionarios);
             this.grpConsultaPaciente.Controls.Add(this.btnExcluirFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.btnEditarFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.btnIncuirFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.txbConsultarFuncionario);
-            this.grpConsultaPaciente.Controls.Add(this.lstFuncionarios);
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqFunc);
             this.grpConsultaPaciente.Location = new System.Drawing.Point(4, -3);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
             this.grpConsultaPaciente.Size = new System.Drawing.Size(546, 495);
             this.grpConsultaPaciente.TabIndex = 47;
             this.grpConsultaPaciente.TabStop = false;
+            this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
             // 
             // btnExcluirFuncionario
             // 
@@ -87,23 +93,14 @@
             // txbConsultarFuncionario
             // 
             this.txbConsultarFuncionario.ForeColor = System.Drawing.Color.Silver;
-            this.txbConsultarFuncionario.Location = new System.Drawing.Point(6, 39);
+            this.txbConsultarFuncionario.Location = new System.Drawing.Point(6, 58);
             this.txbConsultarFuncionario.MaxLength = 50;
             this.txbConsultarFuncionario.Name = "txbConsultarFuncionario";
             this.txbConsultarFuncionario.Size = new System.Drawing.Size(534, 22);
             this.txbConsultarFuncionario.TabIndex = 47;
             this.txbConsultarFuncionario.Text = "Insira nome do funcionário";
             this.txbConsultarFuncionario.Click += new System.EventHandler(this.txbConsultarFuncionario_Click);
-            // 
-            // lstFuncionarios
-            // 
-            this.lstFuncionarios.FormattingEnabled = true;
-            this.lstFuncionarios.ItemHeight = 16;
-            this.lstFuncionarios.Location = new System.Drawing.Point(6, 74);
-            this.lstFuncionarios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lstFuncionarios.Name = "lstFuncionarios";
-            this.lstFuncionarios.Size = new System.Drawing.Size(534, 388);
-            this.lstFuncionarios.TabIndex = 45;
+            this.txbConsultarFuncionario.TextChanged += new System.EventHandler(this.TxbConsultarFuncionario_TextChanged);
             // 
             // btnFecharPesqFunc
             // 
@@ -121,6 +118,36 @@
             this.btnFecharPesqFunc.UseVisualStyleBackColor = false;
             this.btnFecharPesqFunc.Click += new System.EventHandler(this.btnFecharPesqFunc_Click);
             // 
+            // dgv_Funcionarios
+            // 
+            this.dgv_Funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Funcionarios.Location = new System.Drawing.Point(9, 96);
+            this.dgv_Funcionarios.Name = "dgv_Funcionarios";
+            this.dgv_Funcionarios.Size = new System.Drawing.Size(528, 368);
+            this.dgv_Funcionarios.TabIndex = 51;
+            // 
+            // cbx_TipoFuncionario
+            // 
+            this.cbx_TipoFuncionario.FormattingEnabled = true;
+            this.cbx_TipoFuncionario.Items.AddRange(new object[] {
+            "Aluno",
+            "Coordenador",
+            "Professor",
+            "Enfermeiro"});
+            this.cbx_TipoFuncionario.Location = new System.Drawing.Point(112, 15);
+            this.cbx_TipoFuncionario.Name = "cbx_TipoFuncionario";
+            this.cbx_TipoFuncionario.Size = new System.Drawing.Size(121, 24);
+            this.cbx_TipoFuncionario.TabIndex = 52;
+            // 
+            // lbl_TipoFuncionario
+            // 
+            this.lbl_TipoFuncionario.AutoSize = true;
+            this.lbl_TipoFuncionario.Location = new System.Drawing.Point(3, 18);
+            this.lbl_TipoFuncionario.Name = "lbl_TipoFuncionario";
+            this.lbl_TipoFuncionario.Size = new System.Drawing.Size(103, 16);
+            this.lbl_TipoFuncionario.TabIndex = 53;
+            this.lbl_TipoFuncionario.Text = "Tipo Funcionario";
+            // 
             // frmConsultarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -136,6 +163,7 @@
             this.Text = "frmConsultarFuncionario";
             this.grpConsultaPaciente.ResumeLayout(false);
             this.grpConsultaPaciente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Funcionarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,9 +173,11 @@
         private System.Windows.Forms.GroupBox grpConsultaPaciente;
         private System.Windows.Forms.Button btnFecharPesqFunc;
         private System.Windows.Forms.TextBox txbConsultarFuncionario;
-        private System.Windows.Forms.ListBox lstFuncionarios;
         private System.Windows.Forms.Button btnExcluirFuncionario;
         private System.Windows.Forms.Button btnEditarFuncionario;
         private System.Windows.Forms.Button btnIncuirFuncionario;
+        private System.Windows.Forms.DataGridView dgv_Funcionarios;
+        private System.Windows.Forms.Label lbl_TipoFuncionario;
+        private System.Windows.Forms.ComboBox cbx_TipoFuncionario;
     }
 }

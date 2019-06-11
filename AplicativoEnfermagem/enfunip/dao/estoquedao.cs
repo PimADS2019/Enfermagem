@@ -70,7 +70,7 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"delete from estoque where id = @id";
+            cmd.CommandText = @"delete from Estoques where IdProduto = @id";
             cmd.Parameters.AddWithValue("@id", estoque.id);
             try
             {
@@ -122,6 +122,7 @@ namespace enfunip.dao
 
                 cmd = new SqlCommand("SELECT * FROM Estoques WHERE NomeProduto Like @Nome ORDER BY NomeProduto", cmd.Connection);
                 cmd.Parameters.AddWithValue("@Nome", "%"+estoque.produto+"%");
+                
 
                 da.SelectCommand = cmd;
                 da.Fill(dt);
