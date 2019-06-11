@@ -13,9 +13,11 @@ namespace enfunip.modelo
         private String usuario;
         private String senha;
         private String mensagem;
+        
 
         public ControleLogin(string usuario, string senha)
         {
+            
             this.usuario = usuario;
             this.senha = senha;
             Executar();
@@ -26,6 +28,13 @@ namespace enfunip.modelo
         private void Executar()
         {
             this.mensagem = "Usuário e/ou senha inválidos";
+
+            Login login = new Login();
+
+            dao.Logindao logindao = new dao.Logindao();
+
+            logindao.ValidarLogin(login);
+
             Validacao validacao = new Validacao(this.usuario, this.senha);
 
             if (validacao.Mensagem.Equals(""))

@@ -17,8 +17,25 @@ namespace enfunip.dao
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"select * from Pessoas 
-                where usuario = @usuario";
+                                where usuario = @usuario";
+                                 
             cmd.Parameters.AddWithValue("@Usuario", login.usuario);
+
+            cmd.CommandText = @"select * from Pessoas 
+                                where Senha = @Senha";
+            cmd.Parameters.AddWithValue("@Senha", login.senha);
+
+            try
+            {
+                cmd.Connection = conexaoBD.Conectar();
+                cmd.ExecuteNonQuery();
+                conexaoBD.Desconectar();
+                
+            }
+            catch (SqlException e)
+            {
+                this.mensagem = e.ToString();
+            }
         }
     }
 }

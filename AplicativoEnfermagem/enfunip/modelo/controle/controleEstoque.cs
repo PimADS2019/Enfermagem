@@ -22,8 +22,8 @@ namespace enfunip.modelo.controle
             {
                 Estoque estoque = new Estoque();
 
-                estoque.produto = dadosItem[1];
-                estoque.dataentrada = Convert.ToDateTime(dadosItem[2]);
+                estoque.produto = dadosItem[2];
+                estoque.dataentrada = Convert.ToDateTime(dadosItem[1]);
                 estoque.quantidade = (Convert.ToInt32(dadosItem[3]));
                 estoque.descricao = dadosItem[4];
 

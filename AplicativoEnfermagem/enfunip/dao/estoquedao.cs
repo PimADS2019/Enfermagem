@@ -50,8 +50,6 @@ namespace enfunip.dao
             cmd.Parameters.AddWithValue("@DataEntrada", estoque.dataentrada);
             cmd.Parameters.AddWithValue("@Produto", estoque.produto);
             cmd.Parameters.AddWithValue("@Quantidade", estoque.quantidade);
-            cmd.Parameters.AddWithValue("@fabricante", estoque.fabricante);
-            cmd.Parameters.AddWithValue("@Categoria", estoque.categoria);
             cmd.Parameters.AddWithValue("@Descricao", estoque.descricao);
             try
             {

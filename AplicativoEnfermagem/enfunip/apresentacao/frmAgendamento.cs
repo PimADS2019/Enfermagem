@@ -130,10 +130,15 @@ namespace enfunip.apresentacao
             }
             else
             {
-                Agenda agenda = new Agenda;
+                Agenda agenda = new Agenda();
                 Pesquisar(agenda);
             }
             
+        }
+
+        private void MnsFunçõesAgendar_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

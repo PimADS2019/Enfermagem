@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgendamento));
             this.mclDiasAgendados = new System.Windows.Forms.MonthCalendar();
             this.grpAgendamento = new System.Windows.Forms.GroupBox();
+            this.mtxDataHoraAgenda = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio = new System.Windows.Forms.Label();
+            this.lblCampoObrig = new System.Windows.Forms.Label();
             this.txbLocalAgendamento = new System.Windows.Forms.TextBox();
             this.lblObsAgenda = new System.Windows.Forms.Label();
             this.txbObsAgenda = new System.Windows.Forms.TextBox();
@@ -44,13 +49,8 @@
             this.tsmiSalvarAgenda = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLimparAgenda = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelarAgenda = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblCampoObrig = new System.Windows.Forms.Label();
             this.dgvAgendamentos = new System.Windows.Forms.DataGridView();
-            this.lblCampoObrigatorio = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.mtxDataHoraAgenda = new System.Windows.Forms.MaskedTextBox();
             this.grpAgendamentos = new System.Windows.Forms.GroupBox();
             this.txbConsultarAgendamento = new System.Windows.Forms.TextBox();
             this.grpAgendamento.SuspendLayout();
@@ -90,6 +90,61 @@
             this.grpAgendamento.Size = new System.Drawing.Size(820, 275);
             this.grpAgendamento.TabIndex = 43;
             this.grpAgendamento.TabStop = false;
+            // 
+            // mtxDataHoraAgenda
+            // 
+            this.mtxDataHoraAgenda.Location = new System.Drawing.Point(17, 92);
+            this.mtxDataHoraAgenda.Mask = "00/00/0000 90:00";
+            this.mtxDataHoraAgenda.Name = "mtxDataHoraAgenda";
+            this.mtxDataHoraAgenda.Size = new System.Drawing.Size(115, 22);
+            this.mtxDataHoraAgenda.TabIndex = 125;
+            this.mtxDataHoraAgenda.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtxDataHoraAgenda.ValidatingType = typeof(System.DateTime);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(173, 73);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 16);
+            this.label3.TabIndex = 124;
+            this.label3.Text = "*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(90, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 16);
+            this.label1.TabIndex = 122;
+            this.label1.Text = "*";
+            // 
+            // lblCampoObrigatorio
+            // 
+            this.lblCampoObrigatorio.AutoSize = true;
+            this.lblCampoObrigatorio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio.Location = new System.Drawing.Point(71, 19);
+            this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
+            this.lblCampoObrigatorio.Size = new System.Drawing.Size(13, 16);
+            this.lblCampoObrigatorio.TabIndex = 121;
+            this.lblCampoObrigatorio.Text = "*";
+            // 
+            // lblCampoObrig
+            // 
+            this.lblCampoObrig.AutoSize = true;
+            this.lblCampoObrig.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoObrig.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrig.Location = new System.Drawing.Point(703, 9);
+            this.lblCampoObrig.Name = "lblCampoObrig";
+            this.lblCampoObrig.Size = new System.Drawing.Size(115, 14);
+            this.lblCampoObrig.TabIndex = 120;
+            this.lblCampoObrig.Text = "* Campos Obrigatórios";
+            this.lblCampoObrig.Visible = false;
             // 
             // txbLocalAgendamento
             // 
@@ -179,6 +234,7 @@
             this.mnsFunçõesAgendar.Size = new System.Drawing.Size(831, 24);
             this.mnsFunçõesAgendar.TabIndex = 51;
             this.mnsFunçõesAgendar.Text = "menuStrip1";
+            this.mnsFunçõesAgendar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MnsFunçõesAgendar_ItemClicked);
             // 
             // tsmiSalvarAgenda
             // 
@@ -204,18 +260,6 @@
             this.tsmiCancelarAgenda.Text = "Cancelar";
             this.tsmiCancelarAgenda.Click += new System.EventHandler(this.tsmiCancelarAgenda_Click);
             // 
-            // lblCampoObrig
-            // 
-            this.lblCampoObrig.AutoSize = true;
-            this.lblCampoObrig.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampoObrig.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrig.Location = new System.Drawing.Point(703, 9);
-            this.lblCampoObrig.Name = "lblCampoObrig";
-            this.lblCampoObrig.Size = new System.Drawing.Size(115, 14);
-            this.lblCampoObrig.TabIndex = 120;
-            this.lblCampoObrig.Text = "* Campos Obrigatórios";
-            this.lblCampoObrig.Visible = false;
-            // 
             // dgvAgendamentos
             // 
             this.dgvAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -224,53 +268,10 @@
             this.dgvAgendamentos.Size = new System.Drawing.Size(785, 277);
             this.dgvAgendamentos.TabIndex = 52;
             // 
-            // lblCampoObrigatorio
-            // 
-            this.lblCampoObrigatorio.AutoSize = true;
-            this.lblCampoObrigatorio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio.Location = new System.Drawing.Point(71, 19);
-            this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
-            this.lblCampoObrigatorio.Size = new System.Drawing.Size(13, 16);
-            this.lblCampoObrigatorio.TabIndex = 121;
-            this.lblCampoObrigatorio.Text = "*";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(90, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 16);
-            this.label1.TabIndex = 122;
-            this.label1.Text = "*";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(173, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 16);
-            this.label3.TabIndex = 124;
-            this.label3.Text = "*";
-            // 
             // errorProvider
             // 
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
-            // 
-            // mtxDataHoraAgenda
-            // 
-            this.mtxDataHoraAgenda.Location = new System.Drawing.Point(17, 92);
-            this.mtxDataHoraAgenda.Mask = "00/00/0000 90:00";
-            this.mtxDataHoraAgenda.Name = "mtxDataHoraAgenda";
-            this.mtxDataHoraAgenda.Size = new System.Drawing.Size(115, 22);
-            this.mtxDataHoraAgenda.TabIndex = 125;
-            this.mtxDataHoraAgenda.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.mtxDataHoraAgenda.ValidatingType = typeof(System.DateTime);
             // 
             // grpAgendamentos
             // 
