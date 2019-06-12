@@ -48,8 +48,6 @@ namespace enfunip
             if (controle.Mensagem.Equals(""))
             {
                 this.Close();
-
-                
             }
             else
             {

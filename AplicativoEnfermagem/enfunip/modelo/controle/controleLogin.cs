@@ -31,19 +31,20 @@ namespace enfunip.modelo
 
             Login login = new Login();
 
+            login.usuario = this.usuario;
+            login.senha = this.senha;
+
             dao.Logindao logindao = new dao.Logindao();
 
             logindao.ValidarLogin(login);
 
-            Validacao validacao = new Validacao(this.usuario, this.senha);
-
-            if (validacao.Mensagem.Equals(""))
+            if (logindao.mensagem .Equals(""))
             {
                 this.mensagem = "";
             }
             else
             {
-                this.mensagem = validacao.Mensagem;
+                this.mensagem = logindao.mensagem;
             }
         }
     }
