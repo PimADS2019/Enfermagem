@@ -150,18 +150,17 @@ namespace enfunip.apresentacao
 
         }
 
-        private void txbPacienteAgenda_TextChanged(object sender, EventArgs e)
-        {
-           
-
-            
-        }
         private void ApagarTodosCampos()
         {
             txbPacienteAgenda.Clear();
             mtxDataHoraAgenda.Clear();
             txbLocalAgendamento.Clear();
             txbObsAgenda.Clear();
+        }
+
+        private void txbPacienteAgenda_Enter(object sender, EventArgs e)
+        {
+            txbPacienteAgenda.Text = Estaticos.IncluirId;
         }
     }
 }

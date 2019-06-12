@@ -13,6 +13,7 @@ namespace enfunip.modelo
         public static List<Funcionario> listaFuncionarioEstatico;
         public static List<Estoque> listaEstoqueEstatico;
         public static String TipoUsuario;
+        public static String IncluirId;
 
     }
 }

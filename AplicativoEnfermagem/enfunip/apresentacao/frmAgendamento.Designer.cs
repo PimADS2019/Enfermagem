@@ -98,7 +98,7 @@
             this.mtxDataHoraAgenda.Mask = "00/00/0000 90:00";
             this.mtxDataHoraAgenda.Name = "mtxDataHoraAgenda";
             this.mtxDataHoraAgenda.Size = new System.Drawing.Size(115, 22);
-            this.mtxDataHoraAgenda.TabIndex = 125;
+            this.mtxDataHoraAgenda.TabIndex = 3;
             this.mtxDataHoraAgenda.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mtxDataHoraAgenda.ValidatingType = typeof(System.DateTime);
             // 
@@ -154,7 +154,7 @@
             this.txbLocalAgendamento.MaxLength = 30;
             this.txbLocalAgendamento.Name = "txbLocalAgendamento";
             this.txbLocalAgendamento.Size = new System.Drawing.Size(357, 22);
-            this.txbLocalAgendamento.TabIndex = 46;
+            this.txbLocalAgendamento.TabIndex = 4;
             // 
             // lblObsAgenda
             // 
@@ -172,7 +172,7 @@
             this.txbObsAgenda.Multiline = true;
             this.txbObsAgenda.Name = "txbObsAgenda";
             this.txbObsAgenda.Size = new System.Drawing.Size(478, 106);
-            this.txbObsAgenda.TabIndex = 44;
+            this.txbObsAgenda.TabIndex = 5;
             // 
             // lblLocalAgenda
             // 
@@ -190,8 +190,8 @@
             this.txbPacienteAgenda.MaxLength = 50;
             this.txbPacienteAgenda.Name = "txbPacienteAgenda";
             this.txbPacienteAgenda.Size = new System.Drawing.Size(451, 22);
-            this.txbPacienteAgenda.TabIndex = 42;
-            this.txbPacienteAgenda.TextChanged += new System.EventHandler(this.txbPacienteAgenda_TextChanged);
+            this.txbPacienteAgenda.TabIndex = 1;
+            this.txbPacienteAgenda.Enter += new System.EventHandler(this.txbPacienteAgenda_Enter);
             // 
             // lblDataHoraAgenda
             // 
@@ -210,7 +210,7 @@
             this.btnPaciente.Location = new System.Drawing.Point(474, 39);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Size = new System.Drawing.Size(21, 22);
-            this.btnPaciente.TabIndex = 38;
+            this.btnPaciente.TabIndex = 2;
             this.btnPaciente.Text = "...";
             this.btnPaciente.UseVisualStyleBackColor = true;
             this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);

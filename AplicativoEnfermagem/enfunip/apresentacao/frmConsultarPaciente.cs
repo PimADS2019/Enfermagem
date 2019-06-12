@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using enfunip.modelo;
+using enfunip.modelo.controle;
 
 namespace enfunip.apresentacao
 {
@@ -17,7 +19,7 @@ namespace enfunip.apresentacao
             InitializeComponent();
         }
 
-        public String Incluir_Id;
+
 
         private void txbConsultarPaciente_TextChanged(object sender, EventArgs e)
         {
@@ -81,13 +83,12 @@ namespace enfunip.apresentacao
 
         private void btnIncluirAgenda_Click(object sender, EventArgs e)
         {
-            
-
-            Incluir_Id = dgv_Pacientes.CurrentRow.Cells[0].Value.ToString();
-
+            Estaticos.IncluirId = dgv_Pacientes.CurrentRow.Cells[1].Value.ToString();
+             
             this.Close();
-        }
 
+        }
+        
         private void txbConsultarPaciente_Enter(object sender, EventArgs e)
         {
             txbConsultarPaciente.Clear();
