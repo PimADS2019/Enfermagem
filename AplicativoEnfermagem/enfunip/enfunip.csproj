@@ -86,11 +86,11 @@
     <Compile Include="apresentacao\frmConsultarPaciente.Designer.cs">
       <DependentUpon>frmConsultarPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmListarEstoque.cs">
+    <Compile Include="apresentacao\frmConsultarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmListarEstoque.Designer.cs">
-      <DependentUpon>frmListarEstoque.cs</DependentUpon>
+    <Compile Include="apresentacao\frmConsultarEstoque.Designer.cs">
+      <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
     </Compile>
     <Compile Include="apresentacao\frmLogin.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="apresentacao\frmConsultarPaciente.resx">
       <DependentUpon>frmConsultarPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmListarEstoque.resx">
-      <DependentUpon>frmListarEstoque.cs</DependentUpon>
+    <EmbeddedResource Include="apresentacao\frmConsultarEstoque.resx">
+      <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="apresentacao\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

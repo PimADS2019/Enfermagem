@@ -131,7 +131,7 @@ namespace enfunip.apresentacao
 
         private void tmiListagemEstoque_Click(object sender, EventArgs e)
         {
-            frmListarEstoque frmListarEstoque = new frmListarEstoque();
+            frmConsultarEstoque frmListarEstoque = new frmConsultarEstoque();
             frmListarEstoque.ShowDialog();
         }
 

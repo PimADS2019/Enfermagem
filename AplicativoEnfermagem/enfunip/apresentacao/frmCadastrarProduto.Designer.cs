@@ -51,10 +51,10 @@
             // txbProduto
             // 
             this.txbProduto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbProduto.Location = new System.Drawing.Point(7, 106);
+            this.txbProduto.Location = new System.Drawing.Point(16, 107);
             this.txbProduto.MaxLength = 50;
             this.txbProduto.Name = "txbProduto";
-            this.txbProduto.Size = new System.Drawing.Size(517, 22);
+            this.txbProduto.Size = new System.Drawing.Size(383, 22);
             this.txbProduto.TabIndex = 0;
             // 
             // lblProduto
@@ -62,7 +62,7 @@
             this.lblProduto.AutoSize = true;
             this.lblProduto.BackColor = System.Drawing.Color.Beige;
             this.lblProduto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduto.Location = new System.Drawing.Point(4, 87);
+            this.lblProduto.Location = new System.Drawing.Point(13, 88);
             this.lblProduto.Name = "lblProduto";
             this.lblProduto.Size = new System.Drawing.Size(53, 16);
             this.lblProduto.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.dtpEntradaProduto.CustomFormat = "";
             this.dtpEntradaProduto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEntradaProduto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEntradaProduto.Location = new System.Drawing.Point(556, 29);
+            this.dtpEntradaProduto.Location = new System.Drawing.Point(443, 31);
             this.dtpEntradaProduto.MinDate = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
             this.dtpEntradaProduto.Name = "dtpEntradaProduto";
             this.dtpEntradaProduto.Size = new System.Drawing.Size(106, 22);
@@ -84,7 +84,7 @@
             // 
             this.lblDataEntradaProduto.AutoSize = true;
             this.lblDataEntradaProduto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataEntradaProduto.Location = new System.Drawing.Point(553, 10);
+            this.lblDataEntradaProduto.Location = new System.Drawing.Point(440, 12);
             this.lblDataEntradaProduto.Name = "lblDataEntradaProduto";
             this.lblDataEntradaProduto.Size = new System.Drawing.Size(110, 16);
             this.lblDataEntradaProduto.TabIndex = 4;
@@ -101,7 +101,7 @@
             this.mnsFunçõesCadastroPac.Location = new System.Drawing.Point(0, 0);
             this.mnsFunçõesCadastroPac.Name = "mnsFunçõesCadastroPac";
             this.mnsFunçõesCadastroPac.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnsFunçõesCadastroPac.Size = new System.Drawing.Size(680, 24);
+            this.mnsFunçõesCadastroPac.Size = new System.Drawing.Size(580, 24);
             this.mnsFunçõesCadastroPac.TabIndex = 51;
             // 
             // tsmiSalvar
@@ -143,7 +143,7 @@
             this.grpCadastrarProduto.Controls.Add(this.dtpEntradaProduto);
             this.grpCadastrarProduto.Location = new System.Drawing.Point(6, 27);
             this.grpCadastrarProduto.Name = "grpCadastrarProduto";
-            this.grpCadastrarProduto.Size = new System.Drawing.Size(669, 338);
+            this.grpCadastrarProduto.Size = new System.Drawing.Size(566, 356);
             this.grpCadastrarProduto.TabIndex = 52;
             this.grpCadastrarProduto.TabStop = false;
             this.grpCadastrarProduto.Enter += new System.EventHandler(this.grpCadastrarProduto_Enter);
@@ -153,7 +153,7 @@
             this.lbl_idProduto.AutoSize = true;
             this.lbl_idProduto.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_idProduto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_idProduto.Location = new System.Drawing.Point(6, 16);
+            this.lbl_idProduto.Location = new System.Drawing.Point(7, 11);
             this.lbl_idProduto.Name = "lbl_idProduto";
             this.lbl_idProduto.Size = new System.Drawing.Size(28, 23);
             this.lbl_idProduto.TabIndex = 63;
@@ -165,7 +165,7 @@
             this.idProduto_BD.ForeColor = System.Drawing.Color.DarkGray;
             this.idProduto_BD.FormattingEnabled = true;
             this.idProduto_BD.ItemHeight = 14;
-            this.idProduto_BD.Location = new System.Drawing.Point(36, 19);
+            this.idProduto_BD.Location = new System.Drawing.Point(37, 14);
             this.idProduto_BD.Name = "idProduto_BD";
             this.idProduto_BD.Size = new System.Drawing.Size(68, 18);
             this.idProduto_BD.TabIndex = 64;
@@ -174,7 +174,7 @@
             // 
             this.lblObservaçãoProduto.AutoSize = true;
             this.lblObservaçãoProduto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservaçãoProduto.Location = new System.Drawing.Point(4, 154);
+            this.lblObservaçãoProduto.Location = new System.Drawing.Point(13, 155);
             this.lblObservaçãoProduto.Name = "lblObservaçãoProduto";
             this.lblObservaçãoProduto.Size = new System.Drawing.Size(76, 16);
             this.lblObservaçãoProduto.TabIndex = 62;
@@ -184,7 +184,7 @@
             // 
             this.lblQuantidadeProduto.AutoSize = true;
             this.lblQuantidadeProduto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidadeProduto.Location = new System.Drawing.Point(539, 87);
+            this.lblQuantidadeProduto.Location = new System.Drawing.Point(426, 88);
             this.lblQuantidadeProduto.Name = "lblQuantidadeProduto";
             this.lblQuantidadeProduto.Size = new System.Drawing.Size(74, 16);
             this.lblQuantidadeProduto.TabIndex = 61;
@@ -193,18 +193,18 @@
             // nudQtdProduto
             // 
             this.nudQtdProduto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQtdProduto.Location = new System.Drawing.Point(542, 106);
+            this.nudQtdProduto.Location = new System.Drawing.Point(429, 107);
             this.nudQtdProduto.Name = "nudQtdProduto";
             this.nudQtdProduto.Size = new System.Drawing.Size(120, 22);
             this.nudQtdProduto.TabIndex = 58;
             // 
             // txbObsProduto
             // 
-            this.txbObsProduto.Location = new System.Drawing.Point(6, 173);
+            this.txbObsProduto.Location = new System.Drawing.Point(16, 174);
             this.txbObsProduto.MaxLength = 300;
             this.txbObsProduto.Multiline = true;
             this.txbObsProduto.Name = "txbObsProduto";
-            this.txbObsProduto.Size = new System.Drawing.Size(655, 158);
+            this.txbObsProduto.Size = new System.Drawing.Size(533, 158);
             this.txbObsProduto.TabIndex = 59;
             // 
             // frmCadastrarProduto
@@ -212,7 +212,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(680, 370);
+            this.ClientSize = new System.Drawing.Size(580, 389);
             this.Controls.Add(this.mnsFunçõesCadastroPac);
             this.Controls.Add(this.grpCadastrarProduto);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

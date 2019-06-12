@@ -25,13 +25,13 @@ namespace enfunip.apresentacao
         {
             if (txbConsultarPaciente.Text.Equals(""))
             {
-                modelo.controle.controlePaciente controlePaciente = new modelo.controle.controlePaciente();
+                controlePaciente controlePaciente = new controlePaciente();
 
                 dgv_Pacientes.DataSource = controlePaciente.ListarPaciente();              
             }
             else
             {
-                modelo.Paciente paciente = new modelo.Paciente();
+                Paciente paciente = new Paciente();
                 Pesquisar(paciente);
             }
         }
@@ -43,18 +43,18 @@ namespace enfunip.apresentacao
             frmCadastrarPaciente.ShowDialog();
         }
 
-        private void Pesquisar(modelo.Paciente paciente)
+        private void Pesquisar(Paciente paciente)
         {
             paciente.nome = (txbConsultarPaciente.Text.Trim());
 
-            modelo.controle.controlePaciente controlePaciente = new modelo.controle.controlePaciente();
+            controlePaciente controlePaciente = new controlePaciente();
 
             dgv_Pacientes.DataSource = controlePaciente.PesquisarPaciente(paciente);
         }
 
         private void GrpConsultaPaciente_Enter(object sender, EventArgs e)
         {
-            modelo.controle.controlePaciente controlePaciente = new modelo.controle.controlePaciente();
+            controlePaciente controlePaciente = new controlePaciente();
 
             dgv_Pacientes.DataSource = controlePaciente.ListarPaciente();
         }
@@ -66,14 +66,14 @@ namespace enfunip.apresentacao
             DialogResult confirm = MessageBox.Show("Deseja Realmente Excluir o Paciente?", "Exclusão de Paciente", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
             if (confirm.ToString().ToUpper() == "YES")
             {
-                modelo.controle.controlePaciente controlePaciente = new modelo.controle.controlePaciente(); 
+                controlePaciente controlePaciente = new modelo.controle.controlePaciente(); 
 
                 Excluir_Id = dgv_Pacientes.CurrentRow.Cells[0].Value.ToString();
                 controlePaciente.ExcluirPaciente(Excluir_Id);
 
                 MessageBox.Show(controlePaciente.mensagem);
 
-                controlePaciente = new modelo.controle.controlePaciente();
+                controlePaciente = new controlePaciente();
 
                 dgv_Pacientes.DataSource = controlePaciente.ListarPaciente();
 
@@ -99,6 +99,13 @@ namespace enfunip.apresentacao
         private void btnFecharPesqPac_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            controlePaciente controlePaciente = new controlePaciente();
+
+            dgv_Pacientes.DataSource = controlePaciente.ListarPaciente();
         }
     }
 }

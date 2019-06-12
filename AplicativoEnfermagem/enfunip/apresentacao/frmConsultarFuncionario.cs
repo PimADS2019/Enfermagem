@@ -42,7 +42,7 @@ namespace enfunip.apresentacao
 
         private void GrpConsultaPaciente_Enter(object sender, EventArgs e)
         {
-             Estaticos.TipoUsuario = cboTipoFuncionario.Text;
+            Estaticos.TipoUsuario = cboTipoFuncionario.Text;
             modelo.controle.controleFuncionario controleFuncionario = new modelo.controle.controleFuncionario();
             dgv_Funcionarios.DataSource = controleFuncionario.ListarFuncionario();
         }
@@ -94,6 +94,13 @@ namespace enfunip.apresentacao
         {
             txbConsultarFuncionario.Clear();
             txbConsultarFuncionario.ForeColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            Estaticos.TipoUsuario = cboTipoFuncionario.Text;
+            modelo.controle.controleFuncionario controleFuncionario = new modelo.controle.controleFuncionario();
+            dgv_Funcionarios.DataSource = controleFuncionario.ListarFuncionario();
         }
     }
 }

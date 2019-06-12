@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarFuncionario));
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
             this.lbl_TipoFuncionario = new System.Windows.Forms.Label();
             this.cboTipoFuncionario = new System.Windows.Forms.ComboBox();
@@ -37,6 +38,7 @@
             this.btnIncuirFuncionario = new System.Windows.Forms.Button();
             this.txbConsultarFuncionario = new System.Windows.Forms.TextBox();
             this.btnFecharPesqFunc = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Funcionarios)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +46,7 @@
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.btnAtualizar);
             this.grpConsultaPaciente.Controls.Add(this.lbl_TipoFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.cboTipoFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.dgv_Funcionarios);
@@ -52,6 +55,7 @@
             this.grpConsultaPaciente.Controls.Add(this.btnIncuirFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.txbConsultarFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqFunc);
+            this.grpConsultaPaciente.Cursor = System.Windows.Forms.Cursors.Default;
             this.grpConsultaPaciente.Location = new System.Drawing.Point(4, -3);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
             this.grpConsultaPaciente.Size = new System.Drawing.Size(694, 598);
@@ -89,7 +93,9 @@
             // 
             this.dgv_Funcionarios.AllowUserToAddRows = false;
             this.dgv_Funcionarios.AllowUserToDeleteRows = false;
+            this.dgv_Funcionarios.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_Funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Funcionarios.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_Funcionarios.Location = new System.Drawing.Point(9, 96);
             this.dgv_Funcionarios.Name = "dgv_Funcionarios";
             this.dgv_Funcionarios.ReadOnly = true;
@@ -146,6 +152,7 @@
             this.btnFecharPesqFunc.BackColor = System.Drawing.Color.Transparent;
             this.btnFecharPesqFunc.BackgroundImage = global::enfunip.Properties.Resources.excluir;
             this.btnFecharPesqFunc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFecharPesqFunc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFecharPesqFunc.FlatAppearance.BorderSize = 0;
             this.btnFecharPesqFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFecharPesqFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -155,6 +162,19 @@
             this.btnFecharPesqFunc.TabIndex = 21;
             this.btnFecharPesqFunc.UseVisualStyleBackColor = false;
             this.btnFecharPesqFunc.Click += new System.EventHandler(this.btnFecharPesqFunc_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
+            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(543, 56);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
+            this.btnAtualizar.TabIndex = 57;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // frmConsultarFuncionario
             // 
@@ -189,5 +209,6 @@
         private System.Windows.Forms.DataGridView dgv_Funcionarios;
         private System.Windows.Forms.Label lbl_TipoFuncionario;
         private System.Windows.Forms.ComboBox cboTipoFuncionario;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

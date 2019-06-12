@@ -8,14 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using enfunip.modelo;
+using enfunip.modelo.controle;
 
 namespace enfunip.apresentacao
 {
-    public partial class frmListarEstoque : Form
+    public partial class frmConsultarEstoque : Form
     {
-        public frmListarEstoque()
+        public frmConsultarEstoque()
         {
             InitializeComponent();
+            controleEstoque controleEstoque = new controleEstoque();
+            dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
         }
 
         private void btnFecharPesqPac_Click(object sender, EventArgs e)
@@ -23,26 +26,16 @@ namespace enfunip.apresentacao
             this.Close();
         }
 
-        private void btnIncuirProduto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPesqPac_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Pesquisar (Estoque estoque)
         {
             estoque.produto = txbConsultarProdutos.Text.Trim();
 
-            modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+            controleEstoque controleEstoque = new controleEstoque();
             dgv_ListaProdutos.DataSource = controleEstoque.PesquisarPorNome(estoque);
         }
         private void GrpConsultaPaciente_Enter(object sender, EventArgs e)
         {
-            modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+            controleEstoque controleEstoque = new controleEstoque();
             dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
         }
 
@@ -50,7 +43,7 @@ namespace enfunip.apresentacao
         {
             if (txbConsultarProdutos.Text.Equals(""))
             {
-                modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+                controleEstoque controleEstoque = new controleEstoque();
                 dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
             }
             else
@@ -67,7 +60,7 @@ namespace enfunip.apresentacao
             DialogResult confirm = MessageBox.Show("Deseja Realmente Excluir o Produto?", "Fechar Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
             if (confirm.ToString().ToUpper() == "YES")
             {
-                modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+                controleEstoque controleEstoque = new controleEstoque();
 
                 Id_Excluir = dgv_ListaProdutos.CurrentRow.Cells[0].Value.ToString();
                 controleEstoque.ExcluirItem(Id_Excluir);
@@ -78,11 +71,6 @@ namespace enfunip.apresentacao
             }
         }
 
-        private void dgv_ListaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnCadProduto_Click(object sender, EventArgs e)
         {
             frmCadastrarProduto frmCadastrarProduto = new frmCadastrarProduto();
@@ -91,14 +79,15 @@ namespace enfunip.apresentacao
 
         private void frmListarEstoque_Load(object sender, EventArgs e)
         {
-            modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+            controleEstoque controleEstoque = new controleEstoque();
 
             dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
         }
 
-        private void frmListarEstoque_Enter(object sender, EventArgs e)
+        private void btnAtualizar_Click(object sender, EventArgs e)
         {
-
+            controleEstoque controleEstoque = new controleEstoque();
+            dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
         }
     }
 }

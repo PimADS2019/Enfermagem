@@ -1,6 +1,6 @@
 ﻿namespace enfunip.apresentacao
 {
-    partial class frmListarEstoque
+    partial class frmConsultarEstoque
     {
         /// <summary>
         /// Required designer variable.
@@ -29,21 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarEstoque));
             this.txbConsultarProdutos = new System.Windows.Forms.TextBox();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.dgv_ListaProdutos = new System.Windows.Forms.DataGridView();
-            this.estoquesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pimEnfermagem2019DataSet1 = new enfunip.PimEnfermagem2019DataSet1();
-            this.btnExcluirProduto = new System.Windows.Forms.Button();
-            this.btnEditarProduto = new System.Windows.Forms.Button();
-            this.btnCadProduto = new System.Windows.Forms.Button();
-            this.btnFecharPesqPac = new System.Windows.Forms.Button();
-            this.estoquesTableAdapter = new enfunip.PimEnfermagem2019DataSet1TableAdapters.EstoquesTableAdapter();
             this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataHrCadastroProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estoquesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pimEnfermagem2019DataSet1 = new enfunip.PimEnfermagem2019DataSet1();
+            this.btnFecharPesqPac = new System.Windows.Forms.Button();
+            this.btnExcluirProduto = new System.Windows.Forms.Button();
+            this.btnEditarProduto = new System.Windows.Forms.Button();
+            this.btnCadProduto = new System.Windows.Forms.Button();
+            this.estoquesTableAdapter = new enfunip.PimEnfermagem2019DataSet1TableAdapters.EstoquesTableAdapter();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoquesBindingSource)).BeginInit();
@@ -56,7 +58,7 @@
             this.txbConsultarProdutos.Location = new System.Drawing.Point(9, 30);
             this.txbConsultarProdutos.MaxLength = 50;
             this.txbConsultarProdutos.Name = "txbConsultarProdutos";
-            this.txbConsultarProdutos.Size = new System.Drawing.Size(550, 22);
+            this.txbConsultarProdutos.Size = new System.Drawing.Size(443, 22);
             this.txbConsultarProdutos.TabIndex = 44;
             this.txbConsultarProdutos.Text = "Insira nome do produto";
             this.txbConsultarProdutos.TextChanged += new System.EventHandler(this.TxbConsultarProdutos_TextChanged);
@@ -64,6 +66,7 @@
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.btnAtualizar);
             this.grpConsultaPaciente.Controls.Add(this.dgv_ListaProdutos);
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
             this.grpConsultaPaciente.Controls.Add(this.btnExcluirProduto);
@@ -77,11 +80,25 @@
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
+            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(452, 29);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
+            this.btnAtualizar.TabIndex = 58;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // dgv_ListaProdutos
             // 
             this.dgv_ListaProdutos.AllowUserToAddRows = false;
             this.dgv_ListaProdutos.AllowUserToDeleteRows = false;
             this.dgv_ListaProdutos.AutoGenerateColumns = false;
+            this.dgv_ListaProdutos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_ListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ListaProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProdutoDataGridViewTextBoxColumn,
@@ -90,75 +107,12 @@
             this.descricaoProdutoDataGridViewTextBoxColumn,
             this.dataHrCadastroProdutoDataGridViewTextBoxColumn});
             this.dgv_ListaProdutos.DataSource = this.estoquesBindingSource;
+            this.dgv_ListaProdutos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_ListaProdutos.Location = new System.Drawing.Point(9, 76);
             this.dgv_ListaProdutos.Name = "dgv_ListaProdutos";
             this.dgv_ListaProdutos.ReadOnly = true;
             this.dgv_ListaProdutos.Size = new System.Drawing.Size(550, 392);
             this.dgv_ListaProdutos.TabIndex = 54;
-            this.dgv_ListaProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ListaProdutos_CellContentClick);
-            // 
-            // estoquesBindingSource
-            // 
-            this.estoquesBindingSource.DataMember = "Estoques";
-            this.estoquesBindingSource.DataSource = this.pimEnfermagem2019DataSet1;
-            // 
-            // pimEnfermagem2019DataSet1
-            // 
-            this.pimEnfermagem2019DataSet1.DataSetName = "PimEnfermagem2019DataSet1";
-            this.pimEnfermagem2019DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnExcluirProduto
-            // 
-            this.btnExcluirProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirProduto.Location = new System.Drawing.Point(178, 483);
-            this.btnExcluirProduto.Name = "btnExcluirProduto";
-            this.btnExcluirProduto.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluirProduto.TabIndex = 53;
-            this.btnExcluirProduto.Text = "Excluir";
-            this.btnExcluirProduto.UseVisualStyleBackColor = true;
-            this.btnExcluirProduto.Click += new System.EventHandler(this.BtnExcluirProduto_Click);
-            // 
-            // btnEditarProduto
-            // 
-            this.btnEditarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarProduto.Location = new System.Drawing.Point(93, 483);
-            this.btnEditarProduto.Name = "btnEditarProduto";
-            this.btnEditarProduto.Size = new System.Drawing.Size(75, 23);
-            this.btnEditarProduto.TabIndex = 52;
-            this.btnEditarProduto.Text = "Editar";
-            this.btnEditarProduto.UseVisualStyleBackColor = true;
-            // 
-            // btnCadProduto
-            // 
-            this.btnCadProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadProduto.Location = new System.Drawing.Point(9, 483);
-            this.btnCadProduto.Name = "btnCadProduto";
-            this.btnCadProduto.Size = new System.Drawing.Size(75, 23);
-            this.btnCadProduto.TabIndex = 51;
-            this.btnCadProduto.Text = "Cadastrar";
-            this.btnCadProduto.UseVisualStyleBackColor = true;
-            this.btnCadProduto.Click += new System.EventHandler(this.btnCadProduto_Click);
-            // 
-            // btnFecharPesqPac
-            // 
-            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
-            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
-            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
-            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFecharPesqPac.Location = new System.Drawing.Point(544, 4);
-            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
-            this.btnFecharPesqPac.Size = new System.Drawing.Size(22, 23);
-            this.btnFecharPesqPac.TabIndex = 21;
-            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
-            this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
-            // 
-            // estoquesTableAdapter
-            // 
-            this.estoquesTableAdapter.ClearBeforeFill = true;
             // 
             // idProdutoDataGridViewTextBoxColumn
             // 
@@ -205,7 +159,70 @@
             this.dataHrCadastroProdutoDataGridViewTextBoxColumn.ReadOnly = true;
             this.dataHrCadastroProdutoDataGridViewTextBoxColumn.Width = 123;
             // 
-            // frmListarEstoque
+            // estoquesBindingSource
+            // 
+            this.estoquesBindingSource.DataMember = "Estoques";
+            this.estoquesBindingSource.DataSource = this.pimEnfermagem2019DataSet1;
+            // 
+            // pimEnfermagem2019DataSet1
+            // 
+            this.pimEnfermagem2019DataSet1.DataSetName = "PimEnfermagem2019DataSet1";
+            this.pimEnfermagem2019DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnFecharPesqPac
+            // 
+            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
+            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
+            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
+            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(544, 4);
+            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
+            this.btnFecharPesqPac.Size = new System.Drawing.Size(22, 23);
+            this.btnFecharPesqPac.TabIndex = 21;
+            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
+            this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
+            // 
+            // btnExcluirProduto
+            // 
+            this.btnExcluirProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluirProduto.Location = new System.Drawing.Point(178, 483);
+            this.btnExcluirProduto.Name = "btnExcluirProduto";
+            this.btnExcluirProduto.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirProduto.TabIndex = 53;
+            this.btnExcluirProduto.Text = "Excluir";
+            this.btnExcluirProduto.UseVisualStyleBackColor = true;
+            this.btnExcluirProduto.Click += new System.EventHandler(this.BtnExcluirProduto_Click);
+            // 
+            // btnEditarProduto
+            // 
+            this.btnEditarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarProduto.Location = new System.Drawing.Point(93, 483);
+            this.btnEditarProduto.Name = "btnEditarProduto";
+            this.btnEditarProduto.Size = new System.Drawing.Size(75, 23);
+            this.btnEditarProduto.TabIndex = 52;
+            this.btnEditarProduto.Text = "Editar";
+            this.btnEditarProduto.UseVisualStyleBackColor = true;
+            // 
+            // btnCadProduto
+            // 
+            this.btnCadProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadProduto.Location = new System.Drawing.Point(9, 483);
+            this.btnCadProduto.Name = "btnCadProduto";
+            this.btnCadProduto.Size = new System.Drawing.Size(75, 23);
+            this.btnCadProduto.TabIndex = 51;
+            this.btnCadProduto.Text = "Cadastrar";
+            this.btnCadProduto.UseVisualStyleBackColor = true;
+            this.btnCadProduto.Click += new System.EventHandler(this.btnCadProduto_Click);
+            // 
+            // estoquesTableAdapter
+            // 
+            this.estoquesTableAdapter.ClearBeforeFill = true;
+            // 
+            // frmConsultarEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,11 +232,10 @@
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.Name = "frmListarEstoque";
+            this.Name = "frmConsultarEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmListarEstoque";
             this.Load += new System.EventHandler(this.frmListarEstoque_Load);
-            this.Enter += new System.EventHandler(this.frmListarEstoque_Enter);
             this.grpConsultaPaciente.ResumeLayout(false);
             this.grpConsultaPaciente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaProdutos)).EndInit();
@@ -246,5 +262,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataHrCadastroProdutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }
