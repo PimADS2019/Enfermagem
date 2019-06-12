@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="enfunip.modelo.controle.controleFuncionario">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAQAAABEAAAAiAAAAAAAAAAAAAAEQAAIAAA=</HashCode>
+      <FileName>modelo\controle\controleFuncionario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="validarFuncionario" />
+      <Property Name="Funcionariodao" />
+      <Property Name="Funcionario1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="enfunip.modelo.validacoes.validarFuncionario">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>modelo\validacoes\validarFuncionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="enfunip.dao.Funcionariodao">
+    <Position X="6" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAABABAAAABAAAgEAAAAgAAAAAAAAAAAAAAEQAAIAAA=</HashCode>
+      <FileName>dao\Funcionariodao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Conexao" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="enfunip.dao.Conexao">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAgAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dao\conexao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="enfunip.modelo.Funcionario">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAACIgIIAAAAIAgAAAAJAAAAAAIgAQAAIEQAAAAAgA=</HashCode>
+      <FileName>modelo\Funcionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="enfunip.apresentacao.frmConsultarFuncionario">
+    <Position X="13.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAAAABAACAAAAAAAACAAAACAAAAgBCAIEBAASAAAAA=</HashCode>
+      <FileName>apresentacao\frmConsultarFuncionario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="controleFuncionario" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="enfunip.dao.intFuncionariodao">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAEQAAIAAA=</HashCode>
+      <FileName>dao\intFucionariodao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

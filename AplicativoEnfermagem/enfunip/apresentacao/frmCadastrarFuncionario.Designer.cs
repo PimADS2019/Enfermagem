@@ -88,6 +88,8 @@
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.grpBar = new System.Windows.Forms.GroupBox();
+            this.lblCadFunc = new System.Windows.Forms.Label();
             this.grpDadosPaciente.SuspendLayout();
             this.mnsFunçõesCadastroFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -96,6 +98,8 @@
             // grpDadosPaciente
             // 
             this.grpDadosPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpDadosPaciente.Controls.Add(this.lblCadFunc);
+            this.grpDadosPaciente.Controls.Add(this.grpBar);
             this.grpDadosPaciente.Controls.Add(this.lblCamposObrigatorios10);
             this.grpDadosPaciente.Controls.Add(this.lblCampoObrig);
             this.grpDadosPaciente.Controls.Add(this.lblCampoObrigatorio9);
@@ -150,9 +154,9 @@
             this.grpDadosPaciente.Controls.Add(this.lbl_Cep);
             this.grpDadosPaciente.Controls.Add(this.txbEmail);
             this.grpDadosPaciente.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.grpDadosPaciente.Location = new System.Drawing.Point(4, 22);
+            this.grpDadosPaciente.Location = new System.Drawing.Point(5, 25);
             this.grpDadosPaciente.Name = "grpDadosPaciente";
-            this.grpDadosPaciente.Size = new System.Drawing.Size(603, 427);
+            this.grpDadosPaciente.Size = new System.Drawing.Size(703, 539);
             this.grpDadosPaciente.TabIndex = 47;
             this.grpDadosPaciente.TabStop = false;
             // 
@@ -161,7 +165,7 @@
             this.lblCamposObrigatorios10.AutoSize = true;
             this.lblCamposObrigatorios10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCamposObrigatorios10.ForeColor = System.Drawing.Color.Red;
-            this.lblCamposObrigatorios10.Location = new System.Drawing.Point(565, 25);
+            this.lblCamposObrigatorios10.Location = new System.Drawing.Point(648, 88);
             this.lblCamposObrigatorios10.Name = "lblCamposObrigatorios10";
             this.lblCamposObrigatorios10.Size = new System.Drawing.Size(13, 16);
             this.lblCamposObrigatorios10.TabIndex = 120;
@@ -172,7 +176,7 @@
             this.lblCampoObrig.AutoSize = true;
             this.lblCampoObrig.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrig.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrig.Location = new System.Drawing.Point(488, 2);
+            this.lblCampoObrig.Location = new System.Drawing.Point(573, 68);
             this.lblCampoObrig.Name = "lblCampoObrig";
             this.lblCampoObrig.Size = new System.Drawing.Size(115, 14);
             this.lblCampoObrig.TabIndex = 119;
@@ -184,7 +188,7 @@
             this.lblCampoObrigatorio9.AutoSize = true;
             this.lblCampoObrigatorio9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrigatorio9.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio9.Location = new System.Drawing.Point(438, 365);
+            this.lblCampoObrigatorio9.Location = new System.Drawing.Point(506, 481);
             this.lblCampoObrigatorio9.Name = "lblCampoObrigatorio9";
             this.lblCampoObrigatorio9.Size = new System.Drawing.Size(13, 16);
             this.lblCampoObrigatorio9.TabIndex = 118;
@@ -195,7 +199,7 @@
             this.lblCampoObrigatorio8.AutoSize = true;
             this.lblCampoObrigatorio8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrigatorio8.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio8.Location = new System.Drawing.Point(55, 364);
+            this.lblCampoObrigatorio8.Location = new System.Drawing.Point(61, 481);
             this.lblCampoObrigatorio8.Name = "lblCampoObrigatorio8";
             this.lblCampoObrigatorio8.Size = new System.Drawing.Size(13, 16);
             this.lblCampoObrigatorio8.TabIndex = 117;
@@ -206,7 +210,7 @@
             this.lblCampoObrigatorio5.AutoSize = true;
             this.lblCampoObrigatorio5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrigatorio5.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio5.Location = new System.Drawing.Point(519, 142);
+            this.lblCampoObrigatorio5.Location = new System.Drawing.Point(605, 227);
             this.lblCampoObrigatorio5.Name = "lblCampoObrigatorio5";
             this.lblCampoObrigatorio5.Size = new System.Drawing.Size(13, 16);
             this.lblCampoObrigatorio5.TabIndex = 114;
@@ -217,7 +221,7 @@
             this.lblCampoObrigatorio4.AutoSize = true;
             this.lblCampoObrigatorio4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrigatorio4.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio4.Location = new System.Drawing.Point(55, 142);
+            this.lblCampoObrigatorio4.Location = new System.Drawing.Point(59, 227);
             this.lblCampoObrigatorio4.Name = "lblCampoObrigatorio4";
             this.lblCampoObrigatorio4.Size = new System.Drawing.Size(13, 16);
             this.lblCampoObrigatorio4.TabIndex = 113;
@@ -228,7 +232,7 @@
             this.lblCampoObrigatorio3.AutoSize = true;
             this.lblCampoObrigatorio3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrigatorio3.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio3.Location = new System.Drawing.Point(519, 88);
+            this.lblCampoObrigatorio3.Location = new System.Drawing.Point(593, 166);
             this.lblCampoObrigatorio3.Name = "lblCampoObrigatorio3";
             this.lblCampoObrigatorio3.Size = new System.Drawing.Size(13, 16);
             this.lblCampoObrigatorio3.TabIndex = 112;
@@ -239,7 +243,7 @@
             this.lblCampoObrigatorio2.AutoSize = true;
             this.lblCampoObrigatorio2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrigatorio2.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio2.Location = new System.Drawing.Point(289, 88);
+            this.lblCampoObrigatorio2.Location = new System.Drawing.Point(332, 166);
             this.lblCampoObrigatorio2.Name = "lblCampoObrigatorio2";
             this.lblCampoObrigatorio2.Size = new System.Drawing.Size(13, 16);
             this.lblCampoObrigatorio2.TabIndex = 111;
@@ -250,7 +254,7 @@
             this.lblCampoObrigatorio.AutoSize = true;
             this.lblCampoObrigatorio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio.Location = new System.Drawing.Point(64, 88);
+            this.lblCampoObrigatorio.Location = new System.Drawing.Point(69, 166);
             this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
             this.lblCampoObrigatorio.Size = new System.Drawing.Size(13, 16);
             this.lblCampoObrigatorio.TabIndex = 110;
@@ -259,7 +263,7 @@
             // lblSemestre
             // 
             this.lblSemestre.AutoSize = true;
-            this.lblSemestre.Location = new System.Drawing.Point(446, 194);
+            this.lblSemestre.Location = new System.Drawing.Point(525, 287);
             this.lblSemestre.Name = "lblSemestre";
             this.lblSemestre.Size = new System.Drawing.Size(64, 16);
             this.lblSemestre.TabIndex = 109;
@@ -281,18 +285,18 @@
             "6º Semestre",
             "7º Semestre",
             "8º Semestre"});
-            this.cboSemestre.Location = new System.Drawing.Point(449, 213);
+            this.cboSemestre.Location = new System.Drawing.Point(528, 309);
             this.cboSemestre.Name = "cboSemestre";
-            this.cboSemestre.Size = new System.Drawing.Size(137, 24);
+            this.cboSemestre.Size = new System.Drawing.Size(159, 24);
             this.cboSemestre.TabIndex = 11;
             // 
             // dtpNascimento
             // 
             this.dtpNascimento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(367, 161);
+            this.dtpNascimento.Location = new System.Drawing.Point(433, 249);
             this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(122, 22);
+            this.dtpNascimento.Size = new System.Drawing.Size(142, 22);
             this.dtpNascimento.TabIndex = 6;
             // 
             // cboPeriodo
@@ -308,15 +312,15 @@
             "Tarde",
             "Noite",
             "Todos"});
-            this.cboPeriodo.Location = new System.Drawing.Point(212, 213);
+            this.cboPeriodo.Location = new System.Drawing.Point(252, 309);
             this.cboPeriodo.Name = "cboPeriodo";
-            this.cboPeriodo.Size = new System.Drawing.Size(90, 24);
+            this.cboPeriodo.Size = new System.Drawing.Size(104, 24);
             this.cboPeriodo.TabIndex = 9;
             // 
             // lblRA
             // 
             this.lblRA.AutoSize = true;
-            this.lblRA.Location = new System.Drawing.Point(305, 194);
+            this.lblRA.Location = new System.Drawing.Point(360, 287);
             this.lblRA.Name = "lblRA";
             this.lblRA.Size = new System.Drawing.Size(26, 16);
             this.lblRA.TabIndex = 105;
@@ -325,7 +329,7 @@
             // lblNumContrato
             // 
             this.lblNumContrato.AutoSize = true;
-            this.lblNumContrato.Location = new System.Drawing.Point(14, 196);
+            this.lblNumContrato.Location = new System.Drawing.Point(21, 289);
             this.lblNumContrato.Name = "lblNumContrato";
             this.lblNumContrato.Size = new System.Drawing.Size(127, 16);
             this.lblNumContrato.TabIndex = 104;
@@ -334,23 +338,23 @@
             // txbRA
             // 
             this.txbRA.Enabled = false;
-            this.txbRA.Location = new System.Drawing.Point(308, 213);
+            this.txbRA.Location = new System.Drawing.Point(364, 309);
             this.txbRA.Name = "txbRA";
-            this.txbRA.Size = new System.Drawing.Size(135, 22);
+            this.txbRA.Size = new System.Drawing.Size(157, 22);
             this.txbRA.TabIndex = 10;
             // 
             // txbNumContrato
             // 
             this.txbNumContrato.Enabled = false;
-            this.txbNumContrato.Location = new System.Drawing.Point(17, 215);
+            this.txbNumContrato.Location = new System.Drawing.Point(24, 311);
             this.txbNumContrato.Name = "txbNumContrato";
-            this.txbNumContrato.Size = new System.Drawing.Size(189, 22);
+            this.txbNumContrato.Size = new System.Drawing.Size(220, 22);
             this.txbNumContrato.TabIndex = 8;
             // 
             // lblPeriodo
             // 
             this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Location = new System.Drawing.Point(209, 196);
+            this.lblPeriodo.Location = new System.Drawing.Point(248, 289);
             this.lblPeriodo.Name = "lblPeriodo";
             this.lblPeriodo.Size = new System.Drawing.Size(52, 16);
             this.lblPeriodo.TabIndex = 101;
@@ -359,7 +363,7 @@
             // lblConfSenhaCad
             // 
             this.lblConfSenhaCad.AutoSize = true;
-            this.lblConfSenhaCad.Location = new System.Drawing.Point(421, 88);
+            this.lblConfSenhaCad.Location = new System.Drawing.Point(496, 166);
             this.lblConfSenhaCad.Name = "lblConfSenhaCad";
             this.lblConfSenhaCad.Size = new System.Drawing.Size(102, 16);
             this.lblConfSenhaCad.TabIndex = 48;
@@ -368,16 +372,16 @@
             // txbConfirmaSenha
             // 
             this.errorProvider.SetIconPadding(this.txbConfirmaSenha, -17);
-            this.txbConfirmaSenha.Location = new System.Drawing.Point(424, 107);
+            this.txbConfirmaSenha.Location = new System.Drawing.Point(499, 187);
             this.txbConfirmaSenha.MaxLength = 12;
             this.txbConfirmaSenha.Name = "txbConfirmaSenha";
-            this.txbConfirmaSenha.Size = new System.Drawing.Size(162, 22);
+            this.txbConfirmaSenha.Size = new System.Drawing.Size(188, 22);
             this.txbConfirmaSenha.TabIndex = 4;
             // 
             // lblSenhaCad
             // 
             this.lblSenhaCad.AutoSize = true;
-            this.lblSenhaCad.Location = new System.Drawing.Point(246, 88);
+            this.lblSenhaCad.Location = new System.Drawing.Point(292, 166);
             this.lblSenhaCad.Name = "lblSenhaCad";
             this.lblSenhaCad.Size = new System.Drawing.Size(45, 16);
             this.lblSenhaCad.TabIndex = 46;
@@ -386,7 +390,7 @@
             // lblUsuarioCad
             // 
             this.lblUsuarioCad.AutoSize = true;
-            this.lblUsuarioCad.Location = new System.Drawing.Point(16, 88);
+            this.lblUsuarioCad.Location = new System.Drawing.Point(23, 166);
             this.lblUsuarioCad.Name = "lblUsuarioCad";
             this.lblUsuarioCad.Size = new System.Drawing.Size(52, 16);
             this.lblUsuarioCad.TabIndex = 45;
@@ -395,19 +399,19 @@
             // txbSenha
             // 
             this.errorProvider.SetIconPadding(this.txbSenha, -17);
-            this.txbSenha.Location = new System.Drawing.Point(249, 107);
+            this.txbSenha.Location = new System.Drawing.Point(295, 187);
             this.txbSenha.MaxLength = 12;
             this.txbSenha.Name = "txbSenha";
-            this.txbSenha.Size = new System.Drawing.Size(169, 22);
+            this.txbSenha.Size = new System.Drawing.Size(196, 22);
             this.txbSenha.TabIndex = 3;
             // 
             // txbUsuario
             // 
             this.errorProvider.SetIconPadding(this.txbUsuario, -17);
-            this.txbUsuario.Location = new System.Drawing.Point(18, 107);
+            this.txbUsuario.Location = new System.Drawing.Point(26, 187);
             this.txbUsuario.MaxLength = 20;
             this.txbUsuario.Name = "txbUsuario";
-            this.txbUsuario.Size = new System.Drawing.Size(225, 22);
+            this.txbUsuario.Size = new System.Drawing.Size(262, 22);
             this.txbUsuario.TabIndex = 2;
             // 
             // lblTipoUsuario
@@ -415,7 +419,7 @@
             this.lblTipoUsuario.AutoSize = true;
             this.lblTipoUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblTipoUsuario.Location = new System.Drawing.Point(462, 25);
+            this.lblTipoUsuario.Location = new System.Drawing.Point(544, 88);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
             this.lblTipoUsuario.Size = new System.Drawing.Size(108, 16);
             this.lblTipoUsuario.TabIndex = 42;
@@ -434,18 +438,18 @@
             "Professor",
             "Enfermeiro",
             "Aluno"});
-            this.cboTipoUsuario.Location = new System.Drawing.Point(465, 44);
+            this.cboTipoUsuario.Location = new System.Drawing.Point(547, 110);
             this.cboTipoUsuario.Name = "cboTipoUsuario";
-            this.cboTipoUsuario.Size = new System.Drawing.Size(121, 24);
+            this.cboTipoUsuario.Size = new System.Drawing.Size(140, 24);
             this.cboTipoUsuario.TabIndex = 1;
             this.cboTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cboTipoUsuario_SelectedIndexChanged);
             // 
             // txbTelefone
             // 
-            this.txbTelefone.Location = new System.Drawing.Point(498, 383);
+            this.txbTelefone.Location = new System.Drawing.Point(586, 503);
             this.txbTelefone.Mask = "(99) 0000-0000";
             this.txbTelefone.Name = "txbTelefone";
-            this.txbTelefone.Size = new System.Drawing.Size(88, 22);
+            this.txbTelefone.Size = new System.Drawing.Size(102, 22);
             this.txbTelefone.TabIndex = 21;
             this.txbTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -454,7 +458,7 @@
             this.lbl_Id.AutoSize = true;
             this.lbl_Id.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_Id.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Id.Location = new System.Drawing.Point(4, 12);
+            this.lbl_Id.Location = new System.Drawing.Point(10, 73);
             this.lbl_Id.Name = "lbl_Id";
             this.lbl_Id.Size = new System.Drawing.Size(28, 23);
             this.lbl_Id.TabIndex = 0;
@@ -463,10 +467,10 @@
             // txbNome
             // 
             this.errorProvider.SetIconPadding(this.txbNome, -17);
-            this.txbNome.Location = new System.Drawing.Point(17, 161);
+            this.txbNome.Location = new System.Drawing.Point(24, 249);
             this.txbNome.MaxLength = 50;
             this.txbNome.Name = "txbNome";
-            this.txbNome.Size = new System.Drawing.Size(344, 22);
+            this.txbNome.Size = new System.Drawing.Size(401, 22);
             this.txbNome.TabIndex = 5;
             // 
             // idFuncionario_BD
@@ -475,16 +479,16 @@
             this.idFuncionario_BD.ForeColor = System.Drawing.Color.DarkGray;
             this.idFuncionario_BD.FormattingEnabled = true;
             this.idFuncionario_BD.ItemHeight = 14;
-            this.idFuncionario_BD.Location = new System.Drawing.Point(34, 15);
+            this.idFuncionario_BD.Location = new System.Drawing.Point(45, 76);
             this.idFuncionario_BD.Name = "idFuncionario_BD";
-            this.idFuncionario_BD.Size = new System.Drawing.Size(68, 18);
+            this.idFuncionario_BD.Size = new System.Drawing.Size(79, 18);
             this.idFuncionario_BD.TabIndex = 35;
             // 
             // lbl_Cidade
             // 
             this.lbl_Cidade.AutoSize = true;
             this.lbl_Cidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Cidade.Location = new System.Drawing.Point(14, 308);
+            this.lbl_Cidade.Location = new System.Drawing.Point(21, 417);
             this.lbl_Cidade.Name = "lbl_Cidade";
             this.lbl_Cidade.Size = new System.Drawing.Size(48, 16);
             this.lbl_Cidade.TabIndex = 8;
@@ -492,26 +496,26 @@
             // 
             // txbCep
             // 
-            this.txbCep.Location = new System.Drawing.Point(522, 327);
+            this.txbCep.Location = new System.Drawing.Point(614, 439);
             this.txbCep.Mask = "00000-000";
             this.txbCep.Name = "txbCep";
-            this.txbCep.Size = new System.Drawing.Size(64, 22);
+            this.txbCep.Size = new System.Drawing.Size(74, 22);
             this.txbCep.TabIndex = 18;
             this.txbCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txbCidade
             // 
-            this.txbCidade.Location = new System.Drawing.Point(17, 328);
+            this.txbCidade.Location = new System.Drawing.Point(24, 440);
             this.txbCidade.MaxLength = 40;
             this.txbCidade.Name = "txbCidade";
-            this.txbCidade.Size = new System.Drawing.Size(261, 22);
+            this.txbCidade.Size = new System.Drawing.Size(304, 22);
             this.txbCidade.TabIndex = 15;
             // 
             // lbl_Numero
             // 
             this.lbl_Numero.AutoSize = true;
             this.lbl_Numero.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Numero.Location = new System.Drawing.Point(305, 253);
+            this.lbl_Numero.Location = new System.Drawing.Point(360, 354);
             this.lbl_Numero.Name = "lbl_Numero";
             this.lbl_Numero.Size = new System.Drawing.Size(53, 16);
             this.lbl_Numero.TabIndex = 6;
@@ -551,16 +555,16 @@
             "SE",
             "SP",
             "TO"});
-            this.cboEstado.Location = new System.Drawing.Point(446, 327);
+            this.cboEstado.Location = new System.Drawing.Point(525, 439);
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(70, 24);
+            this.cboEstado.Size = new System.Drawing.Size(81, 24);
             this.cboEstado.TabIndex = 17;
             // 
             // lbl_Complemento
             // 
             this.lbl_Complemento.AutoSize = true;
             this.lbl_Complemento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Complemento.Location = new System.Drawing.Point(377, 253);
+            this.lbl_Complemento.Location = new System.Drawing.Point(444, 354);
             this.lbl_Complemento.Name = "lbl_Complemento";
             this.lbl_Complemento.Size = new System.Drawing.Size(88, 16);
             this.lbl_Complemento.TabIndex = 7;
@@ -570,7 +574,7 @@
             // 
             this.lbl_Endereco.AutoSize = true;
             this.lbl_Endereco.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Endereco.Location = new System.Drawing.Point(14, 253);
+            this.lbl_Endereco.Location = new System.Drawing.Point(21, 354);
             this.lbl_Endereco.Name = "lbl_Endereco";
             this.lbl_Endereco.Size = new System.Drawing.Size(63, 16);
             this.lbl_Endereco.TabIndex = 5;
@@ -580,7 +584,7 @@
             // 
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblDataNascimento.Location = new System.Drawing.Point(362, 142);
+            this.lblDataNascimento.Location = new System.Drawing.Point(427, 227);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(126, 16);
             this.lblDataNascimento.TabIndex = 4;
@@ -588,33 +592,33 @@
             // 
             // txbEndereco
             // 
-            this.txbEndereco.Location = new System.Drawing.Point(17, 272);
+            this.txbEndereco.Location = new System.Drawing.Point(24, 376);
             this.txbEndereco.MaxLength = 50;
             this.txbEndereco.Name = "txbEndereco";
-            this.txbEndereco.Size = new System.Drawing.Size(285, 22);
+            this.txbEndereco.Size = new System.Drawing.Size(332, 22);
             this.txbEndereco.TabIndex = 12;
             // 
             // txbBairro
             // 
-            this.txbBairro.Location = new System.Drawing.Point(284, 328);
+            this.txbBairro.Location = new System.Drawing.Point(336, 440);
             this.txbBairro.MaxLength = 40;
             this.txbBairro.Name = "txbBairro";
-            this.txbBairro.Size = new System.Drawing.Size(156, 22);
+            this.txbBairro.Size = new System.Drawing.Size(181, 22);
             this.txbBairro.TabIndex = 16;
             // 
             // txbNumeroEndereco
             // 
-            this.txbNumeroEndereco.Location = new System.Drawing.Point(308, 272);
+            this.txbNumeroEndereco.Location = new System.Drawing.Point(364, 376);
             this.txbNumeroEndereco.MaxLength = 8;
             this.txbNumeroEndereco.Name = "txbNumeroEndereco";
-            this.txbNumeroEndereco.Size = new System.Drawing.Size(66, 22);
+            this.txbNumeroEndereco.Size = new System.Drawing.Size(76, 22);
             this.txbNumeroEndereco.TabIndex = 13;
             // 
             // lvl_Bairro
             // 
             this.lvl_Bairro.AutoSize = true;
             this.lvl_Bairro.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lvl_Bairro.Location = new System.Drawing.Point(281, 309);
+            this.lvl_Bairro.Location = new System.Drawing.Point(332, 418);
             this.lvl_Bairro.Name = "lvl_Bairro";
             this.lvl_Bairro.Size = new System.Drawing.Size(42, 16);
             this.lvl_Bairro.TabIndex = 9;
@@ -624,7 +628,7 @@
             // 
             this.lbl_Celular.AutoSize = true;
             this.lbl_Celular.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Celular.Location = new System.Drawing.Point(392, 364);
+            this.lbl_Celular.Location = new System.Drawing.Point(462, 481);
             this.lbl_Celular.Name = "lbl_Celular";
             this.lbl_Celular.Size = new System.Drawing.Size(48, 16);
             this.lbl_Celular.TabIndex = 12;
@@ -634,7 +638,7 @@
             // 
             this.lbl_Cpf.AutoSize = true;
             this.lbl_Cpf.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Cpf.Location = new System.Drawing.Point(491, 142);
+            this.lbl_Cpf.Location = new System.Drawing.Point(577, 227);
             this.lbl_Cpf.Name = "lbl_Cpf";
             this.lbl_Cpf.Size = new System.Drawing.Size(34, 16);
             this.lbl_Cpf.TabIndex = 3;
@@ -642,17 +646,17 @@
             // 
             // txbComplemento
             // 
-            this.txbComplemento.Location = new System.Drawing.Point(380, 272);
+            this.txbComplemento.Location = new System.Drawing.Point(448, 376);
             this.txbComplemento.MaxLength = 40;
             this.txbComplemento.Name = "txbComplemento";
-            this.txbComplemento.Size = new System.Drawing.Size(206, 22);
+            this.txbComplemento.Size = new System.Drawing.Size(240, 22);
             this.txbComplemento.TabIndex = 14;
             // 
             // lbl_Email
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Email.Location = new System.Drawing.Point(14, 364);
+            this.lbl_Email.Location = new System.Drawing.Point(21, 481);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(45, 16);
             this.lbl_Email.TabIndex = 14;
@@ -662,7 +666,7 @@
             // 
             this.lbl_estado.AutoSize = true;
             this.lbl_estado.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_estado.Location = new System.Drawing.Point(443, 309);
+            this.lbl_estado.Location = new System.Drawing.Point(521, 418);
             this.lbl_estado.Name = "lbl_estado";
             this.lbl_estado.Size = new System.Drawing.Size(49, 16);
             this.lbl_estado.TabIndex = 10;
@@ -671,10 +675,10 @@
             // txbCelular
             // 
             this.errorProvider.SetIconPadding(this.txbCelular, -17);
-            this.txbCelular.Location = new System.Drawing.Point(395, 383);
+            this.txbCelular.Location = new System.Drawing.Point(465, 503);
             this.txbCelular.Mask = "(99) 00000-0000";
             this.txbCelular.Name = "txbCelular";
-            this.txbCelular.Size = new System.Drawing.Size(97, 22);
+            this.txbCelular.Size = new System.Drawing.Size(112, 22);
             this.txbCelular.TabIndex = 20;
             this.txbCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -682,7 +686,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblNome.Location = new System.Drawing.Point(14, 142);
+            this.lblNome.Location = new System.Drawing.Point(21, 227);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(42, 16);
             this.lblNome.TabIndex = 1;
@@ -692,10 +696,10 @@
             // 
             this.txbCpf.Culture = new System.Globalization.CultureInfo("en-001");
             this.errorProvider.SetIconPadding(this.txbCpf, -17);
-            this.txbCpf.Location = new System.Drawing.Point(494, 161);
+            this.txbCpf.Location = new System.Drawing.Point(581, 249);
             this.txbCpf.Mask = "000.000.000-00";
             this.txbCpf.Name = "txbCpf";
-            this.txbCpf.Size = new System.Drawing.Size(92, 22);
+            this.txbCpf.Size = new System.Drawing.Size(107, 22);
             this.txbCpf.TabIndex = 7;
             this.txbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -703,7 +707,7 @@
             // 
             this.lbl_Telefone.AutoSize = true;
             this.lbl_Telefone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Telefone.Location = new System.Drawing.Point(495, 364);
+            this.lbl_Telefone.Location = new System.Drawing.Point(582, 481);
             this.lbl_Telefone.Name = "lbl_Telefone";
             this.lbl_Telefone.Size = new System.Drawing.Size(55, 16);
             this.lbl_Telefone.TabIndex = 13;
@@ -713,7 +717,7 @@
             // 
             this.lbl_Cep.AutoSize = true;
             this.lbl_Cep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Cep.Location = new System.Drawing.Point(519, 309);
+            this.lbl_Cep.Location = new System.Drawing.Point(610, 418);
             this.lbl_Cep.Name = "lbl_Cep";
             this.lbl_Cep.Size = new System.Drawing.Size(35, 16);
             this.lbl_Cep.TabIndex = 11;
@@ -722,10 +726,10 @@
             // txbEmail
             // 
             this.errorProvider.SetIconPadding(this.txbEmail, -17);
-            this.txbEmail.Location = new System.Drawing.Point(17, 383);
+            this.txbEmail.Location = new System.Drawing.Point(24, 503);
             this.txbEmail.MaxLength = 70;
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(372, 22);
+            this.txbEmail.Size = new System.Drawing.Size(433, 22);
             this.txbEmail.TabIndex = 19;
             // 
             // mnsFunçõesCadastroFunc
@@ -738,8 +742,9 @@
             this.tsmiCancelar});
             this.mnsFunçõesCadastroFunc.Location = new System.Drawing.Point(0, 0);
             this.mnsFunçõesCadastroFunc.Name = "mnsFunçõesCadastroFunc";
+            this.mnsFunçõesCadastroFunc.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.mnsFunçõesCadastroFunc.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnsFunçõesCadastroFunc.Size = new System.Drawing.Size(612, 24);
+            this.mnsFunçõesCadastroFunc.Size = new System.Drawing.Size(719, 24);
             this.mnsFunçõesCadastroFunc.TabIndex = 51;
             // 
             // tsmiSalvar
@@ -771,15 +776,33 @@
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(8, 55);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(686, 10);
+            this.grpBar.TabIndex = 121;
+            this.grpBar.TabStop = false;
+            // 
+            // lblCadFunc
+            // 
+            this.lblCadFunc.AutoSize = true;
+            this.lblCadFunc.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadFunc.Location = new System.Drawing.Point(190, 21);
+            this.lblCadFunc.Name = "lblCadFunc";
+            this.lblCadFunc.Size = new System.Drawing.Size(276, 27);
+            this.lblCadFunc.TabIndex = 127;
+            this.lblCadFunc.Text = "Cadastro de Funcionário";
+            // 
             // frmCadastrarFuncionario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(612, 452);
+            this.ClientSize = new System.Drawing.Size(719, 570);
             this.Controls.Add(this.mnsFunçõesCadastroFunc);
             this.Controls.Add(this.grpDadosPaciente);
-            this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "frmCadastrarFuncionario";
@@ -856,5 +879,7 @@
         private System.Windows.Forms.Label lblCampoObrig;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label lblCamposObrigatorios10;
+        private System.Windows.Forms.GroupBox grpBar;
+        private System.Windows.Forms.Label lblCadFunc;
     }
 }

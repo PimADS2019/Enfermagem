@@ -133,6 +133,9 @@
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblCadPac = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
+            this.grpCadPac = new System.Windows.Forms.GroupBox();
             this.tbcCadastroPaciente.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.grpDadosPaciente.SuspendLayout();
@@ -922,13 +925,33 @@
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
+            // lblCadPac
+            // 
+            resources.ApplyResources(this.lblCadPac, "lblCadPac");
+            this.lblCadPac.Name = "lblCadPac";
+            // 
+            // grpBar
+            // 
+            resources.ApplyResources(this.grpBar, "grpBar");
+            this.grpBar.Name = "grpBar";
+            this.grpBar.TabStop = false;
+            // 
+            // grpCadPac
+            // 
+            resources.ApplyResources(this.grpCadPac, "grpCadPac");
+            this.grpCadPac.Name = "grpCadPac";
+            this.grpCadPac.TabStop = false;
+            // 
             // frmCadastrarPaciente
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
+            this.Controls.Add(this.lblCadPac);
+            this.Controls.Add(this.grpBar);
             this.Controls.Add(this.tbcCadastroPaciente);
             this.Controls.Add(this.mnsFunçõesCadastroPac);
+            this.Controls.Add(this.grpCadPac);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.mnsFunçõesCadastroPac;
             this.MaximizeBox = false;
@@ -1068,5 +1091,8 @@
         private System.Windows.Forms.Label lblCampoObrigatorio3;
         private System.Windows.Forms.Label lblCampoObrigatorio2;
         private System.Windows.Forms.Label lblCampoObrigatorio;
+        private System.Windows.Forms.Label lblCadPac;
+        private System.Windows.Forms.GroupBox grpBar;
+        private System.Windows.Forms.GroupBox grpCadPac;
     }
 }

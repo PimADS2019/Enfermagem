@@ -127,7 +127,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblNumFilhos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>482, 222</value>
+    <value>562, 254</value>
   </data>
   <data name="lblNumFilhos.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 16</value>
@@ -151,13 +151,13 @@
     <value>20</value>
   </data>
   <data name="txbReligiao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 240</value>
+    <value>320, 274</value>
   </data>
   <data name="txbReligiao.MaxLength" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <data name="txbReligiao.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 22</value>
+    <value>238, 22</value>
   </data>
   <data name="txbReligiao.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -181,7 +181,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblReligiao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 221</value>
+    <value>316, 253</value>
   </data>
   <data name="lblReligiao.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 16</value>
@@ -211,10 +211,61 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 14</value>
+    <value>7, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>631, 407</value>
+    <value>741, 519</value>
+  </data>
+  <data name="lblCadPac.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCadPac.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 18pt</value>
+  </data>
+  <data name="lblCadPac.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 37</value>
+  </data>
+  <data name="lblCadPac.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 27</value>
+  </data>
+  <data name="lblCadPac.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="lblCadPac.Text" xml:space="preserve">
+    <value>Cadastro de Paciente</value>
+  </data>
+  <data name="&gt;&gt;lblCadPac.Name" xml:space="preserve">
+    <value>lblCadPac</value>
+  </data>
+  <data name="&gt;&gt;lblCadPac.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCadPac.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCadPac.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grpBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 66</value>
+  </data>
+  <data name="grpBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 10</value>
+  </data>
+  <data name="grpBar.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
+  <data name="&gt;&gt;grpBar.Name" xml:space="preserve">
+    <value>grpBar</value>
+  </data>
+  <data name="&gt;&gt;grpBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpBar.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblCampoObrigatorio11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -223,7 +274,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>541, 169</value>
+    <value>631, 193</value>
   </data>
   <data name="lblCampoObrigatorio11.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -253,7 +304,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 169</value>
+    <value>371, 193</value>
   </data>
   <data name="lblCampoObrigatorio10.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -283,7 +334,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 169</value>
+    <value>560, 193</value>
   </data>
   <data name="lblCampoObrigatorio9.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -313,7 +364,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 222</value>
+    <value>55, 254</value>
   </data>
   <data name="lblCampoObrigatorio8.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -343,7 +394,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 169</value>
+    <value>63, 193</value>
   </data>
   <data name="lblCampoObrigatorio7.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -373,7 +424,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 276</value>
+    <value>509, 315</value>
   </data>
   <data name="lblCampoObrigatorio6.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -403,7 +454,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 276</value>
+    <value>63, 315</value>
   </data>
   <data name="lblCampoObrigatorio5.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -433,7 +484,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 114</value>
+    <value>481, 130</value>
   </data>
   <data name="lblCampoObrigatorio4.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -463,7 +514,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 114</value>
+    <value>85, 130</value>
   </data>
   <data name="lblCampoObrigatorio3.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -493,7 +544,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 57</value>
+    <value>607, 65</value>
   </data>
   <data name="lblCampoObrigatorio2.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -523,7 +574,7 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="lblCampoObrigatorio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 57</value>
+    <value>58, 65</value>
   </data>
   <data name="lblCampoObrigatorio.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 16</value>
@@ -553,7 +604,7 @@
     <value>Arial, 8.25pt</value>
   </data>
   <data name="lblCampoObrig.Location" type="System.Drawing.Point, System.Drawing">
-    <value>490, 12</value>
+    <value>572, 14</value>
   </data>
   <data name="lblCampoObrig.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 14</value>
@@ -580,10 +631,10 @@
     <value>11</value>
   </data>
   <data name="dtpNascimento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 76</value>
+    <value>427, 87</value>
   </data>
   <data name="dtpNascimento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>142, 22</value>
   </data>
   <data name="dtpNascimento.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -685,10 +736,10 @@
     <value>TO</value>
   </data>
   <data name="cboEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 188</value>
+    <value>511, 215</value>
   </data>
   <data name="cboEstado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 24</value>
+    <value>81, 24</value>
   </data>
   <data name="cboEstado.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -706,10 +757,10 @@
     <value>13</value>
   </data>
   <data name="nudFilhos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>485, 241</value>
+    <value>566, 275</value>
   </data>
   <data name="nudFilhos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 22</value>
+    <value>119, 22</value>
   </data>
   <data name="nudFilhos.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -727,13 +778,13 @@
     <value>14</value>
   </data>
   <data name="txbTelefone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>499, 295</value>
+    <value>582, 337</value>
   </data>
   <data name="txbTelefone.Mask" xml:space="preserve">
-    <value>(99) 0000-0000</value>
+    <value>(99) 0000-00000</value>
   </data>
   <data name="txbTelefone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 22</value>
+    <value>105, 22</value>
   </data>
   <data name="txbTelefone.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -760,7 +811,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Id.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 12</value>
+    <value>3, 14</value>
   </data>
   <data name="lbl_Id.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 23</value>
@@ -787,13 +838,13 @@
     <value>-17</value>
   </data>
   <data name="txbNome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 76</value>
+    <value>19, 87</value>
   </data>
   <data name="txbNome.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
   <data name="txbNome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 22</value>
+    <value>401, 22</value>
   </data>
   <data name="txbNome.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -817,10 +868,10 @@
     <value>14</value>
   </data>
   <data name="idPaciente_BD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 15</value>
+    <value>38, 17</value>
   </data>
   <data name="idPaciente_BD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 18</value>
+    <value>79, 18</value>
   </data>
   <data name="idPaciente_BD.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -844,7 +895,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Cidade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 169</value>
+    <value>14, 193</value>
   </data>
   <data name="lbl_Cidade.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 16</value>
@@ -871,13 +922,13 @@
     <value>-17</value>
   </data>
   <data name="txbCep.Location" type="System.Drawing.Point, System.Drawing">
-    <value>514, 188</value>
+    <value>600, 215</value>
   </data>
   <data name="txbCep.Mask" xml:space="preserve">
     <value>00000-000</value>
   </data>
   <data name="txbCep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 22</value>
+    <value>84, 22</value>
   </data>
   <data name="txbCep.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -898,13 +949,13 @@
     <value>-17</value>
   </data>
   <data name="txbCidade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 188</value>
+    <value>19, 215</value>
   </data>
   <data name="txbCidade.MaxLength" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <data name="txbCidade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 22</value>
+    <value>304, 22</value>
   </data>
   <data name="txbCidade.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -928,7 +979,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Numero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 114</value>
+    <value>423, 130</value>
   </data>
   <data name="lbl_Numero.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 16</value>
@@ -958,7 +1009,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Complemento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 114</value>
+    <value>509, 130</value>
   </data>
   <data name="lbl_Complemento.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 16</value>
@@ -988,7 +1039,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Endereco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 114</value>
+    <value>15, 130</value>
   </data>
   <data name="lbl_Endereco.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 16</value>
@@ -1018,7 +1069,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_DataNascimento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 57</value>
+    <value>420, 65</value>
   </data>
   <data name="lbl_DataNascimento.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 16</value>
@@ -1045,13 +1096,13 @@
     <value>-17</value>
   </data>
   <data name="txbEndereco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 133</value>
+    <value>19, 152</value>
   </data>
   <data name="txbEndereco.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
   <data name="txbEndereco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 22</value>
+    <value>401, 22</value>
   </data>
   <data name="txbEndereco.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1072,13 +1123,13 @@
     <value>-17</value>
   </data>
   <data name="txbBairro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>283, 188</value>
+    <value>330, 215</value>
   </data>
   <data name="txbBairro.MaxLength" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <data name="txbBairro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
+    <value>173, 22</value>
   </data>
   <data name="txbBairro.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1102,7 +1153,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_EstadoCivil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 221</value>
+    <value>163, 253</value>
   </data>
   <data name="lbl_EstadoCivil.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 16</value>
@@ -1132,7 +1183,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Bairro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 169</value>
+    <value>327, 193</value>
   </data>
   <data name="lbl_Bairro.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 16</value>
@@ -1162,7 +1213,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Celular.Location" type="System.Drawing.Point, System.Drawing">
-    <value>393, 276</value>
+    <value>458, 315</value>
   </data>
   <data name="lbl_Celular.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 16</value>
@@ -1192,7 +1243,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSexo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 221</value>
+    <value>15, 253</value>
   </data>
   <data name="lblSexo.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 16</value>
@@ -1222,7 +1273,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Cpf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>490, 57</value>
+    <value>572, 65</value>
   </data>
   <data name="lbl_Cpf.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 16</value>
@@ -1246,13 +1297,13 @@
     <value>36</value>
   </data>
   <data name="txbComplemento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 133</value>
+    <value>511, 152</value>
   </data>
   <data name="txbComplemento.MaxLength" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <data name="txbComplemento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
+    <value>173, 22</value>
   </data>
   <data name="txbComplemento.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1276,7 +1327,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 276</value>
+    <value>14, 315</value>
   </data>
   <data name="lbl_Email.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 16</value>
@@ -1318,10 +1369,10 @@
     <value>Viuvo</value>
   </data>
   <data name="cboEstadoCivil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 240</value>
+    <value>167, 274</value>
   </data>
   <data name="cboEstadoCivil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 24</value>
+    <value>145, 24</value>
   </data>
   <data name="cboEstadoCivil.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1345,7 +1396,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_estado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 169</value>
+    <value>509, 193</value>
   </data>
   <data name="lbl_estado.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 16</value>
@@ -1372,13 +1423,13 @@
     <value>-17</value>
   </data>
   <data name="txbCelular.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 295</value>
+    <value>462, 337</value>
   </data>
   <data name="txbCelular.Mask" xml:space="preserve">
     <value>(99) 00000-0000</value>
   </data>
   <data name="txbCelular.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 22</value>
+    <value>112, 22</value>
   </data>
   <data name="txbCelular.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1405,10 +1456,10 @@
     <value>Feminino</value>
   </data>
   <data name="cboSexo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 240</value>
+    <value>19, 274</value>
   </data>
   <data name="cboSexo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 24</value>
+    <value>140, 24</value>
   </data>
   <data name="cboSexo.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1432,7 +1483,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Nome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 57</value>
+    <value>15, 65</value>
   </data>
   <data name="lbl_Nome.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 16</value>
@@ -1459,13 +1510,13 @@
     <value>-17</value>
   </data>
   <data name="txbCpf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>495, 75</value>
+    <value>577, 86</value>
   </data>
   <data name="txbCpf.Mask" xml:space="preserve">
     <value>000.000.000-00</value>
   </data>
   <data name="txbCpf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 22</value>
+    <value>107, 22</value>
   </data>
   <data name="txbCpf.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1489,7 +1540,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Telefone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>496, 276</value>
+    <value>579, 315</value>
   </data>
   <data name="lbl_Telefone.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 16</value>
@@ -1519,7 +1570,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Cep.Location" type="System.Drawing.Point, System.Drawing">
-    <value>511, 169</value>
+    <value>596, 193</value>
   </data>
   <data name="lbl_Cep.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 16</value>
@@ -1546,13 +1597,13 @@
     <value>-17</value>
   </data>
   <data name="txbEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 295</value>
+    <value>19, 337</value>
   </data>
   <data name="txbEmail.MaxLength" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
   <data name="txbEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 22</value>
+    <value>436, 22</value>
   </data>
   <data name="txbEmail.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1573,10 +1624,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="grpDadosPaciente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 5</value>
+    <value>7, 6</value>
   </data>
   <data name="grpDadosPaciente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>606, 334</value>
+    <value>707, 382</value>
   </data>
   <data name="grpDadosPaciente.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -1600,7 +1651,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 350</value>
+    <value>722, 404</value>
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1627,7 +1678,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkRenalFamiliar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 27</value>
+    <value>174, 31</value>
   </data>
   <data name="chkRenalFamiliar.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 20</value>
@@ -1654,13 +1705,13 @@
     <value>False</value>
   </data>
   <data name="txbOutrosFamiliar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 129</value>
+    <value>96, 147</value>
   </data>
   <data name="txbOutrosFamiliar.MaxLength" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
   <data name="txbOutrosFamiliar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 22</value>
+    <value>203, 22</value>
   </data>
   <data name="txbOutrosFamiliar.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -1684,7 +1735,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkOutrosFamiliar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 131</value>
+    <value>19, 150</value>
   </data>
   <data name="chkOutrosFamiliar.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 20</value>
@@ -1714,7 +1765,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkCardiovascularFamiliar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 105</value>
+    <value>19, 120</value>
   </data>
   <data name="chkCardiovascularFamiliar.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 20</value>
@@ -1744,7 +1795,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkDiabetesFamiliar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 27</value>
+    <value>19, 31</value>
   </data>
   <data name="chkDiabetesFamiliar.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 20</value>
@@ -1774,7 +1825,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkDislipidemiasFamiliar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 54</value>
+    <value>19, 62</value>
   </data>
   <data name="chkDislipidemiasFamiliar.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 20</value>
@@ -1804,7 +1855,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkNeurologicaFamiliar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 80</value>
+    <value>19, 91</value>
   </data>
   <data name="chkNeurologicaFamiliar.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 20</value>
@@ -1831,10 +1882,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="grpFamiliar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 180</value>
+    <value>371, 206</value>
   </data>
   <data name="grpFamiliar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 160</value>
+    <value>338, 183</value>
   </data>
   <data name="grpFamiliar.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -1861,7 +1912,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkIncontinenciaUrinaria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 27</value>
+    <value>19, 31</value>
   </data>
   <data name="chkIncontinenciaUrinaria.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 20</value>
@@ -1891,7 +1942,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkIncontinenciaFecal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 56</value>
+    <value>19, 64</value>
   </data>
   <data name="chkIncontinenciaFecal.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 20</value>
@@ -1921,7 +1972,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkDemencia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 82</value>
+    <value>19, 94</value>
   </data>
   <data name="chkDemencia.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 20</value>
@@ -1951,7 +2002,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkQueda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 108</value>
+    <value>19, 123</value>
   </data>
   <data name="chkQueda.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -1981,7 +2032,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkHospitalizacao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 134</value>
+    <value>19, 153</value>
   </data>
   <data name="chkHospitalizacao.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 20</value>
@@ -2008,10 +2059,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="grpCondFrequentes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 6</value>
+    <value>371, 7</value>
   </data>
   <data name="grpCondFrequentes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 168</value>
+    <value>338, 192</value>
   </data>
   <data name="grpCondFrequentes.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -2038,7 +2089,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkRenal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 244</value>
+    <value>19, 279</value>
   </data>
   <data name="chkRenal.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 20</value>
@@ -2065,13 +2116,13 @@
     <value>False</value>
   </data>
   <data name="txbOutros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 294</value>
+    <value>103, 336</value>
   </data>
   <data name="txbOutros.MaxLength" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
   <data name="txbOutros.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 22</value>
+    <value>229, 22</value>
   </data>
   <data name="txbOutros.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -2095,7 +2146,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkMusculoEsqueletica.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 166</value>
+    <value>19, 190</value>
   </data>
   <data name="chkMusculoEsqueletica.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 20</value>
@@ -2125,7 +2176,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkOutros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 296</value>
+    <value>19, 338</value>
   </data>
   <data name="chkOutros.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 20</value>
@@ -2155,7 +2206,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkTabagismo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 33</value>
+    <value>19, 38</value>
   </data>
   <data name="chkTabagismo.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 20</value>
@@ -2185,7 +2236,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkSexual.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 270</value>
+    <value>19, 309</value>
   </data>
   <data name="chkSexual.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 20</value>
@@ -2215,7 +2266,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkEtilismo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 62</value>
+    <value>19, 71</value>
   </data>
   <data name="chkEtilismo.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 20</value>
@@ -2245,7 +2296,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkRespiratoria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 218</value>
+    <value>19, 249</value>
   </data>
   <data name="chkRespiratoria.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 20</value>
@@ -2275,7 +2326,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkDiabetes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 88</value>
+    <value>19, 101</value>
   </data>
   <data name="chkDiabetes.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 20</value>
@@ -2305,7 +2356,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkDislipidemias.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 114</value>
+    <value>19, 130</value>
   </data>
   <data name="chkDislipidemias.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 20</value>
@@ -2335,7 +2386,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkNeurologica.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 192</value>
+    <value>19, 219</value>
   </data>
   <data name="chkNeurologica.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 20</value>
@@ -2365,7 +2416,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkCardiovascular.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 140</value>
+    <value>19, 160</value>
   </data>
   <data name="chkCardiovascular.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 20</value>
@@ -2392,10 +2443,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="grpComorbidades.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 6</value>
+    <value>6, 7</value>
   </data>
   <data name="grpComorbidades.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 334</value>
+    <value>339, 382</value>
   </data>
   <data name="grpComorbidades.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -2422,7 +2473,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 350</value>
+    <value>723, 404</value>
   </data>
   <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2449,7 +2500,7 @@
     <value>NoControl</value>
   </data>
   <data name="radDormePouco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 40</value>
+    <value>177, 46</value>
   </data>
   <data name="radDormePouco.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 20</value>
@@ -2479,7 +2530,7 @@
     <value>NoControl</value>
   </data>
   <data name="radDormeBem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 40</value>
+    <value>15, 46</value>
   </data>
   <data name="radDormeBem.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 20</value>
@@ -2509,7 +2560,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkDormeMedicação.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 90</value>
+    <value>15, 103</value>
   </data>
   <data name="chkDormeMedicação.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 20</value>
@@ -2536,10 +2587,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="grpSonoRepouso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 209</value>
+    <value>8, 239</value>
   </data>
   <data name="grpSonoRepouso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 131</value>
+    <value>336, 150</value>
   </data>
   <data name="grpSonoRepouso.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -2563,7 +2614,7 @@
     <value>True</value>
   </data>
   <data name="chkMultParceiros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 100</value>
+    <value>21, 114</value>
   </data>
   <data name="chkMultParceiros.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 20</value>
@@ -2590,7 +2641,7 @@
     <value>True</value>
   </data>
   <data name="chkSexualAtivo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 50</value>
+    <value>21, 57</value>
   </data>
   <data name="chkSexualAtivo.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
@@ -2617,10 +2668,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="grpVidaSexual.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 188</value>
+    <value>374, 215</value>
   </data>
   <data name="grpVidaSexual.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 152</value>
+    <value>335, 174</value>
   </data>
   <data name="grpVidaSexual.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -2644,7 +2695,7 @@
     <value>True</value>
   </data>
   <data name="chkPraticaAtvFisc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 55</value>
+    <value>17, 63</value>
   </data>
   <data name="chkPraticaAtvFisc.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 20</value>
@@ -2674,7 +2725,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblNumAtivFisic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 108</value>
+    <value>14, 123</value>
   </data>
   <data name="lblNumAtivFisic.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 16</value>
@@ -2701,10 +2752,10 @@
     <value>False</value>
   </data>
   <data name="nudAtivFis.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 106</value>
+    <value>201, 121</value>
   </data>
   <data name="nudAtivFis.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
+    <value>117, 22</value>
   </data>
   <data name="nudAtivFis.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -2725,10 +2776,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="grpAtivFisc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 9</value>
+    <value>374, 10</value>
   </data>
   <data name="grpAtivFisc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 173</value>
+    <value>335, 198</value>
   </data>
   <data name="grpAtivFisc.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -2755,7 +2806,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkLiquidos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 159</value>
+    <value>16, 182</value>
   </data>
   <data name="chkLiquidos.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 20</value>
@@ -2785,7 +2836,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkMassas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 133</value>
+    <value>16, 152</value>
   </data>
   <data name="chkMassas.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 20</value>
@@ -2815,7 +2866,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkLeguminosasVerduras.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 82</value>
+    <value>16, 94</value>
   </data>
   <data name="chkLeguminosasVerduras.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 20</value>
@@ -2845,7 +2896,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkProteinas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 107</value>
+    <value>16, 122</value>
   </data>
   <data name="chkProteinas.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 20</value>
@@ -2875,7 +2926,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkLeiteDerivados.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 57</value>
+    <value>16, 65</value>
   </data>
   <data name="chkLeiteDerivados.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 20</value>
@@ -2905,7 +2956,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkFrutas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 31</value>
+    <value>16, 35</value>
   </data>
   <data name="chkFrutas.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -2932,10 +2983,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="grpAlimentação.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 9</value>
+    <value>7, 10</value>
   </data>
   <data name="grpAlimentação.Size" type="System.Drawing.Size, System.Drawing">
-    <value>289, 193</value>
+    <value>337, 221</value>
   </data>
   <data name="grpAlimentação.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -2962,7 +3013,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 350</value>
+    <value>723, 404</value>
   </data>
   <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2986,10 +3037,10 @@
     <value>Arial, 9.75pt, style=Bold</value>
   </data>
   <data name="tbcCadastroPaciente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
+    <value>3, 84</value>
   </data>
   <data name="tbcCadastroPaciente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>626, 379</value>
+    <value>730, 433</value>
   </data>
   <data name="tbcCadastroPaciente.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -3004,7 +3055,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbcCadastroPaciente.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="mnsFunçõesCadastroPac.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -3033,8 +3084,11 @@
   <data name="mnsFunçõesCadastroPac.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="mnsFunçõesCadastroPac.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>7, 2, 0, 2</value>
+  </data>
   <data name="mnsFunçõesCadastroPac.Size" type="System.Drawing.Size, System.Drawing">
-    <value>631, 24</value>
+    <value>741, 24</value>
   </data>
   <data name="mnsFunçõesCadastroPac.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -3049,10 +3103,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;mnsFunçõesCadastroPac.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="grpCadPac.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 20</value>
+  </data>
+  <data name="grpCadPac.Size" type="System.Drawing.Size, System.Drawing">
+    <value>733, 493</value>
+  </data>
+  <data name="grpCadPac.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;grpCadPac.Name" xml:space="preserve">
+    <value>grpCadPac</value>
+  </data>
+  <data name="&gt;&gt;grpCadPac.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpCadPac.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpCadPac.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 8.25pt</value>
+    <value>Arial, 9.75pt</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
@@ -3094,13 +3169,13 @@
     <value>-17</value>
   </data>
   <data name="txbNumeroEndereco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 133</value>
+    <value>427, 152</value>
   </data>
   <data name="txbNumeroEndereco.MaxLength" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="txbNumeroEndereco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 22</value>
+    <value>76, 22</value>
   </data>
   <data name="txbNumeroEndereco.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>

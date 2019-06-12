@@ -104,12 +104,6 @@
     <Compile Include="apresentacao\frmMainmenu.Designer.cs">
       <DependentUpon>frmMainmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmNovoAtendimento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="apresentacao\frmNovoAtendimento.Designer.cs">
-      <DependentUpon>frmNovoAtendimento.cs</DependentUpon>
-    </Compile>
     <Compile Include="apresentacao\frmSobre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="apresentacao\frmMainmenu.resx">
       <DependentUpon>frmMainmenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmNovoAtendimento.resx">
-      <DependentUpon>frmNovoAtendimento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="apresentacao\frmSobre.resx">
       <DependentUpon>frmSobre.cs</DependentUpon>

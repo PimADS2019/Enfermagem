@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="enfunip.modelo.controle.controleEstoque">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAgAAAAAAgGAAAAAAAQAEAAAAAAAAAQCAAQAAA=</HashCode>
+      <FileName>modelo\controle\controleEstoque.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="controleEstoque1" />
+      <Property Name="Estoque" />
+      <Property Name="validarEstoque" />
+      <Property Name="Estoquedao" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="enfunip.modelo.Estoque">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAQBAIAAAAAAAAAAAEAAAAAAAEgA=</HashCode>
+      <FileName>modelo\Estoque.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="enfunip.modelo.validacoes.validarEstoque">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>modelo\validacoes\validarEstoque.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="enfunip.dao.Estoquedao">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAABAAAABAAAgEAAAAAAAAAEAAAAAAAAAQCAAAAAA=</HashCode>
+      <FileName>dao\Estoquedao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Conexao" />
+    </ShowAsAssociation>
+    <Lollipop Position="1.242" />
+  </Class>
+  <Class Name="enfunip.dao.Conexao">
+    <Position X="8.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAgAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dao\conexao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="enfunip.apresentacao.frmListarEstoque">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAEQAIACAAAEAAAACgAAACAAAAABAEEAQAAgAAAAA=</HashCode>
+      <FileName>apresentacao\frmListarEstoque.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="controleEstoque" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="enfunip.dao.intEstoquedao">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAgAAAAAAAAAAEAAAAAAAAAQCAAAAAA=</HashCode>
+      <FileName>dao\intEstoquedao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

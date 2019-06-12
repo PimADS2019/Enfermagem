@@ -46,6 +46,8 @@
             this.btnEditarProduto = new System.Windows.Forms.Button();
             this.btnCadProduto = new System.Windows.Forms.Button();
             this.estoquesTableAdapter = new enfunip.PimEnfermagem2019DataSet1TableAdapters.EstoquesTableAdapter();
+            this.lblConsProd = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoquesBindingSource)).BeginInit();
@@ -55,7 +57,7 @@
             // txbConsultarProdutos
             // 
             this.txbConsultarProdutos.ForeColor = System.Drawing.Color.Silver;
-            this.txbConsultarProdutos.Location = new System.Drawing.Point(9, 30);
+            this.txbConsultarProdutos.Location = new System.Drawing.Point(9, 70);
             this.txbConsultarProdutos.MaxLength = 50;
             this.txbConsultarProdutos.Name = "txbConsultarProdutos";
             this.txbConsultarProdutos.Size = new System.Drawing.Size(443, 22);
@@ -66,6 +68,8 @@
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.lblConsProd);
+            this.grpConsultaPaciente.Controls.Add(this.grpBar);
             this.grpConsultaPaciente.Controls.Add(this.btnAtualizar);
             this.grpConsultaPaciente.Controls.Add(this.dgv_ListaProdutos);
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
@@ -73,9 +77,9 @@
             this.grpConsultaPaciente.Controls.Add(this.btnEditarProduto);
             this.grpConsultaPaciente.Controls.Add(this.btnCadProduto);
             this.grpConsultaPaciente.Controls.Add(this.txbConsultarProdutos);
-            this.grpConsultaPaciente.Location = new System.Drawing.Point(3, -4);
+            this.grpConsultaPaciente.Location = new System.Drawing.Point(3, -1);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
-            this.grpConsultaPaciente.Size = new System.Drawing.Size(566, 517);
+            this.grpConsultaPaciente.Size = new System.Drawing.Size(566, 556);
             this.grpConsultaPaciente.TabIndex = 47;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
@@ -86,7 +90,7 @@
             this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(452, 29);
+            this.btnAtualizar.Location = new System.Drawing.Point(452, 69);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
             this.btnAtualizar.TabIndex = 58;
@@ -108,7 +112,7 @@
             this.dataHrCadastroProdutoDataGridViewTextBoxColumn});
             this.dgv_ListaProdutos.DataSource = this.estoquesBindingSource;
             this.dgv_ListaProdutos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgv_ListaProdutos.Location = new System.Drawing.Point(9, 76);
+            this.dgv_ListaProdutos.Location = new System.Drawing.Point(9, 116);
             this.dgv_ListaProdutos.Name = "dgv_ListaProdutos";
             this.dgv_ListaProdutos.ReadOnly = true;
             this.dgv_ListaProdutos.Size = new System.Drawing.Size(550, 392);
@@ -189,7 +193,7 @@
             // btnExcluirProduto
             // 
             this.btnExcluirProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirProduto.Location = new System.Drawing.Point(178, 483);
+            this.btnExcluirProduto.Location = new System.Drawing.Point(171, 528);
             this.btnExcluirProduto.Name = "btnExcluirProduto";
             this.btnExcluirProduto.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirProduto.TabIndex = 53;
@@ -200,7 +204,7 @@
             // btnEditarProduto
             // 
             this.btnEditarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarProduto.Location = new System.Drawing.Point(93, 483);
+            this.btnEditarProduto.Location = new System.Drawing.Point(90, 528);
             this.btnEditarProduto.Name = "btnEditarProduto";
             this.btnEditarProduto.Size = new System.Drawing.Size(75, 23);
             this.btnEditarProduto.TabIndex = 52;
@@ -210,7 +214,7 @@
             // btnCadProduto
             // 
             this.btnCadProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadProduto.Location = new System.Drawing.Point(9, 483);
+            this.btnCadProduto.Location = new System.Drawing.Point(9, 527);
             this.btnCadProduto.Name = "btnCadProduto";
             this.btnCadProduto.Size = new System.Drawing.Size(75, 23);
             this.btnCadProduto.TabIndex = 51;
@@ -222,12 +226,31 @@
             // 
             this.estoquesTableAdapter.ClearBeforeFill = true;
             // 
+            // lblConsProd
+            // 
+            this.lblConsProd.AutoSize = true;
+            this.lblConsProd.Font = new System.Drawing.Font("Arial", 18F);
+            this.lblConsProd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblConsProd.Location = new System.Drawing.Point(166, 18);
+            this.lblConsProd.Name = "lblConsProd";
+            this.lblConsProd.Size = new System.Drawing.Size(234, 27);
+            this.lblConsProd.TabIndex = 133;
+            this.lblConsProd.Text = "Consulta de Produto";
+            // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(5, 48);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(556, 10);
+            this.grpBar.TabIndex = 132;
+            this.grpBar.TabStop = false;
+            // 
             // frmConsultarEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(575, 517);
+            this.ClientSize = new System.Drawing.Size(572, 562);
             this.Controls.Add(this.grpConsultaPaciente);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -263,5 +286,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataHrCadastroProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Label lblConsProd;
+        private System.Windows.Forms.GroupBox grpBar;
     }
 }

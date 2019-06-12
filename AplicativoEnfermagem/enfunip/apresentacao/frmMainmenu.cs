@@ -117,12 +117,6 @@ namespace enfunip.apresentacao
             frmConsultarPaciente.ShowDialog();
         }
 
-        private void tmiNovoAtendimento_Click(object sender, EventArgs e)
-        {
-            frmNovoAtendimento frmNovoAtendimento = new frmNovoAtendimento();
-            frmNovoAtendimento.ShowDialog();
-        }
-
         private void tmiCadastrar_Click(object sender, EventArgs e)
         {
             frmCadastrarProduto frmCadastrarProduto = new frmCadastrarProduto();

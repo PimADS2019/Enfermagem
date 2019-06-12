@@ -76,6 +76,9 @@ namespace enfunip.apresentacao
                 Id_Excluir = dgv_Funcionarios.CurrentRow.Cells[0].Value.ToString();
                 controleFuncionario.ExcluirFuncionario(Id_Excluir);
                 MessageBox.Show(controleFuncionario.mensagem);
+
+                controleFuncionario = new modelo.controle.controleFuncionario();
+                dgv_Funcionarios.DataSource = controleFuncionario.ListarFuncionario();
             }
         }
 

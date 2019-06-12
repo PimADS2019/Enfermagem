@@ -31,13 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarPaciente));
             this.txbConsultarPaciente = new System.Windows.Forms.TextBox();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnIncluirAgenda = new System.Windows.Forms.Button();
             this.dgv_Pacientes = new System.Windows.Forms.DataGridView();
             this.btnExcluirPaciente = new System.Windows.Forms.Button();
             this.btnEditarPaciente = new System.Windows.Forms.Button();
             this.btnIncuirPaciente = new System.Windows.Forms.Button();
             this.btnFecharPesqPac = new System.Windows.Forms.Button();
-            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.lblConsPac = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Pacientes)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +47,7 @@
             // txbConsultarPaciente
             // 
             this.txbConsultarPaciente.ForeColor = System.Drawing.Color.Silver;
-            this.txbConsultarPaciente.Location = new System.Drawing.Point(9, 30);
+            this.txbConsultarPaciente.Location = new System.Drawing.Point(9, 86);
             this.txbConsultarPaciente.MaxLength = 50;
             this.txbConsultarPaciente.Name = "txbConsultarPaciente";
             this.txbConsultarPaciente.Size = new System.Drawing.Size(519, 22);
@@ -57,6 +59,8 @@
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.lblConsPac);
+            this.grpConsultaPaciente.Controls.Add(this.grpBar);
             this.grpConsultaPaciente.Controls.Add(this.btnAtualizar);
             this.grpConsultaPaciente.Controls.Add(this.btnIncluirAgenda);
             this.grpConsultaPaciente.Controls.Add(this.dgv_Pacientes);
@@ -67,15 +71,28 @@
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
             this.grpConsultaPaciente.Location = new System.Drawing.Point(3, -4);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
-            this.grpConsultaPaciente.Size = new System.Drawing.Size(695, 598);
+            this.grpConsultaPaciente.Size = new System.Drawing.Size(695, 675);
             this.grpConsultaPaciente.TabIndex = 46;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
+            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(528, 85);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
+            this.btnAtualizar.TabIndex = 56;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // btnIncluirAgenda
             // 
             this.btnIncluirAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIncluirAgenda.Location = new System.Drawing.Point(87, 569);
+            this.btnIncluirAgenda.Location = new System.Drawing.Point(87, 643);
             this.btnIncluirAgenda.Name = "btnIncluirAgenda";
             this.btnIncluirAgenda.Size = new System.Drawing.Size(75, 23);
             this.btnIncluirAgenda.TabIndex = 55;
@@ -90,7 +107,7 @@
             this.dgv_Pacientes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_Pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Pacientes.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgv_Pacientes.Location = new System.Drawing.Point(6, 67);
+            this.dgv_Pacientes.Location = new System.Drawing.Point(6, 123);
             this.dgv_Pacientes.Name = "dgv_Pacientes";
             this.dgv_Pacientes.ReadOnly = true;
             this.dgv_Pacientes.Size = new System.Drawing.Size(683, 496);
@@ -99,7 +116,7 @@
             // btnExcluirPaciente
             // 
             this.btnExcluirPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirPaciente.Location = new System.Drawing.Point(249, 569);
+            this.btnExcluirPaciente.Location = new System.Drawing.Point(249, 643);
             this.btnExcluirPaciente.Name = "btnExcluirPaciente";
             this.btnExcluirPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirPaciente.TabIndex = 53;
@@ -110,7 +127,7 @@
             // btnEditarPaciente
             // 
             this.btnEditarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarPaciente.Location = new System.Drawing.Point(168, 569);
+            this.btnEditarPaciente.Location = new System.Drawing.Point(168, 643);
             this.btnEditarPaciente.Name = "btnEditarPaciente";
             this.btnEditarPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnEditarPaciente.TabIndex = 52;
@@ -120,7 +137,7 @@
             // btnIncuirPaciente
             // 
             this.btnIncuirPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIncuirPaciente.Location = new System.Drawing.Point(6, 569);
+            this.btnIncuirPaciente.Location = new System.Drawing.Point(6, 643);
             this.btnIncuirPaciente.Name = "btnIncuirPaciente";
             this.btnIncuirPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnIncuirPaciente.TabIndex = 51;
@@ -138,32 +155,38 @@
             this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
             this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFecharPesqPac.Location = new System.Drawing.Point(674, 5);
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(673, 5);
             this.btnFecharPesqPac.Name = "btnFecharPesqPac";
             this.btnFecharPesqPac.Size = new System.Drawing.Size(22, 23);
             this.btnFecharPesqPac.TabIndex = 21;
             this.btnFecharPesqPac.UseVisualStyleBackColor = false;
             this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
             // 
-            // btnAtualizar
+            // lblConsPac
             // 
-            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
-            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(528, 29);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
-            this.btnAtualizar.TabIndex = 56;
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            this.lblConsPac.AutoSize = true;
+            this.lblConsPac.Font = new System.Drawing.Font("Arial", 18F);
+            this.lblConsPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblConsPac.Location = new System.Drawing.Point(226, 18);
+            this.lblConsPac.Name = "lblConsPac";
+            this.lblConsPac.Size = new System.Drawing.Size(242, 27);
+            this.lblConsPac.TabIndex = 137;
+            this.lblConsPac.Text = "Consulta de Paciente";
+            // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(9, 48);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(683, 10);
+            this.grpBar.TabIndex = 136;
+            this.grpBar.TabStop = false;
             // 
             // frmConsultarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(700, 600);
+            this.ClientSize = new System.Drawing.Size(700, 683);
             this.Controls.Add(this.grpConsultaPaciente);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -188,5 +211,7 @@
         private System.Windows.Forms.DataGridView dgv_Pacientes;
         private System.Windows.Forms.Button btnIncluirAgenda;
         private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Label lblConsPac;
+        private System.Windows.Forms.GroupBox grpBar;
     }
 }

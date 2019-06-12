@@ -33,7 +33,6 @@
             this.tsmiPacientes = new System.Windows.Forms.ToolStripDropDownButton();
             this.tmiCadastrodePacientes = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiConsultaDePacientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmiNovoAtendimento = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiFuncionarios = new System.Windows.Forms.ToolStripDropDownButton();
             this.tmiCadastroDeFuncionarios = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,8 +85,7 @@
             this.tsmiPacientes.AutoToolTip = false;
             this.tsmiPacientes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tmiCadastrodePacientes,
-            this.tmiConsultaDePacientes,
-            this.tmiNovoAtendimento});
+            this.tmiConsultaDePacientes});
             this.tsmiPacientes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiPacientes.Image = ((System.Drawing.Image)(resources.GetObject("tsmiPacientes.Image")));
             this.tsmiPacientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -109,13 +107,6 @@
             this.tmiConsultaDePacientes.Size = new System.Drawing.Size(218, 22);
             this.tmiConsultaDePacientes.Text = "Consulta de Pacientes";
             this.tmiConsultaDePacientes.Click += new System.EventHandler(this.tmiConsultaDePacientes_Click);
-            // 
-            // tmiNovoAtendimento
-            // 
-            this.tmiNovoAtendimento.Name = "tmiNovoAtendimento";
-            this.tmiNovoAtendimento.Size = new System.Drawing.Size(218, 22);
-            this.tmiNovoAtendimento.Text = "Novo Atendimento";
-            this.tmiNovoAtendimento.Click += new System.EventHandler(this.tmiNovoAtendimento_Click);
             // 
             // toolStripSeparator2
             // 
@@ -251,7 +242,7 @@
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLogout.Location = new System.Drawing.Point(49, 660);
+            this.btnLogout.Location = new System.Drawing.Point(47, 678);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(33, 40);
             this.btnLogout.TabIndex = 20;
@@ -319,7 +310,6 @@
         private System.Windows.Forms.ToolStripDropDownButton tsmiPacientes;
         private System.Windows.Forms.ToolStripMenuItem tmiCadastrodePacientes;
         private System.Windows.Forms.ToolStripMenuItem tmiConsultaDePacientes;
-        private System.Windows.Forms.ToolStripMenuItem tmiNovoAtendimento;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

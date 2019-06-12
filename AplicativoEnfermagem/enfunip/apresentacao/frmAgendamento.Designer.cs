@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgendamento));
             this.mclDiasAgendados = new System.Windows.Forms.MonthCalendar();
             this.grpAgendamento = new System.Windows.Forms.GroupBox();
+            this.lblAgendamento = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
             this.mtxDataHoraAgenda = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +54,7 @@
             this.dgvAgendamentos = new System.Windows.Forms.DataGridView();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpAgendamentos = new System.Windows.Forms.GroupBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.txbConsultarAgendamento = new System.Windows.Forms.TextBox();
             this.grpAgendamento.SuspendLayout();
             this.mnsFunçõesAgendar.SuspendLayout();
@@ -62,7 +65,7 @@
             // 
             // mclDiasAgendados
             // 
-            this.mclDiasAgendados.Location = new System.Drawing.Point(562, 58);
+            this.mclDiasAgendados.Location = new System.Drawing.Point(559, 107);
             this.mclDiasAgendados.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.mclDiasAgendados.Name = "mclDiasAgendados";
             this.mclDiasAgendados.TabIndex = 28;
@@ -70,6 +73,8 @@
             // grpAgendamento
             // 
             this.grpAgendamento.BackColor = System.Drawing.Color.Beige;
+            this.grpAgendamento.Controls.Add(this.lblAgendamento);
+            this.grpAgendamento.Controls.Add(this.grpBar);
             this.grpAgendamento.Controls.Add(this.mtxDataHoraAgenda);
             this.grpAgendamento.Controls.Add(this.label3);
             this.grpAgendamento.Controls.Add(this.label1);
@@ -85,27 +90,45 @@
             this.grpAgendamento.Controls.Add(this.btnPaciente);
             this.grpAgendamento.Controls.Add(this.lblPacienteAgenda);
             this.grpAgendamento.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpAgendamento.Location = new System.Drawing.Point(4, 21);
+            this.grpAgendamento.Location = new System.Drawing.Point(3, 27);
             this.grpAgendamento.Name = "grpAgendamento";
-            this.grpAgendamento.Size = new System.Drawing.Size(820, 275);
+            this.grpAgendamento.Size = new System.Drawing.Size(820, 344);
             this.grpAgendamento.TabIndex = 43;
             this.grpAgendamento.TabStop = false;
+            // 
+            // lblAgendamento
+            // 
+            this.lblAgendamento.AutoSize = true;
+            this.lblAgendamento.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgendamento.Location = new System.Drawing.Point(331, 13);
+            this.lblAgendamento.Name = "lblAgendamento";
+            this.lblAgendamento.Size = new System.Drawing.Size(162, 27);
+            this.lblAgendamento.TabIndex = 126;
+            this.lblAgendamento.Text = "Agendamento";
+            // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(6, 46);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(808, 10);
+            this.grpBar.TabIndex = 54;
+            this.grpBar.TabStop = false;
             // 
             // mtxDataHoraAgenda
             // 
             this.mtxDataHoraAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.mtxDataHoraAgenda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.mtxDataHoraAgenda.Location = new System.Drawing.Point(17, 92);
+            this.mtxDataHoraAgenda.Location = new System.Drawing.Point(14, 141);
             this.mtxDataHoraAgenda.Name = "mtxDataHoraAgenda";
             this.mtxDataHoraAgenda.Size = new System.Drawing.Size(102, 22);
-            this.mtxDataHoraAgenda.TabIndex = 125;
+            this.mtxDataHoraAgenda.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(173, 73);
+            this.label3.Location = new System.Drawing.Point(170, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 16);
             this.label3.TabIndex = 124;
@@ -116,7 +139,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(90, 73);
+            this.label1.Location = new System.Drawing.Point(87, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 16);
             this.label1.TabIndex = 122;
@@ -127,7 +150,7 @@
             this.lblCampoObrigatorio.AutoSize = true;
             this.lblCampoObrigatorio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio.Location = new System.Drawing.Point(71, 19);
+            this.lblCampoObrigatorio.Location = new System.Drawing.Point(68, 68);
             this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
             this.lblCampoObrigatorio.Size = new System.Drawing.Size(13, 16);
             this.lblCampoObrigatorio.TabIndex = 121;
@@ -138,7 +161,7 @@
             this.lblCampoObrig.AutoSize = true;
             this.lblCampoObrig.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoObrig.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrig.Location = new System.Drawing.Point(703, 9);
+            this.lblCampoObrig.Location = new System.Drawing.Point(700, 63);
             this.lblCampoObrig.Name = "lblCampoObrig";
             this.lblCampoObrig.Size = new System.Drawing.Size(115, 14);
             this.lblCampoObrig.TabIndex = 120;
@@ -148,16 +171,16 @@
             // txbLocalAgendamento
             // 
             this.errorProvider.SetIconPadding(this.txbLocalAgendamento, -17);
-            this.txbLocalAgendamento.Location = new System.Drawing.Point(138, 92);
+            this.txbLocalAgendamento.Location = new System.Drawing.Point(135, 141);
             this.txbLocalAgendamento.MaxLength = 30;
             this.txbLocalAgendamento.Name = "txbLocalAgendamento";
             this.txbLocalAgendamento.Size = new System.Drawing.Size(357, 22);
-            this.txbLocalAgendamento.TabIndex = 4;
+            this.txbLocalAgendamento.TabIndex = 3;
             // 
             // lblObsAgenda
             // 
             this.lblObsAgenda.AutoSize = true;
-            this.lblObsAgenda.Location = new System.Drawing.Point(14, 129);
+            this.lblObsAgenda.Location = new System.Drawing.Point(11, 178);
             this.lblObsAgenda.Name = "lblObsAgenda";
             this.lblObsAgenda.Size = new System.Drawing.Size(76, 16);
             this.lblObsAgenda.TabIndex = 45;
@@ -165,17 +188,17 @@
             // 
             // txbObsAgenda
             // 
-            this.txbObsAgenda.Location = new System.Drawing.Point(17, 150);
+            this.txbObsAgenda.Location = new System.Drawing.Point(14, 199);
             this.txbObsAgenda.MaxLength = 300;
             this.txbObsAgenda.Multiline = true;
             this.txbObsAgenda.Name = "txbObsAgenda";
             this.txbObsAgenda.Size = new System.Drawing.Size(478, 106);
-            this.txbObsAgenda.TabIndex = 5;
+            this.txbObsAgenda.TabIndex = 4;
             // 
             // lblLocalAgenda
             // 
             this.lblLocalAgenda.AutoSize = true;
-            this.lblLocalAgenda.Location = new System.Drawing.Point(138, 73);
+            this.lblLocalAgenda.Location = new System.Drawing.Point(135, 122);
             this.lblLocalAgenda.Name = "lblLocalAgenda";
             this.lblLocalAgenda.Size = new System.Drawing.Size(39, 16);
             this.lblLocalAgenda.TabIndex = 43;
@@ -184,7 +207,7 @@
             // txbPacienteAgenda
             // 
             this.errorProvider.SetIconPadding(this.txbPacienteAgenda, -17);
-            this.txbPacienteAgenda.Location = new System.Drawing.Point(17, 39);
+            this.txbPacienteAgenda.Location = new System.Drawing.Point(14, 88);
             this.txbPacienteAgenda.MaxLength = 50;
             this.txbPacienteAgenda.Name = "txbPacienteAgenda";
             this.txbPacienteAgenda.Size = new System.Drawing.Size(451, 22);
@@ -194,7 +217,7 @@
             // lblDataHoraAgenda
             // 
             this.lblDataHoraAgenda.AutoSize = true;
-            this.lblDataHoraAgenda.Location = new System.Drawing.Point(14, 73);
+            this.lblDataHoraAgenda.Location = new System.Drawing.Point(11, 122);
             this.lblDataHoraAgenda.Name = "lblDataHoraAgenda";
             this.lblDataHoraAgenda.Size = new System.Drawing.Size(77, 16);
             this.lblDataHoraAgenda.TabIndex = 40;
@@ -205,9 +228,9 @@
             this.btnPaciente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPaciente.BackgroundImage")));
             this.btnPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPaciente.Location = new System.Drawing.Point(474, 39);
+            this.btnPaciente.Location = new System.Drawing.Point(465, 87);
             this.btnPaciente.Name = "btnPaciente";
-            this.btnPaciente.Size = new System.Drawing.Size(21, 22);
+            this.btnPaciente.Size = new System.Drawing.Size(24, 24);
             this.btnPaciente.TabIndex = 2;
             this.btnPaciente.Text = "...";
             this.btnPaciente.UseVisualStyleBackColor = true;
@@ -216,7 +239,7 @@
             // lblPacienteAgenda
             // 
             this.lblPacienteAgenda.AutoSize = true;
-            this.lblPacienteAgenda.Location = new System.Drawing.Point(14, 19);
+            this.lblPacienteAgenda.Location = new System.Drawing.Point(11, 68);
             this.lblPacienteAgenda.Name = "lblPacienteAgenda";
             this.lblPacienteAgenda.Size = new System.Drawing.Size(59, 16);
             this.lblPacienteAgenda.TabIndex = 35;
@@ -264,7 +287,9 @@
             // 
             // dgvAgendamentos
             // 
+            this.dgvAgendamentos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAgendamentos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAgendamentos.Location = new System.Drawing.Point(17, 56);
             this.dgvAgendamentos.Name = "dgvAgendamentos";
             this.dgvAgendamentos.Size = new System.Drawing.Size(780, 277);
@@ -277,14 +302,27 @@
             // 
             // grpAgendamentos
             // 
+            this.grpAgendamentos.Controls.Add(this.btnAtualizar);
             this.grpAgendamentos.Controls.Add(this.txbConsultarAgendamento);
             this.grpAgendamentos.Controls.Add(this.dgvAgendamentos);
-            this.grpAgendamentos.Location = new System.Drawing.Point(4, 303);
+            this.grpAgendamentos.Location = new System.Drawing.Point(3, 377);
             this.grpAgendamentos.Name = "grpAgendamentos";
             this.grpAgendamentos.Size = new System.Drawing.Size(820, 340);
             this.grpAgendamentos.TabIndex = 53;
             this.grpAgendamentos.TabStop = false;
             this.grpAgendamentos.Enter += new System.EventHandler(this.grpAgendamentos_Enter);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
+            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(506, 21);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
+            this.btnAtualizar.TabIndex = 59;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
             // 
             // txbConsultarAgendamento
             // 
@@ -302,7 +340,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(831, 648);
+            this.ClientSize = new System.Drawing.Size(831, 729);
             this.Controls.Add(this.grpAgendamentos);
             this.Controls.Add(this.mnsFunçõesAgendar);
             this.Controls.Add(this.grpAgendamento);
@@ -350,5 +388,8 @@
         private System.Windows.Forms.GroupBox grpAgendamentos;
         private System.Windows.Forms.TextBox txbConsultarAgendamento;
         private System.Windows.Forms.DateTimePicker mtxDataHoraAgenda;
+        private System.Windows.Forms.Label lblAgendamento;
+        private System.Windows.Forms.GroupBox grpBar;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

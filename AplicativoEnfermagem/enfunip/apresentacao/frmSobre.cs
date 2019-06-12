@@ -21,5 +21,10 @@ namespace enfunip.apresentacao
         {
             this.Close();
         }
+
+        private void grpSobre_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

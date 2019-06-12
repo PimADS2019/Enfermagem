@@ -89,7 +89,6 @@ C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\D
 C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\zu-ZA\enfunip.resources.dll
 C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\zu-ZA\enfunip.resources.dll
 C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmCadastrarProduto.resources
-C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmNovoAtendimento.resources
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\zu-ZA\enfunip.resources.dll
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\Microsoft.VisualStudio.LiveShare.dll
 C:\Users\Isac\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\bin\Debug\Microsoft.VisualStudio.LiveShare.xml

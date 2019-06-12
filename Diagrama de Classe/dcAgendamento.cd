@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="enfunip.apresentacao.frmAgendamento">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEIAAACJABAAgAECAAkAyAAIAAAQCAIIiMAAAAAY=</HashCode>
+      <FileName>apresentacao\frmAgendamento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="controleAgenda" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="enfunip.modelo.controle.controleAgenda">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAEAAAAAAAAgAAAAAABAAAAIAAAAAA=</HashCode>
+      <FileName>modelo\controle\controleAgenda.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Agenda" />
+      <Property Name="Agendadao" />
+      <Property Name="validarAgenda" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="enfunip.modelo.Agenda">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAQAACAAAAAAA=</HashCode>
+      <FileName>modelo\Agenda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="enfunip.dao.Agendadao">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAABAAAAEAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>dao\agendadao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Conexao" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="enfunip.dao.Conexao">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAgAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dao\conexao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="enfunip.modelo.validacoes.validarAgenda">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>modelo\validacoes\validarAgenda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="enfunip.dao.intAgendadao">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>dao\intAgendadao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
