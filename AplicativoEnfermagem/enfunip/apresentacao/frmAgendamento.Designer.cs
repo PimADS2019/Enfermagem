@@ -93,6 +93,7 @@
             // 
             // mtxDataHoraAgenda
             // 
+            this.errorProvider.SetIconPadding(this.mtxDataHoraAgenda, -17);
             this.mtxDataHoraAgenda.Location = new System.Drawing.Point(17, 92);
             this.mtxDataHoraAgenda.Mask = "00/00/0000 90:00";
             this.mtxDataHoraAgenda.Name = "mtxDataHoraAgenda";
@@ -148,6 +149,7 @@
             // 
             // txbLocalAgendamento
             // 
+            this.errorProvider.SetIconPadding(this.txbLocalAgendamento, -17);
             this.txbLocalAgendamento.Location = new System.Drawing.Point(138, 92);
             this.txbLocalAgendamento.MaxLength = 30;
             this.txbLocalAgendamento.Name = "txbLocalAgendamento";
@@ -183,11 +185,13 @@
             // 
             // txbPacienteAgenda
             // 
+            this.errorProvider.SetIconPadding(this.txbPacienteAgenda, -17);
             this.txbPacienteAgenda.Location = new System.Drawing.Point(17, 39);
             this.txbPacienteAgenda.MaxLength = 50;
             this.txbPacienteAgenda.Name = "txbPacienteAgenda";
             this.txbPacienteAgenda.Size = new System.Drawing.Size(451, 22);
             this.txbPacienteAgenda.TabIndex = 42;
+            this.txbPacienteAgenda.TextChanged += new System.EventHandler(this.txbPacienteAgenda_TextChanged);
             // 
             // lblDataHoraAgenda
             // 

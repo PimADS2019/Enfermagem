@@ -37,15 +37,30 @@ namespace enfunip.apresentacao
 
             if (confirm.ToString().ToUpper() == "YES")
             {
-                txbPacienteAtendimento.Clear();
-                dtpAtendimento.ResetText();
-                txbObsAtendimento.Clear();
+                ApagarTodosCampos();
             }
         }
 
         private void tsmiSalvar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Atendimento cadastrado com sucesso!");
+
+            DialogResult confirm = MessageBox.Show("Deseja realizar um novo atendimento?", "Novo Atendimento", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                ApagarTodosCampos();
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+        private void ApagarTodosCampos()
+        {
+            txbPacienteAtendimento.Clear();
+            dtpAtendimento.ResetText();
+            txbObsAtendimento.Clear();
         }
     }
 }

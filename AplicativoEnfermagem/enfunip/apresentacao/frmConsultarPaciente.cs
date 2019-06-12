@@ -17,27 +17,7 @@ namespace enfunip.apresentacao
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txbConsultarPaciente_Click(object sender, EventArgs e)
-        {
-            txbConsultarPaciente.Clear();
-            txbConsultarPaciente.ForeColor = Color.FromArgb(0, 0, 0);
-
-        }
+        public String Incluir_Id;
 
         private void txbConsultarPaciente_TextChanged(object sender, EventArgs e)
         {
@@ -54,15 +34,6 @@ namespace enfunip.apresentacao
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnFecharPesqPac_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void btnIncuirPaciente_Click(object sender, EventArgs e)
         {
@@ -106,6 +77,26 @@ namespace enfunip.apresentacao
 
             }
             
+        }
+
+        private void btnIncluirAgenda_Click(object sender, EventArgs e)
+        {
+            
+
+            Incluir_Id = dgv_Pacientes.CurrentRow.Cells[0].Value.ToString();
+
+            this.Close();
+        }
+
+        private void txbConsultarPaciente_Enter(object sender, EventArgs e)
+        {
+            txbConsultarPaciente.Clear();
+            txbConsultarPaciente.ForeColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void btnFecharPesqPac_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

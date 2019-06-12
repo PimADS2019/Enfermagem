@@ -44,7 +44,7 @@ namespace enfunip.apresentacao
         {
             if (txbSenha.Text != txbConfirmaSenha.Text)
             {
-                MessageBox.Show("Senhas não coincidem");
+                MessageBox.Show("Senhas não coincidem", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             else
             {
@@ -91,11 +91,15 @@ namespace enfunip.apresentacao
 
                     MessageBox.Show(controleFuncionario.mensagem);
 
-                    DialogResult confirm = MessageBox.Show("Deseja realizar um novo cadastro?", "Novo Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    DialogResult confirm = MessageBox.Show("Deseja realizar um novo cadastro?", "Novo Funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                     if (confirm.ToString().ToUpper() == "YES")
                     {
                         ApagarTodosCampos();
+                    }
+                    else
+                    {
+                        this.Close();
                     }
                 }
                     

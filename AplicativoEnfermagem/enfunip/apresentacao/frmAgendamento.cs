@@ -57,10 +57,7 @@ namespace enfunip.apresentacao
 
             if (confirm.ToString().ToUpper() == "YES")
             {
-                txbPacienteAgenda.Clear();
-                mtxDataHoraAgenda.Clear();
-                txbLocalAgendamento.Clear();
-                txbObsAgenda.Clear();
+                ApagarTodosCampos();
             }
         }
 
@@ -90,6 +87,18 @@ namespace enfunip.apresentacao
                 controleAgenda.CadastrarAgenda(dadosAgenda);
 
                 MessageBox.Show(controleAgenda.mensagem);
+
+                DialogResult confirm = MessageBox.Show("Deseja realizar um novo cadastro?", "Novo Funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+                    ApagarTodosCampos();
+                }
+                else
+                {
+                    this.Close();
+                }
+
             }
         }
         private bool VerificarCampos()
@@ -104,7 +113,7 @@ namespace enfunip.apresentacao
             if (mtxDataHoraAgenda.Text == "")
             {
                 ok = false;
-                errorProvider.SetError(txbPacienteAgenda, "Insira a data e hora do agendamento");
+                errorProvider.SetError(mtxDataHoraAgenda, "Insira a data e hora do agendamento");
             }
             if (txbLocalAgendamento.Text == "")
             {
@@ -116,7 +125,7 @@ namespace enfunip.apresentacao
         private void ApagarMsgErro()
         {
             errorProvider.SetError(txbPacienteAgenda, "");
-            errorProvider.SetError(txbPacienteAgenda, "");
+            errorProvider.SetError(mtxDataHoraAgenda, "");
             errorProvider.SetError(txbLocalAgendamento, "");
         }
 
@@ -139,6 +148,20 @@ namespace enfunip.apresentacao
         private void MnsFunçõesAgendar_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void txbPacienteAgenda_TextChanged(object sender, EventArgs e)
+        {
+           
+
+            
+        }
+        private void ApagarTodosCampos()
+        {
+            txbPacienteAgenda.Clear();
+            mtxDataHoraAgenda.Clear();
+            txbLocalAgendamento.Clear();
+            txbObsAgenda.Clear();
         }
     }
 }

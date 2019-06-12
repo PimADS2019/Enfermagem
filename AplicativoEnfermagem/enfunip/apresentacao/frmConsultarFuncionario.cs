@@ -29,11 +29,7 @@ namespace enfunip.apresentacao
             frmCadastrarFuncionario.ShowDialog();
         }
 
-        private void txbConsultarFuncionario_Click(object sender, EventArgs e)
-        {
-            txbConsultarFuncionario.Clear();
-            txbConsultarFuncionario.ForeColor = Color.FromArgb(0, 0, 0);
-        }
+
 
         private void Pesquisar(Funcionario funcionario)
         {
@@ -92,6 +88,12 @@ namespace enfunip.apresentacao
         {
             
             
+        }
+
+        private void txbConsultarFuncionario_Enter(object sender, EventArgs e)
+        {
+            txbConsultarFuncionario.Clear();
+            txbConsultarFuncionario.ForeColor = Color.FromArgb(0, 0, 0);
         }
     }
 }

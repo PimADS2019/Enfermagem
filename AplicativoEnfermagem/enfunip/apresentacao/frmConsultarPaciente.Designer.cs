@@ -35,6 +35,7 @@
             this.btnEditarPaciente = new System.Windows.Forms.Button();
             this.btnIncuirPaciente = new System.Windows.Forms.Button();
             this.btnFecharPesqPac = new System.Windows.Forms.Button();
+            this.btnIncluirAgenda = new System.Windows.Forms.Button();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Pacientes)).BeginInit();
             this.SuspendLayout();
@@ -42,18 +43,19 @@
             // txbConsultarPaciente
             // 
             this.txbConsultarPaciente.ForeColor = System.Drawing.Color.Silver;
-            this.txbConsultarPaciente.Location = new System.Drawing.Point(6, 39);
+            this.txbConsultarPaciente.Location = new System.Drawing.Point(9, 30);
             this.txbConsultarPaciente.MaxLength = 50;
             this.txbConsultarPaciente.Name = "txbConsultarPaciente";
             this.txbConsultarPaciente.Size = new System.Drawing.Size(519, 22);
             this.txbConsultarPaciente.TabIndex = 44;
             this.txbConsultarPaciente.Text = "Insira nome do paciente";
-            this.txbConsultarPaciente.Click += new System.EventHandler(this.txbConsultarPaciente_Click);
             this.txbConsultarPaciente.TextChanged += new System.EventHandler(this.txbConsultarPaciente_TextChanged);
+            this.txbConsultarPaciente.Enter += new System.EventHandler(this.txbConsultarPaciente_Enter);
             // 
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.btnIncluirAgenda);
             this.grpConsultaPaciente.Controls.Add(this.dgv_Pacientes);
             this.grpConsultaPaciente.Controls.Add(this.btnExcluirPaciente);
             this.grpConsultaPaciente.Controls.Add(this.btnEditarPaciente);
@@ -78,7 +80,7 @@
             // btnExcluirPaciente
             // 
             this.btnExcluirPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirPaciente.Location = new System.Drawing.Point(173, 569);
+            this.btnExcluirPaciente.Location = new System.Drawing.Point(249, 569);
             this.btnExcluirPaciente.Name = "btnExcluirPaciente";
             this.btnExcluirPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirPaciente.TabIndex = 53;
@@ -89,7 +91,7 @@
             // btnEditarPaciente
             // 
             this.btnEditarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarPaciente.Location = new System.Drawing.Point(90, 569);
+            this.btnEditarPaciente.Location = new System.Drawing.Point(168, 569);
             this.btnEditarPaciente.Name = "btnEditarPaciente";
             this.btnEditarPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnEditarPaciente.TabIndex = 52;
@@ -124,6 +126,17 @@
             this.btnFecharPesqPac.UseVisualStyleBackColor = false;
             this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
             // 
+            // btnIncluirAgenda
+            // 
+            this.btnIncluirAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncluirAgenda.Location = new System.Drawing.Point(87, 569);
+            this.btnIncluirAgenda.Name = "btnIncluirAgenda";
+            this.btnIncluirAgenda.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluirAgenda.TabIndex = 55;
+            this.btnIncluirAgenda.Text = "Incluir";
+            this.btnIncluirAgenda.UseVisualStyleBackColor = true;
+            this.btnIncluirAgenda.Click += new System.EventHandler(this.btnIncluirAgenda_Click);
+            // 
             // frmConsultarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -152,5 +165,6 @@
         private System.Windows.Forms.Button btnEditarPaciente;
         private System.Windows.Forms.Button btnIncuirPaciente;
         private System.Windows.Forms.DataGridView dgv_Pacientes;
+        private System.Windows.Forms.Button btnIncluirAgenda;
     }
 }

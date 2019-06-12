@@ -37,9 +37,7 @@ namespace enfunip.apresentacao
 
             if (confirm.ToString().ToUpper() == "YES")
             {
-                txbProduto.Clear();
-                nudQtdProduto.ResetText();
-                txbObsProduto.Clear();
+                ApagarTodosCampos();
             }
         }
 
@@ -55,14 +53,30 @@ namespace enfunip.apresentacao
             dadosItem.Add(txbObsProduto.Text);
 
             estoque.CadastrarItem(dadosItem);
-            MessageBox.Show(estoque.mensagem); 
+            MessageBox.Show(estoque.mensagem);
 
+            DialogResult confirm = MessageBox.Show("Deseja realizar um novo cadastro de produto?", "Novo Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                ApagarTodosCampos();
+            }
+            else
+            {
+                this.Close();
+            }
 
         }
 
         private void grpCadastrarProduto_Enter(object sender, EventArgs e)
         {
 
+        }
+        private void ApagarTodosCampos()
+        {
+            txbProduto.Clear();
+            nudQtdProduto.ResetText();
+            txbObsProduto.Clear();
         }
     }
 }

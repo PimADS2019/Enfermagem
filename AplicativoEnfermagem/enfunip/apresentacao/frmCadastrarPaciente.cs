@@ -21,7 +21,7 @@ namespace enfunip.apresentacao
 
         private void timer_CadastroPaciente_Tick(object sender, EventArgs e)
         {
-           
+
         }
 
         private void pbr_Cadastro_Click(object sender, EventArgs e)
@@ -45,27 +45,27 @@ namespace enfunip.apresentacao
 
         private void ckbxCardiovascular_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void chkMusculoEsqueletica_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void chkNeurologica_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void chkRespiratoria_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void chkSexual_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void chkOutros_CheckedChanged(object sender, EventArgs e)
@@ -80,21 +80,21 @@ namespace enfunip.apresentacao
                 txbOutros.Enabled = false;
             }
         }
-     
+
 
         private void chkTabagismo_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void chkEtilismo_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void chkHospitalizacao_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void chkRenal_CheckedChanged(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace enfunip.apresentacao
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txbNome.Text) || string.IsNullOrWhiteSpace(txbCpf.Text) ||
-                string.IsNullOrWhiteSpace(txbEndereco.Text) || string.IsNullOrWhiteSpace (txbNumeroEndereco.Text) || 
+                string.IsNullOrWhiteSpace(txbEndereco.Text) || string.IsNullOrWhiteSpace(txbNumeroEndereco.Text) ||
                 string.IsNullOrWhiteSpace(txbCidade.Text) || string.IsNullOrWhiteSpace(txbBairro.Text) ||
                 string.IsNullOrWhiteSpace(cboEstado.Text) || string.IsNullOrWhiteSpace(txbCep.Text) ||
                 string.IsNullOrWhiteSpace(cboSexo.Text) || string.IsNullOrWhiteSpace(txbEmail.Text) ||
@@ -162,7 +162,17 @@ namespace enfunip.apresentacao
                 controlePaciente.CadastrarPaciente(dadosPaciente);
 
                 MessageBox.Show(controlePaciente.mensagem);
-            
+
+                DialogResult confirm = MessageBox.Show("Deseja realizar um novo cadastro?", "Novo Paciente", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+                    ApagarTodosCampos();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
         }
 
@@ -170,7 +180,7 @@ namespace enfunip.apresentacao
 
         private void chkDormeMedicação_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void tsmiCancelar_Click(object sender, EventArgs e)
@@ -211,81 +221,8 @@ namespace enfunip.apresentacao
                 ApagarMsgErro();
                 lblCampoObrig.Visible = false;
 
-                // DADOS DO PACIENTE
-
-                txbNome.Clear();
-                dtpNascimento.Text = "";
-                txbCpf.Clear();
-                txbEndereco.Clear();
-                txbNumeroEndereco.Clear();
-                txbComplemento.Clear();
-                txbCidade.Clear();
-                txbBairro.Clear();
-                cboEstado.Text = "";
-                txbCep.Clear();
-                cboSexo.Text = "";
-                cboEstadoCivil.Text = "";
-                txbReligiao.Clear();
-                nudFilhos.ResetText();
-                txbEmail.Clear();
-                txbCelular.Clear();
-                txbTelefone.Clear();
-
-                // HISTÓRICO - COMORBIDADES
-
-                chkTabagismo.Checked = false;
-                chkEtilismo.Checked = false;
-                chkDiabetes.Checked = false;
-                chkDislipidemias.Checked = false;
-                chkCardiovascular.Checked = false;
-                chkMusculoEsqueletica.Checked = false;
-                chkNeurologica.Checked = false;
-                chkRespiratoria.Checked = false;
-                chkRenal.Checked = false;
-                chkSexual.Checked = false;
-                chkOutros.Checked = false;
-
-                // HISTÓRICO - CONDIÇÕES FREQUENTES
-
-                chkIncontinenciaUrinaria.Checked = false;
-                chkIncontinenciaFecal.Checked = false;
-                chkDemencia.Checked = false;
-                chkQueda.Checked = false;
-                chkHospitalizacao.Checked = false;
-
-                // HISTÓRICO - FAMILIAR
-
-                chkDiabetesFamiliar.Checked = false;
-                chkRenalFamiliar.Checked = false;
-                chkDislipidemiasFamiliar.Checked = false;
-                chkNeurologicaFamiliar.Checked = false;
-                chkCardiovascularFamiliar.Checked = false;
-                chkOutrosFamiliar.Checked = false;
-
-                // HÁBITOS - ALIMENTAÇÃO
-
-                chkFrutas.Checked = false;
-                chkLeiteDerivados.Checked = false;
-                chkLeguminosasVerduras.Checked = false;
-                chkProteinas.Checked = false;
-                chkMassas.Checked = false;
-                chkLiquidos.Checked = false;
-
-                // HÁBITOS - SONO
-
-                radDormeBem.Checked = false;
-                radDormePouco.Checked = false;
-                chkDormeMedicação.Checked = false;
-                chkPraticaAtvFisc.Checked = false;
-                nudAtivFis.ResetText();
-
-                // HÁBITOS - VIDA SEXUAL
-
-                chkSexualAtivo.Checked = false;
-                chkMultParceiros.Checked = false;
+                ApagarTodosCampos();
             }
-
-
         }
 
         private void chkPraticaAtvFisc_CheckedChanged(object sender, EventArgs e)
@@ -297,7 +234,7 @@ namespace enfunip.apresentacao
             else
                 nudAtivFis.Enabled = false;
         }
-        
+
         // Verificação dos Campos Obrigatórios com ErrorProvider
         private bool VerificarCampos()
         {
@@ -375,6 +312,81 @@ namespace enfunip.apresentacao
             errorProvider.SetError(cboSexo, "");
             errorProvider.SetError(txbEmail, "");
             errorProvider.SetError(txbCelular, "");
+        }
+        private void ApagarTodosCampos()
+        {
+            // DADOS DO PACIENTE
+
+            txbNome.Clear();
+            dtpNascimento.Text = "";
+            txbCpf.Clear();
+            txbEndereco.Clear();
+            txbNumeroEndereco.Clear();
+            txbComplemento.Clear();
+            txbCidade.Clear();
+            txbBairro.Clear();
+            cboEstado.Text = "";
+            txbCep.Clear();
+            cboSexo.Text = "";
+            cboEstadoCivil.Text = "";
+            txbReligiao.Clear();
+            nudFilhos.ResetText();
+            txbEmail.Clear();
+            txbCelular.Clear();
+            txbTelefone.Clear();
+
+            // HISTÓRICO - COMORBIDADES
+
+            chkTabagismo.Checked = false;
+            chkEtilismo.Checked = false;
+            chkDiabetes.Checked = false;
+            chkDislipidemias.Checked = false;
+            chkCardiovascular.Checked = false;
+            chkMusculoEsqueletica.Checked = false;
+            chkNeurologica.Checked = false;
+            chkRespiratoria.Checked = false;
+            chkRenal.Checked = false;
+            chkSexual.Checked = false;
+            chkOutros.Checked = false;
+
+            // HISTÓRICO - CONDIÇÕES FREQUENTES
+
+            chkIncontinenciaUrinaria.Checked = false;
+            chkIncontinenciaFecal.Checked = false;
+            chkDemencia.Checked = false;
+            chkQueda.Checked = false;
+            chkHospitalizacao.Checked = false;
+
+            // HISTÓRICO - FAMILIAR
+
+            chkDiabetesFamiliar.Checked = false;
+            chkRenalFamiliar.Checked = false;
+            chkDislipidemiasFamiliar.Checked = false;
+            chkNeurologicaFamiliar.Checked = false;
+            chkCardiovascularFamiliar.Checked = false;
+            chkOutrosFamiliar.Checked = false;
+
+            // HÁBITOS - ALIMENTAÇÃO
+
+            chkFrutas.Checked = false;
+            chkLeiteDerivados.Checked = false;
+            chkLeguminosasVerduras.Checked = false;
+            chkProteinas.Checked = false;
+            chkMassas.Checked = false;
+            chkLiquidos.Checked = false;
+
+            // HÁBITOS - SONO
+
+            radDormeBem.Checked = false;
+            radDormePouco.Checked = false;
+            chkDormeMedicação.Checked = false;
+            chkPraticaAtvFisc.Checked = false;
+            nudAtivFis.ResetText();
+
+            // HÁBITOS - VIDA SEXUAL
+
+            chkSexualAtivo.Checked = false;
+            chkMultParceiros.Checked = false;
         }
     }
 }
