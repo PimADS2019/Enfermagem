@@ -17,12 +17,19 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"insert into Agendamento (Paciente, DataHoraAgendamento, LocalAgendamento, ObsAgendamento)
-                                    values (@Paciente,@DataHoraAgendamento, @LocalAgendamento, @ObsAgendamento)";
-            cmd.Parameters.AddWithValue("@Paciente", agenda.nomePaciente);
-            cmd.Parameters.AddWithValue("@DataHoraAgendamento", agenda.dataHoraAgendamento);
-            cmd.Parameters.AddWithValue("@LocalAgendamento", agenda.localAgendamento);
-            cmd.Parameters.AddWithValue("@ObsAgendamento", agenda.obsAgendamento);
+            cmd.CommandText = @"Insert into Atendimentos (DescricaoAtendimento, Fk_Pacientes_IdPaciente)
+                                Values (@DescricaoAtendimento, @IdPaciente )
+                                Declare @id_Atendimento int=@@identity
+                                
+                                Insert into LogConsultas (LocalAtendimento, DataHrMarcada, Fk_Atendimentos_IdAtendimento)
+                                Values (@LocalAtendimento, @DataHrMarcada, @id_Atendimento )";
+                                
+
+
+            cmd.Parameters.AddWithValue("@LocalAtendimento", agenda.localAgendamento);
+            cmd.Parameters.AddWithValue("@DataHrMarcada", agenda.dataHoraAgendamento);
+            cmd.Parameters.AddWithValue("@DescricaoAtendimento", agenda.obsAgendamento);
+            cmd.Parameters.AddWithValue("@IdPaciente", agenda.Id);
             try
             {
                 cmd.Connection = conexaoBD.Conectar();
@@ -43,7 +50,24 @@ namespace enfunip.dao
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexaoBD.Conectar();
-                cmd = new SqlCommand("select * from Agendamento", cmd.Connection);
+                cmd = new SqlCommand(@"select Nome, Cpf, LocalAtendimento, DataHrMarcada, DescricaoAtendimento from
+                                    (
+                                        Select IdAtendimento, LocalAtendimento, DataHrMarcada, DescricaoAtendimento, Fk_Pacientes_IdPaciente, Fk_Pessoas_IdPessoa from
+                                        (
+                                            Select IdAtendimento, LocalAtendimento, DataHrMarcada, DescricaoAtendimento, Fk_Pacientes_IdPaciente, Fk_Atendimentos_IdAtendimento from Atendimentos
+                                            inner join LogConsultas
+
+                                            on Atendimentos.IdAtendimento = LogConsultas.Fk_Atendimentos_IdAtendimento
+
+                                        ) as Atendimentos_LogConsulta
+
+                                        inner join Pacientes
+
+                                        on Pacientes.IdPaciente = Atendimentos_LogConsulta.Fk_Pacientes_IdPaciente
+                                    ) as Atendimento_Paciente
+
+                                    inner join Pessoas
+                                    on Pessoas.IdPessoa = Atendimento_Paciente.Fk_Pessoas_IdPessoa", cmd.Connection);
 
                 SqlDataAdapter da = new SqlDataAdapter();
                 DataTable dt = new DataTable();

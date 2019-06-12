@@ -14,8 +14,9 @@ namespace enfunip.modelo.validacoes
         public void ValidarDados(List<String> dadosAgenda)
         {
             this.mensagem = "";
-            if (Convert.ToDateTime(dadosAgenda[1]).Date < DateTime.Now)
-                this.mensagem += "Data de agendamento não pode ser menor do que hoje\n";
+
+            //if (Convert.ToDateTime(dadosAgenda[1]).Date < DateTime.Now)
+                //this.mensagem += "Data de agendamento não pode ser menor do que hoje\n";
             if (dadosAgenda[1].Length > 20)
                 this.mensagem = "Local com mais de 20 caracteres \n";
             if (dadosAgenda[3].Length > 300)

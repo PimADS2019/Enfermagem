@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgendamento));
             this.mclDiasAgendados = new System.Windows.Forms.MonthCalendar();
             this.grpAgendamento = new System.Windows.Forms.GroupBox();
-            this.mtxDataHoraAgenda = new System.Windows.Forms.MaskedTextBox();
+            this.mtxDataHoraAgenda = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCampoObrigatorio = new System.Windows.Forms.Label();
@@ -93,14 +93,12 @@
             // 
             // mtxDataHoraAgenda
             // 
-            this.errorProvider.SetIconPadding(this.mtxDataHoraAgenda, -17);
+            this.mtxDataHoraAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mtxDataHoraAgenda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.mtxDataHoraAgenda.Location = new System.Drawing.Point(17, 92);
-            this.mtxDataHoraAgenda.Mask = "00/00/0000 90:00";
             this.mtxDataHoraAgenda.Name = "mtxDataHoraAgenda";
-            this.mtxDataHoraAgenda.Size = new System.Drawing.Size(115, 22);
-            this.mtxDataHoraAgenda.TabIndex = 3;
-            this.mtxDataHoraAgenda.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.mtxDataHoraAgenda.ValidatingType = typeof(System.DateTime);
+            this.mtxDataHoraAgenda.Size = new System.Drawing.Size(102, 22);
+            this.mtxDataHoraAgenda.TabIndex = 125;
             // 
             // label3
             // 
@@ -269,7 +267,7 @@
             this.dgvAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAgendamentos.Location = new System.Drawing.Point(17, 56);
             this.dgvAgendamentos.Name = "dgvAgendamentos";
-            this.dgvAgendamentos.Size = new System.Drawing.Size(785, 277);
+            this.dgvAgendamentos.Size = new System.Drawing.Size(584, 277);
             this.dgvAgendamentos.TabIndex = 52;
             // 
             // errorProvider
@@ -349,8 +347,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCampoObrigatorio;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.MaskedTextBox mtxDataHoraAgenda;
         private System.Windows.Forms.GroupBox grpAgendamentos;
         private System.Windows.Forms.TextBox txbConsultarAgendamento;
+        private System.Windows.Forms.DateTimePicker mtxDataHoraAgenda;
     }
 }

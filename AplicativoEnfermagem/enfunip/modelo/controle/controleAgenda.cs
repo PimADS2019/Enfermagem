@@ -20,6 +20,8 @@ namespace enfunip.modelo.controle
             if (validaragenda.mensagem.Equals(""))
             {
                 Agenda agenda = new Agenda();
+
+                agenda.Id = validaragenda.id;
                 agenda.nomePaciente = dadosAgenda[1];
                 agenda.dataHoraAgendamento = Convert.ToDateTime(dadosAgenda[2]);
                 agenda.localAgendamento = dadosAgenda[3];

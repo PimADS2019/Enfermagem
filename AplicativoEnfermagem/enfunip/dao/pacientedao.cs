@@ -159,11 +159,11 @@ namespace enfunip.dao
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexaoBD.Conectar();
 
-                cmd.CommandText = @"select IdPessoa, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone from
+                cmd.CommandText = @"select IdPaciente, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone from
 	                            (
-		                            select IdPessoa, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep from
+		                            select IdPessoa, IdPaciente, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep from
 		                            (
-			                            SELECT IdPessoa, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Fk_Pessoas_IdPessoa FROM Pessoas
+			                            SELECT IdPessoa, IdPaciente, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Fk_Pessoas_IdPessoa FROM Pessoas
 			                            inner join Pacientes
 			                            on Pessoas.IdPessoa = Pacientes.Fk_Pessoas_IdPessoa
 		                            ) as Pessoas_pacientes

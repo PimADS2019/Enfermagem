@@ -83,7 +83,8 @@ namespace enfunip.apresentacao
 
         private void btnIncluirAgenda_Click(object sender, EventArgs e)
         {
-            Estaticos.IncluirId = dgv_Pacientes.CurrentRow.Cells[1].Value.ToString();
+            Estaticos.IncluirId = dgv_Pacientes.CurrentRow.Cells[0].Value.ToString();
+            Estaticos.IncluirNome = dgv_Pacientes.CurrentRow.Cells[1].Value.ToString();
              
             this.Close();
 

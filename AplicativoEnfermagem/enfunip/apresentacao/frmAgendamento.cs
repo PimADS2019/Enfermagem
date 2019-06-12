@@ -79,6 +79,7 @@ namespace enfunip.apresentacao
 
                 List<String> dadosAgenda = new List<string>();
 
+                dadosAgenda.Add(Estaticos.IncluirId);
                 dadosAgenda.Add(txbPacienteAgenda.Text);
                 dadosAgenda.Add(mtxDataHoraAgenda.Text);
                 dadosAgenda.Add(txbLocalAgendamento.Text);
@@ -153,14 +154,13 @@ namespace enfunip.apresentacao
         private void ApagarTodosCampos()
         {
             txbPacienteAgenda.Clear();
-            mtxDataHoraAgenda.Clear();
             txbLocalAgendamento.Clear();
             txbObsAgenda.Clear();
         }
 
         private void txbPacienteAgenda_Enter(object sender, EventArgs e)
         {
-            txbPacienteAgenda.Text = Estaticos.IncluirId;
+            txbPacienteAgenda.Text = Estaticos.IncluirNome;
         }
     }
 }

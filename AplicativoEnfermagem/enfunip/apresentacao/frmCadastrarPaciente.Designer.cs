@@ -66,6 +66,18 @@
             this.tbcCadastroPaciente = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.grpDadosPaciente = new System.Windows.Forms.GroupBox();
+            this.lblCampoObrigatorio11 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio10 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio9 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio8 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio7 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio6 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio5 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio4 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio3 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio2 = new System.Windows.Forms.Label();
+            this.lblCampoObrigatorio = new System.Windows.Forms.Label();
+            this.lblCampoObrig = new System.Windows.Forms.Label();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.nudFilhos = new System.Windows.Forms.NumericUpDown();
@@ -120,19 +132,7 @@
             this.tsmiSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblCampoObrig = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblCampoObrigatorio = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio2 = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio3 = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio4 = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio5 = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio6 = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio7 = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio8 = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio9 = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio10 = new System.Windows.Forms.Label();
-            this.lblCampoObrigatorio11 = new System.Windows.Forms.Label();
             this.tbcCadastroPaciente.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.grpDadosPaciente.SuspendLayout();
@@ -422,6 +422,78 @@
             this.grpDadosPaciente.Name = "grpDadosPaciente";
             this.grpDadosPaciente.TabStop = false;
             this.grpDadosPaciente.Enter += new System.EventHandler(this.grpDadosPaciente_Enter);
+            // 
+            // lblCampoObrigatorio11
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio11, "lblCampoObrigatorio11");
+            this.lblCampoObrigatorio11.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio11.Name = "lblCampoObrigatorio11";
+            // 
+            // lblCampoObrigatorio10
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio10, "lblCampoObrigatorio10");
+            this.lblCampoObrigatorio10.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio10.Name = "lblCampoObrigatorio10";
+            // 
+            // lblCampoObrigatorio9
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio9, "lblCampoObrigatorio9");
+            this.lblCampoObrigatorio9.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio9.Name = "lblCampoObrigatorio9";
+            // 
+            // lblCampoObrigatorio8
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio8, "lblCampoObrigatorio8");
+            this.lblCampoObrigatorio8.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio8.Name = "lblCampoObrigatorio8";
+            // 
+            // lblCampoObrigatorio7
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio7, "lblCampoObrigatorio7");
+            this.lblCampoObrigatorio7.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio7.Name = "lblCampoObrigatorio7";
+            // 
+            // lblCampoObrigatorio6
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio6, "lblCampoObrigatorio6");
+            this.lblCampoObrigatorio6.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio6.Name = "lblCampoObrigatorio6";
+            // 
+            // lblCampoObrigatorio5
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio5, "lblCampoObrigatorio5");
+            this.lblCampoObrigatorio5.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio5.Name = "lblCampoObrigatorio5";
+            // 
+            // lblCampoObrigatorio4
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio4, "lblCampoObrigatorio4");
+            this.lblCampoObrigatorio4.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio4.Name = "lblCampoObrigatorio4";
+            // 
+            // lblCampoObrigatorio3
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio3, "lblCampoObrigatorio3");
+            this.lblCampoObrigatorio3.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio3.Name = "lblCampoObrigatorio3";
+            // 
+            // lblCampoObrigatorio2
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio2, "lblCampoObrigatorio2");
+            this.lblCampoObrigatorio2.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio2.Name = "lblCampoObrigatorio2";
+            // 
+            // lblCampoObrigatorio
+            // 
+            resources.ApplyResources(this.lblCampoObrigatorio, "lblCampoObrigatorio");
+            this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
+            // 
+            // lblCampoObrig
+            // 
+            resources.ApplyResources(this.lblCampoObrig, "lblCampoObrig");
+            this.lblCampoObrig.ForeColor = System.Drawing.Color.Red;
+            this.lblCampoObrig.Name = "lblCampoObrig";
             // 
             // dtpNascimento
             // 
@@ -845,82 +917,10 @@
             resources.ApplyResources(this.tsmiCancelar, "tsmiCancelar");
             this.tsmiCancelar.Click += new System.EventHandler(this.tsmiCancelar_Click);
             // 
-            // lblCampoObrig
-            // 
-            resources.ApplyResources(this.lblCampoObrig, "lblCampoObrig");
-            this.lblCampoObrig.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrig.Name = "lblCampoObrig";
-            // 
             // errorProvider
             // 
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
-            // 
-            // lblCampoObrigatorio
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio, "lblCampoObrigatorio");
-            this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
-            // 
-            // lblCampoObrigatorio2
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio2, "lblCampoObrigatorio2");
-            this.lblCampoObrigatorio2.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio2.Name = "lblCampoObrigatorio2";
-            // 
-            // lblCampoObrigatorio3
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio3, "lblCampoObrigatorio3");
-            this.lblCampoObrigatorio3.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio3.Name = "lblCampoObrigatorio3";
-            // 
-            // lblCampoObrigatorio4
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio4, "lblCampoObrigatorio4");
-            this.lblCampoObrigatorio4.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio4.Name = "lblCampoObrigatorio4";
-            // 
-            // lblCampoObrigatorio5
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio5, "lblCampoObrigatorio5");
-            this.lblCampoObrigatorio5.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio5.Name = "lblCampoObrigatorio5";
-            // 
-            // lblCampoObrigatorio6
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio6, "lblCampoObrigatorio6");
-            this.lblCampoObrigatorio6.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio6.Name = "lblCampoObrigatorio6";
-            // 
-            // lblCampoObrigatorio7
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio7, "lblCampoObrigatorio7");
-            this.lblCampoObrigatorio7.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio7.Name = "lblCampoObrigatorio7";
-            // 
-            // lblCampoObrigatorio8
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio8, "lblCampoObrigatorio8");
-            this.lblCampoObrigatorio8.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio8.Name = "lblCampoObrigatorio8";
-            // 
-            // lblCampoObrigatorio9
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio9, "lblCampoObrigatorio9");
-            this.lblCampoObrigatorio9.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio9.Name = "lblCampoObrigatorio9";
-            // 
-            // lblCampoObrigatorio10
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio10, "lblCampoObrigatorio10");
-            this.lblCampoObrigatorio10.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio10.Name = "lblCampoObrigatorio10";
-            // 
-            // lblCampoObrigatorio11
-            // 
-            resources.ApplyResources(this.lblCampoObrigatorio11, "lblCampoObrigatorio11");
-            this.lblCampoObrigatorio11.ForeColor = System.Drawing.Color.Red;
-            this.lblCampoObrigatorio11.Name = "lblCampoObrigatorio11";
             // 
             // frmCadastrarPaciente
             // 
