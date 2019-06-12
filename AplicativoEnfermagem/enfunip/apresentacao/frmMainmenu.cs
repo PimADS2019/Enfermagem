@@ -164,6 +164,15 @@ namespace enfunip.apresentacao
             frmCadastrarFuncionario.ShowDialog();
         }
 
+        private void tmiManual_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Users\Vinicius\Documents\GitHub\Enfermagem\Manual\manual.pdf");
+        }
 
+        private void tmiSobre_Click(object sender, EventArgs e)
+        {
+            frmSobre frmSobre = new frmSobre();
+            frmSobre.ShowDialog();
+        }
     }
 }

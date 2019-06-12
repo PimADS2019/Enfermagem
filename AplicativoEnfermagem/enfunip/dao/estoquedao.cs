@@ -31,7 +31,7 @@ namespace enfunip.dao
                 cmd.Connection = conexaoBD.Conectar();
                 cmd.ExecuteNonQuery();
                 conexaoBD.Desconectar();
-                this.mensagem = "Estoque cadastrado com sucesso !!!!!";
+                this.mensagem = "Produto cadastrado com sucesso!";
             }
             catch (SqlException e)
             {
@@ -56,7 +56,7 @@ namespace enfunip.dao
                 cmd.Connection = conexaoBD.Conectar();
                 cmd.ExecuteNonQuery();
                 conexaoBD.Desconectar();
-                this.mensagem = "Estoque editado com sucesso !!!!!";
+                this.mensagem = "Produto editado com sucesso!";
             }
             catch (SqlException e)
             {
@@ -75,7 +75,7 @@ namespace enfunip.dao
                 cmd.Connection = conexaoBD.Conectar();
                 cmd.ExecuteNonQuery();
                 conexaoBD.Desconectar();
-                this.mensagem = "estoque excluída com sucesso !!!!!";
+                this.mensagem = "Produto excluído com sucesso!";
             }
             catch (SqlException e)
             {

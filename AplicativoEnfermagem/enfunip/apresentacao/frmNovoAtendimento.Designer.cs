@@ -149,6 +149,7 @@
             this.tsmiSalvar.Name = "tsmiSalvar";
             this.tsmiSalvar.Size = new System.Drawing.Size(69, 20);
             this.tsmiSalvar.Text = "Salvar";
+            this.tsmiSalvar.Click += new System.EventHandler(this.tsmiSalvar_Click);
             // 
             // tsmiLimpar
             // 

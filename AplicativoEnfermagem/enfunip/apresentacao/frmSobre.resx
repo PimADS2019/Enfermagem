@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblSobre.Text" xml:space="preserve">
+    <value>Este é um programa de gerenciamento criado para auxiliar 
+o gerenciamento de recursos e atividades dos enfermeiros 
+e alunos de enfermagem da UNIP.
+Criado pelos alunos de Análise e Desenvolvimento de Sistema
+do 2º e 3º semestre do primeiro semestre de 2019.</value>
+  </data>
 </root>

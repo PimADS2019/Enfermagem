@@ -42,5 +42,10 @@ namespace enfunip.apresentacao
                 txbObsAtendimento.Clear();
             }
         }
+
+        private void tsmiSalvar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Atendimento cadastrado com sucesso!");
+        }
     }
 }

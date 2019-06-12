@@ -25,22 +25,12 @@ namespace enfunip.apresentacao
 
         private void btnIncuirProduto_Click(object sender, EventArgs e)
         {
-            frmCadastrarProduto frmCadastrarProduto = new frmCadastrarProduto();
-            frmCadastrarProduto.ShowDialog();
+
         }
 
         private void btnPesqPac_Click(object sender, EventArgs e)
         {
             
-        }
-
-        private void FrmListarEstoque_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'pimEnfermagem2019DataSet1.Estoques'. Você pode movê-la ou removê-la conforme necessário.
-            this.estoquesTableAdapter.Fill(this.pimEnfermagem2019DataSet1.Estoques);
-           
-       
-
         }
 
         private void Pesquisar (Estoque estoque)
@@ -84,11 +74,29 @@ namespace enfunip.apresentacao
 
                 MessageBox.Show(controleEstoque.mensagem);
 
-                this.estoquesTableAdapter.Fill(this.pimEnfermagem2019DataSet1.Estoques); // < FAZ A ATUALIZAÇÃO DA LISTAGEM DE PRODUTOS APÓS A EXCLUSÃO
+                dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
             }
         }
 
         private void dgv_ListaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnCadProduto_Click(object sender, EventArgs e)
+        {
+            frmCadastrarProduto frmCadastrarProduto = new frmCadastrarProduto();
+            frmCadastrarProduto.ShowDialog();
+        }
+
+        private void frmListarEstoque_Load(object sender, EventArgs e)
+        {
+            modelo.controle.controleEstoque controleEstoque = new modelo.controle.controleEstoque();
+
+            dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
+        }
+
+        private void frmListarEstoque_Enter(object sender, EventArgs e)
         {
 
         }

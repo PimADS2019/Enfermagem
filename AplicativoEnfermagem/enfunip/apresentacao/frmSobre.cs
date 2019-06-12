@@ -16,5 +16,10 @@ namespace enfunip.apresentacao
         {
             InitializeComponent();
         }
+
+        private void BtnFecharPesqPac_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

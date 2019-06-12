@@ -20,27 +20,6 @@ namespace enfunip
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             ControleLogin controle = new ControleLogin(txbUsuario.Text,txbSenha.Text);
@@ -53,26 +32,6 @@ namespace enfunip
             {
                 MessageBox.Show(controle.Mensagem);
             }
-
-        }
-
-        private void txbSenha_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void txbUsuario_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void txbSenha_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void txbSenha_TextChanged_1(object sender, EventArgs e)
-        {
 
         }
 
@@ -99,9 +58,24 @@ namespace enfunip
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void txbUsuario_Enter(object sender, EventArgs e)
+        {
+            txbUsuario.Clear();
+            txbUsuario.ForeColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void txbSenha_Enter(object sender, EventArgs e)
+        {
+            txbSenha.Clear();
+            txbSenha.ForeColor = Color.FromArgb(0, 0, 0);
+            txbSenha.PasswordChar = '•';
+        }
+
+
     }
 }

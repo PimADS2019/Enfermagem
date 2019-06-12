@@ -60,7 +60,7 @@ namespace enfunip.dao
             }
             catch (Exception)
             {
-                this.mensagem = "Login ou Senha Invalidos";
+                this.mensagem = "Login e/ou Senha Invalidos";
             }
 
         }

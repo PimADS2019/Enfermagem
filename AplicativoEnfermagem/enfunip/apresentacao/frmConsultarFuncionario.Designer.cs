@@ -83,12 +83,16 @@
             this.cboTipoFuncionario.Size = new System.Drawing.Size(121, 24);
             this.cboTipoFuncionario.TabIndex = 52;
             this.cboTipoFuncionario.Text = "Aluno";
+            this.cboTipoFuncionario.Enter += new System.EventHandler(this.cboTipoFuncionario_Enter);
             // 
             // dgv_Funcionarios
             // 
+            this.dgv_Funcionarios.AllowUserToAddRows = false;
+            this.dgv_Funcionarios.AllowUserToDeleteRows = false;
             this.dgv_Funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Funcionarios.Location = new System.Drawing.Point(9, 96);
             this.dgv_Funcionarios.Name = "dgv_Funcionarios";
+            this.dgv_Funcionarios.ReadOnly = true;
             this.dgv_Funcionarios.Size = new System.Drawing.Size(675, 466);
             this.dgv_Funcionarios.TabIndex = 51;
             // 
@@ -120,7 +124,7 @@
             this.btnIncuirFuncionario.Name = "btnIncuirFuncionario";
             this.btnIncuirFuncionario.Size = new System.Drawing.Size(75, 23);
             this.btnIncuirFuncionario.TabIndex = 48;
-            this.btnIncuirFuncionario.Text = "Incluir";
+            this.btnIncuirFuncionario.Text = "Cadastrar";
             this.btnIncuirFuncionario.UseVisualStyleBackColor = true;
             this.btnIncuirFuncionario.Click += new System.EventHandler(this.btnIncuirFuncionario_Click);
             // 
@@ -166,6 +170,7 @@
             this.Name = "frmConsultarFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmConsultarFuncionario";
+            this.Load += new System.EventHandler(this.frmConsultarFuncionario_Load);
             this.grpConsultaPaciente.ResumeLayout(false);
             this.grpConsultaPaciente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Funcionarios)).EndInit();

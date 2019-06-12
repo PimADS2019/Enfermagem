@@ -49,15 +49,15 @@
             this.txbUsuario.BackColor = System.Drawing.Color.Beige;
             this.txbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbUsuario.ForeColor = System.Drawing.Color.Black;
+            this.txbUsuario.ForeColor = System.Drawing.Color.Silver;
             this.txbUsuario.HideSelection = false;
             this.txbUsuario.Location = new System.Drawing.Point(56, 187);
             this.txbUsuario.MaxLength = 20;
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(204, 19);
-            this.txbUsuario.TabIndex = 1;
-            this.txbUsuario.Click += new System.EventHandler(this.txbUsuario_Click);
-            this.txbUsuario.TextChanged += new System.EventHandler(this.txbUsuario_TextChanged);
+            this.txbUsuario.TabIndex = 2;
+            this.txbUsuario.Text = "Usuário";
+            this.txbUsuario.Enter += new System.EventHandler(this.txbUsuario_Enter);
             // 
             // btnEntrar
             // 
@@ -69,7 +69,7 @@
             this.btnEntrar.Location = new System.Drawing.Point(69, 318);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(154, 36);
-            this.btnEntrar.TabIndex = 3;
+            this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -97,16 +97,15 @@
             this.txbSenha.BackColor = System.Drawing.Color.Beige;
             this.txbSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSenha.ForeColor = System.Drawing.Color.Black;
+            this.txbSenha.ForeColor = System.Drawing.Color.Silver;
             this.txbSenha.HideSelection = false;
             this.txbSenha.Location = new System.Drawing.Point(56, 239);
             this.txbSenha.MaxLength = 12;
             this.txbSenha.Name = "txbSenha";
-            this.txbSenha.PasswordChar = '•';
             this.txbSenha.Size = new System.Drawing.Size(199, 19);
-            this.txbSenha.TabIndex = 2;
-            this.txbSenha.Click += new System.EventHandler(this.txbSenha_Click);
-            this.txbSenha.TextChanged += new System.EventHandler(this.txbSenha_TextChanged_1);
+            this.txbSenha.TabIndex = 3;
+            this.txbSenha.Text = "Senha";
+            this.txbSenha.Enter += new System.EventHandler(this.txbSenha_Enter);
             this.txbSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSenha_KeyPress_1);
             // 
             // picSenha
@@ -130,7 +129,6 @@
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
-            this.imgLogo.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // picUsuario
             // 
@@ -172,10 +170,10 @@
             this.btnMinimizar.Location = new System.Drawing.Point(230, -2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(25, 39);
-            this.btnMinimizar.TabIndex = 22;
+            this.btnMinimizar.TabIndex = 1;
             this.btnMinimizar.Text = "-";
             this.btnMinimizar.UseVisualStyleBackColor = true;
-            this.btnMinimizar.Click += new System.EventHandler(this.button1_Click);
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // frmLogin
             // 
@@ -199,7 +197,6 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enfermagem Unip";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();

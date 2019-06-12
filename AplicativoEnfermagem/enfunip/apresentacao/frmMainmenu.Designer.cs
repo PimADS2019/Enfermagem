@@ -169,7 +169,7 @@
             // tmiAgendar
             // 
             this.tmiAgendar.Name = "tmiAgendar";
-            this.tmiAgendar.Size = new System.Drawing.Size(180, 22);
+            this.tmiAgendar.Size = new System.Drawing.Size(130, 22);
             this.tmiAgendar.Text = "Agendar";
             this.tmiAgendar.Click += new System.EventHandler(this.tmiAgendar_Click);
             // 
@@ -228,12 +228,14 @@
             this.tmiManual.Name = "tmiManual";
             this.tmiManual.Size = new System.Drawing.Size(180, 22);
             this.tmiManual.Text = "Manual";
+            this.tmiManual.Click += new System.EventHandler(this.tmiManual_Click);
             // 
             // tmiSobre
             // 
             this.tmiSobre.Name = "tmiSobre";
             this.tmiSobre.Size = new System.Drawing.Size(180, 22);
             this.tmiSobre.Text = "Sobre";
+            this.tmiSobre.Click += new System.EventHandler(this.tmiSobre_Click);
             // 
             // toolStripSeparator1
             // 

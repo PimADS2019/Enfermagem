@@ -36,32 +36,7 @@ namespace enfunip.apresentacao
                 ApagarMsgErro();
                 lblCampoObrig.Visible = false;
 
-                ApagarMsgErro();
-                cboTipoUsuario.Text = "";
-                txbUsuario.Clear();
-                txbSenha.Clear();
-                txbConfirmaSenha.Clear();
-                txbNome.Clear();
-                txbCpf.Clear();
-                dtpNascimento.Text = "";
-                txbNumContrato.Clear();
-                txbNumContrato.Enabled = false;
-                cboPeriodo.Text = "";
-                cboPeriodo.Enabled = false;
-                txbRA.Clear();
-                txbRA.Enabled = false;
-                cboSemestre.Text = "";
-                cboSemestre.Enabled = false;
-                txbEndereco.Clear();
-                txbNumeroEndereco.Clear();
-                txbComplemento.Clear();
-                txbCidade.Clear();
-                cboEstado.Text = "";
-                txbBairro.Clear();
-                txbCep.Clear();
-                txbEmail.Clear();
-                txbCelular.Clear();
-                txbTelefone.Clear();
+                ApagarTodosCampos();
             }
         }
 
@@ -116,7 +91,14 @@ namespace enfunip.apresentacao
 
                     MessageBox.Show(controleFuncionario.mensagem);
 
+                    DialogResult confirm = MessageBox.Show("Deseja realizar um novo cadastro?", "Novo Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                    if (confirm.ToString().ToUpper() == "YES")
+                    {
+                        ApagarTodosCampos();
+                    }
                 }
+                    
             }
             
         }
@@ -198,6 +180,35 @@ namespace enfunip.apresentacao
             errorProvider.SetError(txbCpf, "");
             errorProvider.SetError(txbEmail, "");
             errorProvider.SetError(txbCelular, "");
+        }
+
+        private void ApagarTodosCampos()
+        {
+            cboTipoUsuario.Text = "";
+            txbUsuario.Clear();
+            txbSenha.Clear();
+            txbConfirmaSenha.Clear();
+            txbNome.Clear();
+            txbCpf.Clear();
+            dtpNascimento.Text = "";
+            txbNumContrato.Clear();
+            txbNumContrato.Enabled = false;
+            cboPeriodo.Text = "";
+            cboPeriodo.Enabled = false;
+            txbRA.Clear();
+            txbRA.Enabled = false;
+            cboSemestre.Text = "";
+            cboSemestre.Enabled = false;
+            txbEndereco.Clear();
+            txbNumeroEndereco.Clear();
+            txbComplemento.Clear();
+            txbCidade.Clear();
+            cboEstado.Text = "";
+            txbBairro.Clear();
+            txbCep.Clear();
+            txbEmail.Clear();
+            txbCelular.Clear();
+            txbTelefone.Clear();
         }
     }
 }

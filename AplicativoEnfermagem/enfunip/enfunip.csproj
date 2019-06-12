@@ -113,7 +113,7 @@
     <Compile Include="apresentacao\frmSobre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmSobre.Designer.cs">
+    <Compile Include="apresentacao\frmSobre.designer.cs">
       <DependentUpon>frmSobre.cs</DependentUpon>
     </Compile>
     <Compile Include="dao\agendadao.cs" />

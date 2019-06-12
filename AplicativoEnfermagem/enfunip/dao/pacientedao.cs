@@ -62,7 +62,7 @@ namespace enfunip.dao
                 cmd.Connection = conexaoBD.Conectar();
                 cmd.ExecuteNonQuery();
                 conexaoBD.Desconectar();
-                this.mensagem = "Paciente cadastrado com sucesso !!!!!";
+                this.mensagem = "Paciente cadastrado com sucesso!";
             }
             catch (SqlException e)
             {

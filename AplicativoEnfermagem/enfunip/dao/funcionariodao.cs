@@ -138,7 +138,7 @@ namespace enfunip.dao
                 cmd.Connection = conexaoBD.Conectar();
                 cmd.ExecuteNonQuery();
                 conexaoBD.Desconectar();
-                this.mensagem = "Funcionário cadastrado com sucesso !!!!!";
+                this.mensagem = "Funcionário cadastrado com sucesso!";
             }
             catch (SqlException e)
             {
@@ -197,7 +197,7 @@ namespace enfunip.dao
                 cmd.Connection = conexaoBD.Conectar();
                 cmd.ExecuteNonQuery();
                 conexaoBD.Desconectar();
-                this.mensagem = "Funcionário editado com sucesso !!!!!";
+                this.mensagem = "Funcionário editado com sucesso!";
             }
             catch (SqlException e)
             {
@@ -217,7 +217,7 @@ namespace enfunip.dao
                 cmd.Connection = conexaoBD.Conectar();
                 cmd.ExecuteNonQuery();
                 conexaoBD.Desconectar();
-                this.mensagem = "Funcionário excluído com sucesso !!!!!";
+                this.mensagem = "Funcionário excluído com sucesso!";
             }
             catch (SqlException e)
             {

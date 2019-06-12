@@ -103,7 +103,7 @@
             this.btnIncuirPaciente.Name = "btnIncuirPaciente";
             this.btnIncuirPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnIncuirPaciente.TabIndex = 51;
-            this.btnIncuirPaciente.Text = "Incluir";
+            this.btnIncuirPaciente.Text = "Cadastrar";
             this.btnIncuirPaciente.UseVisualStyleBackColor = true;
             this.btnIncuirPaciente.Click += new System.EventHandler(this.btnIncuirPaciente_Click);
             // 
