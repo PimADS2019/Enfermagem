@@ -168,5 +168,29 @@ namespace enfunip.apresentacao
             frmSobre frmSobre = new frmSobre();
             frmSobre.ShowDialog();
         }
+
+        private void tsmiPacientes_Click(object sender, EventArgs e)
+        {
+            frmConsultarPaciente frmConsultarPaciente = new frmConsultarPaciente();
+            frmConsultarPaciente.ShowDialog();
+        }
+
+        private void tsmiFuncionarios_Click(object sender, EventArgs e)
+        {
+            frmConsultarFuncionario frmConsultarFuncionario = new frmConsultarFuncionario();
+            frmConsultarFuncionario.ShowDialog();
+        }
+
+        private void tsmiAgenda_Click(object sender, EventArgs e)
+        {
+            frmAgendamento frmAgendamento = new frmAgendamento();
+            frmAgendamento.ShowDialog();
+        }
+
+        private void tsmiEstoque_Click(object sender, EventArgs e)
+        {
+            frmConsultarEstoque frmConsultarEstoque = new frmConsultarEstoque();
+            frmConsultarEstoque.ShowDialog();
+        }
     }
 }

@@ -31,19 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
             this.mnsMenu = new System.Windows.Forms.ToolStrip();
             this.tsmiPacientes = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tmiCadastrodePacientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmiConsultaDePacientes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiFuncionarios = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tmiCadastroDeFuncionarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmiConsultaDeFuncionarios = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiAgenda = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tmiAgendar = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiEstoque = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tmiCadastrar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmiListagemEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiAjuda = new System.Windows.Forms.ToolStripDropDownButton();
             this.tmiManual = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +68,7 @@
             this.mnsMenu.Location = new System.Drawing.Point(0, 0);
             this.mnsMenu.Name = "mnsMenu";
             this.mnsMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnsMenu.Size = new System.Drawing.Size(140, 749);
+            this.mnsMenu.Size = new System.Drawing.Size(131, 749);
             this.mnsMenu.TabIndex = 8;
             this.mnsMenu.Text = "menu";
             this.mnsMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tspMenu_ItemClicked);
@@ -83,30 +76,15 @@
             // tsmiPacientes
             // 
             this.tsmiPacientes.AutoToolTip = false;
-            this.tsmiPacientes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmiCadastrodePacientes,
-            this.tmiConsultaDePacientes});
             this.tsmiPacientes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiPacientes.Image = ((System.Drawing.Image)(resources.GetObject("tsmiPacientes.Image")));
             this.tsmiPacientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiPacientes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsmiPacientes.Name = "tsmiPacientes";
-            this.tsmiPacientes.Size = new System.Drawing.Size(137, 36);
+            this.tsmiPacientes.ShowDropDownArrow = false;
+            this.tsmiPacientes.Size = new System.Drawing.Size(128, 36);
             this.tsmiPacientes.Text = "Pacientes";
-            // 
-            // tmiCadastrodePacientes
-            // 
-            this.tmiCadastrodePacientes.Name = "tmiCadastrodePacientes";
-            this.tmiCadastrodePacientes.Size = new System.Drawing.Size(218, 22);
-            this.tmiCadastrodePacientes.Text = "Cadastro de Pacientes";
-            this.tmiCadastrodePacientes.Click += new System.EventHandler(this.tmiCadastrodePacientes_Click);
-            // 
-            // tmiConsultaDePacientes
-            // 
-            this.tmiConsultaDePacientes.Name = "tmiConsultaDePacientes";
-            this.tmiConsultaDePacientes.Size = new System.Drawing.Size(218, 22);
-            this.tmiConsultaDePacientes.Text = "Consulta de Pacientes";
-            this.tmiConsultaDePacientes.Click += new System.EventHandler(this.tmiConsultaDePacientes_Click);
+            this.tsmiPacientes.Click += new System.EventHandler(this.tsmiPacientes_Click);
             // 
             // toolStripSeparator2
             // 
@@ -115,30 +93,15 @@
             // 
             // tsmiFuncionarios
             // 
-            this.tsmiFuncionarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmiCadastroDeFuncionarios,
-            this.tmiConsultaDeFuncionarios});
             this.tsmiFuncionarios.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiFuncionarios.Image = ((System.Drawing.Image)(resources.GetObject("tsmiFuncionarios.Image")));
             this.tsmiFuncionarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiFuncionarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsmiFuncionarios.Name = "tsmiFuncionarios";
-            this.tsmiFuncionarios.Size = new System.Drawing.Size(137, 40);
+            this.tsmiFuncionarios.ShowDropDownArrow = false;
+            this.tsmiFuncionarios.Size = new System.Drawing.Size(128, 40);
             this.tsmiFuncionarios.Text = "Funcionários";
-            // 
-            // tmiCadastroDeFuncionarios
-            // 
-            this.tmiCadastroDeFuncionarios.Name = "tmiCadastroDeFuncionarios";
-            this.tmiCadastroDeFuncionarios.Size = new System.Drawing.Size(238, 22);
-            this.tmiCadastroDeFuncionarios.Text = "Cadastro de Funcionários";
-            this.tmiCadastroDeFuncionarios.Click += new System.EventHandler(this.tmiCadastroDeFuncionarios_Click);
-            // 
-            // tmiConsultaDeFuncionarios
-            // 
-            this.tmiConsultaDeFuncionarios.Name = "tmiConsultaDeFuncionarios";
-            this.tmiConsultaDeFuncionarios.Size = new System.Drawing.Size(238, 22);
-            this.tmiConsultaDeFuncionarios.Text = "Consulta de Funcionários";
-            this.tmiConsultaDeFuncionarios.Click += new System.EventHandler(this.tmiConsultaDeFuncionarios_Click);
+            this.tsmiFuncionarios.Click += new System.EventHandler(this.tsmiFuncionarios_Click);
             // 
             // toolStripSeparator7
             // 
@@ -147,22 +110,15 @@
             // 
             // tsmiAgenda
             // 
-            this.tsmiAgenda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmiAgendar});
             this.tsmiAgenda.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiAgenda.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAgenda.Image")));
             this.tsmiAgenda.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiAgenda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsmiAgenda.Name = "tsmiAgenda";
-            this.tsmiAgenda.Size = new System.Drawing.Size(137, 36);
+            this.tsmiAgenda.ShowDropDownArrow = false;
+            this.tsmiAgenda.Size = new System.Drawing.Size(128, 36);
             this.tsmiAgenda.Text = "Agenda";
-            // 
-            // tmiAgendar
-            // 
-            this.tmiAgendar.Name = "tmiAgendar";
-            this.tmiAgendar.Size = new System.Drawing.Size(130, 22);
-            this.tmiAgendar.Text = "Agendar";
-            this.tmiAgendar.Click += new System.EventHandler(this.tmiAgendar_Click);
+            this.tsmiAgenda.Click += new System.EventHandler(this.tsmiAgenda_Click);
             // 
             // toolStripSeparator3
             // 
@@ -171,30 +127,15 @@
             // 
             // tsmiEstoque
             // 
-            this.tsmiEstoque.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmiCadastrar,
-            this.tmiListagemEstoque});
             this.tsmiEstoque.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiEstoque.Image = ((System.Drawing.Image)(resources.GetObject("tsmiEstoque.Image")));
             this.tsmiEstoque.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiEstoque.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsmiEstoque.Name = "tsmiEstoque";
-            this.tsmiEstoque.Size = new System.Drawing.Size(137, 36);
+            this.tsmiEstoque.ShowDropDownArrow = false;
+            this.tsmiEstoque.Size = new System.Drawing.Size(128, 36);
             this.tsmiEstoque.Text = "Estoque";
-            // 
-            // tmiCadastrar
-            // 
-            this.tmiCadastrar.Name = "tmiCadastrar";
-            this.tmiCadastrar.Size = new System.Drawing.Size(208, 22);
-            this.tmiCadastrar.Text = "Cadastrar";
-            this.tmiCadastrar.Click += new System.EventHandler(this.tmiCadastrar_Click);
-            // 
-            // tmiListagemEstoque
-            // 
-            this.tmiListagemEstoque.Name = "tmiListagemEstoque";
-            this.tmiListagemEstoque.Size = new System.Drawing.Size(208, 22);
-            this.tmiListagemEstoque.Text = "Listagem do Estoque";
-            this.tmiListagemEstoque.Click += new System.EventHandler(this.tmiListagemEstoque_Click);
+            this.tsmiEstoque.Click += new System.EventHandler(this.tsmiEstoque_Click);
             // 
             // toolStripSeparator4
             // 
@@ -217,14 +158,14 @@
             // tmiManual
             // 
             this.tmiManual.Name = "tmiManual";
-            this.tmiManual.Size = new System.Drawing.Size(180, 22);
+            this.tmiManual.Size = new System.Drawing.Size(123, 22);
             this.tmiManual.Text = "Manual";
             this.tmiManual.Click += new System.EventHandler(this.tmiManual_Click);
             // 
             // tmiSobre
             // 
             this.tmiSobre.Name = "tmiSobre";
-            this.tmiSobre.Size = new System.Drawing.Size(180, 22);
+            this.tmiSobre.Size = new System.Drawing.Size(123, 22);
             this.tmiSobre.Text = "Sobre";
             this.tmiSobre.Click += new System.EventHandler(this.tmiSobre_Click);
             // 
@@ -300,16 +241,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ToolStripDropDownButton tsmiFuncionarios;
-        private System.Windows.Forms.ToolStripMenuItem tmiCadastroDeFuncionarios;
-        private System.Windows.Forms.ToolStripMenuItem tmiConsultaDeFuncionarios;
         private System.Windows.Forms.ToolStripDropDownButton tsmiAgenda;
-        private System.Windows.Forms.ToolStripMenuItem tmiAgendar;
         private System.Windows.Forms.ToolStripDropDownButton tsmiEstoque;
-        private System.Windows.Forms.ToolStripMenuItem tmiCadastrar;
-        private System.Windows.Forms.ToolStripMenuItem tmiListagemEstoque;
         private System.Windows.Forms.ToolStripDropDownButton tsmiPacientes;
-        private System.Windows.Forms.ToolStripMenuItem tmiCadastrodePacientes;
-        private System.Windows.Forms.ToolStripMenuItem tmiConsultaDePacientes;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

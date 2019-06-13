@@ -37,14 +37,14 @@
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.grpCadastrarProduto = new System.Windows.Forms.GroupBox();
+            this.lblCadProduto = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
             this.lbl_idProduto = new System.Windows.Forms.Label();
             this.idProduto_BD = new System.Windows.Forms.ListBox();
             this.lblObservaçãoProduto = new System.Windows.Forms.Label();
             this.lblQuantidadeProduto = new System.Windows.Forms.Label();
             this.nudQtdProduto = new System.Windows.Forms.NumericUpDown();
             this.txbObsProduto = new System.Windows.Forms.TextBox();
-            this.lblCadProduto = new System.Windows.Forms.Label();
-            this.grpBar = new System.Windows.Forms.GroupBox();
             this.mnsFunçõesCadastroPac.SuspendLayout();
             this.grpCadastrarProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdProduto)).BeginInit();
@@ -73,6 +73,7 @@
             // dtpEntradaProduto
             // 
             this.dtpEntradaProduto.CustomFormat = "";
+            this.dtpEntradaProduto.Enabled = false;
             this.dtpEntradaProduto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEntradaProduto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpEntradaProduto.Location = new System.Drawing.Point(519, 85);
@@ -153,6 +154,25 @@
             this.grpCadastrarProduto.TabStop = false;
             this.grpCadastrarProduto.Enter += new System.EventHandler(this.grpCadastrarProduto_Enter);
             // 
+            // lblCadProduto
+            // 
+            this.lblCadProduto.AutoSize = true;
+            this.lblCadProduto.Font = new System.Drawing.Font("Arial", 18F);
+            this.lblCadProduto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblCadProduto.Location = new System.Drawing.Point(209, 14);
+            this.lblCadProduto.Name = "lblCadProduto";
+            this.lblCadProduto.Size = new System.Drawing.Size(235, 27);
+            this.lblCadProduto.TabIndex = 131;
+            this.lblCadProduto.Text = "Cadastro de Produto";
+            // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(6, 44);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(646, 10);
+            this.grpBar.TabIndex = 130;
+            this.grpBar.TabStop = false;
+            // 
             // lbl_idProduto
             // 
             this.lbl_idProduto.AutoSize = true;
@@ -211,25 +231,6 @@
             this.txbObsProduto.Name = "txbObsProduto";
             this.txbObsProduto.Size = new System.Drawing.Size(621, 180);
             this.txbObsProduto.TabIndex = 59;
-            // 
-            // lblCadProduto
-            // 
-            this.lblCadProduto.AutoSize = true;
-            this.lblCadProduto.Font = new System.Drawing.Font("Arial", 18F);
-            this.lblCadProduto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblCadProduto.Location = new System.Drawing.Point(209, 14);
-            this.lblCadProduto.Name = "lblCadProduto";
-            this.lblCadProduto.Size = new System.Drawing.Size(235, 27);
-            this.lblCadProduto.TabIndex = 131;
-            this.lblCadProduto.Text = "Cadastro de Produto";
-            // 
-            // grpBar
-            // 
-            this.grpBar.Location = new System.Drawing.Point(6, 44);
-            this.grpBar.Name = "grpBar";
-            this.grpBar.Size = new System.Drawing.Size(646, 10);
-            this.grpBar.TabIndex = 130;
-            this.grpBar.TabStop = false;
             // 
             // frmCadastrarProduto
             // 

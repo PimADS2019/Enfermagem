@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarPaciente));
             this.txbConsultarPaciente = new System.Windows.Forms.TextBox();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
+            this.lblConsPac = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnIncluirAgenda = new System.Windows.Forms.Button();
             this.dgv_Pacientes = new System.Windows.Forms.DataGridView();
@@ -38,8 +40,6 @@
             this.btnEditarPaciente = new System.Windows.Forms.Button();
             this.btnIncuirPaciente = new System.Windows.Forms.Button();
             this.btnFecharPesqPac = new System.Windows.Forms.Button();
-            this.lblConsPac = new System.Windows.Forms.Label();
-            this.grpBar = new System.Windows.Forms.GroupBox();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Pacientes)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,25 @@
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
             // 
+            // lblConsPac
+            // 
+            this.lblConsPac.AutoSize = true;
+            this.lblConsPac.Font = new System.Drawing.Font("Arial", 18F);
+            this.lblConsPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblConsPac.Location = new System.Drawing.Point(226, 18);
+            this.lblConsPac.Name = "lblConsPac";
+            this.lblConsPac.Size = new System.Drawing.Size(242, 27);
+            this.lblConsPac.TabIndex = 137;
+            this.lblConsPac.Text = "Consulta de Paciente";
+            // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(9, 48);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(683, 10);
+            this.grpBar.TabIndex = 136;
+            this.grpBar.TabStop = false;
+            // 
             // btnAtualizar
             // 
             this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
@@ -92,11 +111,11 @@
             // btnIncluirAgenda
             // 
             this.btnIncluirAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIncluirAgenda.Location = new System.Drawing.Point(87, 643);
+            this.btnIncluirAgenda.Location = new System.Drawing.Point(558, 640);
             this.btnIncluirAgenda.Name = "btnIncluirAgenda";
-            this.btnIncluirAgenda.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluirAgenda.Size = new System.Drawing.Size(131, 26);
             this.btnIncluirAgenda.TabIndex = 55;
-            this.btnIncluirAgenda.Text = "Incluir";
+            this.btnIncluirAgenda.Text = "Incluir na Agenda";
             this.btnIncluirAgenda.UseVisualStyleBackColor = true;
             this.btnIncluirAgenda.Click += new System.EventHandler(this.btnIncluirAgenda_Click);
             // 
@@ -116,7 +135,7 @@
             // btnExcluirPaciente
             // 
             this.btnExcluirPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirPaciente.Location = new System.Drawing.Point(249, 643);
+            this.btnExcluirPaciente.Location = new System.Drawing.Point(168, 643);
             this.btnExcluirPaciente.Name = "btnExcluirPaciente";
             this.btnExcluirPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirPaciente.TabIndex = 53;
@@ -127,7 +146,7 @@
             // btnEditarPaciente
             // 
             this.btnEditarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarPaciente.Location = new System.Drawing.Point(168, 643);
+            this.btnEditarPaciente.Location = new System.Drawing.Point(87, 643);
             this.btnEditarPaciente.Name = "btnEditarPaciente";
             this.btnEditarPaciente.Size = new System.Drawing.Size(75, 23);
             this.btnEditarPaciente.TabIndex = 52;
@@ -161,25 +180,6 @@
             this.btnFecharPesqPac.TabIndex = 21;
             this.btnFecharPesqPac.UseVisualStyleBackColor = false;
             this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
-            // 
-            // lblConsPac
-            // 
-            this.lblConsPac.AutoSize = true;
-            this.lblConsPac.Font = new System.Drawing.Font("Arial", 18F);
-            this.lblConsPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblConsPac.Location = new System.Drawing.Point(226, 18);
-            this.lblConsPac.Name = "lblConsPac";
-            this.lblConsPac.Size = new System.Drawing.Size(242, 27);
-            this.lblConsPac.TabIndex = 137;
-            this.lblConsPac.Text = "Consulta de Paciente";
-            // 
-            // grpBar
-            // 
-            this.grpBar.Location = new System.Drawing.Point(9, 48);
-            this.grpBar.Name = "grpBar";
-            this.grpBar.Size = new System.Drawing.Size(683, 10);
-            this.grpBar.TabIndex = 136;
-            this.grpBar.TabStop = false;
             // 
             // frmConsultarPaciente
             // 
