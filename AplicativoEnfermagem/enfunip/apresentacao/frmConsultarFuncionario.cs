@@ -54,6 +54,7 @@ namespace enfunip.apresentacao
                 modelo.controle.controleFuncionario controleFuncionario = new modelo.controle.controleFuncionario();
 
                 dgv_Funcionarios.DataSource = controleFuncionario.ListarFuncionario();
+                Estaticos.TipoUsuario = cboTipoFuncionario.SelectedItem.ToString();
             }
             else
             {
@@ -104,6 +105,11 @@ namespace enfunip.apresentacao
             Estaticos.TipoUsuario = cboTipoFuncionario.Text;
             modelo.controle.controleFuncionario controleFuncionario = new modelo.controle.controleFuncionario();
             dgv_Funcionarios.DataSource = controleFuncionario.ListarFuncionario();
+        }
+
+        private void CboTipoFuncionario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

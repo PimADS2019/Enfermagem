@@ -354,3 +354,7 @@ alter table Amnense
 	select * from  Professores
 	select * from  Alunos
 	select * from  Pacientes
+
+	insert into Pessoas(TipoUsuario, Usuario, Senha, ConfSenha, Nome, DataNascimento, Cpf, Sexo, EstadoCivil)
+	values ('Professor','Admin','Admin', 'Admin', 'Admin','26-01-1993','00000000', 'Masculino','Solteiro')
+

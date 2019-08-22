@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarFuncionario));
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
+            this.lblConsFunc = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.lbl_TipoFuncionario = new System.Windows.Forms.Label();
             this.cboTipoFuncionario = new System.Windows.Forms.ComboBox();
@@ -39,8 +41,6 @@
             this.btnIncuirFuncionario = new System.Windows.Forms.Button();
             this.txbConsultarFuncionario = new System.Windows.Forms.TextBox();
             this.btnFecharPesqFunc = new System.Windows.Forms.Button();
-            this.lblConsFunc = new System.Windows.Forms.Label();
-            this.grpBar = new System.Windows.Forms.GroupBox();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Funcionarios)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,25 @@
             this.grpConsultaPaciente.TabIndex = 47;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
+            // 
+            // lblConsFunc
+            // 
+            this.lblConsFunc.AutoSize = true;
+            this.lblConsFunc.Font = new System.Drawing.Font("Arial", 18F);
+            this.lblConsFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblConsFunc.Location = new System.Drawing.Point(224, 18);
+            this.lblConsFunc.Name = "lblConsFunc";
+            this.lblConsFunc.Size = new System.Drawing.Size(275, 27);
+            this.lblConsFunc.TabIndex = 135;
+            this.lblConsFunc.Text = "Consulta de Funcionário";
+            // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(7, 48);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(683, 10);
+            this.grpBar.TabIndex = 134;
+            this.grpBar.TabStop = false;
             // 
             // btnAtualizar
             // 
@@ -104,6 +123,7 @@
             this.cboTipoFuncionario.Size = new System.Drawing.Size(121, 24);
             this.cboTipoFuncionario.TabIndex = 52;
             this.cboTipoFuncionario.Text = "Aluno";
+            this.cboTipoFuncionario.SelectedIndexChanged += new System.EventHandler(this.CboTipoFuncionario_SelectedIndexChanged);
             this.cboTipoFuncionario.Enter += new System.EventHandler(this.cboTipoFuncionario_Enter);
             // 
             // dgv_Funcionarios
@@ -179,25 +199,6 @@
             this.btnFecharPesqFunc.TabIndex = 21;
             this.btnFecharPesqFunc.UseVisualStyleBackColor = false;
             this.btnFecharPesqFunc.Click += new System.EventHandler(this.btnFecharPesqFunc_Click);
-            // 
-            // lblConsFunc
-            // 
-            this.lblConsFunc.AutoSize = true;
-            this.lblConsFunc.Font = new System.Drawing.Font("Arial", 18F);
-            this.lblConsFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblConsFunc.Location = new System.Drawing.Point(224, 18);
-            this.lblConsFunc.Name = "lblConsFunc";
-            this.lblConsFunc.Size = new System.Drawing.Size(275, 27);
-            this.lblConsFunc.TabIndex = 135;
-            this.lblConsFunc.Text = "Consulta de Funcionário";
-            // 
-            // grpBar
-            // 
-            this.grpBar.Location = new System.Drawing.Point(7, 48);
-            this.grpBar.Name = "grpBar";
-            this.grpBar.Size = new System.Drawing.Size(683, 10);
-            this.grpBar.TabIndex = 134;
-            this.grpBar.TabStop = false;
             // 
             // frmConsultarFuncionario
             // 

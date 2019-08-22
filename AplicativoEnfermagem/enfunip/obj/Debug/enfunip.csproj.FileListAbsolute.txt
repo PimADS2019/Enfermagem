@@ -171,10 +171,8 @@ C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmCadastrarPaciente.resources
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmConsultarFuncionario.resources
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmConsultarPaciente.resources
-C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmListarEstoque.resources
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.frmLogin.resources
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmMainMenu.resources
-C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmNovoAtendimento.resources
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmSobre.resources
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.Properties.Resources.resources
 C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmCadastrarPaciente.zu-ZA.resources
@@ -226,3 +224,4 @@ C:\Users\Wellington\Desktop\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.cspro
 C:\Users\Wellington\Desktop\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.exe
 C:\Users\Wellington\Desktop\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.pdb
 C:\Users\Vinicius\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmConsultarEstoque.resources
+C:\Users\Wellington\Documents\GitHub\Enfermagem\AplicativoEnfermagem\enfunip\obj\Debug\enfunip.apresentacao.frmConsultarEstoque.resources
