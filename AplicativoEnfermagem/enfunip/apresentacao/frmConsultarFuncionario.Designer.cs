@@ -138,6 +138,7 @@
             this.dgv_Funcionarios.ReadOnly = true;
             this.dgv_Funcionarios.Size = new System.Drawing.Size(675, 466);
             this.dgv_Funcionarios.TabIndex = 51;
+            this.dgv_Funcionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Funcionarios_CellContentClick);
             // 
             // btnExcluirFuncionario
             // 

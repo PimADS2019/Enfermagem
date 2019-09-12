@@ -159,19 +159,14 @@ namespace enfunip.dao
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexaoBD.Conectar();
 
-                cmd.CommandText = @"select IdPaciente, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep, Email, Celular, Telefone from
-	                            (
-		                            select IdPessoa, IdPaciente, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Logradouro, Numero, Complemento, Cidade, Bairro, Estado, Cep from
-		                            (
-			                            SELECT IdPessoa, IdPaciente, Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Religiao, NumeroFilhos, Fk_Pessoas_IdPessoa FROM Pessoas
-			                            inner join Pacientes
-			                            on Pessoas.IdPessoa = Pacientes.Fk_Pessoas_IdPessoa
-		                            ) as Pessoas_pacientes
-		                            inner join Enderecos
-		                            on Enderecos.Fk_Pessoas_IdPessoa = Pessoas_pacientes.IdPessoa
-		                            ) as Pessoas_Pacientes_Endereco
-		                            inner join Contatos
-		                            on Contatos.Fk_Pessoas_IdPessoa = Pessoas_Pacientes_Endereco.IdPessoa";
+                cmd.CommandText = @"select Nome, DataNascimento, Cpf, Sexo, EstadoCivil, Celular, Telefone, Email, Religiao, NumeroFilhos from Pessoas
+                                        inner join Contatos
+                                        on Contatos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+                                        inner join Enderecos
+                                        on Enderecos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+                                        inner join Pacientes
+                                        on Pacientes.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+";
                 SqlDataAdapter da = new SqlDataAdapter();
                 DataTable dt = new DataTable();
 

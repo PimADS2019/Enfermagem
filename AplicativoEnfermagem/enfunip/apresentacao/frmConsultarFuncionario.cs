@@ -96,7 +96,7 @@ namespace enfunip.apresentacao
 
         private void txbConsultarFuncionario_Enter(object sender, EventArgs e)
         {
-            txbConsultarFuncionario.Clear();
+           
             txbConsultarFuncionario.ForeColor = Color.FromArgb(0, 0, 0);
         }
 
@@ -108,6 +108,11 @@ namespace enfunip.apresentacao
         }
 
         private void CboTipoFuncionario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dgv_Funcionarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

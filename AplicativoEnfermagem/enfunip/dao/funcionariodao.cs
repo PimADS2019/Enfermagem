@@ -234,70 +234,46 @@ namespace enfunip.dao
 
                 if (Estaticos.TipoUsuario.Equals("Aluno"))
                 {
-                    cmd.CommandText = @"select IdPessoa, Nome, Cpf, TipoUsuario, Usuario,Ra, PeriodoAluno, Semestre DataNascimento, Logradouro,Numero, Complemento, Cidade, Bairro, Estado, Cep, Celular, Telefone, Email from
-                                        (
-	                                        select IdPessoa, Nome, Cpf, TipoUsuario, Usuario, DataNascimento, Logradouro,Numero, Complemento, Cidade, Bairro, Estado, Cep, Celular, Telefone, Email from 
-	                                        (
-		                                        select * from Pessoas
-		                                        inner join Enderecos
-		                                        on Enderecos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
-	                                        ) as Pessoas_Enderecos
-	                                        inner join Contatos
-	                                        on Contatos.Fk_Pessoas_IdPessoa = Pessoas_Enderecos.IdEndereco
-                                        ) as Pessoas_Contatos
+                    cmd.CommandText = @"select Nome, TipoUsuario, Usuario, DataNascimento, Cpf,Ra,PeriodoAluno,Semestre, Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
+                                        inner join Contatos
+                                        on Contatos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+                                        inner join Enderecos
+                                        on Enderecos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
                                         inner join Alunos
-                                        on Alunos.Fk_Pessoas_IdPessoa = Pessoas_Contatos.IdPessoa";
+                                        on Alunos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa";
                 }
 
                 if (Estaticos.TipoUsuario.Equals("Professor"))
                 {
-                    cmd.CommandText = @"select IdPessoa, Nome, Cpf, TipoUsuario, Usuario,NumeroUnipProf, PeriodoProf, DataNascimento, Logradouro,Numero, Complemento, Cidade, Bairro, Estado, Cep, Celular, Telefone, Email from
-                                        (
-	                                        select IdPessoa, Nome, Cpf, TipoUsuario, Usuario, DataNascimento, Logradouro,Numero, Complemento, Cidade, Bairro, Estado, Cep, Celular, Telefone, Email from 
-	                                        (
-		                                        select * from Pessoas
-		                                        inner join Enderecos
-		                                        on Enderecos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
-	                                        ) as Pessoas_Enderecos
-	                                        inner join Contatos
-	                                        on Contatos.Fk_Pessoas_IdPessoa = Pessoas_Enderecos.IdEndereco
-                                        ) as Pessoas_Contatos
+                    cmd.CommandText = @"select Nome, TipoUsuario, Usuario, DataNascimento, Cpf,NumeroUnipProf, PeriodoProf Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
+                                        inner join Contatos
+                                        on Contatos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+                                        inner join Enderecos
+                                        on Enderecos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
                                         inner join Professores
-                                        on Professores.Fk_Pessoas_IdPessoa = Pessoas_Contatos.IdPessoa";
+                                        on Professores.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa";
                 }
 
                 if (Estaticos.TipoUsuario.Equals("Enfermeiro"))
                 {
-                    cmd.CommandText = @"select IdPessoa, Nome, Cpf, TipoUsuario, Usuario, NumeroEnfermeiro, PeriodoEnf, DataNascimento, Logradouro,Numero, Complemento, Cidade, Bairro, Estado, Cep, Celular, Telefone, Email from
-                                        (
-	                                        select IdPessoa, Nome, Cpf, TipoUsuario, Usuario, DataNascimento, Logradouro,Numero, Complemento, Cidade, Bairro, Estado, Cep, Celular, Telefone, Email from 
-	                                        (
-		                                        select * from Pessoas
-		                                        inner join Enderecos
-		                                        on Enderecos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
-	                                        ) as Pessoas_Enderecos
-	                                        inner join Contatos
-	                                        on Contatos.Fk_Pessoas_IdPessoa = Pessoas_Enderecos.IdEndereco
-                                        ) as Pessoas_Contatos
+                    cmd.CommandText = @"select  Nome,TipoUsuario, Usuario, DataNascimento, Cpf,NumeroEnfermeiro, PeriodoEnf, Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
+                                        inner join Contatos
+                                        on Contatos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+                                        inner join Enderecos
+                                        on Enderecos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
                                         inner join Enfermeiros
-                                        on Enfermeiros.Fk_Pessoas_IdPessoa = Pessoas_Contatos.IdPessoa";
+                                        on Enfermeiros.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa";
                 }
 
                 if (Estaticos.TipoUsuario.Equals("Coordenador"))
                 {
-                    cmd.CommandText = @"select IdPessoa, Nome, Cpf, TipoUsuario, Usuario,NumeroUnipCood, PeriodoCood DataNascimento, Logradouro,Numero, Complemento, Cidade, Bairro, Estado, Cep, Celular, Telefone, Email from
-                                        (
-	                                        select IdPessoa, Nome, Cpf, TipoUsuario, Usuario, DataNascimento, Logradouro,Numero, Complemento, Cidade, Bairro, Estado, Cep, Celular, Telefone, Email from 
-	                                        (
-		                                        select * from Pessoas
-		                                        inner join Enderecos
-		                                        on Enderecos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
-	                                        ) as Pessoas_Enderecos
-	                                        inner join Contatos
-	                                        on Contatos.Fk_Pessoas_IdPessoa = Pessoas_Enderecos.IdEndereco
-                                            ) as Pessoas_Contatos
-                                            inner join Coordenadores
-                                            on Coordenadores.Fk_Pessoas_IdPessoa = Pessoas_Contatos.IdPessoa";
+                    cmd.CommandText = @"select  Nome, TipoUsuario, Usuario, DataNascimento, Cpf,NumeroUnipCood, PeriodoCood, Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
+                                        inner join Contatos
+                                        on Contatos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+                                        inner join Enderecos
+                                        on Enderecos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+                                        inner join Coordenadores
+                                        on Coordenadores.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa";
                 }
 
                 SqlDataAdapter da = new SqlDataAdapter();
