@@ -234,7 +234,7 @@ namespace enfunip.dao
 
                 if (Estaticos.TipoUsuario.Equals("Aluno"))
                 {
-                    cmd.CommandText = @"select Nome, TipoUsuario, Usuario, DataNascimento, Cpf,Ra,PeriodoAluno,Semestre, Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
+                    cmd.CommandText = @"select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf,Ra,PeriodoAluno,Semestre, Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
                                         inner join Contatos
                                         on Contatos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
                                         inner join Enderecos
@@ -245,7 +245,7 @@ namespace enfunip.dao
 
                 if (Estaticos.TipoUsuario.Equals("Professor"))
                 {
-                    cmd.CommandText = @"select Nome, TipoUsuario, Usuario, DataNascimento, Cpf,NumeroUnipProf, PeriodoProf Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
+                    cmd.CommandText = @"select IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf,NumeroUnipProf, PeriodoProf Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
                                         inner join Contatos
                                         on Contatos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
                                         inner join Enderecos
@@ -256,7 +256,7 @@ namespace enfunip.dao
 
                 if (Estaticos.TipoUsuario.Equals("Enfermeiro"))
                 {
-                    cmd.CommandText = @"select  Nome,TipoUsuario, Usuario, DataNascimento, Cpf,NumeroEnfermeiro, PeriodoEnf, Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
+                    cmd.CommandText = @"select  IdPessoa, Nome,TipoUsuario, Usuario, DataNascimento, Cpf,NumeroEnfermeiro, PeriodoEnf, Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
                                         inner join Contatos
                                         on Contatos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
                                         inner join Enderecos
@@ -267,7 +267,7 @@ namespace enfunip.dao
 
                 if (Estaticos.TipoUsuario.Equals("Coordenador"))
                 {
-                    cmd.CommandText = @"select  Nome, TipoUsuario, Usuario, DataNascimento, Cpf,NumeroUnipCood, PeriodoCood, Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
+                    cmd.CommandText = @"select  IdPessoa, Nome, TipoUsuario, Usuario, DataNascimento, Cpf,NumeroUnipCood, PeriodoCood, Sexo, EstadoCivil, Celular, Telefone, Email from Pessoas
                                         inner join Contatos
                                         on Contatos.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
                                         inner join Enderecos

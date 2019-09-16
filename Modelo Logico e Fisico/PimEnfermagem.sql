@@ -287,17 +287,21 @@ go
 
 alter table Atendimentos
 	add constraint Fk_Atendimentos_Pacientes foreign key (Fk_Pacientes_IdPaciente)
-	references Pacientes(IdPaciente);
+	references Pacientes(IdPaciente)
+	on DELETE CASCADE
+	on UPDATE CASCADE;
 go
 
 alter table Atendimentos
 	add constraint Fk_Atendimentos_Aluno foreign key (Fk_Alunos_IdAluno)
 	references Alunos(IdAluno);
+
 go
 
 alter table Atendimentos
 	add constraint Fk_Atendimentos_Professores foreign key (Fk_Professores_IdProfessor)
 	references Professores(IdProfessor);
+
 
 go
 

@@ -18,7 +18,7 @@ namespace enfunip.dao
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"Insert into Atendimentos (DescricaoAtendimento, Fk_Pacientes_IdPaciente)
-                                Values (@DescricaoAtendimento, @IdPaciente )
+                                Values (@DescricaoAtendimento, @IdPaciente)
                                 Declare @id_Atendimento int=@@identity
                                 
                                 Insert into LogConsultas (LocalAtendimento, DataHrMarcada, Fk_Atendimentos_IdAtendimento)
