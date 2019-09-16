@@ -32,7 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarEstoque));
             this.txbConsultarProdutos = new System.Windows.Forms.TextBox();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
-            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.lblConsProd = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
             this.dgv_ListaProdutos = new System.Windows.Forms.DataGridView();
             this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,13 +42,12 @@
             this.dataHrCadastroProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estoquesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pimEnfermagem2019DataSet1 = new enfunip.PimEnfermagem2019DataSet1();
-            this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.btnExcluirProduto = new System.Windows.Forms.Button();
             this.btnEditarProduto = new System.Windows.Forms.Button();
             this.btnCadProduto = new System.Windows.Forms.Button();
             this.estoquesTableAdapter = new enfunip.PimEnfermagem2019DataSet1TableAdapters.EstoquesTableAdapter();
-            this.lblConsProd = new System.Windows.Forms.Label();
-            this.grpBar = new System.Windows.Forms.GroupBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoquesBindingSource)).BeginInit();
@@ -77,25 +77,31 @@
             this.grpConsultaPaciente.Controls.Add(this.btnEditarProduto);
             this.grpConsultaPaciente.Controls.Add(this.btnCadProduto);
             this.grpConsultaPaciente.Controls.Add(this.txbConsultarProdutos);
-            this.grpConsultaPaciente.Location = new System.Drawing.Point(3, -1);
+            this.grpConsultaPaciente.Location = new System.Drawing.Point(7, 5);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
-            this.grpConsultaPaciente.Size = new System.Drawing.Size(566, 556);
+            this.grpConsultaPaciente.Size = new System.Drawing.Size(1285, 590);
             this.grpConsultaPaciente.TabIndex = 47;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
             // 
-            // btnAtualizar
+            // lblConsProd
             // 
-            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
-            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(452, 69);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
-            this.btnAtualizar.TabIndex = 58;
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            this.lblConsProd.AutoSize = true;
+            this.lblConsProd.Font = new System.Drawing.Font("Arial", 18F);
+            this.lblConsProd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblConsProd.Location = new System.Drawing.Point(520, 18);
+            this.lblConsProd.Name = "lblConsProd";
+            this.lblConsProd.Size = new System.Drawing.Size(234, 27);
+            this.lblConsProd.TabIndex = 133;
+            this.lblConsProd.Text = "Consulta de Produto";
+            // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(5, 48);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(1267, 10);
+            this.grpBar.TabIndex = 132;
+            this.grpBar.TabStop = false;
             // 
             // dgv_ListaProdutos
             // 
@@ -115,7 +121,7 @@
             this.dgv_ListaProdutos.Location = new System.Drawing.Point(9, 116);
             this.dgv_ListaProdutos.Name = "dgv_ListaProdutos";
             this.dgv_ListaProdutos.ReadOnly = true;
-            this.dgv_ListaProdutos.Size = new System.Drawing.Size(550, 392);
+            this.dgv_ListaProdutos.Size = new System.Drawing.Size(1251, 428);
             this.dgv_ListaProdutos.TabIndex = 54;
             // 
             // idProdutoDataGridViewTextBoxColumn
@@ -173,27 +179,10 @@
             this.pimEnfermagem2019DataSet1.DataSetName = "PimEnfermagem2019DataSet1";
             this.pimEnfermagem2019DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnFecharPesqPac
-            // 
-            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
-            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
-            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
-            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFecharPesqPac.Location = new System.Drawing.Point(544, 4);
-            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
-            this.btnFecharPesqPac.Size = new System.Drawing.Size(22, 23);
-            this.btnFecharPesqPac.TabIndex = 21;
-            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
-            this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
-            // 
             // btnExcluirProduto
             // 
             this.btnExcluirProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirProduto.Location = new System.Drawing.Point(171, 528);
+            this.btnExcluirProduto.Location = new System.Drawing.Point(171, 561);
             this.btnExcluirProduto.Name = "btnExcluirProduto";
             this.btnExcluirProduto.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirProduto.TabIndex = 53;
@@ -204,7 +193,7 @@
             // btnEditarProduto
             // 
             this.btnEditarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarProduto.Location = new System.Drawing.Point(90, 528);
+            this.btnEditarProduto.Location = new System.Drawing.Point(90, 561);
             this.btnEditarProduto.Name = "btnEditarProduto";
             this.btnEditarProduto.Size = new System.Drawing.Size(75, 23);
             this.btnEditarProduto.TabIndex = 52;
@@ -214,7 +203,7 @@
             // btnCadProduto
             // 
             this.btnCadProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadProduto.Location = new System.Drawing.Point(9, 527);
+            this.btnCadProduto.Location = new System.Drawing.Point(9, 560);
             this.btnCadProduto.Name = "btnCadProduto";
             this.btnCadProduto.Size = new System.Drawing.Size(75, 23);
             this.btnCadProduto.TabIndex = 51;
@@ -226,31 +215,42 @@
             // 
             this.estoquesTableAdapter.ClearBeforeFill = true;
             // 
-            // lblConsProd
+            // btnAtualizar
             // 
-            this.lblConsProd.AutoSize = true;
-            this.lblConsProd.Font = new System.Drawing.Font("Arial", 18F);
-            this.lblConsProd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblConsProd.Location = new System.Drawing.Point(166, 18);
-            this.lblConsProd.Name = "lblConsProd";
-            this.lblConsProd.Size = new System.Drawing.Size(234, 27);
-            this.lblConsProd.TabIndex = 133;
-            this.lblConsProd.Text = "Consulta de Produto";
+            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
+            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(452, 69);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
+            this.btnAtualizar.TabIndex = 58;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // grpBar
+            // btnFecharPesqPac
             // 
-            this.grpBar.Location = new System.Drawing.Point(5, 48);
-            this.grpBar.Name = "grpBar";
-            this.grpBar.Size = new System.Drawing.Size(556, 10);
-            this.grpBar.TabIndex = 132;
-            this.grpBar.TabStop = false;
+            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
+            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
+            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
+            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(1259, 7);
+            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
+            this.btnFecharPesqPac.Size = new System.Drawing.Size(26, 29);
+            this.btnFecharPesqPac.TabIndex = 21;
+            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
+            this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
             // 
             // frmConsultarEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(572, 562);
+            this.ClientSize = new System.Drawing.Size(1300, 600);
             this.Controls.Add(this.grpConsultaPaciente);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

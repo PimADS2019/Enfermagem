@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grpDadosPaciente = new System.Windows.Forms.GroupBox();
+            this.lblCadFunc = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
             this.lblCamposObrigatorios10 = new System.Windows.Forms.Label();
             this.lblCampoObrig = new System.Windows.Forms.Label();
             this.lblCampoObrigatorio9 = new System.Windows.Forms.Label();
@@ -88,8 +90,8 @@
             this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.grpBar = new System.Windows.Forms.GroupBox();
-            this.lblCadFunc = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.grpDadosPaciente.SuspendLayout();
             this.mnsFunçõesCadastroFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -159,6 +161,24 @@
             this.grpDadosPaciente.Size = new System.Drawing.Size(703, 539);
             this.grpDadosPaciente.TabIndex = 47;
             this.grpDadosPaciente.TabStop = false;
+            // 
+            // lblCadFunc
+            // 
+            this.lblCadFunc.AutoSize = true;
+            this.lblCadFunc.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadFunc.Location = new System.Drawing.Point(190, 21);
+            this.lblCadFunc.Name = "lblCadFunc";
+            this.lblCadFunc.Size = new System.Drawing.Size(276, 27);
+            this.lblCadFunc.TabIndex = 127;
+            this.lblCadFunc.Text = "Cadastro de Funcionário";
+            // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(8, 55);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(686, 10);
+            this.grpBar.TabIndex = 121;
+            this.grpBar.TabStop = false;
             // 
             // lblCamposObrigatorios10
             // 
@@ -776,30 +796,40 @@
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
-            // grpBar
+            // btnCadastrar
             // 
-            this.grpBar.Location = new System.Drawing.Point(8, 55);
-            this.grpBar.Name = "grpBar";
-            this.grpBar.Size = new System.Drawing.Size(686, 10);
-            this.grpBar.TabIndex = 121;
-            this.grpBar.TabStop = false;
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.Green;
+            this.btnCadastrar.Location = new System.Drawing.Point(485, 570);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(105, 29);
+            this.btnCadastrar.TabIndex = 52;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
-            // lblCadFunc
+            // btnCancelar
             // 
-            this.lblCadFunc.AutoSize = true;
-            this.lblCadFunc.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadFunc.Location = new System.Drawing.Point(190, 21);
-            this.lblCadFunc.Name = "lblCadFunc";
-            this.lblCadFunc.Size = new System.Drawing.Size(276, 27);
-            this.lblCadFunc.TabIndex = 127;
-            this.lblCadFunc.Text = "Cadastro de Funcionário";
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelar.Location = new System.Drawing.Point(602, 570);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(105, 29);
+            this.btnCancelar.TabIndex = 53;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // frmCadastrarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(719, 570);
+            this.ClientSize = new System.Drawing.Size(719, 611);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.mnsFunçõesCadastroFunc);
             this.Controls.Add(this.grpDadosPaciente);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -881,5 +911,7 @@
         private System.Windows.Forms.Label lblCamposObrigatorios10;
         private System.Windows.Forms.GroupBox grpBar;
         private System.Windows.Forms.Label lblCadFunc;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

@@ -18,19 +18,6 @@ namespace enfunip.apresentacao
         {
             InitializeComponent();
         }
-        private void Pesquisar(Agenda agenda)
-        {
-            agenda.dataHoraAgendamento = Convert.ToDateTime(txbConsultarAgendamento.Text.Trim());
-
-            controleAgenda controleAgenda = new controleAgenda();
-
-            dgvAgendamentos.DataSource = controleAgenda.PesquisarPorNome(agenda);
-        }
-        private void grpAgendamentos_Enter(object sender, EventArgs e)
-        {
-            controleAgenda controleAgenda = new controleAgenda();
-            dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
-        }
 
         private void btnPaciente_Click(object sender, EventArgs e)
         {
@@ -40,7 +27,7 @@ namespace enfunip.apresentacao
 
         private void frmAgendamento_Load(object sender, EventArgs e)
         {
-
+            txbPacienteAgenda.Text = Estaticos.IncluirNome;
         }
 
         private void tsmiCancelarAgenda_Click(object sender, EventArgs e)
@@ -130,21 +117,7 @@ namespace enfunip.apresentacao
             errorProvider.SetError(txbLocalAgendamento, "");
         }
 
-        private void txbConsultarAgendamento_TextChanged(object sender, EventArgs e)
-        {
-            if(txbConsultarAgendamento.Text.Equals(""))
-            {
-                controleAgenda controleAgenda = new controleAgenda();
 
-                dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
-            }
-            else
-            {
-                Agenda agenda = new Agenda();
-                Pesquisar(agenda);
-            }
-            
-        }
 
         private void MnsFunçõesAgendar_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -159,6 +132,16 @@ namespace enfunip.apresentacao
         }
 
         private void txbPacienteAgenda_Enter(object sender, EventArgs e)
+        {
+            txbPacienteAgenda.Text = Estaticos.IncluirNome;
+        }
+
+        private void DgvAgendamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GrpAgendamento_Enter(object sender, EventArgs e)
         {
             txbPacienteAgenda.Text = Estaticos.IncluirNome;
         }

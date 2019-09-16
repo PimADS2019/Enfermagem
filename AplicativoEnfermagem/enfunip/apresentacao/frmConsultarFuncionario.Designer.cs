@@ -32,7 +32,6 @@
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
             this.lblConsFunc = new System.Windows.Forms.Label();
             this.grpBar = new System.Windows.Forms.GroupBox();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.lbl_TipoFuncionario = new System.Windows.Forms.Label();
             this.cboTipoFuncionario = new System.Windows.Forms.ComboBox();
             this.dgv_Funcionarios = new System.Windows.Forms.DataGridView();
@@ -40,7 +39,9 @@
             this.btnEditarFuncionario = new System.Windows.Forms.Button();
             this.btnIncuirFuncionario = new System.Windows.Forms.Button();
             this.txbConsultarFuncionario = new System.Windows.Forms.TextBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnFecharPesqFunc = new System.Windows.Forms.Button();
+            this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Funcionarios)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
             this.grpConsultaPaciente.Controls.Add(this.lblConsFunc);
             this.grpConsultaPaciente.Controls.Add(this.grpBar);
             this.grpConsultaPaciente.Controls.Add(this.btnAtualizar);
@@ -60,9 +62,9 @@
             this.grpConsultaPaciente.Controls.Add(this.txbConsultarFuncionario);
             this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqFunc);
             this.grpConsultaPaciente.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grpConsultaPaciente.Location = new System.Drawing.Point(4, -1);
+            this.grpConsultaPaciente.Location = new System.Drawing.Point(4, 5);
             this.grpConsultaPaciente.Name = "grpConsultaPaciente";
-            this.grpConsultaPaciente.Size = new System.Drawing.Size(694, 681);
+            this.grpConsultaPaciente.Size = new System.Drawing.Size(1285, 590);
             this.grpConsultaPaciente.TabIndex = 47;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
@@ -72,7 +74,7 @@
             this.lblConsFunc.AutoSize = true;
             this.lblConsFunc.Font = new System.Drawing.Font("Arial", 18F);
             this.lblConsFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblConsFunc.Location = new System.Drawing.Point(224, 18);
+            this.lblConsFunc.Location = new System.Drawing.Point(515, 18);
             this.lblConsFunc.Name = "lblConsFunc";
             this.lblConsFunc.Size = new System.Drawing.Size(275, 27);
             this.lblConsFunc.TabIndex = 135;
@@ -82,27 +84,14 @@
             // 
             this.grpBar.Location = new System.Drawing.Point(7, 48);
             this.grpBar.Name = "grpBar";
-            this.grpBar.Size = new System.Drawing.Size(683, 10);
+            this.grpBar.Size = new System.Drawing.Size(1268, 10);
             this.grpBar.TabIndex = 134;
             this.grpBar.TabStop = false;
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
-            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(543, 119);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
-            this.btnAtualizar.TabIndex = 57;
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // lbl_TipoFuncionario
             // 
             this.lbl_TipoFuncionario.AutoSize = true;
-            this.lbl_TipoFuncionario.Location = new System.Drawing.Point(8, 81);
+            this.lbl_TipoFuncionario.Location = new System.Drawing.Point(579, 81);
             this.lbl_TipoFuncionario.Name = "lbl_TipoFuncionario";
             this.lbl_TipoFuncionario.Size = new System.Drawing.Size(103, 16);
             this.lbl_TipoFuncionario.TabIndex = 53;
@@ -118,7 +107,7 @@
             "Coordenador",
             "Professor",
             "Enfermeiro"});
-            this.cboTipoFuncionario.Location = new System.Drawing.Point(117, 78);
+            this.cboTipoFuncionario.Location = new System.Drawing.Point(688, 78);
             this.cboTipoFuncionario.Name = "cboTipoFuncionario";
             this.cboTipoFuncionario.Size = new System.Drawing.Size(121, 24);
             this.cboTipoFuncionario.TabIndex = 52;
@@ -133,17 +122,17 @@
             this.dgv_Funcionarios.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_Funcionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Funcionarios.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgv_Funcionarios.Location = new System.Drawing.Point(9, 159);
+            this.dgv_Funcionarios.Location = new System.Drawing.Point(11, 117);
             this.dgv_Funcionarios.Name = "dgv_Funcionarios";
             this.dgv_Funcionarios.ReadOnly = true;
-            this.dgv_Funcionarios.Size = new System.Drawing.Size(675, 466);
+            this.dgv_Funcionarios.Size = new System.Drawing.Size(1251, 428);
             this.dgv_Funcionarios.TabIndex = 51;
             this.dgv_Funcionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Funcionarios_CellContentClick);
             // 
             // btnExcluirFuncionario
             // 
             this.btnExcluirFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirFuncionario.Location = new System.Drawing.Point(177, 648);
+            this.btnExcluirFuncionario.Location = new System.Drawing.Point(173, 561);
             this.btnExcluirFuncionario.Name = "btnExcluirFuncionario";
             this.btnExcluirFuncionario.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirFuncionario.TabIndex = 50;
@@ -154,7 +143,7 @@
             // btnEditarFuncionario
             // 
             this.btnEditarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarFuncionario.Location = new System.Drawing.Point(93, 648);
+            this.btnEditarFuncionario.Location = new System.Drawing.Point(89, 561);
             this.btnEditarFuncionario.Name = "btnEditarFuncionario";
             this.btnEditarFuncionario.Size = new System.Drawing.Size(75, 23);
             this.btnEditarFuncionario.TabIndex = 49;
@@ -164,7 +153,7 @@
             // btnIncuirFuncionario
             // 
             this.btnIncuirFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIncuirFuncionario.Location = new System.Drawing.Point(9, 648);
+            this.btnIncuirFuncionario.Location = new System.Drawing.Point(5, 561);
             this.btnIncuirFuncionario.Name = "btnIncuirFuncionario";
             this.btnIncuirFuncionario.Size = new System.Drawing.Size(75, 23);
             this.btnIncuirFuncionario.TabIndex = 48;
@@ -175,7 +164,7 @@
             // txbConsultarFuncionario
             // 
             this.txbConsultarFuncionario.ForeColor = System.Drawing.Color.Silver;
-            this.txbConsultarFuncionario.Location = new System.Drawing.Point(9, 120);
+            this.txbConsultarFuncionario.Location = new System.Drawing.Point(11, 78);
             this.txbConsultarFuncionario.MaxLength = 50;
             this.txbConsultarFuncionario.Name = "txbConsultarFuncionario";
             this.txbConsultarFuncionario.Size = new System.Drawing.Size(534, 22);
@@ -183,6 +172,19 @@
             this.txbConsultarFuncionario.Text = "Insira nome do funcionário";
             this.txbConsultarFuncionario.TextChanged += new System.EventHandler(this.TxbConsultarFuncionario_TextChanged);
             this.txbConsultarFuncionario.Enter += new System.EventHandler(this.txbConsultarFuncionario_Enter);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
+            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(545, 77);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
+            this.btnAtualizar.TabIndex = 57;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnFecharPesqFunc
             // 
@@ -194,19 +196,36 @@
             this.btnFecharPesqFunc.FlatAppearance.BorderSize = 0;
             this.btnFecharPesqFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFecharPesqFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFecharPesqFunc.Location = new System.Drawing.Point(672, 4);
+            this.btnFecharPesqFunc.Location = new System.Drawing.Point(672, -87);
             this.btnFecharPesqFunc.Name = "btnFecharPesqFunc";
             this.btnFecharPesqFunc.Size = new System.Drawing.Size(22, 23);
             this.btnFecharPesqFunc.TabIndex = 21;
             this.btnFecharPesqFunc.UseVisualStyleBackColor = false;
             this.btnFecharPesqFunc.Click += new System.EventHandler(this.btnFecharPesqFunc_Click);
             // 
+            // btnFecharPesqPac
+            // 
+            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
+            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
+            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
+            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(1259, 0);
+            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
+            this.btnFecharPesqPac.Size = new System.Drawing.Size(26, 29);
+            this.btnFecharPesqPac.TabIndex = 136;
+            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
+            this.btnFecharPesqPac.Click += new System.EventHandler(this.BtnFecharPesqPac_Click);
+            // 
             // frmConsultarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(700, 685);
+            this.ClientSize = new System.Drawing.Size(1300, 600);
             this.Controls.Add(this.grpConsultaPaciente);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,5 +256,6 @@
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Label lblConsFunc;
         private System.Windows.Forms.GroupBox grpBar;
+        private System.Windows.Forms.Button btnFecharPesqPac;
     }
 }

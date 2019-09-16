@@ -214,5 +214,79 @@ namespace enfunip.apresentacao
             txbCelular.Clear();
             txbTelefone.Clear();
         }
+
+        private void BtnCadastrar_Click(object sender, EventArgs e)
+        {
+            if (txbSenha.Text != txbConfirmaSenha.Text)
+            {
+                MessageBox.Show("Senhas não coincidem", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            else
+            {
+                if (string.IsNullOrWhiteSpace(cboTipoUsuario.Text) || string.IsNullOrWhiteSpace(txbUsuario.Text) ||
+                    string.IsNullOrWhiteSpace(txbSenha.Text) || string.IsNullOrWhiteSpace(txbConfirmaSenha.Text) ||
+                    string.IsNullOrWhiteSpace(txbNome.Text) || string.IsNullOrWhiteSpace(txbCpf.Text) ||
+                    string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbCelular.Text))
+                {
+                    lblCampoObrig.Visible = true;
+                    VerificarCampos();
+                    MessageBox.Show("Campos obrigatórios não preenchidos!");
+                }
+                else
+                {
+                    ApagarMsgErro();
+                    lblCampoObrig.Visible = false;
+
+                    controleFuncionario controleFuncionario = new controleFuncionario();
+
+                    List<String> dadosFuncionario = new List<string>();
+                    dadosFuncionario.Add(cboTipoUsuario.Text);
+                    dadosFuncionario.Add(txbUsuario.Text);
+                    dadosFuncionario.Add(txbSenha.Text);
+                    dadosFuncionario.Add(txbConfirmaSenha.Text);
+                    dadosFuncionario.Add(txbNome.Text);
+                    dadosFuncionario.Add(dtpNascimento.Text);
+                    dadosFuncionario.Add(txbCpf.Text);
+                    dadosFuncionario.Add(txbNumContrato.Text);
+                    dadosFuncionario.Add(txbRA.Text);
+                    dadosFuncionario.Add(cboPeriodo.Text);
+                    dadosFuncionario.Add(cboSemestre.Text);
+                    dadosFuncionario.Add(txbEndereco.Text);
+                    dadosFuncionario.Add(txbNumeroEndereco.Text);
+                    dadosFuncionario.Add(txbComplemento.Text);
+                    dadosFuncionario.Add(txbCidade.Text);
+                    dadosFuncionario.Add(txbBairro.Text);
+                    dadosFuncionario.Add(cboEstado.Text);
+                    dadosFuncionario.Add(txbCep.Text);
+                    dadosFuncionario.Add(txbEmail.Text);
+                    dadosFuncionario.Add(txbCelular.Text);
+                    dadosFuncionario.Add(txbTelefone.Text);
+
+                    controleFuncionario.CadastrarFuncionario(dadosFuncionario);
+
+                    MessageBox.Show(controleFuncionario.mensagem);
+
+                    DialogResult confirm = MessageBox.Show("Deseja realizar um novo cadastro?", "Novo Funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                    if (confirm.ToString().ToUpper() == "YES")
+                    {
+                        ApagarTodosCampos();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
+
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Deseja Fechar o Cadastro?", "Fechar Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+                this.Close();
+        }
     }
 }

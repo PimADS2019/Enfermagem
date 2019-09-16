@@ -136,6 +136,8 @@
             this.lblCadPac = new System.Windows.Forms.Label();
             this.grpBar = new System.Windows.Forms.GroupBox();
             this.grpCadPac = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.tbcCadastroPaciente.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.grpDadosPaciente.SuspendLayout();
@@ -942,11 +944,31 @@
             this.grpCadPac.Name = "grpCadPac";
             this.grpCadPac.TabStop = false;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
+            this.btnCadastrar.ForeColor = System.Drawing.Color.Green;
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
+            // 
             // frmCadastrarPaciente
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblCadPac);
             this.Controls.Add(this.grpBar);
             this.Controls.Add(this.tbcCadastroPaciente);
@@ -1094,5 +1116,7 @@
         private System.Windows.Forms.Label lblCadPac;
         private System.Windows.Forms.GroupBox grpBar;
         private System.Windows.Forms.GroupBox grpCadPac;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

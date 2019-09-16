@@ -33,9 +33,6 @@
             this.dtpEntradaProduto = new System.Windows.Forms.DateTimePicker();
             this.lblDataEntradaProduto = new System.Windows.Forms.Label();
             this.mnsFunçõesCadastroPac = new System.Windows.Forms.MenuStrip();
-            this.tsmiSalvar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.grpCadastrarProduto = new System.Windows.Forms.GroupBox();
             this.lblCadProduto = new System.Windows.Forms.Label();
             this.grpBar = new System.Windows.Forms.GroupBox();
@@ -45,6 +42,11 @@
             this.lblQuantidadeProduto = new System.Windows.Forms.Label();
             this.nudQtdProduto = new System.Windows.Forms.NumericUpDown();
             this.txbObsProduto = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.tsmiSalvar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLimpar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsFunçõesCadastroPac.SuspendLayout();
             this.grpCadastrarProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdProduto)).BeginInit();
@@ -107,30 +109,6 @@
             this.mnsFunçõesCadastroPac.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.mnsFunçõesCadastroPac.Size = new System.Drawing.Size(677, 24);
             this.mnsFunçõesCadastroPac.TabIndex = 51;
-            // 
-            // tsmiSalvar
-            // 
-            this.tsmiSalvar.Image = global::enfunip.Properties.Resources.savedisk_floppydisk_guardar_1543;
-            this.tsmiSalvar.Name = "tsmiSalvar";
-            this.tsmiSalvar.Size = new System.Drawing.Size(69, 20);
-            this.tsmiSalvar.Text = "Salvar";
-            this.tsmiSalvar.Click += new System.EventHandler(this.tsmiSalvar_Click);
-            // 
-            // tsmiLimpar
-            // 
-            this.tsmiLimpar.Image = global::enfunip.Properties.Resources.reply_all_button_icon_icons_com_72603;
-            this.tsmiLimpar.Name = "tsmiLimpar";
-            this.tsmiLimpar.Size = new System.Drawing.Size(74, 20);
-            this.tsmiLimpar.Text = "Limpar";
-            this.tsmiLimpar.Click += new System.EventHandler(this.tsmiLimpar_Click);
-            // 
-            // tsmiCancelar
-            // 
-            this.tsmiCancelar.Image = global::enfunip.Properties.Resources.excluir;
-            this.tsmiCancelar.Name = "tsmiCancelar";
-            this.tsmiCancelar.Size = new System.Drawing.Size(85, 20);
-            this.tsmiCancelar.Text = "Cancelar";
-            this.tsmiCancelar.Click += new System.EventHandler(this.tsmiCancelar_Click);
             // 
             // grpCadastrarProduto
             // 
@@ -232,12 +210,66 @@
             this.txbObsProduto.Size = new System.Drawing.Size(621, 180);
             this.txbObsProduto.TabIndex = 59;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancelar.Location = new System.Drawing.Point(566, 478);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(105, 29);
+            this.btnCancelar.TabIndex = 134;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCadastrar.ForeColor = System.Drawing.Color.Green;
+            this.btnCadastrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCadastrar.Location = new System.Drawing.Point(449, 478);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(105, 29);
+            this.btnCadastrar.TabIndex = 133;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
+            // 
+            // tsmiSalvar
+            // 
+            this.tsmiSalvar.Image = global::enfunip.Properties.Resources.savedisk_floppydisk_guardar_1543;
+            this.tsmiSalvar.Name = "tsmiSalvar";
+            this.tsmiSalvar.Size = new System.Drawing.Size(69, 20);
+            this.tsmiSalvar.Text = "Salvar";
+            this.tsmiSalvar.Click += new System.EventHandler(this.tsmiSalvar_Click);
+            // 
+            // tsmiLimpar
+            // 
+            this.tsmiLimpar.Image = global::enfunip.Properties.Resources.reply_all_button_icon_icons_com_72603;
+            this.tsmiLimpar.Name = "tsmiLimpar";
+            this.tsmiLimpar.Size = new System.Drawing.Size(74, 20);
+            this.tsmiLimpar.Text = "Limpar";
+            this.tsmiLimpar.Click += new System.EventHandler(this.tsmiLimpar_Click);
+            // 
+            // tsmiCancelar
+            // 
+            this.tsmiCancelar.Image = global::enfunip.Properties.Resources.excluir;
+            this.tsmiCancelar.Name = "tsmiCancelar";
+            this.tsmiCancelar.Size = new System.Drawing.Size(85, 20);
+            this.tsmiCancelar.Text = "Cancelar";
+            this.tsmiCancelar.Click += new System.EventHandler(this.tsmiCancelar_Click);
+            // 
             // frmCadastrarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(677, 480);
+            this.ClientSize = new System.Drawing.Size(677, 513);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.mnsFunçõesCadastroPac);
             this.Controls.Add(this.grpCadastrarProduto);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,5 +307,7 @@
         private System.Windows.Forms.ListBox idProduto_BD;
         private System.Windows.Forms.Label lblCadProduto;
         private System.Windows.Forms.GroupBox grpBar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

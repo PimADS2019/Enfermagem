@@ -78,5 +78,39 @@ namespace enfunip.apresentacao
             nudQtdProduto.ResetText();
             txbObsProduto.Clear();
         }
+
+        private void BtnCadastrar_Click(object sender, EventArgs e)
+        {
+            controleEstoque estoque = new controleEstoque();
+
+            List<String> dadosItem = new List<string>();
+            dadosItem.Add(idProduto_BD.Text);
+            dadosItem.Add(dtpEntradaProduto.Text);
+            dadosItem.Add(txbProduto.Text);
+            dadosItem.Add(nudQtdProduto.Text);
+            dadosItem.Add(txbObsProduto.Text);
+
+            estoque.CadastrarItem(dadosItem);
+            MessageBox.Show(estoque.mensagem);
+
+            DialogResult confirm = MessageBox.Show("Deseja realizar um novo cadastro de produto?", "Novo Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                ApagarTodosCampos();
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Deseja Fechar o Cadastro de Produtos?", "Fechar Cadastro de Produtos", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+                this.Close();
+        }
     }
 }

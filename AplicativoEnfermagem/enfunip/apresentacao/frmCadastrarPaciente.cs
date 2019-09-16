@@ -388,5 +388,73 @@ namespace enfunip.apresentacao
             chkSexualAtivo.Checked = false;
             chkMultParceiros.Checked = false;
         }
+
+        private void BtnCadastrar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txbNome.Text) || string.IsNullOrWhiteSpace(txbCpf.Text) ||
+                string.IsNullOrWhiteSpace(txbEndereco.Text) || string.IsNullOrWhiteSpace(txbNumeroEndereco.Text) ||
+                string.IsNullOrWhiteSpace(txbCidade.Text) || string.IsNullOrWhiteSpace(txbBairro.Text) ||
+                string.IsNullOrWhiteSpace(cboEstado.Text) || string.IsNullOrWhiteSpace(txbCep.Text) ||
+                string.IsNullOrWhiteSpace(cboSexo.Text) || string.IsNullOrWhiteSpace(txbEmail.Text) ||
+                string.IsNullOrWhiteSpace(txbCelular.Text))
+            {
+                lblCampoObrig.Visible = true;
+                VerificarCampos();
+                MessageBox.Show("Campos obrigatórios não preenchidos!");
+            }
+            else
+            {
+                ApagarMsgErro();
+
+                lblCampoObrig.Visible = false;
+
+                controlePaciente controlePaciente = new controlePaciente();
+
+                List<String> dadosPaciente = new List<string>();
+                //Primera tela cliente
+                dadosPaciente.Add(idPaciente_BD.Text);
+                dadosPaciente.Add(txbNome.Text);
+                dadosPaciente.Add(dtpNascimento.Text);
+                dadosPaciente.Add(txbCpf.Text);
+                dadosPaciente.Add(txbEndereco.Text);
+                dadosPaciente.Add(txbNumeroEndereco.Text);
+                dadosPaciente.Add(txbComplemento.Text);
+                dadosPaciente.Add(txbCidade.Text);
+                dadosPaciente.Add(txbBairro.Text);
+                dadosPaciente.Add(cboEstado.Text);
+                dadosPaciente.Add(txbCep.Text);
+                dadosPaciente.Add(cboSexo.Text);
+                dadosPaciente.Add(cboEstadoCivil.Text);
+                dadosPaciente.Add(txbReligiao.Text);
+                dadosPaciente.Add(nudFilhos.Text);
+                dadosPaciente.Add(txbEmail.Text);
+                dadosPaciente.Add(txbCelular.Text);
+                dadosPaciente.Add(txbTelefone.Text);
+
+                //Tela Historico
+
+                controlePaciente.CadastrarPaciente(dadosPaciente);
+
+                MessageBox.Show(controlePaciente.mensagem);
+
+                DialogResult confirm = MessageBox.Show("Deseja realizar um novo cadastro?", "Novo Paciente", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+                    ApagarTodosCampos();
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Deseja Fechar o Cadastro?", "Fechar Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            if (confirm.ToString().ToUpper() == "YES")
+                this.Close();
+        }
     }
 }
