@@ -39,6 +39,7 @@
             this.btnExcluirPaciente = new System.Windows.Forms.Button();
             this.btnEditarPaciente = new System.Windows.Forms.Button();
             this.btnIncuirPaciente = new System.Windows.Forms.Button();
+            this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Pacientes)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
             this.grpConsultaPaciente.Controls.Add(this.lblConsPac);
             this.grpConsultaPaciente.Controls.Add(this.grpBar);
             this.grpConsultaPaciente.Controls.Add(this.btnAtualizar);
@@ -162,6 +164,23 @@
             this.btnIncuirPaciente.UseVisualStyleBackColor = true;
             this.btnIncuirPaciente.Click += new System.EventHandler(this.btnIncuirPaciente_Click);
             // 
+            // btnFecharPesqPac
+            // 
+            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
+            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
+            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
+            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(1260, 1);
+            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
+            this.btnFecharPesqPac.Size = new System.Drawing.Size(26, 29);
+            this.btnFecharPesqPac.TabIndex = 137;
+            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
+            this.btnFecharPesqPac.Click += new System.EventHandler(this.BtnFecharPesqPac_Click_1);
+            // 
             // frmConsultarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -193,5 +212,6 @@
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Label lblConsPac;
         private System.Windows.Forms.GroupBox grpBar;
+        private System.Windows.Forms.Button btnFecharPesqPac;
     }
 }

@@ -90,8 +90,9 @@ namespace enfunip.apresentacao
 
         private void frmConsultarFuncionario_Load(object sender, EventArgs e)
         {
-            
-            
+            Estaticos.TipoUsuario = cboTipoFuncionario.Text;
+            modelo.controle.controleFuncionario controleFuncionario = new modelo.controle.controleFuncionario();
+            dgv_Funcionarios.DataSource = controleFuncionario.ListarFuncionario();
         }
 
         private void txbConsultarFuncionario_Enter(object sender, EventArgs e)

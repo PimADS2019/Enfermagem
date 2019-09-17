@@ -107,5 +107,10 @@ namespace enfunip.apresentacao
 
             dgv_Pacientes.DataSource = controlePaciente.ListarPaciente();
         }
+
+        private void BtnFecharPesqPac_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

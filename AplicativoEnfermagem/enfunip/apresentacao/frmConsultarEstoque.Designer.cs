@@ -34,6 +34,7 @@
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
             this.lblConsProd = new System.Windows.Forms.Label();
             this.grpBar = new System.Windows.Forms.GroupBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.dgv_ListaProdutos = new System.Windows.Forms.DataGridView();
             this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +47,6 @@
             this.btnEditarProduto = new System.Windows.Forms.Button();
             this.btnCadProduto = new System.Windows.Forms.Button();
             this.estoquesTableAdapter = new enfunip.PimEnfermagem2019DataSet1TableAdapters.EstoquesTableAdapter();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaProdutos)).BeginInit();
@@ -68,11 +68,11 @@
             // grpConsultaPaciente
             // 
             this.grpConsultaPaciente.BackColor = System.Drawing.Color.Beige;
+            this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
             this.grpConsultaPaciente.Controls.Add(this.lblConsProd);
             this.grpConsultaPaciente.Controls.Add(this.grpBar);
             this.grpConsultaPaciente.Controls.Add(this.btnAtualizar);
             this.grpConsultaPaciente.Controls.Add(this.dgv_ListaProdutos);
-            this.grpConsultaPaciente.Controls.Add(this.btnFecharPesqPac);
             this.grpConsultaPaciente.Controls.Add(this.btnExcluirProduto);
             this.grpConsultaPaciente.Controls.Add(this.btnEditarProduto);
             this.grpConsultaPaciente.Controls.Add(this.btnCadProduto);
@@ -102,6 +102,19 @@
             this.grpBar.Size = new System.Drawing.Size(1267, 10);
             this.grpBar.TabIndex = 132;
             this.grpBar.TabStop = false;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
+            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(452, 69);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
+            this.btnAtualizar.TabIndex = 58;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // dgv_ListaProdutos
             // 
@@ -215,19 +228,6 @@
             // 
             this.estoquesTableAdapter.ClearBeforeFill = true;
             // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
-            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(452, 69);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(24, 24);
-            this.btnAtualizar.TabIndex = 58;
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
             // btnFecharPesqPac
             // 
             this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -238,12 +238,12 @@
             this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
             this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFecharPesqPac.Location = new System.Drawing.Point(1259, 7);
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(1259, 0);
             this.btnFecharPesqPac.Name = "btnFecharPesqPac";
             this.btnFecharPesqPac.Size = new System.Drawing.Size(26, 29);
-            this.btnFecharPesqPac.TabIndex = 21;
+            this.btnFecharPesqPac.TabIndex = 137;
             this.btnFecharPesqPac.UseVisualStyleBackColor = false;
-            this.btnFecharPesqPac.Click += new System.EventHandler(this.btnFecharPesqPac_Click);
+            this.btnFecharPesqPac.Click += new System.EventHandler(this.BtnFecharPesqPac_Click_1);
             // 
             // frmConsultarEstoque
             // 
@@ -275,7 +275,6 @@
         private System.Windows.Forms.Button btnExcluirProduto;
         private System.Windows.Forms.Button btnEditarProduto;
         private System.Windows.Forms.Button btnCadProduto;
-        private System.Windows.Forms.Button btnFecharPesqPac;
         private System.Windows.Forms.DataGridView dgv_ListaProdutos;
         private PimEnfermagem2019DataSet1 pimEnfermagem2019DataSet1;
         private System.Windows.Forms.BindingSource estoquesBindingSource;
@@ -288,5 +287,6 @@
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Label lblConsProd;
         private System.Windows.Forms.GroupBox grpBar;
+        private System.Windows.Forms.Button btnFecharPesqPac;
     }
 }

@@ -89,5 +89,10 @@ namespace enfunip.apresentacao
             controleEstoque controleEstoque = new controleEstoque();
             dgv_ListaProdutos.DataSource = controleEstoque.ListarPorNome();
         }
+
+        private void BtnFecharPesqPac_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

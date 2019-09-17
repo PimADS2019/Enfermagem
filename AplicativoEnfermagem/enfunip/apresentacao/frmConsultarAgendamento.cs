@@ -17,6 +17,7 @@ namespace enfunip.apresentacao
         public frmConsultarAgendamento()
         {
             InitializeComponent();
+
         }
         private void Pesquisar(Agenda agenda)
         {
@@ -52,12 +53,27 @@ namespace enfunip.apresentacao
 
         private void FrmConsultarAgendamento_Load(object sender, EventArgs e)
         {
+            controleAgenda controleAgenda = new controleAgenda();
 
+            dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
         }
 
         private void BtnFecharPesqPac_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnCadProduto_Click(object sender, EventArgs e)
+        {
+            frmAgendamento frmAgendamento = new frmAgendamento();
+            frmAgendamento.Show();
+        }
+
+        private void BtnAtualizar_Click(object sender, EventArgs e)
+        {
+            controleAgenda controleAgenda = new controleAgenda();
+
+            dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
         }
     }
 }

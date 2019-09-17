@@ -183,8 +183,8 @@ namespace enfunip.apresentacao
 
         private void tsmiAgenda_Click(object sender, EventArgs e)
         {
-            frmAgendamento frmAgendamento = new frmAgendamento();
-            frmAgendamento.ShowDialog();
+            frmConsultarAgendamento frmConsultarAgendamento = new frmConsultarAgendamento();
+            frmConsultarAgendamento.ShowDialog();
         }
 
         private void tsmiEstoque_Click(object sender, EventArgs e)

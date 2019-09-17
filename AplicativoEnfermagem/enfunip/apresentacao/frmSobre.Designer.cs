@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSobre));
             this.grpSobre = new System.Windows.Forms.GroupBox();
+            this.lblTituSobre = new System.Windows.Forms.Label();
+            this.grpBar = new System.Windows.Forms.GroupBox();
             this.grpSobre2 = new System.Windows.Forms.GroupBox();
             this.lblSobre = new System.Windows.Forms.Label();
             this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.grpCriadores = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblVersao = new System.Windows.Forms.Label();
-            this.lblTituSobre = new System.Windows.Forms.Label();
-            this.grpBar = new System.Windows.Forms.GroupBox();
             this.grpSobre.SuspendLayout();
             this.grpSobre2.SuspendLayout();
             this.grpCriadores.SuspendLayout();
@@ -58,6 +58,25 @@
             this.grpSobre.TabIndex = 0;
             this.grpSobre.TabStop = false;
             this.grpSobre.Enter += new System.EventHandler(this.grpSobre_Enter);
+            // 
+            // lblTituSobre
+            // 
+            this.lblTituSobre.AutoSize = true;
+            this.lblTituSobre.Font = new System.Drawing.Font("Arial", 18F);
+            this.lblTituSobre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTituSobre.Location = new System.Drawing.Point(182, 18);
+            this.lblTituSobre.Name = "lblTituSobre";
+            this.lblTituSobre.Size = new System.Drawing.Size(76, 27);
+            this.lblTituSobre.TabIndex = 139;
+            this.lblTituSobre.Text = "Sobre";
+            // 
+            // grpBar
+            // 
+            this.grpBar.Location = new System.Drawing.Point(6, 46);
+            this.grpBar.Name = "grpBar";
+            this.grpBar.Size = new System.Drawing.Size(427, 10);
+            this.grpBar.TabIndex = 138;
+            this.grpBar.TabStop = false;
             // 
             // grpSobre2
             // 
@@ -112,10 +131,10 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 80);
+            this.label1.Size = new System.Drawing.Size(226, 80);
             this.label1.TabIndex = 2;
-            this.label1.Text = "- Alisson Sena Feitosa\r\n- Isac Denis Chuab \r\n- Thiago de Souza Oliveira\r\n- Viníci" +
-    "us Guilherme dos Santos\r\n- Wellington Félix da Cruz \r\n";
+            this.label1.Text = "- Bruno Henrique de Oliveira Machado\r\n- Isac Denis Chuab \r\n- Thiago de Souza Oliv" +
+    "eira\r\n- Vinícius Guilherme dos Santos\r\n- Wellington Félix da Cruz \r\n";
             // 
             // lblVersao
             // 
@@ -125,25 +144,6 @@
             this.lblVersao.Size = new System.Drawing.Size(70, 16);
             this.lblVersao.TabIndex = 1;
             this.lblVersao.Text = "Versão 1.0";
-            // 
-            // lblTituSobre
-            // 
-            this.lblTituSobre.AutoSize = true;
-            this.lblTituSobre.Font = new System.Drawing.Font("Arial", 18F);
-            this.lblTituSobre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTituSobre.Location = new System.Drawing.Point(182, 18);
-            this.lblTituSobre.Name = "lblTituSobre";
-            this.lblTituSobre.Size = new System.Drawing.Size(76, 27);
-            this.lblTituSobre.TabIndex = 139;
-            this.lblTituSobre.Text = "Sobre";
-            // 
-            // grpBar
-            // 
-            this.grpBar.Location = new System.Drawing.Point(6, 46);
-            this.grpBar.Name = "grpBar";
-            this.grpBar.Size = new System.Drawing.Size(427, 10);
-            this.grpBar.TabIndex = 138;
-            this.grpBar.TabStop = false;
             // 
             // frmSobre
             // 

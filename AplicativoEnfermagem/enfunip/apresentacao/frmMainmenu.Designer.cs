@@ -44,13 +44,19 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnLogout = new System.Windows.Forms.Button();
             this.imglogo = new System.Windows.Forms.PictureBox();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.mnsMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imglogo)).BeginInit();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnsMenu
             // 
+            this.mnsMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mnsMenu.BackColor = System.Drawing.Color.LightGray;
+            this.mnsMenu.Dock = System.Windows.Forms.DockStyle.None;
             this.mnsMenu.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnsMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.mnsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -64,10 +70,10 @@
             this.toolStripSeparator4,
             this.tsmiAjuda,
             this.toolStripSeparator1});
-            this.mnsMenu.Location = new System.Drawing.Point(0, 0);
+            this.mnsMenu.Location = new System.Drawing.Point(9, 6);
             this.mnsMenu.Name = "mnsMenu";
             this.mnsMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnsMenu.Size = new System.Drawing.Size(1352, 43);
+            this.mnsMenu.Size = new System.Drawing.Size(614, 43);
             this.mnsMenu.TabIndex = 8;
             this.mnsMenu.Text = "menu";
             this.mnsMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tspMenu_ItemClicked);
@@ -157,14 +163,14 @@
             // tmiManual
             // 
             this.tmiManual.Name = "tmiManual";
-            this.tmiManual.Size = new System.Drawing.Size(180, 24);
+            this.tmiManual.Size = new System.Drawing.Size(133, 24);
             this.tmiManual.Text = "Manual";
             this.tmiManual.Click += new System.EventHandler(this.tmiManual_Click);
             // 
             // tmiSobre
             // 
             this.tmiSobre.Name = "tmiSobre";
-            this.tmiSobre.Size = new System.Drawing.Size(180, 24);
+            this.tmiSobre.Size = new System.Drawing.Size(133, 24);
             this.tmiSobre.Text = "Sobre";
             this.tmiSobre.Click += new System.EventHandler(this.tmiSobre_Click);
             // 
@@ -182,24 +188,42 @@
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLogout.Location = new System.Drawing.Point(1293, 5);
+            this.btnLogout.Location = new System.Drawing.Point(1288, 3);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(31, 31);
+            this.btnLogout.Size = new System.Drawing.Size(36, 46);
             this.btnLogout.TabIndex = 20;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnTrocarUsuario_Click);
             // 
             // imglogo
             // 
+            this.imglogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.imglogo.BackColor = System.Drawing.Color.Transparent;
             this.imglogo.Enabled = false;
             this.imglogo.Image = global::enfunip.Properties.Resources.logounip3;
             this.imglogo.ImageLocation = "";
             this.imglogo.Location = new System.Drawing.Point(479, 298);
             this.imglogo.Name = "imglogo";
-            this.imglogo.Size = new System.Drawing.Size(456, 205);
+            this.imglogo.Size = new System.Drawing.Size(456, 193);
             this.imglogo.TabIndex = 0;
             this.imglogo.TabStop = false;
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.mnsMenu);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.btnLogout);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1352, 52);
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(1352, 52);
+            this.toolStripContainer1.TabIndex = 21;
+            this.toolStripContainer1.Text = "toolStripContainer1";
             // 
             // frmMainMenu
             // 
@@ -207,23 +231,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1352, 749);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.mnsMenu);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1352, 729);
+            this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.imglogo);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enfermagem Unip";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Mainmenu_Load);
             this.mnsMenu.ResumeLayout(false);
             this.mnsMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imglogo)).EndInit();
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.ContentPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -244,5 +270,6 @@
         private System.Windows.Forms.ToolStripDropDownButton tsmiEstoque;
         private System.Windows.Forms.ToolStripDropDownButton tsmiPacientes;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
     }
 }
