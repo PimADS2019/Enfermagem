@@ -75,5 +75,23 @@ namespace enfunip.apresentacao
 
             dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
         }
+
+        private void BtnExcluirProduto_Click(object sender, EventArgs e)
+        {
+            String Excluir_Id;
+
+            DialogResult confirm = MessageBox.Show("Deseja Realmente Excluir a Consulta ?", "Exclusão da Consulta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                controleAgenda controleAgenda = new controleAgenda();
+
+                Excluir_Id = dgvAgendamentos.SelectedCells[0].Value.ToString();
+                controleAgenda.ExcluirAgenda(Excluir_Id);
+
+                MessageBox.Show(controleAgenda.mensagem);
+
+                dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
+            }
+        }
     }
 }

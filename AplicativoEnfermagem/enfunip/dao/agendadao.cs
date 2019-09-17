@@ -17,7 +17,8 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"Insert into Atendimentos (DescricaoAtendimento, Fk_Pacientes_IdPaciente)
+            cmd.CommandText = @"
+                                Insert into Atendimentos (DescricaoAtendimento, Fk_Pacientes_IdPaciente)
                                 Values (@DescricaoAtendimento, @IdPaciente)
                                 Declare @id_Atendimento int=@@identity
                                 
@@ -50,7 +51,7 @@ namespace enfunip.dao
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexaoBD.Conectar();
-                cmd = new SqlCommand(@"select Nome, Cpf, LocalAtendimento, DataHrMarcada, DescricaoAtendimento from
+                cmd = new SqlCommand(@"select IdAtendimento, Nome, Cpf, LocalAtendimento, DataHrMarcada, DescricaoAtendimento from
                                     (
                                         Select IdAtendimento, LocalAtendimento, DataHrMarcada, DescricaoAtendimento, Fk_Pacientes_IdPaciente, Fk_Pessoas_IdPessoa from
                                         (
@@ -105,7 +106,32 @@ namespace enfunip.dao
 
                 throw;
             }
+        }
+        public void ExcluirAgenda(Agenda agenda)
+        {
+            this.mensagem = "";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = @"delete from Atendimentos
+                                where IdAtendimento =
+                                (
+	                                 select IdAtendimento from LogConsultas
+	                                 inner join Atendimentos
+	                                 on LogConsultas.Fk_Atendimentos_IdAtendimento = Atendimentos.IdAtendimento
+	                                where IdLogConsultas = @id
+                                )";
 
+            cmd.Parameters.AddWithValue("@id", agenda.Id);
+            try
+            {
+                cmd.Connection = conexaoBD.Conectar();
+                cmd.ExecuteNonQuery();
+                conexaoBD.Desconectar();
+                this.mensagem = "Pessoa excluída com sucesso !!!!!";
+            }
+            catch (SqlException)
+            {
+                this.mensagem = "Paciente com Consulta marcada, Por Favor Cancelar a Consulta Primeiro!!!";
+            }
         }
     }
 }

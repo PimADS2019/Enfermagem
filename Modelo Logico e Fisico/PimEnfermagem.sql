@@ -317,30 +317,22 @@ go
 
 alter table LogEstoques
 	add constraint Fk_LogEstoques_Consultas foreign key (Fk_Consultas_IdConsulta)
-	references Consultas(IdConsulta)
-	on DELETE CASCADE
-	on UPDATE CASCADE;
+	references Consultas(IdConsulta);
 go
 
 alter table LogEstoques
 	add constraint Fk_LogEstoques_Estoques foreign key (Fk_Estoques_IdProduto)
-	references Estoques(IdProduto)
-	on DELETE CASCADE
-	on UPDATE CASCADE;
+	references Estoques(IdProduto);
 go
 
 alter table LogConsultas
 	add constraint Fk_LogConsutas_Consultas foreign key (Fk_Consultas_IdConsulta)
-	references Consultas(IdConsulta)
-	on DELETE CASCADE
-	on UPDATE CASCADE;
+	references Consultas(IdConsulta);
 go
 
 alter table logConsultas
 	add constraint Fk_LogConsultas_Atendimentos foreign key (Fk_Atendimentos_IdAtendimento)
-	references Atendimentos(IdAtendimento)
-	on DELETE CASCADE
-	on UPDATE CASCADE;
+	references Atendimentos(IdAtendimento);
 go
 
 alter table Amnense

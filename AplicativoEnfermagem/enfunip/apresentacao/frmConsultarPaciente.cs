@@ -66,9 +66,9 @@ namespace enfunip.apresentacao
             DialogResult confirm = MessageBox.Show("Deseja Realmente Excluir o Paciente?", "Exclusão de Paciente", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
             if (confirm.ToString().ToUpper() == "YES")
             {
-                controlePaciente controlePaciente = new modelo.controle.controlePaciente(); 
+                controlePaciente controlePaciente = new modelo.controle.controlePaciente();
 
-                Excluir_Id = dgv_Pacientes.CurrentRow.Cells[0].Value.ToString();
+                Excluir_Id = dgv_Pacientes.SelectedCells[0].Value.ToString();
                 controlePaciente.ExcluirPaciente(Excluir_Id);
 
                 MessageBox.Show(controlePaciente.mensagem);

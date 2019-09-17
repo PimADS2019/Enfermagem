@@ -136,8 +136,15 @@ namespace enfunip.dao
         {
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"delete from Pessoas 
-                                where IdPessoa = @id";
+            cmd.CommandText = @"delete from pessoas
+                                where Idpessoa =
+                                (
+	                                select IdPessoa from Pacientes
+	                                inner join Pessoas
+	                                on Pacientes.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+	                                where IdPaciente = @id
+                                )";
+
             cmd.Parameters.AddWithValue("@id", paciente.id);
             try
             {
@@ -146,9 +153,9 @@ namespace enfunip.dao
                 conexaoBD.Desconectar();
                 this.mensagem = "Pessoa excluída com sucesso !!!!!";
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                this.mensagem = e.ToString();
+                this.mensagem = "Paciente com Consulta marcada, Por Favor Cancelar a Consulta Primeiro!!!";
             }
         }
 

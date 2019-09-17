@@ -69,5 +69,24 @@ namespace enfunip.modelo.controle
                 throw;
             }
         }
+        public void ExcluirAgenda(String Id_Excluir)
+        {
+            this.mensagem = "";
+            validarAgenda validarAgenda = new validarAgenda();
+
+            Agenda agenda = new Agenda();
+            agenda.Id = Convert.ToInt32(Id_Excluir);
+            Agendadao agendadao = new Agendadao();
+                if (agendadao.ListarItemPorNome() != null)
+                {
+                    agendadao.ExcluirAgenda(agenda);
+                    this.mensagem = agendadao.mensagem;
+                }
+                else
+                {
+                    this.mensagem = "Não existe este ID";
+                }
+                       
+        }
     }
 }

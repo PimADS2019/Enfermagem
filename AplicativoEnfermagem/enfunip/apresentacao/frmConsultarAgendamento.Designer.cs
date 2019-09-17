@@ -88,6 +88,7 @@
             this.btnExcluirProduto.TabIndex = 131;
             this.btnExcluirProduto.Text = "Excluir";
             this.btnExcluirProduto.UseVisualStyleBackColor = true;
+            this.btnExcluirProduto.Click += new System.EventHandler(this.BtnExcluirProduto_Click);
             // 
             // btnEditarProduto
             // 
