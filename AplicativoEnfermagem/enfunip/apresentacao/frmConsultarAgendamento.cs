@@ -21,7 +21,7 @@ namespace enfunip.apresentacao
         }
         private void Pesquisar(Agenda agenda)
         {
-            agenda.dataHoraAgendamento = Convert.ToDateTime(txbConsultarAgendamento.Text.Trim());
+           agenda.nomePaciente = txbConsultarAgendamento.Text.Trim();
 
             controleAgenda controleAgenda = new controleAgenda();
 

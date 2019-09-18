@@ -92,8 +92,15 @@ namespace enfunip.dao
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexaoBD.Conectar();
 
-                cmd = new SqlCommand("SELECT * FROM Agendamento WHERE DataHoraAgendamento Like @DataHora ORDER BY DataHoraAgendamento", cmd.Connection);
-                cmd.Parameters.AddWithValue("@DataHora", "%" + agenda.dataHoraAgendamento + "%");
+                cmd = new SqlCommand(@"select IdAtendimento, Nome, Cpf, LocalAtendimento, DataHrMarcada, DescricaoAtendimento  from Atendimentos
+                                      inner join Pacientes
+                                      on Atendimentos.Fk_Pacientes_IdPaciente = Pacientes.IdPaciente
+                                      inner join Pessoas
+                                      on Pacientes.Fk_Pessoas_IdPessoa = Pessoas.IdPessoa
+                                      inner join LogConsultas
+                                      on LogConsultas.Fk_Atendimentos_IdAtendimento = Atendimentos.IdAtendimento
+                                      where Nome Like @NomeConsulta order by Nome", cmd.Connection);
+                cmd.Parameters.AddWithValue("@NomeConsulta", "%" + agenda.nomePaciente + "%");
 
 
                 da.SelectCommand = cmd;
@@ -126,7 +133,7 @@ namespace enfunip.dao
                 cmd.Connection = conexaoBD.Conectar();
                 cmd.ExecuteNonQuery();
                 conexaoBD.Desconectar();
-                this.mensagem = "Pessoa excluída com sucesso !!!!!";
+                this.mensagem = "Consulta excluída com sucesso !!!!!";
             }
             catch (SqlException)
             {
