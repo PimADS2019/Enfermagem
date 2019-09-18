@@ -76,6 +76,9 @@ namespace enfunip
             txbSenha.PasswordChar = '•';
         }
 
+        private void TxbUsuario_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

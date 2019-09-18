@@ -23,6 +23,8 @@ namespace enfunip.apresentacao
         {
             frmConsultarPaciente consultarPaciente = new frmConsultarPaciente();
             consultarPaciente.ShowDialog();
+
+            this.Close();
         }
 
         private void frmAgendamento_Load(object sender, EventArgs e)

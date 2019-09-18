@@ -57,6 +57,7 @@
             this.txbUsuario.Size = new System.Drawing.Size(204, 19);
             this.txbUsuario.TabIndex = 2;
             this.txbUsuario.Text = "Usuário";
+            this.txbUsuario.TextChanged += new System.EventHandler(this.TxbUsuario_TextChanged);
             this.txbUsuario.Enter += new System.EventHandler(this.txbUsuario_Enter);
             // 
             // btnEntrar

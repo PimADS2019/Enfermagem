@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarEstoque));
             this.txbConsultarProdutos = new System.Windows.Forms.TextBox();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
+            this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.lblConsProd = new System.Windows.Forms.Label();
             this.grpBar = new System.Windows.Forms.GroupBox();
             this.btnAtualizar = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.btnEditarProduto = new System.Windows.Forms.Button();
             this.btnCadProduto = new System.Windows.Forms.Button();
             this.estoquesTableAdapter = new enfunip.PimEnfermagem2019DataSet1TableAdapters.EstoquesTableAdapter();
-            this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoquesBindingSource)).BeginInit();
@@ -63,6 +63,7 @@
             this.txbConsultarProdutos.Size = new System.Drawing.Size(443, 22);
             this.txbConsultarProdutos.TabIndex = 44;
             this.txbConsultarProdutos.Text = "Insira nome do produto";
+            this.txbConsultarProdutos.Click += new System.EventHandler(this.TxbConsultarProdutos_Click);
             this.txbConsultarProdutos.TextChanged += new System.EventHandler(this.TxbConsultarProdutos_TextChanged);
             // 
             // grpConsultaPaciente
@@ -83,6 +84,23 @@
             this.grpConsultaPaciente.TabIndex = 47;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
+            // 
+            // btnFecharPesqPac
+            // 
+            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
+            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
+            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
+            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(1259, 0);
+            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
+            this.btnFecharPesqPac.Size = new System.Drawing.Size(26, 29);
+            this.btnFecharPesqPac.TabIndex = 137;
+            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
+            this.btnFecharPesqPac.Click += new System.EventHandler(this.BtnFecharPesqPac_Click_1);
             // 
             // lblConsProd
             // 
@@ -227,23 +245,6 @@
             // estoquesTableAdapter
             // 
             this.estoquesTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnFecharPesqPac
-            // 
-            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
-            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
-            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
-            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFecharPesqPac.Location = new System.Drawing.Point(1259, 0);
-            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
-            this.btnFecharPesqPac.Size = new System.Drawing.Size(26, 29);
-            this.btnFecharPesqPac.TabIndex = 137;
-            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
-            this.btnFecharPesqPac.Click += new System.EventHandler(this.BtnFecharPesqPac_Click_1);
             // 
             // frmConsultarEstoque
             // 

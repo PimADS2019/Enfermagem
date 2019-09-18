@@ -85,15 +85,18 @@ namespace enfunip.apresentacao
         {
             Estaticos.IncluirId = dgv_Pacientes.CurrentRow.Cells[0].Value.ToString();
             Estaticos.IncluirNome = dgv_Pacientes.CurrentRow.Cells[1].Value.ToString();
-            
-            this.Close();
+
+
+            frmAgendamento frmAgendamento = new frmAgendamento();
+            frmAgendamento.Show();
+
+
 
         }
         
         private void txbConsultarPaciente_Enter(object sender, EventArgs e)
         {
-            txbConsultarPaciente.Clear();
-            txbConsultarPaciente.ForeColor = Color.FromArgb(0, 0, 0);
+
         }
 
         private void btnFecharPesqPac_Click(object sender, EventArgs e)
@@ -111,6 +114,12 @@ namespace enfunip.apresentacao
         private void BtnFecharPesqPac_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TxbConsultarPaciente_Click(object sender, EventArgs e)
+        {
+            txbConsultarPaciente.Clear();
+            txbConsultarPaciente.ForeColor = Color.FromArgb(0, 0, 0);
         }
     }
 }

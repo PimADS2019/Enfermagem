@@ -94,5 +94,11 @@ namespace enfunip.apresentacao
         {
             this.Close();
         }
+
+        private void TxbConsultarProdutos_Click(object sender, EventArgs e)
+        {
+            txbConsultarProdutos.Clear();
+            txbConsultarProdutos.ForeColor = Color.FromArgb(0, 0, 0);
+        }
     }
 }

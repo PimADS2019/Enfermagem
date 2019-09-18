@@ -160,7 +160,7 @@ namespace enfunip.apresentacao
 
         private void tmiManual_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"C:\Users\Vinicius\Documents\GitHub\Enfermagem\Manual\manual.pdf");
+            System.Diagnostics.Process.Start(@"C:\Enfermagem\Manual\manual.pdf");
         }
 
         private void tmiSobre_Click(object sender, EventArgs e)

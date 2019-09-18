@@ -151,6 +151,8 @@
             this.txbConsultarAgendamento.Size = new System.Drawing.Size(448, 22);
             this.txbConsultarAgendamento.TabIndex = 53;
             this.txbConsultarAgendamento.Text = "insira data do agendamento";
+            this.txbConsultarAgendamento.Click += new System.EventHandler(this.TxbConsultarAgendamento_Click);
+            this.txbConsultarAgendamento.TextChanged += new System.EventHandler(this.TxbConsultarAgendamento_TextChanged_1);
             // 
             // dgvAgendamentos
             // 

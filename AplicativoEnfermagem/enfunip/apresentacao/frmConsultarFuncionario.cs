@@ -122,5 +122,11 @@ namespace enfunip.apresentacao
         {
             this.Close();
         }
+
+        private void TxbConsultarFuncionario_Click(object sender, EventArgs e)
+        {
+            txbConsultarFuncionario.Clear();
+            txbConsultarFuncionario.ForeColor = Color.FromArgb(0, 0, 0);
+        }
     }
 }

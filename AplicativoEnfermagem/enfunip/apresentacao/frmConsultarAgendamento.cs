@@ -93,5 +93,25 @@ namespace enfunip.apresentacao
                 dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
             }
         }
+
+        private void TxbConsultarAgendamento_Click(object sender, EventArgs e)
+        {
+            txbConsultarAgendamento.Clear();
+            txbConsultarAgendamento.ForeColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void TxbConsultarAgendamento_TextChanged_1(object sender, EventArgs e)
+        {
+            if (txbConsultarAgendamento.Text.Equals(""))
+            {
+                controleAgenda controleAgenda = new controleAgenda();
+                dgvAgendamentos.DataSource = controleAgenda.ListarPorNome();
+            }
+            else
+            {
+                Agenda agenda = new Agenda();
+                Pesquisar(agenda);
+            }
+        }
     }
 }

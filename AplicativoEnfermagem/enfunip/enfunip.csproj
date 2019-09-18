@@ -50,99 +50,99 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="apresentacao\frmAgendamento.cs">
+    <Compile Include="APRESENTACAO\frmAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmAgendamento.Designer.cs">
+    <Compile Include="APRESENTACAO\frmAgendamento.Designer.cs">
       <DependentUpon>frmAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmCadastrarFuncionario.cs">
+    <Compile Include="APRESENTACAO\frmCadastrarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmCadastrarFuncionario.Designer.cs">
+    <Compile Include="APRESENTACAO\frmCadastrarFuncionario.Designer.cs">
       <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmCadastrarProduto.cs">
+    <Compile Include="APRESENTACAO\frmCadastrarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmCadastrarProduto.Designer.cs">
+    <Compile Include="APRESENTACAO\frmCadastrarProduto.Designer.cs">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmCadastrarPaciente.cs">
+    <Compile Include="APRESENTACAO\frmCadastrarPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmCadastrarPaciente.Designer.cs">
+    <Compile Include="APRESENTACAO\frmCadastrarPaciente.Designer.cs">
       <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmConsultarAgendamento.cs">
+    <Compile Include="APRESENTACAO\frmConsultarAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmConsultarAgendamento.Designer.cs">
+    <Compile Include="APRESENTACAO\frmConsultarAgendamento.Designer.cs">
       <DependentUpon>frmConsultarAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmConsultarFuncionario.cs">
+    <Compile Include="APRESENTACAO\frmConsultarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmConsultarFuncionario.Designer.cs">
+    <Compile Include="APRESENTACAO\frmConsultarFuncionario.Designer.cs">
       <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmConsultarPaciente.cs">
+    <Compile Include="APRESENTACAO\frmConsultarPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmConsultarPaciente.Designer.cs">
+    <Compile Include="APRESENTACAO\frmConsultarPaciente.Designer.cs">
       <DependentUpon>frmConsultarPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmConsultarEstoque.cs">
+    <Compile Include="APRESENTACAO\frmConsultarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmConsultarEstoque.Designer.cs">
+    <Compile Include="APRESENTACAO\frmConsultarEstoque.Designer.cs">
       <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmLogin.cs">
+    <Compile Include="APRESENTACAO\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmLogin.Designer.cs">
+    <Compile Include="APRESENTACAO\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmMainmenu.cs">
+    <Compile Include="APRESENTACAO\frmMainmenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmMainmenu.Designer.cs">
+    <Compile Include="APRESENTACAO\frmMainmenu.Designer.cs">
       <DependentUpon>frmMainmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="apresentacao\frmSobre.cs">
+    <Compile Include="APRESENTACAO\frmSobre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apresentacao\frmSobre.designer.cs">
+    <Compile Include="APRESENTACAO\frmSobre.designer.cs">
       <DependentUpon>frmSobre.cs</DependentUpon>
     </Compile>
-    <Compile Include="dao\agendadao.cs" />
-    <Compile Include="dao\conexao.cs" />
-    <Compile Include="dao\Estoquedao.cs" />
-    <Compile Include="dao\Funcionariodao.cs" />
-    <Compile Include="dao\intAgendadao.cs" />
-    <Compile Include="dao\intEstoquedao.cs" />
-    <Compile Include="dao\intFucionariodao.cs" />
-    <Compile Include="dao\intLogindao.cs" />
-    <Compile Include="dao\intPessoadao.cs" />
-    <Compile Include="dao\Logindao.cs" />
-    <Compile Include="dao\pacientedao.cs" />
-    <Compile Include="modelo\Agenda.cs" />
-    <Compile Include="modelo\controle\controleAgenda.cs" />
-    <Compile Include="modelo\controle\controleEstoque.cs" />
-    <Compile Include="modelo\controle\controleFuncionario.cs" />
-    <Compile Include="modelo\controle\controleLogin.cs" />
-    <Compile Include="modelo\controle\controlePaciente.cs" />
-    <Compile Include="modelo\Estaticos.cs" />
-    <Compile Include="modelo\Estoque.cs" />
-    <Compile Include="modelo\Funcionario.cs" />
-    <Compile Include="modelo\Login.cs" />
-    <Compile Include="modelo\Paciente.cs" />
-    <Compile Include="modelo\validacoes\Validacao.cs" />
-    <Compile Include="modelo\validacoes\validarAgenda.cs" />
-    <Compile Include="modelo\validacoes\validarEstoque.cs" />
-    <Compile Include="modelo\validacoes\validarFuncionario.cs" />
-    <Compile Include="modelo\validacoes\validarPaciente.cs" />
+    <Compile Include="DAO\agendadao.cs" />
+    <Compile Include="DAO\conexao.cs" />
+    <Compile Include="DAO\Estoquedao.cs" />
+    <Compile Include="DAO\Funcionariodao.cs" />
+    <Compile Include="DAO\intAgendadao.cs" />
+    <Compile Include="DAO\intEstoquedao.cs" />
+    <Compile Include="DAO\intFucionariodao.cs" />
+    <Compile Include="DAO\intLogindao.cs" />
+    <Compile Include="DAO\intPessoadao.cs" />
+    <Compile Include="DAO\Logindao.cs" />
+    <Compile Include="DAO\pacientedao.cs" />
+    <Compile Include="MODELO\Agenda.cs" />
+    <Compile Include="MODELO\controle\controleAgenda.cs" />
+    <Compile Include="MODELO\controle\controleEstoque.cs" />
+    <Compile Include="MODELO\controle\controleFuncionario.cs" />
+    <Compile Include="MODELO\controle\controleLogin.cs" />
+    <Compile Include="MODELO\controle\controlePaciente.cs" />
+    <Compile Include="MODELO\Estaticos.cs" />
+    <Compile Include="MODELO\Estoque.cs" />
+    <Compile Include="MODELO\Funcionario.cs" />
+    <Compile Include="MODELO\Login.cs" />
+    <Compile Include="MODELO\Paciente.cs" />
+    <Compile Include="MODELO\validacoes\Validacao.cs" />
+    <Compile Include="MODELO\validacoes\validarAgenda.cs" />
+    <Compile Include="MODELO\validacoes\validarEstoque.cs" />
+    <Compile Include="MODELO\validacoes\validarFuncionario.cs" />
+    <Compile Include="MODELO\validacoes\validarPaciente.cs" />
     <Compile Include="PimEnfermagem2019DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,40 +155,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="apresentacao\frmAgendamento.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmAgendamento.resx">
       <DependentUpon>frmAgendamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmCadastrarFuncionario.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmCadastrarFuncionario.resx">
       <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmCadastrarProduto.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmCadastrarProduto.resx">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmCadastrarPaciente.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmCadastrarPaciente.resx">
       <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmCadastrarPaciente.zu-ZA.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmCadastrarPaciente.zu-ZA.resx">
       <DependentUpon>frmCadastrarPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmConsultarAgendamento.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmConsultarAgendamento.resx">
       <DependentUpon>frmConsultarAgendamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmConsultarFuncionario.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmConsultarFuncionario.resx">
       <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmConsultarPaciente.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmConsultarPaciente.resx">
       <DependentUpon>frmConsultarPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmConsultarEstoque.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmConsultarEstoque.resx">
       <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmLogin.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmMainmenu.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmMainmenu.resx">
       <DependentUpon>frmMainmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="apresentacao\frmSobre.resx">
+    <EmbeddedResource Include="APRESENTACAO\frmSobre.resx">
       <DependentUpon>frmSobre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

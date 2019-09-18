@@ -205,6 +205,7 @@
             this.txbConsultarFuncionario.Size = new System.Drawing.Size(534, 22);
             this.txbConsultarFuncionario.TabIndex = 47;
             this.txbConsultarFuncionario.Text = "Insira nome do funcionário";
+            this.txbConsultarFuncionario.Click += new System.EventHandler(this.TxbConsultarFuncionario_Click);
             this.txbConsultarFuncionario.TextChanged += new System.EventHandler(this.TxbConsultarFuncionario_TextChanged);
             this.txbConsultarFuncionario.Enter += new System.EventHandler(this.txbConsultarFuncionario_Enter);
             // 

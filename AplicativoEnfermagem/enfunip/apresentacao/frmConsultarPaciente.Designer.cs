@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarPaciente));
             this.txbConsultarPaciente = new System.Windows.Forms.TextBox();
             this.grpConsultaPaciente = new System.Windows.Forms.GroupBox();
+            this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.lblConsPac = new System.Windows.Forms.Label();
             this.grpBar = new System.Windows.Forms.GroupBox();
             this.btnAtualizar = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.btnExcluirPaciente = new System.Windows.Forms.Button();
             this.btnEditarPaciente = new System.Windows.Forms.Button();
             this.btnIncuirPaciente = new System.Windows.Forms.Button();
-            this.btnFecharPesqPac = new System.Windows.Forms.Button();
             this.grpConsultaPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Pacientes)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             this.txbConsultarPaciente.Size = new System.Drawing.Size(519, 22);
             this.txbConsultarPaciente.TabIndex = 44;
             this.txbConsultarPaciente.Text = "Insira nome do paciente";
+            this.txbConsultarPaciente.Click += new System.EventHandler(this.TxbConsultarPaciente_Click);
             this.txbConsultarPaciente.TextChanged += new System.EventHandler(this.txbConsultarPaciente_TextChanged);
             this.txbConsultarPaciente.Enter += new System.EventHandler(this.txbConsultarPaciente_Enter);
             // 
@@ -75,6 +76,23 @@
             this.grpConsultaPaciente.TabIndex = 46;
             this.grpConsultaPaciente.TabStop = false;
             this.grpConsultaPaciente.Enter += new System.EventHandler(this.GrpConsultaPaciente_Enter);
+            // 
+            // btnFecharPesqPac
+            // 
+            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
+            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
+            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
+            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnFecharPesqPac.Location = new System.Drawing.Point(1260, 1);
+            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
+            this.btnFecharPesqPac.Size = new System.Drawing.Size(26, 29);
+            this.btnFecharPesqPac.TabIndex = 137;
+            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
+            this.btnFecharPesqPac.Click += new System.EventHandler(this.BtnFecharPesqPac_Click_1);
             // 
             // lblConsPac
             // 
@@ -163,23 +181,6 @@
             this.btnIncuirPaciente.Text = "Cadastrar";
             this.btnIncuirPaciente.UseVisualStyleBackColor = true;
             this.btnIncuirPaciente.Click += new System.EventHandler(this.btnIncuirPaciente_Click);
-            // 
-            // btnFecharPesqPac
-            // 
-            this.btnFecharPesqPac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnFecharPesqPac.BackColor = System.Drawing.Color.Transparent;
-            this.btnFecharPesqPac.BackgroundImage = global::enfunip.Properties.Resources.excluir;
-            this.btnFecharPesqPac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFecharPesqPac.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFecharPesqPac.FlatAppearance.BorderSize = 0;
-            this.btnFecharPesqPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharPesqPac.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFecharPesqPac.Location = new System.Drawing.Point(1260, 1);
-            this.btnFecharPesqPac.Name = "btnFecharPesqPac";
-            this.btnFecharPesqPac.Size = new System.Drawing.Size(26, 29);
-            this.btnFecharPesqPac.TabIndex = 137;
-            this.btnFecharPesqPac.UseVisualStyleBackColor = false;
-            this.btnFecharPesqPac.Click += new System.EventHandler(this.BtnFecharPesqPac_Click_1);
             // 
             // frmConsultarPaciente
             // 
